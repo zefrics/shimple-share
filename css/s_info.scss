@@ -1,0 +1,51 @@
+#price-table {
+  .calendar {
+    margin-bottom: 90px;
+    .calendar-control {
+      margin-bottom: 30px;
+    }
+    .calendar-month {
+      td {
+        padding: 9px 15px 24px 15px;
+        .price-group{
+          margin-top: 12px;
+          display: flex; align-items: center;
+          flex-direction: column;
+          .price {
+            font-size: 18px; font-weight: 500;
+          }
+          .input-group {
+            width: 75%;
+            position: relative;
+            display: flex; align-items: center; justify-content: space-between;
+            input {
+              width: 100%; height: 33px;
+              padding-left: 15px;
+              font-size: 16px; font-weight: 500;
+            }
+            .unit {
+              font-size: 16px;
+              position: absolute; right: 12px;
+            }
+          }
+        }
+        }
+    }
+    .price-legend {
+      border: 1px solid #bbbbbb;
+      padding: 21px;
+      margin-bottom: auto;
+      li {
+        font-size: 16px;
+        display: flex;  align-items: center;
+        margin-bottom: 21px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .legend-color {
+        width: 21px; height: 21px; margin-right: 9px;
+      }
+    }
+  }
+}

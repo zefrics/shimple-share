@@ -1,0 +1,451 @@
+/* Popup 시작 */
+.popup-container {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.popup-bg {
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.popup {
+  background-color: #ffffff;
+  display: flex; flex-direction: column;
+  width: 360px;
+}
+.popup .popup-contents .msg {
+  text-align: center;
+  font-size: 18px; font-weight: 500;
+}
+.popup .popup-contents {
+  padding: 30px 30px 0 30px;
+  max-height: 420px;
+  
+}
+.popup .popup-contents .selectbox {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.popup .popup-contents .selectbox a, 
+.popup .popup-contents .selectbox a:visited,
+.popup .popup-contents .selectbox a:hover,
+.popup .popup-contents .selectbox a:focus {
+  text-decoration: none;
+}
+.popup .popup-contents .selectbox li {
+  cursor: pointer;
+  padding: 12px 9px;
+  color: #000000;
+}
+.popup .popup-contents .selectbox li:hover {
+  background-color: #eeeeee;
+}
+
+
+
+.popup .popup-contents .title1 {
+  font-size: 21px;
+  font-weight: 600;
+  margin-bottom: 21px;
+}
+.popup .popup-contents .info .section {
+  margin-bottom: 18px;
+}
+.popup .popup-contents .info .section:last-child {
+  margin-bottom: 0;
+}
+.popup .popup-contents .info .section p {
+  font-size: 15px;
+}
+.popup .popup-contents .info .section .title2 {
+  font-size: 16px; font-weight: 600;
+}
+.popup .popup-bottom {
+  padding: 30px 30px 30px 30px;
+}
+
+
+/* Popup 끝 */
+
+/* Modal 시작 */
+.modal-container {
+  height: 100%;
+  top: 0; left: 0; 
+  position: fixed;
+  width: 100%;
+}
+.modal-bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.modal {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+/* Modal 끝 */
+
+/* Modal 제목 시작 */
+.modal-header {
+  align-items: center;
+  box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 30px 24px 24px;
+}
+.modal-header .modal-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.modal-header button {
+  background-color: transparent;
+  border: 0px;
+  height: 30px;
+  width: 30px;
+}
+.modal-header button:hover {
+  outline: 2px solid rgba(0, 180, 255, 1);
+}
+.modal-header button:focus {
+  outline: 2px solid #444444;
+}
+.modal-header button img {
+  height: 30px;
+  width: 30px;
+}
+/* Modal 제목 끝 */
+
+/* Modal 내용*/
+.modal-contents {
+  font-size: 15px;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: scroll;
+  padding: 24px 24px 0 24px;
+}
+/* Modal 내용 - 스크롤 */
+.modal-contents::-webkit-scrollbar {
+  width: 5px;
+}
+.modal-contents::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 180, 255, 0.5);
+}
+
+/* Modal 내용 - 라벨과 내용의 배치 */
+.modal-contents .form-type1 {
+  /* 일반 타입 */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.modal-contents .form-type2 {
+  /* 메모 타입 */
+  margin-bottom: 24px;
+}
+
+/* Modal 내용 - 라벨 */
+.modal-contents .label1,
+.modal-contents .label2
+ {
+  font-weight: 600;
+  line-height: 15px;
+}
+.modal-contents .label1 {
+  margin-top: 9px;
+}
+
+.modal-contents .label2 .label-text {
+  margin-bottom: 6px;
+}
+.modal-contents .label2 .sub-label {
+  color: #888888;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Modal 내용 - 입력 공통 */
+.modal-contents input[type="text"],
+.modal-contents input[type="date"],
+.modal-contents input[type="number"]
+ {
+  width: 100%;
+  padding: 0 12px;
+  height: 33px;
+  font-size: 15px; font-weight: 500;
+}
+
+.modal-contents select {
+  height: 33px;
+  width: 100%;
+  padding: 0 12px;
+  font-size: 15px; font-weight: 500;
+}
+.modal-contents textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px;
+  font-size: 15px; font-weight: 500;
+}
+
+/* Modal 내용 - 뒤에만 단위가 있는 input */
+.modal-contents .input-group1 {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+.modal-contents .input-group1 input,
+.modal-contents .input-group1 select {
+  padding-right: 33px;
+}
+.modal-contents .input-group1 .unit2 {
+  position: absolute;
+  right: 12px;
+}
+
+/* Modal 내용 - 앞뒤에 단위가 있는 input */
+.modal-contents .input-group2 {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+.modal-contents .input-group2 input,
+.modal-contents .input-group2 select {
+  padding: 0 33px 0 24px;
+}
+.modal-contents .input-group2 .unit1 {
+  position: absolute;
+  left: 12px;
+}
+.modal-contents .input-group2 .unit2 {
+  position: absolute;
+  right: 12px;
+}
+
+/* Modal 내용 - 조회 */
+#reservation-read .form-type1 {
+  margin-bottom: 24px;
+}
+.modal-contents .kkk {
+  padding: 4px 6px;
+  text-align: right;
+  font-size: 16px; font-weight: 500;
+  border-bottom: 1px solid #dddddd;
+}
+.modal-contents .kkk span {
+  font-weight: 600;
+}
+
+/* Modal 내용 - SUB BUTTON */
+.modal-contents .btn-group1,
+.modal-contents .btn-group2-2 {
+  margin-top: 6px;
+}
+.modal-contents .btn7-2 {
+  font-size: 27px;
+}
+/* Modal 내용 - SUB TITLE */
+.modal-contents .sub-title1 {
+  display: flex; align-items: center; justify-content: space-between;
+  color:rgba(0, 180, 255, 1);
+  font-size: 21px; font-weight: 600;
+  margin-bottom: 24px;
+}
+.modal-contents .sub-title2 {
+  display: flex; align-items: center; justify-content: space-between;
+  color:rgba(0, 180, 255, 1);
+  font-size: 16px; font-weight: 500;
+  margin-bottom: 12px;
+}
+
+/* 팝업 내용 - 구분 줄*/
+.modal-contents .group-line1 {
+  border: 1px solid rgba(0, 180, 255, 0.2);
+  margin: 48px 0;
+}
+.modal-contents .group-line2 {
+  border: 1px solid #eeeeee;
+  margin: 30px 0;
+}
+.modal-contents .group-line3 {
+  border: 1px solid rgba(0, 180, 255, 0.1);
+  margin: 24px 0;
+}
+.modal-contents .line {
+  border-top: 1px solid #dddddd;
+  margin-bottom: 18px;
+}
+
+/* Modal 내용 - 방번호 */
+.modal-contents .person,
+.modal-contents .pet
+ {
+  display: flex;
+  margin-bottom: 5px;
+}
+.modal-contents .person:last-child,
+.modal-contents .pet:last-child {
+  margin-bottom: 0;
+}
+.modal-contents .person .type,
+.modal-contents .pet .type {
+  height: 33px;
+  width: 70%;
+  border: 1px solid #bbbbbb;
+  box-sizing: border-box;
+  background-color: #eeeeee;
+  font-size: 14px;
+  line-height: 33px;
+  text-align: center;
+}
+.modal-contents .person input,
+.modal-contents .pet input {
+  border-left: 0;
+  padding: 0 0 0 10px;
+  text-align: center;
+  width: 30%;
+}
+.modal-contents .record {
+  color: #444444;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.modal-contents .record span {
+  color: #000000;
+  font-weight: 600;
+  padding-right: 12px;
+}
+
+
+
+/* Modal 하단 */
+.modal-bottom {
+  background-color: rgba(0, 180, 255, 0.05);
+  box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
+  padding: 30px 30px 30px 24px;
+}
+
+/* Side 시작 */
+.side {
+  z-index: 700;
+}
+.side .modal-bg {
+  z-index: 1;
+}
+.side .modal {
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 390px;
+  z-index: 2;
+}
+.side .modal-header,
+.side .modal-bottom {
+  z-index: 1;
+}
+.side .modal-contents .col-type1,
+.side .modal-contents .col-type2 {
+  display: flex; flex-direction: column; align-items: right;
+  width: 50%;
+}
+/* Side 끝 */
+
+/* Center 시작 */
+.center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  z-index: 800;
+}
+.center .modal-bg,
+.center .popup-bg {
+  z-index: 1;
+}
+.center .modal,
+.center .popup {
+  z-index: 2;
+}
+.center .modal-header,
+.center .modal-bottom {
+  z-index: 1;
+}
+/* Center 팝업 끝 */
+
+/* 예약 취소 생성 시작 */
+#modal-c-create .modal-bg {
+  opacity: 0;
+}
+#modal-c-create .modal {
+  height: 100%;
+  width: 390px;
+}
+#modal-c-create .modal .col-type1,
+#modal-c-create .modal .col-type2 {
+  width: 50%;
+}
+#modal-c-create .reservation-info {
+  border: 1px solid #cfcfcf;
+  padding: 12px;
+  overflow: scroll;
+  height: 240px; max-height: 240px;
+}
+/* 예약 취소 생성 끝 */
+
+
+/* 기간 지정 방막기 Modal 시작*/
+#modal-roomblock .modal {
+  height: 100%;
+  width: 600px;
+}
+#modal-roomblock .modal .col-type1,
+#modal-roomblock .modal .col-type2 {
+  width: 70%;
+}
+#modal-roomblock .input-row {
+  display: flex; align-items: center;
+}
+#modal-roomblock .input-row input {
+  width: 150px;
+}
+#modal-roomblock .input-row span {
+  margin: 0 9px;
+}
+
+#modal-roomblock .room-type {
+  display: flex;
+  margin-bottom: 15px;
+}
+#modal-roomblock .room-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+#modal-roomblock .room-group div {
+  margin: 0 5px 5px 0;
+}
+/* 기간 지정 방막기 Modal 끝 */
+
+/* 하단 팝업 시작 */
+.bottom-popup {
+  background-color: rgba(255, 255, 255, 0.9);
+  bottom: 0;
+  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  left: 0;
+  padding: 30px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 600;
+}
+/* 하단 팝업 끝 */

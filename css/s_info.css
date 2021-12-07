@@ -1,0 +1,86 @@
+#price-table .calendar {
+  margin-bottom: 90px;
+}
+
+#price-table .calendar .calendar-control {
+  margin-bottom: 30px;
+}
+
+#price-table .calendar .calendar-month td {
+  padding: 9px 15px 24px 15px;
+}
+
+#price-table .calendar .calendar-month td .price-group {
+  margin-top: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#price-table .calendar .calendar-month td .price-group .price {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#price-table .calendar .calendar-month td .price-group .input-group {
+  width: 75%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#price-table .calendar .calendar-month td .price-group .input-group input {
+  width: 100%;
+  height: 33px;
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#price-table .calendar .calendar-month td .price-group .input-group .unit {
+  font-size: 16px;
+  position: absolute;
+  right: 12px;
+}
+
+#price-table .calendar .price-legend {
+  border: 1px solid #bbbbbb;
+  padding: 21px;
+  margin-bottom: auto;
+}
+
+#price-table .calendar .price-legend li {
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 21px;
+}
+
+#price-table .calendar .price-legend li:last-child {
+  margin-bottom: 0;
+}
+
+#price-table .calendar .price-legend .legend-color {
+  width: 21px;
+  height: 21px;
+  margin-right: 9px;
+}
+/*# sourceMappingURL=s_info.css.map */

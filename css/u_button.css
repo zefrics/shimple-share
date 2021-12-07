@@ -1,0 +1,312 @@
+button {
+  padding: 0px;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  font-family: Apple SD Gothic Neo;
+}
+
+/* CONFIRM BUTTON 모음 */
+.btn1-1 {
+  width: 100%;
+  border: 2px solid rgba(0, 180, 255, 1);
+  border-radius: 30px;
+  height: 48px;
+  font-size: 21px; font-weight: 600;
+  background-color: rgba(0, 180, 255, 1);
+  color: #ffffff;
+}
+.btn1-2 {
+  width: 100%;
+  border: 2px solid rgba(244, 81, 108, 1);
+  border-radius: 30px;
+  height: 48px;
+  font-size: 21px; font-weight: 600;
+  background-color: rgba(244, 81, 108, 1);
+  color: #ffffff;
+}
+.btn1-3 {
+  width: 100%;
+  border: 2px solid rgba(171, 171, 171, 1);
+  border-radius: 30px;
+  height: 48px;
+  font-size: 21px; font-weight: 600;
+  background-color: rgba(171, 171, 171, 1);
+  color: #ffffff;
+}
+
+.btn1-1:hover,
+.btn1-2:hover,
+.btn1-3:hover {
+  box-shadow: 0 0 0 2px #444444;
+}
+.btn1-1:focus,
+.btn1-2:focus,
+.btn1-3:focus {
+  box-shadow: 0 0 0 2px #000000;
+}
+
+
+/* SMALL BUTTON 모음 */
+
+.btn2-1 {
+  border: 1px solid rgba(0, 180, 255, 1);
+  border-radius: 5px;
+  height: 30px;
+  padding: 0 15px;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: rgba(0, 180, 255, 1);
+}
+.btn2-1:hover {
+  box-shadow: 0 0 0 2px #444444;
+}
+.btn2-1:focus {
+  box-shadow: 0 0 0 2px #000000;
+}
+.btn2-1.active {
+  background-color: rgba(0, 180, 255, 1);
+  color: #ffffff;
+}
+
+.btn2-3 {
+  border: 1px solid rgba(171, 171, 171, 0.75);
+  border-radius: 5px;
+  cursor: pointer;
+  height: 30px;
+  padding: 0 15px;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #888888;
+}
+.btn2-3:hover {
+  box-shadow: 0 0 0 2px #444444;
+}
+.btn2-3:focus {
+  box-shadow: 0 0 0 2px #000000;
+}
+.btn2-3.active {
+  background-color: rgba(171, 171, 171, 0.75);
+  color: #ffffff;
+}
+
+
+/* SUB BUTTON 모음 */
+.btn3-1 {
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid rgba(0, 180, 255, 1);
+  border-radius: 5px;
+  background-color: rgba(0, 180, 255, 0.2);
+  height: 33px;
+  font-size: 14px; font-weight: 500;
+}
+.btn3-2 {
+  width: 100%;
+  border: 1px solid rgba(244, 81, 108, 1);
+  border-radius: 5px;
+  background-color: rgba(244, 81, 108, 0.2);
+  height: 33px;
+  font-size: 14px; font-weight: 500;
+}
+.btn3-3 {
+  width: 100%;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(171, 171, 171, 1);
+  border-radius: 5px;
+  background-color: rgba(171, 171, 171, 0.2);
+  height: 33px;
+  font-size: 14px; font-weight: 500;
+}
+.btn3-1:hover,
+.btn3-2:hover,
+.btn3-3:hover {
+  box-shadow: 0 0 0 1px #444444;
+  outline: 0;
+}
+.btn3-1:focus,
+.btn3-2:focus,
+.btn3-3:focus {
+  box-shadow: 0 0 0 2px #000000;
+  outline: 0;
+}
+.btn3-1 img,
+.btn3-2 img,
+.btn3-3 img {
+  padding-top: 3px;
+  height: 15px; width: 15px;
+  margin-right: 6px;
+}
+
+
+/*INPUT BUTTON 모음*/
+.btn4-1 {
+  position: relative;
+}
+.btn4-1 label {
+  display: flex; align-items: center; justify-content: center;
+  height: 30px;
+  padding: 0 9px;
+  border: 1px solid rgba(171, 171, 171, 0.8); border-radius: 5px;
+  background-color: #ffffff; color: rgba(171, 171, 171, 0.8);
+  cursor: pointer;
+  font-size: 14px; font-weight: 400;
+  
+}
+.btn4-1:hover label {
+  box-shadow: 0 0 0 2px #444444;
+}
+.btn4-1 input {
+  position: absolute; 
+  width: 100%; height: 100%;
+  opacity: 0;
+}
+.btn4-1 input:checked ~ label {
+  border-color: rgba(0, 180, 255, 0.8);
+  background-color: rgba(0, 180, 255, 0.8);
+  color: #ffffff;
+}
+
+/* SMALL CONFIRM 버튼*/
+.btn5-1 {
+  width: 100%;
+  border: 2px solid rgba(0, 180, 255, 1);
+  border-radius: 30px;
+  height: 42px;
+  font-size: 18px; font-weight: 500;
+  background-color: rgba(0, 180, 255, 1);
+  color: #ffffff;
+}
+.btn5-2 {
+  width: 100%;
+  border: 2px solid rgba(244, 81, 108, 1);
+  border-radius: 30px;
+  height: 42px;
+  font-size: 18px; font-weight: 500;
+  background-color: rgba(244, 81, 108, 1);
+  color: #ffffff;
+}
+.btn5-3 {
+  width: 100%;
+  border: 2px solid rgba(171, 171, 171, 1);
+  border-radius: 30px;
+  height: 42px;
+  font-size: 18px; font-weight: 500;
+  background-color: rgba(171, 171, 171, 1);
+  color: #ffffff;
+}
+
+.btn5-1:hover,
+.btn5-2:hover,
+.btn5-3:hover {
+  box-shadow: 0 0 0 2px #444444;
+}
+.btn5-1:focus,
+.btn5-2:focus,
+.btn5-3:focus {
+  box-shadow: 0 0 0 2px #000000;
+}
+
+/* 게시판 목록에 사용된 버튼들*/
+.btn6-1 {
+  padding: 3px 9px;
+  border: 2px solid rgba(0, 180, 255, 1);
+  border-radius: 6px;
+  font-size: 15px; font-weight: 500;
+  background-color: rgba(0, 180, 255, 1);
+  color: #ffffff;
+}
+.btn6-2 {
+  padding: 3px 9px;
+  border: 2px solid rgba(244, 81, 108, 1);
+  border-radius: 6px;
+  font-size: 15px; font-weight: 500;
+  background-color: rgba(244, 81, 108, 1);
+  color: #ffffff;
+}
+
+.btn6-1:hover,
+.btn6-2:hover,
+.btn6-3:hover {
+  box-shadow: 0 0 0 2px #444444;
+}
+.btn6-1:focus,
+.btn6-2:focus,
+.btn6-3:focus {
+  box-shadow: 0 0 0 2px #000000;
+}
+
+
+/* TEXT BUTTON 모음*/
+.btn7-2 {
+  font-weight: 100;
+  color: #444444;
+}
+.btn7-2:hover {
+  cursor: pointer;
+  color: rgba(244, 81, 108, 1); 
+}
+
+/* FILE LIST BUTTON */
+.btn8-1 {
+  width: 100%;
+  text-align: left;
+  border: 1px solid rgba(171, 171, 171, 1);
+  border-radius: 5px;
+  background-color: rgba(171, 171, 171, 0.2);
+  font-size: 14px; font-weight: 500;
+}
+.btn8-1:hover,
+.btn8-2:hover,
+.btn8-3:hover {
+  box-shadow: 0 0 0 1px #444444;
+}
+.btn8-1:focus,
+.btn8-2:focus,
+.btn8-3:focus {
+  box-shadow: 0 0 0 2px #000000;
+}
+
+
+/* 로그인 버튼 */
+.btn9-1 {
+  width: 100%;
+  border: 2px solid rgba(0, 180, 255, 1);
+  border-radius: 12px;
+  height: 54px;
+  font-size: 24px; font-weight: 600;
+  background-color: rgba(0, 180, 255, 1);
+  color: #ffffff;
+}
+.btn9-1:hover {
+  box-shadow: 0 0 0 2px #444444;
+}
+.btn9-1:focus {
+  box-shadow: 0 0 0 2px #000000;
+}
+
+
+/* BUTTON GROUP */
+
+.btn-group2-1 { /* 센터 팝업 및 모달 */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5%;
+}
+.btn-group2-2 { /* 사이드 모달 작은 버튼 */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5%;
+}
+.btn-group2-3 {  /* 하단 팝업용 */
+  width: 360px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5%;
+}
+.btn-group1-1 {  /* 하단 팝업용 단독 버튼*/
+  width: 360px;
+}

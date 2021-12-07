@@ -1,0 +1,43 @@
+#c-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'summary summary'
+                       'div1 div2'
+                       'div3 div4';
+  gap: 30px;
+  margin-bottom: 30px;
+
+  .grid-artboard {
+    width: 100%;
+    padding: 30px;
+    overflow: auto;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 7px 0px;
+
+    .header {
+      display: flex; justify-content: space-between;
+      border-bottom: 0;
+      margin-bottom: 15px;
+      .title {
+        font-size: 18px; font-weight: 600;
+      }
+    }
+  }
+
+  .summary {
+    grid-area: summary;
+  }
+  .div1 {
+    grid-area: div1;
+    // height: 600px;
+  }
+  .div2 {
+    grid-area: div2;
+  }
+  .div3 {
+    grid-area: div3;
+  }
+  .div4 {
+    grid-area: div4;
+  }
+}
