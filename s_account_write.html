@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="css/popup.css" />
     <link rel="stylesheet" href="css/u_button.css" />
     <link rel="stylesheet" href="css/u_bulletin.css" />
-
+    <link rel="stylesheet" href="css/s_main.css" />
     <script type="text/javascript" src="js/hide.js"></script>
     <script type="text/javascript" src="js/toggle.js"></script>
     <title>쉼플 - 관리자 페이지</title>
   </head>
 
   <body>
+
     <!--Main Menu 시작-->
     <div id="s-nav" class="main-nav">
       <div class="brand">
@@ -37,12 +38,13 @@
           <a class="sub-item" href="s_info1_list.html">&#45;&nbsp;&nbsp;숙소 세부 정보</a>
           <a class="sub-item" href="s_info2_list.html">&#45;&nbsp;&nbsp;객실 세부 정보</a>
         </div>
-        <a class="menu-item selected">
+
+        <a class="menu-item accordion">
           <img src="img/1-4.svg" alt="1-4" />
           <span>정산</span>
         </a>
         <div class="sub">
-          <a class="sub-item active" href="s_adjustment1.html">&#45;&nbsp;&nbsp;정산서 생성</a>
+          <a class="sub-item" href="s_adjustment1.html">&#45;&nbsp;&nbsp;정산서 생성</a>
           <a class="sub-item" href="s_adjustment2_read.html">&#45;&nbsp;&nbsp;쉼플 정산서</a>
           <a class="sub-item" href="s_adjustment3_read.html">&#45;&nbsp;&nbsp;파트너 정산서</a>
         </div>
@@ -59,14 +61,13 @@
           <a class="sub-item" href="s_faq_read.html">&#45;&nbsp;&nbsp;자주 묻는 질문</a>
           <a class="sub-item" href="s_question_read.html">&#45;&nbsp;&nbsp;문의 사항</a>
         </div>
-
-        <a class="menu-item accordion">
+        <a class="menu-item selected">
           <img src="img/1-8.svg" alt="1-8" />
           <span>설정</span>
         </a>
         <div class="sub">
           <a class="sub-item" href="s_history.html">&#45;&nbsp;&nbsp;히스토리</a>
-          <a class="sub-item" href="s_account_read.html">&#45;&nbsp;&nbsp;계정 설정</a>
+          <a class="sub-item active" href="s_account_read.html">&#45;&nbsp;&nbsp;계정 설정</a>
           <a class="sub-item" href="s_db.html">&#45;&nbsp;&nbsp;항목 설정</a>
           <a class="sub-item" href="s_checker.html">&#45;&nbsp;&nbsp;누락 검사기</a>
         </div>
@@ -80,55 +81,85 @@
 
     <!--Content 시작 -->
     <div class="content-container">
-      
       <!--메인 시작-->
-      
       <div class="artboard">
         <div class="header">
-          <div class="title">정산서 생성</div>
+          <div class="title">새로운 계정 생성 / 계정 수정</div>
         </div>
-        <div class="bulletin-write2" id="ad-extractor">
+
+        <div class="bulletin-write1 grid2-1">
           <div class="grid-section">
             <div class="form3">
-              <div class="label3">파트너</div>
+              <div class="label3">기본 정보</div>
               <div class="col-right">
-                <div class="filter">
-                  <div class="title">선택해주세요</div>
-                  <div class="options hide">
-                    <label class="radio-select"><input class="label" type="radio" value="" name="fff">르페도라 펜션</label>
-                    <label class="radio-select"><input class="label" type="radio" value="" name="fff">제주애견동반 솔펜션</label>
-                    <label class="radio-select"><input class="label" type="radio" value="" name="fff">신라 호텔</label>
-                    <label class="radio-select"><input class="label" type="radio" value="" name="fff">롯데 호텔</label>
+                <div class="row col2">
+                  <div class="content-group">
+                    <div class="sub-title">이름</div>
+                    <input class="content" type="text" maxlength="5">
+                  </div>
+                  <div class="content-group">
+                    <div class="sub-title">연락처</div>
+                    <input class="content" type="tel" maxlength="13">
                   </div>
                 </div>
               </div>
             </div>
             <div class="form3">
-              <div class="label3">시작일</div>
+              <div class="label3">계정 정보</div>
               <div class="col-right">
-                <input class="content" type="date">
+                <div class="row col2">
+                  <div class="content-group">
+                    <div class="sub-title">아이디 / 이메일</div>
+                    <input class="content" type="email">
+                  </div>
+                  <div class="content-group">
+                    <div class="sub-title">비밀번호</div>
+                    <input class="content" type="password" maxlength="15">
+                  </div>
+                </div>
               </div>
             </div>
             <div class="form3">
-              <div class="label3">지급일</div>
+              <div class="label3">권한 정보</div>
               <div class="col-right">
-                <input class="content" type="date">
+                <div class="row col2">
+                  <div class="content-group">
+                    <div class="sub-title">권한</div>
+                    <select class="content">
+                      <option value="">0 : 파트너</option>
+                      <option value="">1 : 최고 관리자</option>
+                      <option value="">2 : 중간 관리자</option>
+                      <option value="">3 : 일반 관리자</option>
+                    </select>
+                  </div>
+                  <div class="content-group">
+                    <div class="sub-title">소속 (권한이 0인 경우에만 활성화)</div>
+                    <div class="options">
+                      <label>
+                        <input type="checkbox">제주 르페도라펜션
+                      </label>
+                      <label>
+                        <input type="checkbox">제주 솔펜션
+                      </label>
+                      <label>
+                        <input type="checkbox">근동이네
+                      </label>
+                      <label>
+                        <input type="checkbox">메리어트 호텔
+                      </label>
+                      <label>
+                        <input type="checkbox">하얏트 호텔
+                      </label>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+
           </div>
-          <span>위 3가지 항목을 모두 채우면 아래의 버튼이 생성됨</span>
-          <div class="confirm">
-            <button class="btn1-1">정산서 생성</button>
-          </div>
-          
         </div>
-        
       </div>
-      
       <!--메인 끝-->
-
-
-
 
       <!--Footer 시작-->
       <footer>&copy;&nbsp;Shimple</footer>
@@ -172,5 +203,15 @@
       </div>
     </div>
     <!--숙소 목록 Popup 끝-->
+
+    <!--하단 Popup 시작-->
+    <div id="confirm" class="bottom-popup">
+      <div class="btn-group2-3">
+        <button class="btn1-1" onclick="">적용</button>
+        <a class="btn1-3" href="s_account_read.html">취소</a>
+      </div>
+    </div>
+    <!--하단 Popup 끝-->
+
   </body>
 </html>

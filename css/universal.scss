@@ -15,7 +15,7 @@ body::-webkit-scrollbar-track {
   background-color: rgba(255, 255, 255, 0.5);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 180, 255, 0.5);
+  background-color: rgba(0, 0,0, 0.15);
 }
 /* 팝업 발생시 전체화면 스크롤 막는 기능 */
 .not_scroll {
@@ -60,9 +60,6 @@ body::-webkit-scrollbar-thumb {
 #s-nav a.active {
   background-color: rgba(54, 198, 211, 1) !important;
 }
-
-
-
 
 .main-nav .brand a { /* 숙소 이름*/
   display: block;
@@ -133,7 +130,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   padding: 30px 30px 0px 210px;
   height: 100%; min-height: 100%;
-  min-width: 1910px;
+  min-width: 1910px; max-width: 1910px;
 
   .artboard {
     // width: 1670px;

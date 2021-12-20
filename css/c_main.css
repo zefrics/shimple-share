@@ -3,7 +3,7 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-      grid-template-areas: 'summary summary' 'div1 div2' 'div3 div4';
+      grid-template-areas: 'summary summary' 'div1 div2' 'div3 div4';
   gap: 30px;
   margin-bottom: 30px;
 }

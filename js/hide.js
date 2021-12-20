@@ -1,3 +1,9 @@
+function selectBox() {
+  var x = document.querySelector(".selectbox");
+  // var y = document.querySelector("#monthly");
+  x.classList.toggle("hide");
+}
+
 function weekly() {
   var x = document.querySelector("#weekly");
   var y = document.querySelector("#monthly");

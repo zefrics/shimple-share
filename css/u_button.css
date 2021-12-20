@@ -16,6 +16,8 @@ button {
   font-size: 21px; font-weight: 600;
   background-color: rgba(0, 180, 255, 1);
   color: #ffffff;
+  text-decoration: none;
+  display: flex; align-items: center; justify-content: center;
 }
 .btn1-2 {
   width: 100%;
@@ -25,6 +27,8 @@ button {
   font-size: 21px; font-weight: 600;
   background-color: rgba(244, 81, 108, 1);
   color: #ffffff;
+  text-decoration: none;
+  display: flex; align-items: center; justify-content: center;
 }
 .btn1-3 {
   width: 100%;
@@ -34,6 +38,8 @@ button {
   font-size: 21px; font-weight: 600;
   background-color: rgba(171, 171, 171, 1);
   color: #ffffff;
+  text-decoration: none;
+  display: flex; align-items: center; justify-content: center;
 }
 
 .btn1-1:hover,
@@ -212,20 +218,26 @@ button {
 
 /* 게시판 목록에 사용된 버튼들*/
 .btn6-1 {
+  width: 100%;
   padding: 3px 9px;
   border: 2px solid rgba(0, 180, 255, 1);
   border-radius: 6px;
   font-size: 15px; font-weight: 500;
   background-color: rgba(0, 180, 255, 1);
   color: #ffffff;
+  text-decoration: none;
+  display: flex; align-items: center; justify-content: center;
 }
 .btn6-2 {
+  width: 100%;
   padding: 3px 9px;
   border: 2px solid rgba(244, 81, 108, 1);
   border-radius: 6px;
   font-size: 15px; font-weight: 500;
   background-color: rgba(244, 81, 108, 1);
   color: #ffffff;
+  text-decoration: none;
+  display: flex; align-items: center; justify-content: center;
 }
 
 .btn6-1:hover,

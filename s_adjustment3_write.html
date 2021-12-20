@@ -42,9 +42,9 @@
           <span>정산</span>
         </a>
         <div class="sub">
-          <a class="sub-item active" href="s_adjustment1.html">&#45;&nbsp;&nbsp;정산서 생성</a>
+          <a class="sub-item" href="s_adjustment1.html">&#45;&nbsp;&nbsp;정산서 생성</a>
           <a class="sub-item" href="s_adjustment2_read.html">&#45;&nbsp;&nbsp;쉼플 정산서</a>
-          <a class="sub-item" href="s_adjustment3_read.html">&#45;&nbsp;&nbsp;파트너 정산서</a>
+          <a class="sub-item active" href="s_adjustment3_read.html">&#45;&nbsp;&nbsp;파트너 정산서</a>
         </div>
         <a class="menu-item" href="s_statistics.html">
           <img src="img/1-5.svg" alt="1-5" />
@@ -80,33 +80,24 @@
 
     <!--Content 시작 -->
     <div class="content-container">
-      
+
       <!--메인 시작-->
-      
       <div class="artboard">
         <div class="header">
-          <div class="title">정산서 생성</div>
+          <div class="title">파트너 정산서 작성</div>
         </div>
-        <div class="bulletin-write2" id="ad-extractor">
+        <div class="bulletin-write2" id="c-ad-write">
           <div class="grid-section">
             <div class="form3">
               <div class="label3">파트너</div>
               <div class="col-right">
-                <div class="filter">
-                  <div class="title">선택해주세요</div>
-                  <div class="options hide">
-                    <label class="radio-select"><input class="label" type="radio" value="" name="fff">르페도라 펜션</label>
-                    <label class="radio-select"><input class="label" type="radio" value="" name="fff">제주애견동반 솔펜션</label>
-                    <label class="radio-select"><input class="label" type="radio" value="" name="fff">신라 호텔</label>
-                    <label class="radio-select"><input class="label" type="radio" value="" name="fff">롯데 호텔</label>
-                  </div>
-                </div>
+                <div class="text">제주애견동반 솔펜션</div>
               </div>
             </div>
             <div class="form3">
-              <div class="label3">시작일</div>
+              <div class="label3">제목</div>
               <div class="col-right">
-                <input class="content" type="date">
+                <input class="content" type="text" maxlength="20">
               </div>
             </div>
             <div class="form3">
@@ -115,20 +106,53 @@
                 <input class="content" type="date">
               </div>
             </div>
+            <div class="form3">
+              <div class="label3">정산 금액</div>
+              <div class="col-right">
+                <div class="input-group">
+                  <input class="content" type="text" maxlength="9">
+                  <div class="unit">원</div>
+                </div>
+              </div>
+            </div>
+            <div class="form3">
+              <div class="label3">내용</div>
+              <div class="col-right">
+                <textarea maxlength="500"></textarea>
+              </div>
+            </div>
+
+            <div class="form3">
+              <div class="label3">정산서 파일</div>
+              <div class="col-right">
+                <div class="upload-group">
+                  <ul class="uploading">
+                    <li>
+                      <div class="name-cover">
+                        <div class="filename">파트너_르페도라_202104정산서.xlsx</div>
+                      </div>
+                      <button class="btn7-2">×</button>
+                    </li>
+                    <li>
+                      <div class="name-cover">
+                        <div class="filename">파트너_르페도라_202104정산서.jpg</div>
+                      </div>
+                      <button class="btn7-2">×</button>
+                    </li>
+                  </ul>
+                  <form class="upload" action="">
+                    <input type="file">
+                    <input class="btn3-1" type="submit" value="파일 업로드">
+                  </form>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <span>위 3가지 항목을 모두 채우면 아래의 버튼이 생성됨</span>
-          <div class="confirm">
-            <button class="btn1-1">정산서 생성</button>
-          </div>
-          
         </div>
         
       </div>
-      
       <!--메인 끝-->
-
-
-
 
       <!--Footer 시작-->
       <footer>&copy;&nbsp;Shimple</footer>
@@ -172,5 +196,13 @@
       </div>
     </div>
     <!--숙소 목록 Popup 끝-->
+    <!--하단 Popup 시작-->
+    <div id="confirm" class="bottom-popup">
+      <div class="btn-group2-3">
+        <button class="btn1-1" onclick="">적용</button>
+        <a class="btn1-3" href="s_adjustment3_read.html">취소</a>
+      </div>
+    </div>
+    <!--하단 Popup 끝-->
   </body>
 </html>

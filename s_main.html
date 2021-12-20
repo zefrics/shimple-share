@@ -34,8 +34,8 @@
           <span>숙소 정보</span>
         </a>
         <div class="sub">
-          <a class="sub-item" href="s_info1.html">&#45;&nbsp;&nbsp;숙소 세부 정보</a>
-          <a class="sub-item" href="s_info2.html">&#45;&nbsp;&nbsp;객실 세부 정보</a>
+          <a class="sub-item" href="s_info1_list.html">&#45;&nbsp;&nbsp;숙소 세부 정보</a>
+          <a class="sub-item" href="s_info2_list.html">&#45;&nbsp;&nbsp;객실 세부 정보</a>
         </div>
 
         <a class="menu-item accordion">
@@ -44,8 +44,8 @@
         </a>
         <div class="sub">
           <a class="sub-item" href="s_adjustment1.html">&#45;&nbsp;&nbsp;정산서 생성</a>
-          <a class="sub-item" href="s_adjustment2.html">&#45;&nbsp;&nbsp;쉼플 정산서</a>
-          <a class="sub-item" href="s_adjustment3.html">&#45;&nbsp;&nbsp;파트너 정산서</a>
+          <a class="sub-item" href="s_adjustment2_read.html">&#45;&nbsp;&nbsp;쉼플 정산서</a>
+          <a class="sub-item" href="s_adjustment3_read.html">&#45;&nbsp;&nbsp;파트너 정산서</a>
         </div>
         <a class="menu-item" href="s_statistics.html">
           <img src="img/1-5.svg" alt="1-5" />
@@ -56,9 +56,9 @@
           <span>게시판</span>
         </a>
         <div class="sub">
-          <a class="sub-item" href="s_notice.html">&#45;&nbsp;&nbsp;공지 사항</a>
-          <a class="sub-item" href="s_question.html">&#45;&nbsp;&nbsp;문의 사항</a>
-          <a class="sub-item" href="s_faq.html">&#45;&nbsp;&nbsp;FAQ</a>
+          <a class="sub-item" href="s_notice_read.html">&#45;&nbsp;&nbsp;공지 사항</a>
+          <a class="sub-item" href="s_faq_read.html">&#45;&nbsp;&nbsp;자주 묻는 질문</a>
+          <a class="sub-item" href="s_question_read.html">&#45;&nbsp;&nbsp;문의 사항</a>
         </div>
         <a class="menu-item accordion">
           <img src="img/1-8.svg" alt="1-8" />
@@ -66,11 +66,11 @@
         </a>
         <div class="sub">
           <a class="sub-item" href="s_history.html">&#45;&nbsp;&nbsp;히스토리</a>
-          <a class="sub-item" href="s_account.html">&#45;&nbsp;&nbsp;계정 설정</a>
+          <a class="sub-item" href="s_account_read.html">&#45;&nbsp;&nbsp;계정 설정</a>
           <a class="sub-item" href="s_db.html">&#45;&nbsp;&nbsp;항목 설정</a>
           <a class="sub-item" href="s_checker.html">&#45;&nbsp;&nbsp;누락 검사기</a>
         </div>
-        <a class="menu-item" href="s_myinfo.html">
+        <a class="menu-item" href="s_myinfo_read.html">
           <img src="img/myinfo.svg" alt="myinfo" />
           <span>내 정보</span>
         </a>
@@ -79,60 +79,173 @@
     <!--Main Menu 끝-->
 
     <!--Content 시작 -->
-    <div class="content-container" id="test">
+    <div class="content-container">
       <!--메인 시작-->
       <div id="s-main">
         <div class="grid-artboard summary">
-          TODAY 2021.07.05 (월)<br>
-          (오늘 얼마를 팔았는지를 보고싶은 것이다.  따라서 내년 3월 방을 오늘 팔았어도 여기에 반영이 되어야 한다.)<br>
-          1,000,000 원<br>예약 완료 (34박)<br>
-          40,000 원<br>예약 취소 (4박)<br>
-          960,000 원<br>총계 (30박)<br>
+          <div class="info-group">
+            <div class="info date">
+              <div class="title">TODAY</div>
+              <div class="value">2021.07.05 (월)</div>
+            </div>
+            <div class="info">
+              <div class="title">예약 완료 (34박)</div>
+              <div class="value">+ 100,000,000 원</div>
+            </div>
+            <div class="info cancel">
+              <div class="title">예약 취소 (4박)</div>
+              <div class="value">- 40,000 원</div>
+            </div>
+            <div class="info">
+              <div class="title">총계 (30박)</div>
+              <div class="value">= 960,000 원</div>
+            </div>
+            <div class="info share-group" onclick="selectBox()">
+              <div class="title">11월 객실 점유율</div>
+              <div class="value">76 %</div>
+              <div class="selectbox hide">
+                <a class="partner-group" href="index.html">
+                  <div class="partner">근동이네독채민박</div>
+                  <div class="share">80%</div>
+                </a>
+                <a class="partner-group" href="index.html">
+                  <div class="partner">제주 르페도라펜션</div>
+                  <div class="share">80%</div>
+                </a>
+                <a class="partner-group" href="index.html">
+                  <div class="partner">제주애견동반 솔펜션</div>
+                  <div class="share">80%</div>
+                </a>
+                <a class="partner-group" href="index.html">
+                  <div class="partner">힐튼 호텔</div>
+                  <div class="share">80%</div>
+                </a>
+                <a class="partner-group" href="index.html">
+                  <div class="partner">웨스틴 조선 호텔</div>
+                  <div class="share">1%</div>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="grid-artboard div1">
-          <div class="header">
-            <div class="title">공지 사항</div>
-          </div>
-          <div class="bulletin-list1" id="s-main-notice">
+          <div class="bulletin-list3" id="s-main-shimple">
+            <div class="top">
+              <div class="title">쉼플 처리 내역</div>
+              <div class="filter-group">
+                <div class="filter">
+                  <div class="title">직원명 선택</div>
+                  <div class="options hide">
+                    <label>
+                      <input type="checkbox">모두 선택
+                    </label>
+                    <label>
+                      <input type="checkbox">신재호
+                    </label>
+                    
+                    <label>
+                      <input type="checkbox">우소영
+                    </label>
+                    <label>
+                      <input type="checkbox">이문성
+                    </label>
+                  </div>
+                </div>
+                <div class="filter">
+                  <div class="title">10개씩 보기</div>
+                  <div class="options hide">
+                    <label class="radio-select"><input class="label" type="radio" value="10" name="eee">10개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="20" name="eee">20개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="30" name="eee">30개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="50" name="eee">50개씩 보기</label>
+                  </div>
+                </div>
+              </div>
+            </div>  
             <ul class="table">
               <li class="row-group">
                 <div class="title">
-                  <div>제목</div>
-                  <div>작성 일시</div>
+                  <div>직원명</div>
+                  <div>내역</div>
                 </div>
               </li>
-
-              <li class="row-group">
-                <div class="table-row">
-                  <div class="link"><span class="badge-xs new">N</span>2022년 새해 맞이 이벤트</div>
-                  <div>2021-09-20<br>18:31:45</div>
-                </div>
-              </li>
-              <li class="row-group">
-                <div class="table-row">
-                  <div class="link"><span class="badge-xs new">N</span>2022년 새해 맞이 이벤트</div>
-                  <div>2021-09-20<br>18:31:45</div>
-                </div>
-              </li>
-              <li class="row-group">
-                <div class="table-row">
-                  <div class="link"><span class="badge-xs new">N</span>2022년 새해 맞이 이벤트</div>
-                  <div>2021-09-20<br>18:31:45</div>
-                </div>
-              </li>
-              <li class="row-group">
-                <div class="table-row">
-                  <div class="link"><span class="badge-xs new">N</span>2022년 새해 맞이 이벤트</div>
-                  <div>2021-09-20<br>18:31:45</div>
-                </div>
-              </li>
-              <li class="row-group">
-                <div class="table-row">
-                  <div class="link"><span class="badge-xs new">N</span>2022년 새해 맞이 이벤트</div>
-                  <div>2021-09-20<br>18:31:45</div>
-                </div>
-              </li>
-
+              <div class="scr-group">
+                <li class="row-group selected">
+                  <div class="table-row">
+                    <div>신재호호 2021-09-20 18:31</div>
+                    <div class="link">
+                      <div class="title-group">
+                        <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="text">
+                      [예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)
+                    </div>
+                  </div>
+                </li>
+                <li class="row-group">
+                  <div class="table-row">
+                    <div>신재호호 2021-09-20 18:31</div>
+                    <div class="link">
+                      <div class="title-group">
+                        <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content hide">
+                    <div class="text">
+                      [예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)
+                    </div>
+                  </div>
+                </li>
+                <li class="row-group">
+                  <div class="table-row">
+                    <div>신재호호 2021-09-20 18:31</div>
+                    <div class="link">
+                      <div class="title-group">
+                        <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content hide">
+                    <div class="text">
+                      [예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)
+                    </div>
+                  </div>
+                </li>
+                <li class="row-group">
+                  <div class="table-row">
+                    <div>신재호호 2021-09-20 18:31</div>
+                    <div class="link">
+                      <div class="title-group">
+                        <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content hide">
+                    <div class="text">
+                      [예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)
+                    </div>
+                  </div>
+                </li>
+                <li class="row-group">
+                  <div class="table-row">
+                    <div>신재호호 2021-09-20 18:31</div>
+                    <div class="link">
+                      <div class="title-group">
+                        <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content hide">
+                    <div class="text">
+                      [예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)
+                    </div>
+                  </div>
+                </li>
+              </div>
             </ul>
 
             <div class="bottom">
@@ -157,59 +270,103 @@
           </div>
         </div>
         <div class="grid-artboard div2">
-          <div class="header">
-            <div class="title">문의 사항</div>
-          </div>
-          <div class="bulletin-list1" id="s-main-qna">
+          
+          <div class="bulletin-list3" id="s-main-qna">
+            <div class="top">
+              <div class="title">문의 사항</div>
+              <div class="filter-group">
+                <div class="filter">
+                  <div class="title">답변 상태 선택</div>
+                  <div class="options hide">
+                    <label>
+                      <input type="checkbox">모두 선택
+                    </label>
+                    <label>
+                      <input type="checkbox">미답변
+                    </label>
+                    <label>
+                      <input type="checkbox">답변 완료
+                    </label>
+                  </div>
+                </div>
+                <div class="filter">
+                  <div class="title">파트너 선택</div>
+                  <div class="options hide">
+                    <label>
+                      <input type="checkbox">모두 선택
+                    </label>
+                    <label>
+                      <input type="checkbox">제주 르페도라펜션
+                    </label>
+                    <label>
+                      <input type="checkbox">제주 솔펜션
+                    </label>
+                    <label>
+                      <input type="checkbox">근동이네
+                    </label>
+                    <label>
+                      <input type="checkbox">메리어트 호텔
+                    </label>
+                    <label>
+                      <input type="checkbox">하얏트 호텔
+                    </label>
+                  </div>
+                </div>
+                <div class="filter">
+                  <div class="title">10개씩 보기</div>
+                  <div class="options hide">
+                    <label class="radio-select"><input class="label" type="radio" value="10" name="eee">10개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="20" name="eee">20개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="30" name="eee">30개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="50" name="eee">50개씩 보기</label>
+                  </div>
+                </div>
+              </div>
+            </div>
             <ul class="table">
+
               <li class="row-group">
                 <div class="title">
                   <div>답변</div>
                   <div>내용</div>
                   <div>파트너</div>
-                  <div>문의 일시</div>
                 </div>
               </li>
-              <li class="row-group">
-                <div class="table-row">
-                  <div>신재호호</div>
-                  <div class="link">
-                    <div class="title-group">
-                      <div class="badge-xs new">N</div>
-                      <div class="shorten">숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?  숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?</div>
+              <div class="scr-group">
+                <li class="row-group">
+                  <div class="table-row">
+                    <div>신재호호</div>
+                    <div class="link">
+                      <div class="title-group">
+                        <div class="shorten">객실 세부 정보에 잘못된 내용이 있어 수정 요청 드립니다.</div>
+                      </div>
                     </div>
+                    <div class="partner">제주애견동반 솔펜션<br>2021-09-20 18:31</div>
                   </div>
-                  <div class="partner">제주애견동반 솔펜션</div>
-                  <div>2021-09-20<br>18:31:45</div>
-                </div>
-              </li>
-              <li class="row-group">
-                <div class="table-row">
-                  <div>미답변</div>
-                  <div class="link">
-                    <div class="title-group">
-                      <div class="badge-xs new">N</div>
-                      <div class="shorten">안녕하세요 혹시 정산서 내용에 이해가 잘 가지 않는 부분들이 있는데 확인 부탁드립니다.  해당 파일을 첨부했습니다.</div>
+                </li>
+                <li class="row-group">
+                  <div class="table-row">
+                    <div>미답변</div>
+                    <div class="link">
+                      <div class="title-group">
+                        <div class="shorten">안녕하세요 혹시 정산서 내용에 이해가 잘 가지 않는 부분들이 있는데 확인 부탁드립니다.  해당 파일을 첨부했습니다.</div>
+                      </div>
                     </div>
+                    <div class="partner">제주 르페도라<br>2021-09-20 18:31</div>
                   </div>
-                  <div class="partner">제주 르페도라</div>
-                  <div>2021-09-20<br>18:31:45</div>
-                </div>
-              </li>
-              <li class="row-group">
-                <div class="table-row">
-                  <div>미답변</div>
-                  <div class="link">
-                    <div class="title-group">
-                      <div class="badge-xs new">N</div>
-                      <div class="shorten">혹시 2021년 03월 31일에 들어온 예약건에 대해서 수정해주실 수 있을까요?</div>
+                </li>
+                <li class="row-group">
+                  <div class="table-row">
+                    <div>미답변</div>
+                    <div class="link">
+                      <div class="title-group">
+                        <div class="shorten">혹시 2021년 03월 31일에 들어온 예약건에 대해서 수정해주실 수 있을까요?</div>
+                      </div>
                     </div>
+                    <div class="partner">제주 르페도라<br>2021-09-20 18:31</div>
                   </div>
-                  <div class="partner">제주 르페도라</div>
-                  <div>2021-09-20<br>18:31:45</div>
-                </div>
-              </li>
-  
+                </li>
+              </div>
             </ul>
             <div class="bottom">
               <div class="page-group">
@@ -232,36 +389,135 @@
             </div> 
           </div>
         </div>
+        
         <div class="grid-artboard div3">
-          <div class="header">
-            <div class="title">쉼플 처리 내역</div>
-          </div>
-          <div class="bulletin-list1" id="s-main-shimple">
+          <div class="bulletin-list3" id="s-main-partner">
+            <div class="top">
+              <div class="title">파트너 처리 내역</div>
+              <div class="filter-group">
+                <div class="filter">
+                  <div class="title">체크 여부 선택</div>
+                  <div class="options hide">
+                    <label>
+                      <input type="checkbox">모두 선택
+                    </label>
+                    <label>
+                      <input type="checkbox">체크 완료
+                    </label>
+                    <label>
+                      <input type="checkbox">미체크
+                    </label>
+                  </div>
+                </div>
+                <div class="filter">
+                  <div class="title">파트너 선택</div>
+                  <div class="options hide">
+                    <label>
+                      <input type="checkbox">모두 선택
+                    </label>
+                    <label>
+                      <input type="checkbox">제주 르페도라펜션
+                    </label>
+                    <label>
+                      <input type="checkbox">제주 솔펜션
+                    </label>
+                    <label>
+                      <input type="checkbox">근동이네
+                    </label>
+                    <label>
+                      <input type="checkbox">메리어트 호텔
+                    </label>
+                    <label>
+                      <input type="checkbox">하얏트 호텔
+                    </label>
+                  </div>
+                </div>
+                
+                <div class="filter">
+                  <div class="title">10개씩 보기</div>
+                  <div class="options hide">
+                    <label class="radio-select"><input class="label" type="radio" value="10" name="eee">10개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="20" name="eee">20개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="30" name="eee">30개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="50" name="eee">50개씩 보기</label>
+                  </div>
+                </div>
+              </div>
+            </div>
             <ul class="table">
               <li class="row-group">
                 <div class="title">
                   <div>체크</div>
-                  <div>확인 일시</div>
                   <div>내역</div>
+                  <div>파트너</div>
                 </div>
               </li>
-              <li class="row-group">
-                <div class="table-row">
-                  <div class="check">
-                    <input type="checkbox" checked>
-                    <div>신재호호</div>
+              <div class="scr-group">
+                <li class="row-group">
+                  <div class="table-row">
+                    <div class="check-group">
+                      <div class="check">
+                        <input type="checkbox" checked>
+                        <div>신재호호</div>  
+                      </div>
+                      <div>2021-09-20 18:31</div>
+                    </div>
+                    <div class="link">
+                      <div class="title-group">
+                        <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
+                      </div>
+                    </div>
+                    <div class="partner">제주애견동반 솔펜션<br>2021-09-20 18:31</div>
                   </div>
-                  <div>2021-09-20<br>18:31:45</div>
-                  <div>ㅇㅇㅇㅇㅇㅇ<br>ddddddddddd</div>
-                </div>
-              </li>
-              <li class="row-group">
-                <div class="table-row">
-                  <div><input type="checkbox"></div>
-                  <div>-</div>
-                  <div>ㅇㅇㅇㅇㅇㅇ<br>ddddddddddd</div>
-                </div>
-              </li>
+                  <div class="content hide">
+                    <div class="text">
+                      [예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)
+                    </div>
+                  </div>
+                </li>
+                <li class="row-group selected">
+                  <div class="table-row">
+                    <div class="check-group">
+                      <div class="check">
+                        <input type="checkbox">
+                      </div>
+                    </div>
+                    <div class="link">
+                      <div class="title-group">
+                        <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
+                      </div>
+                    </div>
+                    <div class="partner">제주애견동반 솔펜션<br>2021-09-20 18:31</div>
+                  </div>
+                  <div class="content">
+                    <div class="text">
+                      [예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)
+                    </div>
+                  </div>
+                </li>
+                <li class="row-group">
+                  <div class="table-row">
+                    <div class="check-group">
+                      <div class="check">
+                        <input type="checkbox" checked>
+                        <div>신재호호</div>  
+                      </div>
+                      <div>2021-09-20 18:31</div>
+                    </div>
+                    <div class="link">
+                      <div class="title-group">
+                        <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
+                      </div>
+                    </div>
+                    <div class="partner">제주애견동반 솔펜션<br>2021-09-20 18:31</div>
+                  </div>
+                  <div class="content hide">
+                    <div class="text">
+                      [예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)
+                    </div>
+                  </div>
+                </li>
+              </div>
             </ul>
             <div class="bottom">
               <div class="page-group">
@@ -282,68 +538,6 @@
                 </ul>
               </div>
             </div> 
-          </div>
-        </div>
-        <div class="grid-artboard div4">
-          <div class="header">
-            <div class="title">파트너 처리 내역</div>
-          </div>
-          <div class="bulletin-list1" id="s-main-partner">
-            <ul class="table">
-              <li class="row-group">
-                <div class="title">
-                  <div>체크</div>
-                  <div>확인 일시</div>
-                  <div>내역</div>
-                </div>
-              </li>
-              <li class="row-group">
-                <div class="table-row">
-                  <div class="check">
-                    <input type="checkbox" checked>
-                    <div>신재호호</div>
-                  </div>
-                  <div>2021-09-20<br>18:31:45</div>
-                  <div>ㅇㅇㅇㅇㅇㅇ<br>ddddddddddd</div>
-                </div>
-              </li>
-              <li class="row-group">
-                <div class="table-row">
-                  <div><input type="checkbox"></div>
-                  <div>-</div>
-                  <div>ㅇㅇㅇㅇㅇㅇ<br>ddddddddddd</div>
-                </div>
-              </li>
-            </ul>
-            <div class="bottom">
-              <div class="page-group">
-                <ul class="previous">
-                  <li>&#60;&#60;</li>
-                  <li>&#60;</li>
-                </ul>
-                <ul class="page">
-                  <li class="selected">1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul>
-                <ul class="next">
-                  <li>&#62;</li>
-                  <li>&#62;&#62;</li>
-                </ul>
-              </div>
-            </div> 
-          </div>
-        </div>
-        <div class="grid-artboard div5">
-          <div class="header">
-            <div class="title">판매 채널</div>
-          </div>
-        </div>
-        <div class="grid-artboard div6">
-          <div class="header">
-            <div class="title">숙소 목록</div>
           </div>
         </div>
       </div>
