@@ -7,7 +7,8 @@
 }
 
 #price-table .calendar .calendar-month td {
-  padding: 9px 15px 24px 15px;
+  height: 105px;
+  padding: 9px 15px 0 15px;
 }
 
 #price-table .calendar .calendar-month td .price-group {
@@ -25,6 +26,7 @@
 }
 
 #price-table .calendar .calendar-month td .price-group .price {
+  margin-top: 3px;
   font-size: 18px;
   font-weight: 500;
 }

@@ -17,29 +17,6 @@
           box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 7px 0px;
 }
 
-#c-main .grid-artboard .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-bottom: 0;
-  margin-bottom: 15px;
-}
-
-#c-main .grid-artboard .header .title {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-#c-main .summary {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: summary;
-}
-
 #c-main .div1 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -62,5 +39,87 @@
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: div4;
+}
+
+#c-main .summary {
+  padding: 21px 45px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: summary;
+  text-align: center;
+}
+
+#c-main .summary .info-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#c-main .summary .info-group .info {
+  width: 360px;
+  border: 3px solid rgba(0, 180, 255, 0.5);
+  border-radius: 15px;
+  padding: 9px 15px;
+}
+
+#c-main .summary .info-group .info > .title {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#c-main .summary .info-group .info > .value {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+#c-main .summary .info-group .date {
+  border: 0;
+}
+
+#c-main #monthly-share .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 33px;
+  margin-bottom: 15px;
+}
+
+#c-main #monthly-share .top .title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#c-main #monthly-share .top .month-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#c-main #monthly-share .top .month-group .month {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#c-main #monthly-share .top .month-group button {
+  margin-left: 12px;
+}
+
+#c-main #monthly-share .graph {
+  border: 1px solid red;
+  height: 270px;
 }
 /*# sourceMappingURL=c_main.css.map */

@@ -196,7 +196,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .content-container .artboard .header .title span {
-  color: #888888;
+  color: rgba(0, 0, 0, 0.4);
   margin-left: 18px;
   font-size: 18px;
   font-weight: 500;

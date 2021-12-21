@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/s_main.css" />
     <script type="text/javascript" src="js/hide.js"></script>
     <script type="text/javascript" src="js/toggle.js"></script>
-    <title>쉼플 - 관리자 페이지</title>
+    <title>쉼플</title>
   </head>
 
   <body>
@@ -67,9 +67,10 @@
         </a>
         <div class="sub">
           <a class="sub-item" href="s_history.html">&#45;&nbsp;&nbsp;히스토리</a>
-          <a class="sub-item active" href="s_account_read.html">&#45;&nbsp;&nbsp;계정 설정</a>
-          <a class="sub-item" href="s_db.html">&#45;&nbsp;&nbsp;항목 설정</a>
           <a class="sub-item" href="s_checker.html">&#45;&nbsp;&nbsp;누락 검사기</a>
+          <a class="sub-item" href="s_db.html">&#45;&nbsp;&nbsp;항목 설정</a>
+          <a class="sub-item active" href="s_account2_read.html">&#45;&nbsp;&nbsp;파트너 계정 설정</a>
+          <a class="sub-item" href="s_account1_read.html">&#45;&nbsp;&nbsp;관리자 계정 설정</a>
         </div>
         <a class="menu-item" href="s_myinfo_read.html">
           <img src="img/myinfo.svg" alt="myinfo" />
@@ -84,11 +85,7 @@
       <!--메인 시작-->
       <div class="artboard">
         <div class="header">
-          <div class="title">파트너 목록</div>
-          <div class="btn-group">
-            <button class="btn2-1 active">파트너 목록</button>
-            <button class="btn2-1"> 쉼플 관리자 목록</button>
-          </div>
+          <div class="title">파트너 계정<span>검색 결과 : 100개</span></div>
         </div>
         <div class="bulletin-list1" id="account-c-list">
           <div class="top">
@@ -127,6 +124,10 @@
                   </div>
                 </div>
               </div>
+              <div class="search-group">
+                <input class="search" type="text" placeholder="제목 / 내용" maxlength="15">
+                <button>검색</button>
+              </div>
             </div>
 
           </div>
@@ -149,7 +150,7 @@
                 <div>010-0000-0000</div>
                 <div>
                   <div class="btn-group">
-                    <a class="btn6-1" href="s_account_write.html">수정</a>
+                    <a class="btn6-1" href="s_account2_write.html">수정</a>
                     <button class="btn6-2">삭제</button>
                   </div>
                 </div>
@@ -163,7 +164,7 @@
                 <div>010-0000-0000</div>
                 <div>
                   <div class="btn-group">
-                    <a class="btn6-1" href="s_account_write.html">수정</a>
+                    <a class="btn6-1" href="s_account2_write.html">수정</a>
                     <button class="btn6-2">삭제</button>
                   </div>
                 </div>
@@ -177,7 +178,7 @@
                 <div>010-0000-0000</div>
                 <div>
                   <div class="btn-group">
-                    <a class="btn6-1" href="s_account_write.html">수정</a>
+                    <a class="btn6-1" href="s_account2_write.html">수정</a>
                     <button class="btn6-2">삭제</button>
                   </div>
                 </div>
@@ -191,141 +192,7 @@
                 <div>010-0000-0000</div>
                 <div>
                   <div class="btn-group">
-                    <a class="btn6-1" href="s_account_write.html">수정</a>
-                    <button class="btn6-2">삭제</button>
-                  </div>
-                </div>
-              </div>
-            </li>
-            
-          </ul>
-
-          <div class="bottom">
-            <div class="page-group">
-              <ul class="previous">
-                <li>&#60;&#60;</li>
-                <li>&#60;</li>
-              </ul>
-              <ul class="page">
-                <li class="selected">1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-              </ul>
-              <ul class="next">
-                <li>&#62;</li>
-                <li>&#62;&#62;</li>
-              </ul>
-            </div>
-          </div>  
-        </div>
-      </div>
-      <div class="artboard">
-        <div class="header">
-          <div class="title">쉼플 관리자 목록</div>
-          <div class="btn-group">
-            <button class="btn2-1">파트너 목록</button>
-            <button class="btn2-1 active"> 쉼플 관리자 목록</button>
-          </div>
-        </div>
-        <div class="bulletin-list1" id="account-s-list">
-          <div class="top">
-            <div class="row2">
-              <div class="filter-group">
-                <div class="filter">
-                  <div class="title">권한</div>
-                  <div class="options hide">
-                    <label>
-                      <input type="checkbox">모두 선택
-                    </label>
-                    <label>
-                      <input type="checkbox">1 : 최고 관리자
-                    </label>
-                    <label>
-                      <input type="checkbox">2 : 중간 관리자
-                    </label>
-                    <label>
-                      <input type="checkbox">3 : 일반 관리자
-                    </label>
-                  </div>
-                </div>
-                <div class="filter">
-                  <div class="title">10개씩 보기</div>
-                  <div class="options hide">
-                    <label class="radio-select"><input class="label" type="radio" value="10" name="eee">10개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="20" name="eee">20개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="30" name="eee">30개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="50" name="eee">50개씩 보기</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <ul class="table">
-            <li class="row-group"> 
-              <div class="title">
-                <div>권한</div>
-                <div>아이디 / 이메일</div>
-                <div>이름</div>
-                <div>연락처</div>
-                <div>수정 및 삭제</div>
-                
-              </div>
-            </li>
-            <li class="row-group"> 
-              <div class="table-row">
-                <div>3 : 일반 관리자</div>
-                <div>wjdwldhks1004@hotmail.com</div>
-                <div>정지완</div>
-                <div>010-0000-0000</div>
-                <div>
-                  <div class="btn-group">
-                    <a class="btn6-1" href="s_account_write.html">수정</a>
-                    <button class="btn6-2">삭제</button>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="row-group"> 
-              <div class="table-row">
-                <div>3 : 일반 관리자</div>
-                <div>abc@naver.com</div>
-                <div>홍길동</div>
-                <div>010-0000-0000</div>
-                <div>
-                  <div class="btn-group">
-                    <a class="btn6-1" href="s_account_write.html">수정</a>
-                    <button class="btn6-2">삭제</button>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="row-group"> 
-              <div class="table-row">
-                <div>2 : 중간 관리자</div>
-                <div>abc@naver.com</div>
-                <div>신재호</div>
-                <div>010-0000-0000</div>
-                <div>
-                  <div class="btn-group">
-                    <a class="btn6-1" href="s_account_write.html">수정</a>
-                    <button class="btn6-2">삭제</button>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="row-group"> 
-              <div class="table-row">
-                <div>1 : 최고 관리자</div>
-                <div>abc@naver.com</div>
-                <div>우소영</div>
-                <div>010-0000-0000</div>
-                <div>
-                  <div class="btn-group">
-                    <a class="btn6-1" href="s_account_write.html">수정</a>
+                    <a class="btn6-1" href="s_account2_write.html">수정</a>
                     <button class="btn6-2">삭제</button>
                   </div>
                 </div>
@@ -405,8 +272,9 @@
 
     <!--하단 Popup 시작-->
     <div id="confirm" class="bottom-popup">
-      <div class="btn-group1-1">
-        <a class="btn1-1" href="s_account_write.html">새로운 계정 생성</a>
+      <div class="btn-group2-3">
+        <a class="btn1-1" href="s_account2_write.html">계정 추가</a>
+        <a class="btn1-2" href="s_account2_list_modify.html">목록 수정</a>
       </div>
     </div>
     <!--하단 Popup 끝-->

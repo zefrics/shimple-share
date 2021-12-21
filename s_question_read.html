@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/s_main.css" />
     <script type="text/javascript" src="js/hide.js"></script>
     <script type="text/javascript" src="js/toggle.js"></script>
-    <title>쉼플 - 관리자 페이지</title>
+    <title>쉼플</title>
   </head>
 
   <body>
@@ -66,9 +66,10 @@
         </a>
         <div class="sub">
           <a class="sub-item" href="s_history.html">&#45;&nbsp;&nbsp;히스토리</a>
-          <a class="sub-item" href="s_account_read.html">&#45;&nbsp;&nbsp;계정 설정</a>
-          <a class="sub-item" href="s_db.html">&#45;&nbsp;&nbsp;항목 설정</a>
           <a class="sub-item" href="s_checker.html">&#45;&nbsp;&nbsp;누락 검사기</a>
+          <a class="sub-item" href="s_db.html">&#45;&nbsp;&nbsp;항목 설정</a>
+          <a class="sub-item" href="s_account2_read.html">&#45;&nbsp;&nbsp;파트너 계정 설정</a>
+          <a class="sub-item" href="s_account1_read.html">&#45;&nbsp;&nbsp;관리자 계정 설정</a>
         </div>
         <a class="menu-item" href="s_myinfo_read.html">
           <img src="img/myinfo.svg" alt="myinfo" />
@@ -83,9 +84,12 @@
       <!--메인 시작-->
       <div class="artboard">
         <div class="header">
-          <div class="title">문의 사항 목록<span>검색 결과 : 100개</div>
+          <div class="title">문의 사항<span>검색 결과 : 100개</div>
         </div>
-        <div class="bulletin-list1" id="qna-list">
+        <div class="bulletin-list1" id="s-question-list">
+          <div class="view-all">
+            <button class="btn10-1">전체 보기</button>
+          </div>
           <div class="top">
             <div class="row2">
               <div class="filter-group">
@@ -182,7 +186,7 @@
             </li>
             <li class="row-group selected">
               <div class="table-row">
-                <div>답변 완료</div>
+                <div>우소영</div>
                 <div>숙소 정보 변경</div>
                 <div class="link">
                   <div class="title-group">
@@ -298,13 +302,13 @@
                     <button class="btn6-2">삭제</button>
                   </div>
                   <div class="record">
-                    <div><span>작성</span>2020-11-20 12:53 신재호</div>
-                    <div><span>수정</span>2020-11-21 00:15 우소영</div>
+                    <div><span>작성</span>2020-11-20 12:53 제주 르페도라</div>
+                    <div><span>수정</span>2020-11-21 00:15 제주 르페도라</div>
                   </div>
                 </div>
 
                 <div class="content2">
-                  <div class="bulletin-write2" id="qna-reply">
+                  <div class="bulletin-write2" id="s-question-reply">
                     <div class="grid-section">
                       <div class="form3">
                         <div class="label3">답변 내용</div>
@@ -340,8 +344,6 @@
                       <div class="confirm">
                         <button class="btn1-1">답변 작성</button>
                       </div>
-
-          
                     </div>
                   </div>
                 </div>
@@ -428,14 +430,5 @@
       </div>
     </div>
     <!--숙소 목록 Popup 끝-->
-
-    <!--하단 Popup 시작-->
-    <div id="confirm" class="bottom-popup">
-      <div class="btn-group1-1">
-        <a class="btn1-1" href="s_question_write.html">문의 사항 작성</a>
-      </div>
-    </div>
-    <!--하단 Popup 끝-->
-
   </body>
 </html>

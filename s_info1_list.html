@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/u_bulletin.css" />
     <script type="text/javascript" src="js/hide.js"></script>
     <script type="text/javascript" src="js/toggle.js"></script>
-    <title>쉼플 - 예약 목록</title>
+    <title>쉼플</title>
   </head>
 
   <body>
@@ -64,9 +64,10 @@
         </a>
         <div class="sub">
           <a class="sub-item" href="s_history.html">&#45;&nbsp;&nbsp;히스토리</a>
-          <a class="sub-item" href="s_account_read.html">&#45;&nbsp;&nbsp;계정 설정</a>
-          <a class="sub-item" href="s_db.html">&#45;&nbsp;&nbsp;항목 설정</a>
           <a class="sub-item" href="s_checker.html">&#45;&nbsp;&nbsp;누락 검사기</a>
+          <a class="sub-item" href="s_db.html">&#45;&nbsp;&nbsp;항목 설정</a>
+          <a class="sub-item" href="s_account2_read.html">&#45;&nbsp;&nbsp;파트너 계정 설정</a>
+          <a class="sub-item" href="s_account1_read.html">&#45;&nbsp;&nbsp;관리자 계정 설정</a>
         </div>
         <a class="menu-item" href="s_myinfo_read.html">
           <img src="img/myinfo.svg" alt="myinfo" />
@@ -81,13 +82,31 @@
       <!--숙소 정보 시작-->
       <div class="artboard">
         <div class="header">
-          <div class="title">숙소 목록<span>검색 결과 : 100개</div>
+          <div class="title">숙소 목록<span>검색 결과 : 100개</span></div>
         </div>
         <div class="bulletin-list1" id="partner-list">
+          <div class="top">
+            <div class="row2">
+              <div class="filter-group">
+                <div class="filter">
+                  <div class="title">10개씩 보기</div>
+                  <div class="options hide">
+                    <label class="radio-select"><input class="label" type="radio" value="10" name="eee">10개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="20" name="eee">20개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="30" name="eee">30개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="50" name="eee">50개씩 보기</label>
+                  </div>
+                </div>
+              </div>
+              <div class="search-group">
+                <input class="search" type="text" placeholder="제목 / 내용" maxlength="15">
+                <button>검색</button>
+              </div>
+            </div>
+          </div>
           <ul class="table">
             <li class="row-group">
               <div class="title">
-                <div>순서</div>
                 <div>분류</div>
                 <div>지역</div>
                 <div>파트너</div>
@@ -97,7 +116,6 @@
             </li>
             <li class="row-group">
               <div class="table-row">
-                <div>1</div>
                 <div>펜션</div>
                 <div>제주</div>
                 <div>제주 르페도라 펜션</div>
@@ -112,7 +130,6 @@
             </li>
             <li class="row-group">
               <div class="table-row">
-                <div>2</div>
                 <div>호텔</div>
                 <div>서울</div>
                 <div>신라 호텔</div>
@@ -127,7 +144,6 @@
             </li>
             <li class="row-group">
               <div class="table-row">
-                <div>3</div>
                 <div>리조트</div>
                 <div>부산</div>
                 <div>웨스틴 조선</div>
@@ -142,7 +158,6 @@
             </li>
             <li class="row-group">
               <div class="table-row">
-                <div>4</div>
                 <div>리조트</div>
                 <div>부산</div>
                 <div>웨스틴 조선</div>
@@ -157,7 +172,6 @@
             </li>
             <li class="row-group">
               <div class="table-row">
-                <div>5</div>
                 <div>리조트</div>
                 <div>부산</div>
                 <div>웨스틴 조선</div>
@@ -171,6 +185,25 @@
               </div>
             </li>
           </ul>
+          <div class="bottom">
+            <div class="page-group">
+              <ul class="previous">
+                <li>&#60;&#60;</li>
+                <li>&#60;</li>
+              </ul>
+              <ul class="page">
+                <li class="selected">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+              </ul>
+              <ul class="next">
+                <li>&#62;</li>
+                <li>&#62;&#62;</li>
+              </ul>
+            </div>
+          </div> 
         </div>
       </div>
       <!--숙소 정보 끝--> 

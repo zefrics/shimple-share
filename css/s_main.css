@@ -64,7 +64,7 @@
 #s-main .summary .info-group .share-group .selectbox {
   z-index: 500;
   position: absolute;
-  top: 75px;
+  top: 70px;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
@@ -94,6 +94,10 @@
 
 #s-main .summary .info-group .share-group .selectbox .partner-group:hover {
   background-color: #eeeeee;
+}
+
+#s-main .summary .info-group .share-group .selectbox::-webkit-scrollbar {
+  display: none;
 }
 
 #s-main .div1 {

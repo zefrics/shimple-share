@@ -232,6 +232,10 @@
   height: 30px;
 }
 
+.bulletin-list1 .view-all {
+  margin-bottom: 15px;
+}
+
 .bulletin-list1 .top {
   margin-bottom: 15px;
 }
@@ -567,11 +571,10 @@
 .bulletin-list1 .table .row-group .content-group .content1 .text, .bulletin-list1 .table .row-group .content-group .content2 .text {
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 18px;
 }
 
 .bulletin-list1 .table .row-group .content-group .content1 .uploaded, .bulletin-list1 .table .row-group .content-group .content2 .uploaded {
-  margin-bottom: 18px;
+  margin-top: 18px;
 }
 
 .bulletin-list1 .table .row-group .content-group .content1 .uploaded li, .bulletin-list1 .table .row-group .content-group .content2 .uploaded li {
@@ -593,8 +596,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 18px;
   gap: 9px;
-  margin-bottom: 18px;
   width: 30%;
 }
 
@@ -603,6 +606,7 @@
 }
 
 .bulletin-list1 .table .row-group .content-group .content1 .record, .bulletin-list1 .table .row-group .content-group .content2 .record {
+  margin-top: 18px;
   font-size: 14px;
 }
 
@@ -707,46 +711,98 @@
   color: #00b4ff;
 }
 
-#c-ad-list, #s-ad-list {
+#c-ad-list {
   width: 70%;
 }
 
-#c-ad-list .title, #c-ad-list .table-row, #s-ad-list .title, #s-ad-list .table-row {
+#c-ad-list .title, #c-ad-list .table-row {
+  -ms-grid-columns: 1fr 150px 150px 165px;
+      grid-template-columns: 1fr 150px 150px 165px;
+}
+
+#c-ad-list .table-row .link .title-group {
+  max-width: 570px;
+}
+
+#s-ad-list {
+  width: 70%;
+}
+
+#s-ad-list .title, #s-ad-list .table-row {
   -ms-grid-columns: 150px 1fr 150px 150px 165px;
       grid-template-columns: 150px 1fr 150px 150px 165px;
 }
 
-#c-ad-list .table-row .link .title-group, #s-ad-list .table-row .link .title-group {
+#s-ad-list .table-row .link .title-group {
   max-width: 450px;
 }
 
-#price-list {
+#s-price-list {
   width: 70%;
 }
 
-#price-list .title, #price-list .table-row {
+#s-price-list .title, #s-price-list .table-row {
   -ms-grid-columns: 150px 1fr 180px;
       grid-template-columns: 150px 1fr 180px;
 }
 
-#qna-list {
+#s-price-list .table-row .link .title-group {
+  max-width: 720px;
+}
+
+#c-price-list {
   width: 70%;
 }
 
-#qna-list .title, #qna-list .table-row {
+#c-price-list .title, #c-price-list .table-row {
+  -ms-grid-columns: 1fr 180px;
+      grid-template-columns: 1fr 180px;
+}
+
+#c-price-list .table-row .link .title-group {
+  max-width: 840px;
+}
+
+#c-question-list {
+  width: 70%;
+}
+
+#c-question-list .title, #c-question-list .table-row {
+  -ms-grid-columns: 90px 120px 1fr 165px;
+      grid-template-columns: 90px 120px 1fr 165px;
+}
+
+#c-question-list .table-row .link .title-group {
+  max-width: 690px;
+}
+
+#c-question-list .content1 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#c-question-list .content2 .frame {
+  padding-left: 30px;
+  border-left: 3px solid rgba(0, 180, 255, 0.6);
+}
+
+#s-question-list {
+  width: 70%;
+}
+
+#s-question-list .title, #s-question-list .table-row {
   -ms-grid-columns: 90px 120px 1fr 150px 165px;
       grid-template-columns: 90px 120px 1fr 150px 165px;
 }
 
-#qna-list .table-row .link .title-group {
+#s-question-list .table-row .link .title-group {
   max-width: 540px;
 }
 
-#qna-list .content1 {
+#s-question-list .content1 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-#qna-list .content2 .frame {
+#s-question-list .content2 .frame {
   padding-left: 30px;
   border-left: 3px solid rgba(0, 180, 255, 0.6);
 }
@@ -756,11 +812,34 @@
 }
 
 #faq-list .title, #faq-list .table-row {
-  -ms-grid-columns: 60px 120px 1fr;
-      grid-template-columns: 60px 120px 1fr;
+  -ms-grid-columns: 120px 1fr;
+      grid-template-columns: 120px 1fr;
 }
 
 #faq-list .table-row .link .title-group {
+  max-width: 930px;
+}
+
+#faq-list .content1 .question {
+  padding-bottom: 21px;
+  margin-bottom: 21px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#faq-list .content1 .answer {
+  margin-bottom: 24px;
+}
+
+#faq-list-modify {
+  width: 70%;
+}
+
+#faq-list-modify .title, #faq-list-modify .table-row {
+  -ms-grid-columns: 60px 60px 1fr;
+      grid-template-columns: 60px 60px 1fr;
+}
+
+#faq-list-modify .table-row .link .title-group {
   max-width: 540px;
 }
 
@@ -786,6 +865,11 @@
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   gap: 12px;
+}
+
+#account-c-list-modify .title, #account-c-list-modify .table-row, #account-s-list-modify .title, #account-s-list-modify .table-row {
+  -ms-grid-columns: 60px 60px 240px 1fr 240px 240px;
+      grid-template-columns: 60px 60px 240px 1fr 240px 240px;
 }
 
 #reservation-list .table-row {
@@ -840,8 +924,8 @@
 }
 
 #partner-list .title, #partner-list .table-row {
-  -ms-grid-columns: 60px 120px 120px 1fr 270px 90px;
-      grid-template-columns: 60px 120px 120px 1fr 270px 90px;
+  -ms-grid-columns: 120px 120px 1fr 300px 90px;
+      grid-template-columns: 120px 120px 1fr 300px 90px;
 }
 
 #partner-list .btn-group {
@@ -874,8 +958,8 @@
 }
 
 #roomtype-list .title, #roomtype-list .table-row {
-  -ms-grid-columns: 60px 1fr 300px 120px 120px;
-      grid-template-columns: 60px 1fr 300px 120px 120px;
+  -ms-grid-columns: 1fr 300px 120px 120px;
+      grid-template-columns: 1fr 300px 120px 120px;
 }
 
 #roomtype-list .btn-group {
@@ -914,6 +998,12 @@
 
 #notice-list .table-row .link .title-group {
   max-width: 720px;
+}
+
+#notice-list .content1 .range {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 18px;
 }
 
 .bulletin-read2 .read-title {
@@ -1164,15 +1254,15 @@
   height: 30px;
 }
 
-#qna-write {
+#c-question-write {
   width: 50%;
 }
 
-#qna-reply .col-right textarea {
+#s-question-reply .col-right textarea {
   height: 150px;
 }
 
-#qna-reply .confirm {
+#s-question-reply .confirm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1181,7 +1271,7 @@
           justify-content: center;
 }
 
-#qna-reply .confirm button {
+#s-question-reply .confirm button {
   width: 36%;
 }
 
@@ -1506,13 +1596,19 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 0;
   margin-bottom: 15px;
 }
 
 .bulletin-list3 .top .title {
   font-size: 18px;
   font-weight: 600;
+}
+
+.bulletin-list3 .top .title span {
+  margin-left: 15px;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .bulletin-list3 .top .filter-group {
@@ -1681,8 +1777,11 @@
   color: #00b4ff;
 }
 
-.bulletin-list3 .bottom .page-group {
+.bulletin-list3 .bottom {
   margin-top: 18px;
+}
+
+.bulletin-list3 .bottom .page-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1762,22 +1861,22 @@
   color: #00b4ff;
 }
 
-#s-main-qna .scr-group {
+#s-main-question .scr-group {
   min-height: 150px;
   max-height: 150px;
   overflow-y: auto;
 }
 
-#s-main-qna .title, #s-main-qna .table-row {
+#s-main-question .title, #s-main-question .table-row {
   -ms-grid-columns: 78px 1fr 150px;
       grid-template-columns: 78px 1fr 150px;
 }
 
-#s-main-qna .title .partner, #s-main-qna .table-row .partner {
+#s-main-question .title .partner, #s-main-question .table-row .partner {
   word-break: break-all;
 }
 
-#s-main-qna .title .link .title-group, #s-main-qna .table-row .link .title-group {
+#s-main-question .title .link .title-group, #s-main-question .table-row .link .title-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1787,7 +1886,7 @@
   max-width: 480px;
 }
 
-#s-main-qna .title .link .shorten, #s-main-qna .table-row .link .shorten {
+#s-main-question .title .link .shorten, #s-main-question .table-row .link .shorten {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1844,9 +1943,25 @@
   max-width: 420px;
 }
 
+#c-main-notice .scr-group {
+  min-height: 195px;
+  max-height: 195px;
+  overflow-y: auto;
+}
+
 #c-main-notice .title, #c-main-notice .table-row {
-  -ms-grid-columns: 1fr 105px;
-      grid-template-columns: 1fr 105px;
+  -ms-grid-columns: 1fr 175px;
+      grid-template-columns: 1fr 175px;
+}
+
+#c-main-notice .title-group {
+  max-width: 540px;
+}
+
+#c-main-enter .scr-group, #c-main-exit .scr-group {
+  min-height: 195px;
+  max-height: 195px;
+  overflow-y: auto;
 }
 
 #c-main-enter .title, #c-main-enter .table-row, #c-main-exit .title, #c-main-exit .table-row {

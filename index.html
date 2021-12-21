@@ -12,7 +12,7 @@
     <script type="text/javascript" src="js/hide.js"></script>
     <script type="text/javascript" src="js/toggle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
-    <title>쉼플 - 제주 르페도라펜션</title>
+    <title>쉼플</title>
   </head>
 
   <body>
@@ -39,10 +39,10 @@
           <span>숙소 정보</span>
         </a>
         <div class="sub">
-          <a class="sub-item" href="c_info1.html">&#45;&nbsp;&nbsp;숙소 세부 정보</a>
-          <a class="sub-item" href="c_info2.html">&#45;&nbsp;&nbsp;객실 세부 정보</a>
+          <a class="sub-item" href="c_info1_read.html">&#45;&nbsp;&nbsp;숙소 세부 정보</a>
+          <a class="sub-item" href="c_info2_list.html">&#45;&nbsp;&nbsp;객실 세부 정보</a>
         </div>
-        <a class="menu-item" href="c_adjustment.html">
+        <a class="menu-item" href="c_adjustment3_read.html">
           <img src="img/1-4.svg" alt="1-4" />
           <span>정산</span>
         </a>
@@ -55,17 +55,16 @@
           <span>게시판</span>
         </a>
         <div class="sub">
-          <a class="sub-item" href="c_notice.html">&#45;&nbsp;&nbsp;공지 사항</a>
-          <a class="sub-item" href="c_faq.html">&#45;&nbsp;&nbsp;자주 묻는 질문</a>
-          <a class="sub-item" href="c_question.html">&#45;&nbsp;&nbsp;문의 사항</a>
+          <a class="sub-item" href="c_notice_read.html">&#45;&nbsp;&nbsp;공지 사항</a>
+          <a class="sub-item" href="c_faq_read.html">&#45;&nbsp;&nbsp;자주 묻는 질문</a>
+          <a class="sub-item" href="c_question_read.html">&#45;&nbsp;&nbsp;문의 사항</a>
         </div>
-        <a class="menu-item" href="c_myinfo.html">
+        <a class="menu-item" href="c_myinfo_read.html">
           <img src="img/myinfo.svg" alt="myinfo" />
           <span>내 정보</span>
         </a>
       </nav>
     </div>
-    
 
     <!--Main Menu 끝-->
 
@@ -74,16 +73,42 @@
       <!--메인 시작-->
       <div id="c-main">
         <div class="grid-artboard summary">
-          TODAY 2021.07.05 (월)<br>
-          (입실일 기준이 아니라 예약 완료 및 예약 취소가 발생한 시점 (입금 대기는 미포함))<br>
-          34 박<br>예약 완료<br>
-          4 박<br>예약 취소 (4박)<br>
-        </div>
-        <div class="grid-artboard div1">
-          <div class="header">
-            <div class="title">공지 사항</div>
+          <div class="info-group">
+            <div class="info date">
+              <div class="title">TODAY</div>
+              <div class="value">2021.07.05 (월)</div>
+            </div>
+            <div class="info">
+              <div class="title">예약 완료</div>
+              <div class="value">34 박</div>
+            </div>
+            <div class="info cancel">
+              <div class="title">예약 취소</div>
+              <div class="value">4 박</div>
+            </div>
+            <div class="info">
+              <div class="title">총계</div>
+              <div class="value">30 박</div>
+            </div>
           </div>
-          <div class="bulletin-list1" id="c-main-notice">
+        </div>
+
+        <div class="grid-artboard div1">
+          <div class="bulletin-list3" id="c-main-notice">
+            <div class="top">
+              <div class="title">공지 사항</div>
+              <div class="filter-group">
+                <div class="filter">
+                  <div class="title">10개씩 보기</div>
+                  <div class="options hide">
+                    <label class="radio-select"><input class="label" type="radio" value="10" name="eee">10개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="20" name="eee">20개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="30" name="eee">30개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="50" name="eee">50개씩 보기</label>
+                  </div>
+                </div>
+              </div>
+            </div>  
             <ul class="table">
               <li class="row-group">
                 <div class="title">
@@ -91,40 +116,59 @@
                   <div>작성일시</div>
                 </div>
               </li>
-
-              <li class="row-group">
-                <div class="table-row">
-                  <div class="link"><span class="badge-xs new">N</span>2022년 새해 맞이 이벤트</div>
-                  <div>2021-09-20<br>18:31:45</div>
-                </div>
-              </li>
-              <li class="row-group">
-                <div class="table-row">
-                  <div class="link"><span class="badge-xs new">N</span>2022년 새해 맞이 이벤트</div>
-                  <div>2021-09-20<br>18:31:45</div>
-                </div>
-              </li>
-              <li class="row-group">
-                <div class="table-row">
-                  <div class="link"><span class="badge-xs new">N</span>2022년 새해 맞이 이벤트</div>
-                  <div>2021-09-20<br>18:31:45</div>
-                </div>
-              </li>
-              <li class="row-group">
-                <div class="table-row">
-                  <div class="link"><span class="badge-xs new">N</span>2022년 새해 맞이 이벤트</div>
-                  <div>2021-09-20<br>18:31:45</div>
-                </div>
-              </li>
-              <li class="row-group">
-                <div class="table-row">
-                  <div class="link"><span class="badge-xs new">N</span>2022년 새해 맞이 이벤트</div>
-                  <div>2021-09-20<br>18:31:45</div>
-                </div>
-              </li>
-
+              <div class="scr-group">
+                <li class="row-group">
+                  <div class="table-row">
+                    <div class="link">
+                      <div class="title-group">
+                        <div class="shorten">2022년 공지 사항 입니다.</div>
+                      </div>
+                    </div>
+                    <div>2021-09-20 18:31:45</div>
+                  </div>
+                </li>
+                <li class="row-group">
+                  <div class="table-row">
+                    <div class="link">
+                      <div class="title-group">
+                        <div class="shorten">서버 관련 공지 사항입니다.  서버 관련 공지 사항입니다.  서버 관련 공지 사항입니다.  서버 관련 공지 사항입니다.</div>
+                      </div>
+                    </div>
+                    <div>2021-09-20 18:31:45</div>
+                  </div>
+                </li>
+                <li class="row-group">
+                  <div class="table-row">
+                    <div class="link">
+                      <div class="title-group">
+                        <div class="shorten">11월 공지 사항 입니다.</div>
+                      </div>
+                    </div>
+                    <div>2021-09-20 18:31:45</div>
+                  </div>
+                </li>
+                <li class="row-group">
+                  <div class="table-row">
+                    <div class="link">
+                      <div class="title-group">
+                        <div class="shorten">10월 공지 사항 입니다.</div>
+                      </div>
+                    </div>
+                    <div>2021-09-20 18:31:45</div>
+                  </div>
+                </li>
+                <li class="row-group">
+                  <div class="table-row">
+                    <div class="link">
+                      <div class="title-group">
+                        <div class="shorten">추가 문의 사항입니다.</div>
+                      </div>
+                    </div>
+                    <div>2021-09-20 18:31:45</div>
+                  </div>
+                </li>
+              </div>
             </ul>
-
             <div class="bottom">
               <div class="page-group">
                 <ul class="previous">
@@ -146,25 +190,41 @@
             </div> 
           </div>
         </div>
+
         <div class="grid-artboard div2">
-          <div class="header">
-            <div class="title">월별 객실 점유율</div>
-            <div class="month">
-              <div class="text">9월</div>
-              <div class="button-group">
-                <button class="btn3-1">o</button>
-                <button class="btn3-1">o</button>
+          <div class="bulletin-list3" id="monthly-share">
+            <div class="top">
+              <div class="title">월별 객실 점유율</div>
+              <div class="month-group">
+                <div class="month">9월</div>
+                <button class="btn2-3">&#60;</button>
+                <button class="btn2-3">&#62;</button>
               </div>
+            </div>
+            <div class="graph">
+              
             </div>
 
           </div>
         </div>
         <div class="grid-artboard div3">
-          <div class="header">
-            <div class="title">오늘 입실 ( 00 건 )</div>
-          </div>
-          <div class="bulletin-list1" id="c-main-enter">
+          <div class="bulletin-list3" id="c-main-enter">
+            <div class="top">
+              <div class="title">오늘 입실<span>00 건</span></div>
+              <div class="filter-group">
+                <div class="filter">
+                  <div class="title">10개씩 보기</div>
+                  <div class="options hide">
+                    <label class="radio-select"><input class="label" type="radio" value="10" name="eee">10개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="20" name="eee">20개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="30" name="eee">30개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="50" name="eee">50개씩 보기</label>
+                  </div>
+                </div>
+              </div>
+            </div>  
             <ul class="table">
+              
               <li class="row-group">
                 <div class="title">
                   <div>체크</div>
@@ -172,28 +232,36 @@
                   <div>예약 정보</div>
                 </div>
               </li>
-              <li class="row-group">
-                <div class="table-row">
-                  <div><input type="checkbox"></div>
-                  <div>최예규<br>010-0000-0000</div>
-                  <div>2명</div>
-                </div>
-              </li>
-              <li class="row-group">
-                <div class="table-row">
-                  <div><input type="checkbox"></div>
-                  <div>최예규<br>010-0000-0000</div>
-                  <div>2명</div>
-                </div>
-              </li>  
-              <li class="row-group">
-                <div class="table-row">
-                  <div><input type="checkbox"></div>
-                  <div>최예규<br>010-0000-0000</div>
-                  <div>2명</div>
-                </div>
-              </li>
-              
+              <div class="scr-group">
+                <li class="row-group">
+                  <div class="table-row">
+                    <div><input type="checkbox"></div>
+                    <div>최예규<br>010-0000-0000</div>
+                    <div>2명</div>
+                  </div>
+                </li>
+                <li class="row-group">
+                  <div class="table-row">
+                    <div><input type="checkbox"></div>
+                    <div>최예규<br>010-0000-0000</div>
+                    <div>2명</div>
+                  </div>
+                </li>  
+                <li class="row-group">
+                  <div class="table-row">
+                    <div><input type="checkbox"></div>
+                    <div>최예규<br>010-0000-0000</div>
+                    <div>2명</div>
+                  </div>
+                </li>
+                <li class="row-group">
+                  <div class="table-row">
+                    <div><input type="checkbox"></div>
+                    <div>최예규<br>010-0000-0000</div>
+                    <div>2명</div>
+                  </div>
+                </li>
+              </div>
             </ul>
             <div class="bottom">
               <div class="page-group">
@@ -216,13 +284,62 @@
             </div> 
           </div>
         </div>
-
-        
         <div class="grid-artboard div4">
-          <div class="header">
-            <div class="title">오늘 퇴실 ( 00 건 )</div>
-          </div>
-          <div class="bulletin-list1" id="c-main-exit">
+          <div class="bulletin-list3" id="c-main-enter">
+            <div class="top">
+              <div class="title">오늘 퇴실<span>00 건</span></div>
+              <div class="filter-group">
+                <div class="filter">
+                  <div class="title">10개씩 보기</div>
+                  <div class="options hide">
+                    <label class="radio-select"><input class="label" type="radio" value="10" name="eee">10개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="20" name="eee">20개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="30" name="eee">30개씩 보기</label>
+                    <label class="radio-select"><input class="label" type="radio" value="50" name="eee">50개씩 보기</label>
+                  </div>
+                </div>
+              </div>
+            </div>  
+            <ul class="table">
+              
+              <li class="row-group">
+                <div class="title">
+                  <div>체크</div>
+                  <div>예약자</div>
+                  <div>예약 정보</div>
+                </div>
+              </li>
+              <div class="scr-group">
+                <li class="row-group">
+                  <div class="table-row">
+                    <div><input type="checkbox"></div>
+                    <div>최예규<br>010-0000-0000</div>
+                    <div>2명</div>
+                  </div>
+                </li>
+                <li class="row-group">
+                  <div class="table-row">
+                    <div><input type="checkbox"></div>
+                    <div>최예규<br>010-0000-0000</div>
+                    <div>2명</div>
+                  </div>
+                </li>  
+                <li class="row-group">
+                  <div class="table-row">
+                    <div><input type="checkbox"></div>
+                    <div>최예규<br>010-0000-0000</div>
+                    <div>2명</div>
+                  </div>
+                </li>
+                <li class="row-group">
+                  <div class="table-row">
+                    <div><input type="checkbox"></div>
+                    <div>최예규<br>010-0000-0000</div>
+                    <div>2명</div>
+                  </div>
+                </li>
+              </div>
+            </ul>
             <div class="bottom">
               <div class="page-group">
                 <ul class="previous">

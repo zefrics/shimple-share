@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="css/universal.css" />
     <link rel="stylesheet" href="css/popup.css" />
     <link rel="stylesheet" href="css/u_button.css" />
-
-    <link rel="stylesheet" href="css/c_adjustment.css" />
+    <link rel="stylesheet" href="css/u_bulletin.css" />
     <script type="text/javascript" src="js/hide.js"></script>
     <script type="text/javascript" src="js/toggle.js"></script>
-    <title>쉼플 - 정산</title>
+    <title>쉼플</title>
   </head>
 
   <body>
@@ -38,10 +37,10 @@
           <span>숙소 정보</span>
         </a>
         <div class="sub">
-          <a class="sub-item" href="c_info1.html">&#45;&nbsp;&nbsp;숙소 세부 정보</a>
-          <a class="sub-item" href="c_info2.html">&#45;&nbsp;&nbsp;객실 세부 정보</a>
+          <a class="sub-item" href="c_info1_read.html">&#45;&nbsp;&nbsp;숙소 세부 정보</a>
+          <a class="sub-item" href="c_info2_list.html">&#45;&nbsp;&nbsp;객실 세부 정보</a>
         </div>
-        <a class="menu-item" href="c_adjustment.html">
+        <a class="menu-item" href="c_adjustment3_read.html">
           <img src="img/1-4.svg" alt="1-4" />
           <span>정산</span>
         </a>
@@ -49,16 +48,16 @@
           <img src="img/1-5.svg" alt="1-5" />
           <span>통계</span>
         </a>
-        <a class="menu-item accordion selected">
+        <a class="menu-item accordion">
           <img src="img/2-1.svg" alt="2-1" />
           <span>게시판</span>
         </a>
         <div class="sub">
-          <a class="sub-item" href="c_notice.html">&#45;&nbsp;&nbsp;공지 사항</a>
-          <a class="sub-item active" href="c_faq.html">&#45;&nbsp;&nbsp;자주 묻는 질문</a>
-          <a class="sub-item" href="c_question.html">&#45;&nbsp;&nbsp;문의 사항</a>
+          <a class="sub-item" href="c_notice_read.html">&#45;&nbsp;&nbsp;공지 사항</a>
+          <a class="sub-item" href="c_faq_read.html">&#45;&nbsp;&nbsp;자주 묻는 질문</a>
+          <a class="sub-item" href="c_question_read.html">&#45;&nbsp;&nbsp;문의 사항</a>
         </div>
-        <a class="menu-item" href="c_myinfo.html">
+        <a class="menu-item active" href="c_myinfo_read.html">
           <img src="img/myinfo.svg" alt="myinfo" />
           <span>내 정보</span>
         </a>
@@ -68,23 +67,21 @@
 
     <!--Content 시작 -->
     <div class="content-container">
-      <!--정산 시작-->
+
+      <!--내 정보 시작-->
       <div class="artboard">
         <div class="header">
-          <div class="title">정산</div>
+          <div class="title">내 정보</div>
         </div>
+        
       </div>
-      <!--정산 끝-->
-
-
-
+      <!--내 정보 끝-->
 
       <!--Footer 시작-->
       <footer>&copy;&nbsp;Shimple</footer>
       <!--Footer 끝-->
     </div>
     <!--Content 끝-->
-
     <!--숙소 목록 Popup 시작-->
     <div id="popup-list" class="popup-container center hide">
       <div class="popup-bg" onclick="popupListClose()"></div>
@@ -120,6 +117,5 @@
       </div>
     </div>
     <!--숙소 목록 Popup 끝-->
-
   </body>
 </html>

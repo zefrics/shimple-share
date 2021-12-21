@@ -41,7 +41,7 @@
         cursor: pointer;
         .selectbox {
           z-index: 500;
-          position: absolute; top: 75px; left: 50%; transform: translate(-50%, 0);
+          position: absolute; top: 70px; left: 50%; transform: translate(-50%, 0);
           height: 240px;
           width: 300px;
           padding: 9px 15px;
@@ -61,8 +61,10 @@
               background-color: #eeeeee;
             }
           }
+          &::-webkit-scrollbar {
+            display: none; 
+          }
         }
-
       }
     }
   }

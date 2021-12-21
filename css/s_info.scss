@@ -6,12 +6,14 @@
     }
     .calendar-month {
       td {
-        padding: 9px 15px 24px 15px;
+        height: 105px;
+        padding: 9px 15px 0 15px;
         .price-group{
           margin-top: 12px;
           display: flex; align-items: center;
           flex-direction: column;
           .price {
+            margin-top: 3px;
             font-size: 18px; font-weight: 500;
           }
           .input-group {
@@ -29,7 +31,7 @@
             }
           }
         }
-        }
+      }
     }
     .price-legend {
       border: 1px solid #bbbbbb;
