@@ -6,10 +6,6 @@
 
 body {
   font-family: Apple SD Gothic Neo;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   overflow-x: scroll;
   overflow-y: scroll;
   background-color: #f2f2f2;
@@ -442,7 +438,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .past-month {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .past-week {

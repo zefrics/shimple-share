@@ -4,7 +4,7 @@
 
 body {
   font-family: Apple SD Gothic Neo;
-  user-select: none;
+  // user-select: none; 스크롤을 막는 기능
   overflow-x: scroll; overflow-y: scroll;
   background-color: #f2f2f2;
 }
@@ -320,7 +320,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #dddddd;
 }
 .past-month {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 .past-week {
   /* opacity: 0.5; */

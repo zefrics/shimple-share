@@ -86,25 +86,29 @@
       <!--메인 시작-->
       <div class="artboard">
         <div class="header">
-          <div class="title">객실 추가 / 제주 르페도라 펜션 - Park(1F) 정보 수정</div>
-          <button class="btn6-1">다른 객실 정보 불러오기</button>
+          <div class="title">객실 추가 / 객실 수정</div>
+          <button class="btn13-1">다른 객실 정보 불러오기</button>
         </div>
         <div class="bulletin-write1 grid2-1">
           <div class="grid-section">
             <div class="form3">
               <div class="label3">객실명</div>
               <div class="col-right">
-                <div class="row">
+                <div class="row col2">
+                  <div class="content-group">
+                    <div class="sub-title">숙소명</div>
+                    <input class="content" type="text" value="제주 르페도라펜션" disabled>
+                  </div>
                   <div class="content-group">
                     <div class="sub-title">객실 타입명</div>
-                    <input class="content" type="text">
+                    <input class="content" type="text" maxlength="15">
                   </div>
                 </div>
                 <div class="row">
                   <div class="content-group">
                     <div class="sub-title">개별 객실명 및 순서</div>
 
-                    <div class="bulletin-list2" id="room-name">
+                    <div class="bulletin-list2" id="room-name-write">
                       <ul class="table">
                         <li class="title">
                           <div>선택</div>
@@ -178,7 +182,7 @@
                 <div class="row">
                   <div class="content-group">
                     <div class="sub-title">인원 추가</div>
-                    <div class="bulletin-list2" id="add-person">
+                    <div class="bulletin-list2" id="add-person-write">
                       <ul class="table">
                         <li class="title">
                           <div>선택</div>
@@ -189,7 +193,7 @@
                         <li class="table-row">
                           <div><input type="radio" name="bbb"></div>
                           <div>1</div>
-                          <div><input type="text" class="basic" value="성인"></div>
+                          <div><input type="text" class="basic" value="성인" maxlength="10"></div>
                           <div>
                             <div class="unit-group">
                               <input class="price" type="text" maxlength="7">
@@ -200,7 +204,7 @@
                         <li class="table-row">
                           <div><input type="radio" name="bbb"></div>
                           <div>2</div>
-                          <div><input type="text" class="basic" value="청소년"></div>
+                          <div><input type="text" class="basic" value="청소년" maxlength="10"></div>
                           <div>
                             <div class="unit-group">
                               <input class="price" type="text" maxlength="7">
@@ -211,7 +215,7 @@
                         <li class="table-row">
                           <div><input type="radio" name="bbb"></div>
                           <div>3</div>
-                          <div><input type="text" class="basic" value="유아"></div>
+                          <div><input type="text" class="basic" value="유아" maxlength="10"></div>
                           <div>
                             <div class="unit-group">
                               <input class="price" type="text" maxlength="7">
@@ -222,7 +226,7 @@
                         <li class="table-row">
                           <div><input type="radio" name="bbb"></div>
                           <div>4</div>
-                          <div><input type="text" class="basic" value="영아"></div>
+                          <div><input type="text" class="basic" value="영아" maxlength="10"></div>
                           <div>
                             <div class="unit-group">
                               <input class="price" type="text" maxlength="7">
@@ -233,7 +237,7 @@
                         <li class="table-row">
                           <div><input type="radio" name="bbb"></div>
                           <div>5</div>
-                          <div><input type="text" class="basic" value=""></div>
+                          <div><input type="text" class="basic" value="" maxlength="10"></div>
                           <div>
                             <div class="unit-group">
                               <input class="price" type="text" maxlength="7">
@@ -264,7 +268,7 @@
               <div class="label3">반려 동물</div>
               <div class="col-right">
                 <div class="row">
-                  <div class="bulletin-list2" id="add-pet">
+                  <div class="bulletin-list2" id="add-pet-write">
                     <ul class="table">
                       <li class="title">
                         <div>선택</div>
@@ -275,7 +279,7 @@
                       <li class="table-row">
                         <div><input type="radio" name="bbb"></div>
                         <div>1</div>
-                        <div><input type="text" class="basic" value="대형견"></div>
+                        <div><input type="text" class="basic" value="대형견" maxlength="10"></div>
                         <div>
                           <div class="unit-group">
                             <input class="price" type="text" maxlength="7">
@@ -286,7 +290,7 @@
                       <li class="table-row">
                         <div><input type="radio" name="bbb"></div>
                         <div>2</div>
-                        <div><input type="text" class="basic" value="중형견"></div>
+                        <div><input type="text" class="basic" value="중형견" maxlength="10"></div>
                         <div>
                           <div class="unit-group">
                             <input class="price" type="text" maxlength="7">
@@ -297,7 +301,7 @@
                       <li class="table-row">
                         <div><input type="radio" name="bbb"></div>
                         <div>3</div>
-                        <div><input type="text" class="basic" value="소형견"></div>
+                        <div><input type="text" class="basic" value="소형견" maxlength="10"></div>
                         <div>
                           <div class="unit-group">
                             <input class="price" type="text" maxlength="7">
@@ -308,7 +312,7 @@
                       <li class="table-row">
                         <div><input type="radio" name="bbb"></div>
                         <div>4</div>
-                        <div><input type="text" class="basic" value=""></div>
+                        <div><input type="text" class="basic" value="" maxlength="10"></div>
                         <div>
                           <div class="unit-group">
                             <input class="price" type="text" maxlength="7">
@@ -342,7 +346,7 @@
               <div class="col-right">
                 <div class="row">
                   <div class="content-group">
-                    <textarea rows="5"></textarea>
+                    <textarea rows="5" maxlength="500"></textarea>
                   </div>
                 </div>
               </div>
@@ -354,13 +358,13 @@
                 <div class="row col1-1-1">
                   <div class="content-group">
                     <div class="input-group">
-                      <input class="content" type="text" maxlength="2">
+                      <input class="content" type="text" maxlength="3">
                       <div class="unit">㎡</div>
                     </div>
                   </div>
                   <div class="content-group">
                     <div class="input-group">
-                      <input class="content" type="text" maxlength="2">
+                      <input class="content" type="text" maxlength="3">
                       <div class="unit">평</div>
                     </div>
                   </div>

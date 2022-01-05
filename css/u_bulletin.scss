@@ -19,9 +19,10 @@
   
     .content-group {
       .sub-title {
+        margin-bottom: 6px;
         font-size: 13px; font-weight: 500;
         line-height: 18px;
-        color: #666666;
+        color: rgba(0, 0 , 0, 0.45);
       }
       .input-group {
         position: relative;
@@ -149,19 +150,18 @@
   }
 }
 
-.bulletin-list1 {
-  .view-all {
-    margin-bottom: 15px;
-  }
 
+.bulletin-list1 { /*숙소세부정보, 객실세부정보, 게시판, 히스토리, 예약 목록*/
+  .view-all {
+    // margin-bottom: 15px;
+  }
   .top {
-    margin-bottom: 15px;
+    margin-top: 15px;
     .row1 {
       display: flex;
       border: 1px solid #bbbbbb;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
       padding: 21px;
-
       .item-group {
         display: flex; align-items: center;
         margin-right: 18px;
@@ -323,6 +323,7 @@
     }
   }
   .table {
+    margin-top: 15px;
     border: 1px solid #cccccc;
 
     .row-group {
@@ -347,6 +348,7 @@
         border-bottom: 1px solid rgba(0, 0 , 0, 0.1);
         font-size: 15px; font-weight: 400;
         .link {
+          padding: 12px 27px;
           color: #000000;
           cursor: pointer;
           text-decoration: none;
@@ -355,10 +357,6 @@
           }
           .badge-xs {
             margin-right: 9px;
-          }
-          .title-group {
-            display: flex; align-items: center;
-            max-width: 540px;
           }
           .shorten {
             overflow: hidden;
@@ -413,6 +411,10 @@
     }
     .row-group.selected {
       box-shadow: 0 0 0 3px rgba(0, 180, 255, 0.9) inset;
+      .link {
+        font-weight: 600;
+        color: rgba(0, 180, 255, 1);
+      }
     }
   }
   .bottom {
@@ -477,71 +479,53 @@
     }
   }
 }
-
 #c-ad-list {
   width: 70%;
-  .title, .table-row {
-    grid-template-columns: 1fr 150px 150px 165px;
-  }
-  .table-row {
-    .link {
-      .title-group {
-        max-width: 570px;
+  .top {
+    .row3 {
+      margin-top: 15px;
+      padding: 15px 21px;
+      border-radius: 15px;
+      background-color: rgba(0, 180, 255, 0.1);
+      .ad-account {
+        font-size: 18px; font-weight: 600;
+      }
+      .ad-memo {
+        margin-top: 6px;
+        font-size: 15px; font-weight: 400;
       }
     }
   }
+  .table {
+    // margin-top: 30px;
+    .title, .table-row {
+      grid-template-columns: minmax(0, 1fr) 150px 150px 165px;
+    }
+  }
+  
 }
 #s-ad-list {
   width: 70%;
   .title, .table-row {
-    grid-template-columns: 150px 1fr 150px 150px 165px;
-  }
-  .table-row {
-    .link {
-      .title-group {
-        max-width: 450px;
-      }
-    }
+    grid-template-columns: 150px minmax(0, 1fr) 150px 150px 165px;
   }
 }
 #s-price-list {
   width: 70%;
   .title, .table-row {
-    grid-template-columns: 150px 1fr 180px;
-  }
-  .table-row {
-    .link {
-      .title-group {
-        max-width: 720px;
-      }
-    }
+    grid-template-columns: 150px minmax(0, 1fr) 180px;
   }
 }
 #c-price-list {
   width: 70%;
   .title, .table-row {
-    grid-template-columns: 1fr 180px;
-  }
-  .table-row {
-    .link {
-      .title-group {
-        max-width: 840px;
-      }
-    }
+    grid-template-columns: minmax(0, 1fr) 180px;
   }
 }
-
 #c-question-list {
   width: 70%;
   .title, .table-row {
-    grid-template-columns: 90px 120px 1fr 165px;
-  }
-  .table-row {
-    .link {
-      .title-group {
-        max-width: 690px;
-      }
-    }
+    grid-template-columns: 90px 120px minmax(0, 1fr) 165px;
   }
   .content1 {
     border-bottom: 1px solid rgba(0, 0 , 0, 0.1);
@@ -556,14 +540,7 @@
 #s-question-list {
   width: 70%;
   .title, .table-row {
-    grid-template-columns: 90px 120px 1fr 150px 165px;
-  }
-  .table-row {
-    .link {
-      .title-group {
-        max-width: 540px;
-      }
-    }
+    grid-template-columns: 90px 120px minmax(0, 1fr) 150px 165px;
   }
   .content1 {
     border-bottom: 1px solid rgba(0, 0 , 0, 0.1);
@@ -575,18 +552,10 @@
     }
   }
 }
-
 #faq-list {
   width: 70%;
   .title, .table-row {
-    grid-template-columns: 120px 1fr;
-  }
-  .table-row {
-    .link {
-      .title-group {
-        max-width: 930px;
-      }
-    }
+    grid-template-columns: 120px minmax(0, 1fr);
   }
   .content1 {
     .question {
@@ -599,33 +568,23 @@
     }
   }
 }
-
 #faq-list-modify {
   width: 70%;
   .title, .table-row {
-    grid-template-columns: 60px 60px 1fr;
-  }
-  .table-row {
-    .link {
-      .title-group {
-        max-width: 540px;
-      }
-    }
+    grid-template-columns: 60px 60px minmax(0, 1fr);
   }
 }
-
 #history-list {
   .table-row {
     font-size: 14px; font-weight: 400;
   }
   .title, .table-row {
-    grid-template-columns: 165px 120px 120px 1fr 90px 165px;
+    grid-template-columns: 165px 120px 120px minmax(0, 1fr) 90px 165px;
   }
 }
-
 #account-c-list, #account-s-list {
   .title, .table-row {
-    grid-template-columns: 240px 1fr 240px 240px 240px;
+    grid-template-columns: 240px minmax(0, 1fr) 240px 240px 240px;
   }
   .btn-group {
     width: 80%;
@@ -635,17 +594,15 @@
 }
 #account-c-list-modify, #account-s-list-modify {
   .title, .table-row {
-    grid-template-columns: 60px 60px 240px 1fr 240px 240px;
+    grid-template-columns: 60px 60px 240px minmax(0, 1fr) 240px 240px;
   }
 }
-
-
 #reservation-list {
   .table-row {
     font-size: 14px; font-weight: 400;
   }
   .title, .table-row {
-    grid-template-columns: 135px 90px 90px 120px 150px 375px 105px 1fr 1fr;
+    grid-template-columns: 150px 90px 80px 120px 150px 350px 105px minmax(0, 1fr) minmax(0, 1fr);
     .contact, .schedule, .statue, .date, .price {
       display: flex; flex-direction: column;
     }
@@ -667,14 +624,30 @@
         }
       }
     }
-    
-    .btn-group1 {
-      margin-top: 6px;
-      width: 60px; 
+    .statue {
+      .btn-group1 {
+        .btn7-2 {
+          font-size: 21px;
+        }
+      }
+    }
+    .contact {
+      .btn-group2-4 {
+        margin-top: 6px;
+      }
+    }
+    .memo1, .memo2 { /*예약 목록에서 여러줄 메모 ... 처리*/
+      .text{
+        overflow: hidden;
+        display: -webkit-box;
+        white-space: normal;
+        word-wrap: break-word;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+      }
     }
   }
 }
-
 #partner-list {
   width: 70%;
   .title, .table-row {
@@ -685,7 +658,6 @@
     gap: 12px;
   }
 }
-
 #partner-list-modify {
   width: 70%;
   .title, .table-row {
@@ -696,7 +668,6 @@
     gap: 12px;
   }
 }
-
 #roomtype-list {
   width: 70%;
   .title, .table-row {
@@ -707,7 +678,6 @@
     gap: 12px;
   }
 }
-
 #roomtype-list-modify {
   width: 70%;
   .title, .table-row {
@@ -718,19 +688,10 @@
     gap: 12px;
   }
 }
-
-
 #notice-list {
   width: 70%;
   .title, .table-row {
-    grid-template-columns: 1fr 180px;
-  }
-  .table-row {
-    .link {
-      .title-group {
-        max-width: 720px;
-      }
-    }
+    grid-template-columns: minmax(0, 1fr) 180px;
   }
   .content1 {
     .range {
@@ -742,34 +703,108 @@
 }
 
 
-.bulletin-read2 {
-  .read-title {
-    font-size: 21px; font-weight: 600;
-    margin-bottom: 3px;
-  }
-  .read-info {
-    font-size: 14px; font-weight: 400;
-    padding-bottom: 15px; 
-  }
-  .read-content {
-    font-size: 16px;
-    padding: 30px 0 30px 0;
-    margin-bottom: 30px;
-    border-top: 1px solid #cccccc;
-    border-bottom: 1px solid #cccccc;
-  }
-  .uploaded {
-    li {
-      margin-bottom: 12px;
-      button {
-        padding: 6px 12px;
+.bulletin-read1 { /*숙소 세부 정보, 객실 세부 정보*/
+  .form3 {
+    margin-bottom: 75px;
+    display: grid;
+    grid-template-columns: 105px 1fr;
+    column-gap: 30px;
+  
+    .label3 {
+      font-size: 16px; font-weight: 600; color: #000000;
+    }
+    .col-right {
+      .row {
+        margin-bottom: 24px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  
+    .content-group {
+      .sub-title {
+        margin-bottom: 6px;
+        font-size: 13px; font-weight: 500;
+        line-height: 18px;
+        color: rgba(0, 0 , 0, 0.45);
+      }
+      .content {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        width: 100%;
+        // height: 36px;
+        padding: 4px 0;
+        // text-align: right;
+        font-size: 16px; font-weight: 500;
+        overflow: auto;
+        &::-webkit-scrollbar { 
+          display: none; 
+        }
+        a { /* 숙소 홈페이지 */
+          color: #000000;
+          text-decoration: none;
+          &:hover {
+            color: rgba(0, 180, 255, 1);
+          }
+        }
+      }
+      .text-box {
+        border: 1px solid rgba(0, 0 , 0, 0.15);
+        padding: 15px;
+        height: 105px;
+        font-size: 15px; font-weight: 400;
+        overflow: auto;
+        &::-webkit-scrollbar { 
+          display: none; 
+        }
+      }
+      .uploaded {
+        li {
+          margin-bottom: 12px;
+          button {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding: 6px 9px;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
       }
     }
   }
 }
+#refund-read {
+  .table {
+    li {
+      grid-template-columns: 1fr;
+    }
+    .number {
+      margin: 0 12px;
+      font-weight: 600;
+    }
+  }
+  .notice {
+    color: red;
+    font-size: 14px;
+    font-weight: 600;
+  }
 
-#ad-read {
-  width: 50%;
+}
+#holiday-read {
+  .top {
+    select {
+      width: 240px;
+      padding: 0 15px;
+      height: 33px;
+    }
+  }
+  .table {
+    li {
+      grid-template-columns: 180px 1fr;
+    }
+  }
 }
 
 
@@ -923,11 +958,9 @@
 
   }
 }
-
 #c-question-write {
   width: 50%;
 }
-
 #s-question-reply {
   .col-right {
     textarea {
@@ -941,7 +974,6 @@
     }
   }
 }
-
 #ad-extractor {
   width: 35%;
   .grid-section {
@@ -957,23 +989,20 @@
     color: #aaaaaa;
   }
 }
-
 #c-ad-write, #s-ad-write {
   width: 50%;
 }
-
 #notice-write {
   width: 50%;
 }
-
 #price-write {
   width: 50%;
 }
 
 
-.bulletin-list2 { /*환불 수수료, 공휴일 지정... */
+.bulletin-list2 { /*환불 수수료, 공휴일 지정, 객실 이름, 인원추가, 항목설정*/
   .top {
-    display: grid; justify-content: space-between;
+    display: flex; justify-content: space-between;
     margin-bottom: 15px;
   }
   .table {
@@ -1034,16 +1063,14 @@
     }
   }
 }
-
-#channel {
+#channel-write {
   .table {
     li {
       grid-template-columns: 60px 60px 1fr;
     }
   }
 }
-
-#refund {
+#refund-write {
   .table {
     li {
       grid-template-columns: 1fr;
@@ -1063,10 +1090,8 @@
   }
 
 }
-
-#holiday {
+#holiday-write {
   .top {
-    grid-template-columns: 1fr 210px;
     select {
       width: 240px;
       padding: 0 15px;
@@ -1079,16 +1104,14 @@
     }
   }
 }
-
-#room-name {
+#room-name-write {
   .table {
     li {
       grid-template-columns: 60px 60px 1fr;
     }
   }
 }
-
-#add-person, #add-pet {
+#add-person-write, #add-pet-write {
   .table {
     li {
       grid-template-columns: 60px 60px 1fr 1fr;
@@ -1111,8 +1134,7 @@
     }
   }
 }
-
-#day-price {
+#day-price { /* 요금 정보 수정시 */
   .table {
     li {
       grid-template-columns: 210px 1fr;
@@ -1141,8 +1163,7 @@
     }
   }
 }
-
-#holiday-price {
+#holiday-price { /* 요금 정보 수정시 */
   .table {
     li {
       grid-template-columns: 210px 1fr;
@@ -1178,15 +1199,13 @@
     }
   }
 }
-
 #db1 {
   .table {
     li {
-      grid-template-columns: 60px 60px 1fr 150px;
+      grid-template-columns: 60px 60px 1fr 135px;
     }
   }
 }
-
 #db2 {
   .table {
     li {
@@ -1194,6 +1213,7 @@
     }
   }
 }
+
 
 .bulletin-list3 { /*메인 페이지 리스트*/
   .top {
@@ -1286,14 +1306,12 @@
         border-bottom: 1px solid rgba(0, 0 , 0, 0.1);
         font-size: 15px; font-weight: 400;
         .link {
+          padding: 9px 15px;
           color: #000000;
           cursor: pointer;
           text-decoration: none;
           &:hover {
             color: rgba(0, 180, 255, 1);
-          }
-          .title-group {
-            display: flex; align-items: center;
           }
           .shorten {
             overflow: hidden;
@@ -1374,7 +1392,6 @@
     }
   }
 }
-
 #s-main-question {
   .scr-group {
     min-height: 150px;
@@ -1382,24 +1399,12 @@
     overflow-y: auto;
   }
   .title, .table-row {
-    grid-template-columns: 78px 1fr 150px;
+    grid-template-columns: 78px minmax(0, 1fr) 150px;
     .partner {
       word-break: break-all;
     }
-    .link {
-      .title-group {
-        display: flex; align-items: center;
-        max-width: 480px;
-      }
-      .shorten {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-    }
   }
 }
-
 #s-main-shimple {
   .scr-group {
     min-height: 240px;
@@ -1407,12 +1412,8 @@
     overflow-y: auto;
   }
   .title, .table-row {
-    grid-template-columns: 195px 1fr;
+    grid-template-columns: 195px minmax(0, 1fr);
   }
-  .title-group {
-    max-width: 510px;
-  }
-
 }
 #s-main-partner {
   .scr-group {
@@ -1421,7 +1422,7 @@
     overflow-y: auto;
   }
   .title, .table-row {
-    grid-template-columns: 150px 1fr 150px;
+    grid-template-columns: 150px minmax(0, 1fr) 150px;
     .partner {
       word-break: break-all;
     }
@@ -1433,11 +1434,7 @@
       }
     }
   }
-  .title-group {
-    max-width: 420px;
-  }
 }
-
 #c-main-notice {
   .scr-group {
     min-height: 195px;
@@ -1445,13 +1442,9 @@
     overflow-y: auto;
   }
   .title, .table-row {
-    grid-template-columns: 1fr 175px;
-  }
-  .title-group {
-    max-width: 540px;
+    grid-template-columns: minmax(0, 1fr) 175px;
   }
 }
-
 #c-main-enter, #c-main-exit {
   .scr-group {
     min-height: 195px;
@@ -1459,7 +1452,7 @@
     overflow-y: auto;
   }
   .title, .table-row {
-    grid-template-columns: 60px 135px 1fr;
+    grid-template-columns: 60px 135px minmax(0, 1fr);
   }
 }
 
@@ -1471,7 +1464,7 @@
 }
 .col1-1-1 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) ;
   column-gap: 3%;
 
   .content-group:nth-child(1) {
