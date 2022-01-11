@@ -83,17 +83,17 @@
       <div class="artboard">
         <div class="header">
           <div class="title">숙소 추가 / 숙소 세부 정보 수정</div>
-          <button class="btn10-1">다른 숙소 정보 불러오기</button>
+          <button class="btn13-1">다른 숙소 정보 불러오기</button>
         </div>
         <div class="bulletin-write1 grid2-1">
           <div class="grid-section">
             <div class="form3">
-              <div class="label3">공통 사항</div>
+              <div class="label3">기본 정보</div>
               <div class="col-right">
                 <div class="row col1-1-1">
                   <div class="content-group">
                     <div class="sub-title">숙소명</div>
-                    <input class="content" type="text" value="르페도라 펜션">
+                    <input class="content" type="text" value="제주애견동반 솔펜션" maxlength="10">
                   </div>
                   <div class="content-group">
                     <div class="sub-title">분류</div>
@@ -106,7 +106,7 @@
                   </div>
                   <div class="content-group">
                     <div class="sub-title">제휴 상태</div>
-                    <select class="content asdf">
+                    <select class="content">
                       <option>제휴</option>
                       <option class="red">미제휴</option>
                     </select>
@@ -121,29 +121,29 @@
                 <div class="row col1-1-1">
                   <div class="content-group">
                     <div class="sub-title">담당자 #1</div>
-                    <input class="content" type="text">
+                    <input class="content" type="text" maxlength="5">
                   </div>
                   <div class="content-group">
                     <div class="sub-title">연락처 #1</div>
-                    <input class="content" type="tel">
+                    <input class="content" type="tel" maxlength="20">
                   </div>
                   <div class="content-group">
                     <div class="sub-title">이메일 #1</div>
-                    <input class="content" type="email">
+                    <input class="content" type="email" maxlength="30">
                   </div>
                 </div>
                 <div class="row col1-1-1">
                   <div class="content-group">
                     <div class="sub-title">담당자 #2</div>
-                    <input class="content" type="text">
+                    <input class="content" type="text" maxlength="5">
                   </div>
                   <div class="content-group">
                     <div class="sub-title">연락처 #2</div>
-                    <input class="content" type="tel">
+                    <input class="content" type="tel" maxlength="20">
                   </div>
                   <div class="content-group">
                     <div class="sub-title">이메일 #2</div>
-                    <input class="content" type="email">
+                    <input class="content" type="email" maxlength="30">
                   </div>
                 </div>
               </div>
@@ -155,15 +155,15 @@
                 <div class="row col1-1-1">
                   <div class="content-group">
                     <div class="sub-title">연락처 #1</div>
-                    <input class="content" type="tel">
+                    <input class="content" type="tel" maxlength="20">
                   </div>
                   <div class="content-group">
                     <div class="sub-title">연락처 #2</div>
-                    <input class="content" type="tel">
+                    <input class="content" type="tel" maxlength="20">
                   </div>
                   <div class="content-group">
                     <div class="sub-title">연락처 #3</div>
-                    <input class="content" type="tel">
+                    <input class="content" type="tel" maxlength="20">
                   </div>
                 </div>
               </div>
@@ -193,6 +193,12 @@
               <div class="col-right">
                 <div class="row col1-1-1">
                   <div class="content-group">
+                    <div class="sub-title">숙소 연락처 (고객 고지용)</div>
+                    <input class="content" type="text" maxlength="20">
+                  </div>
+                </div>
+                <div class="row col1-1-1">
+                  <div class="content-group">
                     <div class="sub-title">체크인 시작</div>
                     <input class="content" type="time" step="600">
                   </div>
@@ -201,7 +207,7 @@
                     <input class="content" type="time" step="600">
                   </div>
                   <div class="content-group">
-                    <div class="sub-title">체크아웃</div>
+                    <div class="sub-title">체크 아웃</div>
                     <input class="content" type="time" step="600">
                   </div>
                 </div>
@@ -209,41 +215,47 @@
                 <div class="row">
                   <div class="content-group">
                     <div class="sub-title">주소</div>
-                    <input class="content" type="text">
+                    <input class="content" type="text" maxlength="50">
                   </div>
                 </div>
                 <div class="row col1-2">
                   <div class="content-group">
                     <div class="sub-title">지역</div>
-                    <input class="content" type="text">
+                    <input class="content" type="text" maxlength="10">
                   </div>
                   <div class="content-group">
                     <div class="sub-title">숙소 홈페이지</div>
-                    <input class="content" type="url">
+                    <input class="content" type="url" maxlength="200">
                   </div>
                 </div>
                 <div class="row">
                   <div class="content-group">
                     <div class="sub-title">숙소 소개</div>
-                    <textarea rows="5"></textarea>
+                    <textarea rows="5" maxlength="500"></textarea>
                   </div>
                 </div>
                 <div class="row">
                   <div class="content-group">
-                    <div class="sub-title">예약 안내</div>
-                    <textarea rows="5"></textarea>
+                    <div class="sub-title">이용 안내</div>
+                    <textarea rows="5" maxlength="500"></textarea>
                   </div>
                 </div>
                 <div class="row">
                   <div class="content-group">
-                    <div class="sub-title">지역 정보</div>
-                    <textarea rows="5"></textarea>
+                    <div class="sub-title">추가 요금 안내</div>
+                    <textarea rows="5" maxlength="500"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="content-group">
+                    <div class="sub-title">주변 편의 시설</div>
+                    <textarea rows="5" maxlength="500"></textarea>
                   </div>
                 </div>
                 <div class="row">
                   <div class="content-group">
                     <div class="sub-title">교통편</div>
-                    <textarea rows="5"></textarea>
+                    <textarea rows="5" maxlength="500"></textarea>
                   </div>
                 </div>
                 <div class="row">
@@ -252,7 +264,7 @@
                     <div class="preset-group">
                       <select multiple>
                         <option disabled>111</option>
-                        <option>111</option>
+                        <option>111asdfasdfasdfasdfadsfasdf1</option>
                         <option>111</option>
                         <option>111</option>
                         <option>111</option>
@@ -365,7 +377,7 @@
                 <div class="row">
                   <div class="content-group">
                     <div class="sub-title">정산 계좌</div>
-                    <input class="content" type="text">
+                    <input class="content" type="text" maxlength="30">
                   </div>
                 </div>
                 <div class="row">
@@ -411,7 +423,7 @@
               <div class="label3">판매 채널</div>
               <div class="row col1">
 
-                <div class="content-group" id="channel">
+                <div class="content-group">
                   <div class="preset-group">
                     <select multiple>
                       <option disabled>네이버</option>
@@ -446,64 +458,35 @@
             <div class="form3">
               <div class="label3">환불 수수료</div>
               <div class="row">
-                <div class="bulletin-list2" id="refund">
+                <div class="bulletin-list2" id="refund-write">
                   <ul class="table">
-                    <li class="table-row">
-                      <div>방문 0일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
+                    <li class="title">
+                      <div>취소 날짜</div>
+                      <div>환불 비율</div>
                     </li>
                     <li class="table-row">
-                      <div>방문 1일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
+                      <div>입실일 <span class="day">당일</span> 취소 시</div>
+                      <div>총 금액의 <input type="text" class="percentage" maxlength="3">% 환불</div>
                     </li>
                     <li class="table-row">
-                      <div>방문 2일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
+                      <div>입실일 <span class="day">1일 전</span> 취소 시</div>
+                      <div>총 금액의 <input type="text" class="percentage" maxlength="3">% 환불</div>
                     </li>
                     <li class="table-row">
-                      <div>방문 3일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
+                      <div>입실일 <span class="day">2일 전</span> 취소 시</div>
+                      <div>총 금액의 <input type="text" class="percentage" maxlength="3">% 환불</div>
                     </li>
                     <li class="table-row">
-                      <div>방문 4일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
+                      <div>입실일 <span class="day">3일 전</span> 취소 시</div>
+                      <div>총 금액의 <input type="text" class="percentage" maxlength="3">% 환불</div>
                     </li>
                     <li class="table-row">
-                      <div>방문 5일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
+                      <div>입실일 <span class="day">4일 전</span> 취소 시</div>
+                      <div>총 금액의 <input type="text" class="percentage" maxlength="3">% 환불</div>
                     </li>
                     <li class="table-row">
-                      <div>방문 6일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
-                    </li>
-                    <li class="table-row">
-                      <div>방문 7일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
-                    </li>
-                    <li class="table-row">
-                      <div>방문 8일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
-                    </li>
-                    <li class="table-row">
-                      <div>방문 9일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
-                    </li>
-                    <li class="table-row">
-                      <div>방문 10일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
-                    </li>
-                    <li class="table-row">
-                      <div>방문 11일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
-                    </li>
-                    <li class="table-row">
-                      <div>방문 12일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
-                    </li>
-                    <li class="table-row">
-                      <div>방문 13일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
-                    </li>
-                    <li class="table-row">
-                      <div>방문 14일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
-                    </li>
-                    <li class="table-row">
-                      <div>방문 15일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
-                    </li>
-                    <li class="table-row">
-                      <div>방문 16일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
-                    </li>
-                    <li class="table-row">
-                      <div>방문 17일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
-                    </li>
-                    <li class="table-row">
-                      <div>방문 18일전 총금액의<input type="text" class="number" maxlength="3">% 환불</div>
+                      <div>입실일 <span class="day">5일 전</span> 취소 시</div>
+                      <div>총 금액의 <input type="text" class="percentage" maxlength="3">% 환불</div>
                     </li>
                   </ul>
                   <p class="notice">* 명기되어 있지 않는 날짜는 100 % 환불</p>
@@ -522,13 +505,13 @@
             <div class="form3">
               <div class="label3">공휴일 지정</div>
               <div class="row">
-                <div class="bulletin-list2" id="holiday">
+                <div class="bulletin-list2" id="holiday-write">
                   <div class="top">
                     <select class="filter" name="" id="">
                       <option value="">2021년 공휴일</option>
                       <option value="">2020년 공휴일</option>
                     </select>
-                    <button class="btn3-1">다른 숙소 공휴일 정보 불러오기</button>
+                    <button class="btn13-1">다른 숙소 공휴일 정보 불러오기</button>
 
                   </div>
                   <ul class="table">
@@ -540,82 +523,82 @@
                     <li class="table-row">
                       <div><input type="checkbox"></div>
                       <div><input type="date" class="basic" value="2021-08-15"></div>
-                      <div><input type="text" class="basic" value="광복절"></div>
+                      <div><input type="text" class="basic" value="광복절" maxlength="10"></div>
                     </li>
                     <li class="table-row">
                       <div><input type="checkbox"></div>
                       <div><input type="date" class="basic" value="2021-07-17"></div>
-                      <div><input type="text" class="basic" value="제헌절"></div>
+                      <div><input type="text" class="basic" value="제헌절" maxlength="10"></div>
                     </li>
                     <li class="table-row">
                       <div><input type="checkbox"></div>
                       <div><input type="date" class="basic" value="2021-07-17"></div>
-                      <div><input type="text" class="basic" value="제헌절"></div>
+                      <div><input type="text" class="basic" value="제헌절" maxlength="10"></div>
                     </li>
                     <li class="table-row">
                       <div><input type="checkbox"></div>
                       <div><input type="date" class="basic" value="2021-07-17"></div>
-                      <div><input type="text" class="basic" value="제헌절"></div>
+                      <div><input type="text" class="basic" value="제헌절" maxlength="10"></div>
                     </li>
                     <li class="table-row">
                       <div><input type="checkbox"></div>
                       <div><input type="date" class="basic" value="2021-07-17"></div>
-                      <div><input type="text" class="basic" value="제헌절"></div>
+                      <div><input type="text" class="basic" value="제헌절" maxlength="10"></div>
                     </li>
                     <li class="table-row">
                       <div><input type="checkbox"></div>
                       <div><input type="date" class="basic" value="2021-07-17"></div>
-                      <div><input type="text" class="basic" value="제헌절"></div>
+                      <div><input type="text" class="basic" value="제헌절" maxlength="10"></div>
                     </li>
                     <li class="table-row">
                       <div><input type="checkbox"></div>
                       <div><input type="date" class="basic" value="2021-07-17"></div>
-                      <div><input type="text" class="basic" value="제헌절"></div>
+                      <div><input type="text" class="basic" value="제헌절" maxlength="10"></div>
                     </li>
                     <li class="table-row">
                       <div><input type="checkbox"></div>
                       <div><input type="date" class="basic" value="2021-07-17"></div>
-                      <div><input type="text" class="basic" value="제헌절"></div>
+                      <div><input type="text" class="basic" value="제헌절" maxlength="10"></div>
                     </li>
                     <li class="table-row">
                       <div><input type="checkbox"></div>
                       <div><input type="date" class="basic" value="2021-06-07"></div>
-                      <div><input type="text" class="basic" value="현충일 대체공휴일"></div>
+                      <div><input type="text" class="basic" value="현충일 대체공휴일" maxlength="10"></div>
                     </li>
                     <li class="table-row">
                       <div><input type="checkbox"></div>
                       <div><input type="date" class="basic" value="2021-05-19"></div>
-                      <div><input type="text" class="basic" value="부처님 오신날"></div>
+                      <div><input type="text" class="basic" value="부처님 오신날" maxlength="10"></div>
                     </li>
                     <li class="table-row">
                       <div><input type="checkbox"></div>
                       <div><input type="date" class="basic" value="2021-05-05"></div>
-                      <div><input type="text" class="basic" value="어린이날"></div>
+                      <div><input type="text" class="basic" value="어린이날" maxlength="10"></div>
                     </li>
                     <li class="table-row">
                       <div><input type="checkbox"></div>
                       <div><input type="date" class="basic" value="2021-05-05"></div>
-                      <div><input type="text" class="basic" value="어린이날"></div>
+                      <div><input type="text" class="basic" value="어린이날" maxlength="10"></div>
                     </li>
                     <li class="table-row">
                       <div><input type="checkbox"></div>
                       <div><input type="date" class="basic" value="2021-05-05"></div>
-                      <div><input type="text" class="basic" value="어린이날"></div>
+                      <div><input type="text" class="basic" value="어린이날" maxlength="10"></div>
                     </li>
                     <li class="table-row">
                       <div><input type="checkbox"></div>
                       <div><input type="date" class="basic" value="2021-05-05"></div>
-                      <div><input type="text" class="basic" value="어린이날"></div>
+                      <div><input type="text" class="basic" value="어린이날" maxlength="10"></div>
                     </li>
                     <li class="table-row">
                       <div><input type="checkbox"></div>
                       <div><input type="date" class="basic" value="2021-05-05"></div>
-                      <div><input type="text" class="basic" value="어린이날"></div>
+                      <div><input type="text" class="basic" value="어린이날" maxlength="10"></div>
                     </li>
                     <li class="table-row">
                       <div><input type="checkbox"></div>
                       <div><input type="date" class="basic" value="2021-05-05"></div>
-                      <div><input type="text" class="basic" value="어린이날"></div>
+                      <div><input type="text" class="basic" value="어린이날" maxlength="10"></div>
                     </li>
                     <li class="table-row">
                       <div><input type="checkbox"></div>

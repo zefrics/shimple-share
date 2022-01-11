@@ -1,10 +1,25 @@
 #price-table {
   .calendar {
-    margin-bottom: 90px;
-    .calendar-control {
-      margin-bottom: 30px;
-    }
     .calendar-month {
+      .top {
+        display: flex; justify-content: space-between;
+        margin-bottom: 15px;
+        .title {
+          font-size: 21px; font-weight: 600;
+        }
+        .calendar-control {
+          display: flex; align-items: center;
+          .year-month {
+            margin-right: 15px;
+            font-size: 21px; font-weight: 600;
+          }
+          .btn-group {
+            display: flex;
+            gap: 15px;
+          }
+        }
+
+      }
       td {
         height: 105px;
         padding: 9px 15px 0 15px;
@@ -37,6 +52,8 @@
       border: 1px solid #bbbbbb;
       padding: 21px;
       margin-bottom: auto;
+      height: 625px;
+      overflow-y: auto;
       li {
         font-size: 16px;
         display: flex;  align-items: center;
@@ -49,5 +66,8 @@
         width: 21px; height: 21px; margin-right: 9px;
       }
     }
+  }
+  #price2-write {
+    margin-top: 90px;
   }
 }

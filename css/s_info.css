@@ -1,9 +1,38 @@
-#price-table .calendar {
-  margin-bottom: 90px;
+#price-table .calendar .calendar-month .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15px;
 }
 
-#price-table .calendar .calendar-control {
-  margin-bottom: 30px;
+#price-table .calendar .calendar-month .top .title {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+#price-table .calendar .calendar-month .top .calendar-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#price-table .calendar .calendar-month .top .calendar-control .year-month {
+  margin-right: 15px;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+#price-table .calendar .calendar-month .top .calendar-control .btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
 }
 
 #price-table .calendar .calendar-month td {
@@ -63,6 +92,8 @@
   border: 1px solid #bbbbbb;
   padding: 21px;
   margin-bottom: auto;
+  height: 625px;
+  overflow-y: auto;
 }
 
 #price-table .calendar .price-legend li {
@@ -84,5 +115,9 @@
   width: 21px;
   height: 21px;
   margin-right: 9px;
+}
+
+#price-table #price2-write {
+  margin-top: 90px;
 }
 /*# sourceMappingURL=s_info.css.map */

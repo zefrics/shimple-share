@@ -138,18 +138,16 @@
   width: 5px;
 }
 .modal-contents::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 180, 255, 0.5);
+  background-color: rgba(0, 0,0, 0.15);
 }
 
 /* Modal 내용 - 라벨과 내용의 배치 */
-.modal-contents .form-type1 {
-  /* 일반 타입 */
+.modal-contents .form-type1 { /* 일반 타입 */
   display: flex;
   justify-content: space-between;
   margin-bottom: 18px;
 }
-.modal-contents .form-type2 {
-  /* 메모 타입 */
+.modal-contents .form-type2 { /* 메모 타입 */
   margin-bottom: 24px;
 }
 
@@ -239,7 +237,7 @@
   padding: 4px 6px;
   text-align: right;
   font-size: 16px; font-weight: 500;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 .modal-contents .kkk span {
   font-weight: 600;
