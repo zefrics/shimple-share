@@ -838,13 +838,8 @@
 }
 
 #account-c-list .title, #account-c-list .table-row, #account-s-list .title, #account-s-list .table-row {
-<<<<<<< HEAD
   -ms-grid-columns: 240px minmax(0, 1fr) 240px 240px 420px;
       grid-template-columns: 240px minmax(0, 1fr) 240px 240px 420px;
-=======
-  -ms-grid-columns: 240px minmax(0, 1fr) 240px 240px 240px;
-      grid-template-columns: 240px minmax(0, 1fr) 240px 240px 240px;
->>>>>>> 99674b078cf3f376292058a8550c0936e49a81ab
 }
 
 #account-c-list .btn-group, #account-s-list .btn-group {
@@ -866,15 +861,9 @@
   font-weight: 400;
 }
 
-<<<<<<< HEAD
 #c-reservation-list .title, #c-reservation-list .table-row {
   -ms-grid-columns: 90px 80px 120px 150px 350px 105px minmax(0, 1fr) minmax(0, 1fr);
       grid-template-columns: 90px 80px 120px 150px 350px 105px minmax(0, 1fr) minmax(0, 1fr);
-=======
-#reservation-list .title, #reservation-list .table-row {
-  -ms-grid-columns: 150px 90px 80px 120px 150px 350px 105px minmax(0, 1fr) minmax(0, 1fr);
-      grid-template-columns: 150px 90px 80px 120px 150px 350px 105px minmax(0, 1fr) minmax(0, 1fr);
->>>>>>> 99674b078cf3f376292058a8550c0936e49a81ab
 }
 
 #c-reservation-list .title .contact, #c-reservation-list .title .schedule, #c-reservation-list .title .statue, #c-reservation-list .title .date, #c-reservation-list .title .price, #c-reservation-list .table-row .contact, #c-reservation-list .table-row .schedule, #c-reservation-list .table-row .statue, #c-reservation-list .table-row .date, #c-reservation-list .table-row .price {
@@ -909,7 +898,6 @@
   font-weight: 600;
 }
 
-<<<<<<< HEAD
 #c-reservation-list .title .statue, #c-reservation-list .table-row .statue {
   position: relative;
 }
@@ -1006,21 +994,6 @@
 }
 
 #s-reservation-list .title .memo1 .text, #s-reservation-list .title .memo2 .text, #s-reservation-list .table-row .memo1 .text, #s-reservation-list .table-row .memo2 .text {
-=======
-#reservation-list .title .statue .btn-group1 .btn7-2, #reservation-list .table-row .statue .btn-group1 .btn7-2 {
-  font-size: 21px;
-}
-
-#reservation-list .title .contact .btn-group2-4, #reservation-list .table-row .contact .btn-group2-4 {
-  margin-top: 6px;
-}
-
-#reservation-list .title .memo1, #reservation-list .title .memo2, #reservation-list .table-row .memo1, #reservation-list .table-row .memo2 {
-  /*예약 목록에서 여러줄 메모 ... 처리*/
-}
-
-#reservation-list .title .memo1 .text, #reservation-list .title .memo2 .text, #reservation-list .table-row .memo1 .text, #reservation-list .table-row .memo2 .text {
->>>>>>> 99674b078cf3f376292058a8550c0936e49a81ab
   overflow: hidden;
   display: -webkit-box;
   white-space: normal;
@@ -1133,11 +1106,7 @@
 }
 
 .bulletin-read1 .form3 .col-right .row {
-<<<<<<< HEAD
   margin-bottom: 33px;
-=======
-  margin-bottom: 24px;
->>>>>>> 99674b078cf3f376292058a8550c0936e49a81ab
 }
 
 .bulletin-read1 .form3 .col-right .row:last-child {
@@ -1153,7 +1122,6 @@
 }
 
 .bulletin-read1 .form3 .content-group .content {
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1166,13 +1134,6 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 30px;
-=======
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  width: 100%;
-  padding: 4px 0;
-  font-size: 16px;
-  font-weight: 500;
->>>>>>> 99674b078cf3f376292058a8550c0936e49a81ab
   overflow: auto;
 }
 
@@ -1190,7 +1151,6 @@
   color: #00b4ff;
 }
 
-<<<<<<< HEAD
 .bulletin-read1 .form3 .content-group input.content {
   height: 36px;
   padding: 0 12px;
@@ -1202,12 +1162,6 @@
   border: 1px solid rgba(0, 0, 0, 0.15);
   padding: 12px 15px;
   height: 120px;
-=======
-.bulletin-read1 .form3 .content-group .text-box {
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  padding: 15px;
-  height: 105px;
->>>>>>> 99674b078cf3f376292058a8550c0936e49a81ab
   font-size: 15px;
   font-weight: 400;
   overflow: auto;
@@ -1217,7 +1171,6 @@
   display: none;
 }
 
-<<<<<<< HEAD
 .bulletin-read1 .form3 .content-group .element-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1243,8 +1196,6 @@
   color: black;
 }
 
-=======
->>>>>>> 99674b078cf3f376292058a8550c0936e49a81ab
 .bulletin-read1 .form3 .content-group .uploaded li {
   margin-bottom: 12px;
 }
@@ -1254,7 +1205,6 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   padding: 6px 9px;
-<<<<<<< HEAD
 }
 
 .bulletin-read1 .form3 .content-group .uploaded li:last-child {
@@ -1275,21 +1225,6 @@
 #refund-read .table li .percentage {
   margin: 0 9px;
   font-size: 16px;
-=======
-}
-
-.bulletin-read1 .form3 .content-group .uploaded li:last-child {
-  margin-bottom: 0;
-}
-
-#refund-read .table li {
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-}
-
-#refund-read .table .number {
-  margin: 0 12px;
->>>>>>> 99674b078cf3f376292058a8550c0936e49a81ab
   font-weight: 600;
 }
 
@@ -1308,7 +1243,6 @@
 #holiday-read .table li {
   -ms-grid-columns: 180px 1fr;
       grid-template-columns: 180px 1fr;
-<<<<<<< HEAD
 }
 
 #channel-read .table li {
@@ -1352,8 +1286,6 @@
   font-size: 14px;
   position: absolute;
   right: 15px;
-=======
->>>>>>> 99674b078cf3f376292058a8550c0936e49a81ab
 }
 
 .bulletin-write2 {
@@ -1728,7 +1660,6 @@
 }
 
 #refund-write .table li {
-<<<<<<< HEAD
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
 }
@@ -1740,13 +1671,6 @@
 }
 
 #refund-write .table li .percentage {
-=======
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-}
-
-#refund-write .table .number {
->>>>>>> 99674b078cf3f376292058a8550c0936e49a81ab
   text-align: center;
   margin: 0 6px 0 9px;
   height: 30px;
@@ -2230,13 +2154,10 @@
 #s-main-shimple .title, #s-main-shimple .table-row {
   -ms-grid-columns: 195px minmax(0, 1fr);
       grid-template-columns: 195px minmax(0, 1fr);
-<<<<<<< HEAD
 }
 
 #s-main-shimple .title .scr-group::-webkit-scrollbar {
   display: none;
-=======
->>>>>>> 99674b078cf3f376292058a8550c0936e49a81ab
 }
 
 #s-main-partner .scr-group {
@@ -2275,13 +2196,10 @@
   gap: 5px;
 }
 
-<<<<<<< HEAD
 #s-main-partner .title .scr-group::-webkit-scrollbar {
   display: none;
 }
 
-=======
->>>>>>> 99674b078cf3f376292058a8550c0936e49a81ab
 #c-main-notice .scr-group {
   min-height: 195px;
   max-height: 195px;
@@ -2289,13 +2207,8 @@
 }
 
 #c-main-notice .title, #c-main-notice .table-row {
-<<<<<<< HEAD
   -ms-grid-columns: 570px 1fr;
       grid-template-columns: 570px 1fr;
-=======
-  -ms-grid-columns: minmax(0, 1fr) 175px;
-      grid-template-columns: minmax(0, 1fr) 175px;
->>>>>>> 99674b078cf3f376292058a8550c0936e49a81ab
 }
 
 #c-main-enter .scr-group, #c-main-exit .scr-group {

@@ -265,11 +265,7 @@ button {
 /* TEXT BUTTON 모음 - 예약 수정 미 예약 취소 수정 등에서의 X*/
 .btn7-2 {
   font-weight: 100;
-<<<<<<< HEAD
   color: rgba(0, 0, 0, 0.4);
-=======
-  color: rgba(0, 0, 0, 0.5);
->>>>>>> 99674b078cf3f376292058a8550c0936e49a81ab
 }
 .btn7-2:hover {
   cursor: pointer;
