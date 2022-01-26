@@ -117,8 +117,8 @@
             </div>
             <div class="row2">
               <div class="filter-group">
-                <div class="filter">
-                  <div class="title">파트너 선택</div>
+                <div class="filter2">
+                  <div class="title" onclick="filter(this)">파트너 선택</div>
                   <div class="options hide">
                     <label>
                       <input type="checkbox">모두 선택
@@ -143,8 +143,8 @@
                     </label>
                   </div>
                 </div>
-                <div class="filter">
-                  <div class="title">항목 선택</div>
+                <div class="filter2">
+                  <div class="title" onclick="filter(this)">항목 선택</div>
                   <div class="options hide">
                     <label>
                       <input type="checkbox">모두 선택
@@ -172,8 +172,8 @@
                     </label>
                   </div>
                 </div>
-                <div class="filter">
-                  <div class="title">세부 항목 선택</div>
+                <div class="filter2">
+                  <div class="title" onclick="filter(this)">세부 항목 선택</div>
                   <div class="options hide">
                     <label>
                       <input type="checkbox">모두 선택
@@ -189,15 +189,12 @@
                     </label>
                   </div>
                 </div>
-                <div class="filter">
-                  <div class="title">10개씩 보기</div>
-                  <div class="options hide">
-                    <label class="radio-select"><input class="label" type="radio" value="10" name="eee">10개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="20" name="eee">20개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="30" name="eee">30개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="50" name="eee">50개씩 보기</label>
-                  </div>
-                </div>
+                <select class="filter1">
+                  <option value="">10개씩 보기</option>
+                  <option value="">20개씩 보기</option>
+                  <option value="">30개씩 보기</option>
+                  <option value="">50개씩 보기</option>
+                </select>
               </div>
             </div>
             

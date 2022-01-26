@@ -121,8 +121,8 @@
             </div>
             <div class="row2">
               <div class="filter-group">
-                <div class="filter">
-                  <div class="title">판매 채널 선택</div>
+                <div class="filter2">
+                  <div class="title" onclick="filter(this)">판매 채널 선택</div>
                   <div class="options hide">
                     <label>
                       <input type="checkbox">모두 선택
@@ -144,8 +144,8 @@
                     </label>
                   </div>
                 </div>
-                <div class="filter">
-                  <div class="title">파트너 선택</div>
+                <div class="filter2">
+                  <div class="title" onclick="filter(this)">파트너 선택</div>
                   <div class="options hide">
                     <label>
                       <input type="checkbox">모두 선택
@@ -167,8 +167,8 @@
                     </label>
                   </div>
                 </div>
-                <div class="filter">
-                  <div class="title">객실 타입 선택</div>
+                <div class="filter2">
+                  <div class="title" onclick="filter(this)">객실 타입 선택</div>
                   <div class="options hide">
                     <label>
                       <input type="checkbox">모두 선택
@@ -184,46 +184,26 @@
                     </label>
                   </div>
                 </div>
-                <div class="filter">
-                  <div class="title">예약 상태 선택</div>
-                  <div class="options hide">
-                    <label>
-                      <input type="checkbox">모두 선택
-                    </label>
-                    <label>
-                      <input type="checkbox">예약 완료
-                    </label>
-                    <label>
-                      <input type="checkbox">입금 대기
-                    </label>
-                    <label>
-                      <input type="checkbox">예약 취소
-                    </label>
-                  </div>
-                </div>
-                <div class="filter">
-                  <div class="title">카카오톡 발송 여부</div>
-                  <div class="options hide">
-                    <label>
-                      <input type="checkbox">모두 선택
-                    </label>
-                    <label>
-                      <input type="checkbox">발송 완료
-                    </label>
-                    <label>
-                      <input type="checkbox">미발송
-                    </label>
-                  </div>
-                </div>
-                <div class="filter">
-                  <div class="title">10개씩 보기</div>
-                  <div class="options hide">
-                    <label class="radio-select"><input class="label" type="radio" value="10" name="eee">10개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="20" name="eee">20개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="30" name="eee">30개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="50" name="eee">50개씩 보기</label>
-                  </div>
-                </div>
+                <select class="filter1">
+                  <option selected disabled>예약 상태 선택</option>
+                  <option value="">모두 선택</option>
+                  <option value="">예약 완료</option>
+                  <option value="">입금 대기</option>
+                  <option value="">예약 취소</option>
+                </select>
+                <select class="filter1">
+                  <option selected disabled>카카오톡 발송 여부</option>
+                  <option value="">모두 선택</option>
+                  <option value="">발송 완료</option>
+                  <option value="">미발송</option>
+                </select>
+                <select class="filter1">
+                  <option value="">10개씩 보기</option>
+                  <option value="">20개씩 보기</option>
+                  <option value="">30개씩 보기</option>
+                  <option value="">50개씩 보기</option>
+                </select>
+
                 <div class="disabled">
                   <div class="title">( 선택 불가 UI )</div>
                 </div>

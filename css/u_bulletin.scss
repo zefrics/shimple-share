@@ -233,8 +233,23 @@
     .row2 {
       display: flex; justify-content: space-between;
       .filter-group {
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        user-select: none;
         display: flex;
-        .filter {
+        .filter1 { // select 필터
+          margin-right: 12px;
+          cursor: pointer;
+          border: 1px solid #bbbbbb;
+          width: 180px; height: 33px;
+          font-size: 15px; line-height: 33px; font-weight: 400; text-align: center;
+          &:focus {
+            outline: 0px;
+          }
+        }
+        .filter2 {
           position: relative;
           margin-right: 12px;
           cursor: pointer;
@@ -257,7 +272,7 @@
             padding: 6px;
             max-height: 450px;
             overflow-y: auto;
-  
+            z-index: 1; // 간혹 게시판 목록들과 겹치는 경우가 있다.
             label {
               padding: 6px 3px;
               font-size: 15px;
@@ -370,6 +385,7 @@
       }
 
       .content-group {
+        display: none;
         .content1, .content2 {
           padding: 30px;
           .text {
@@ -414,6 +430,9 @@
       .link {
         font-weight: 600;
         color: rgba(0, 180, 255, 1);
+      }
+      .content-group {
+        display: block;
       }
     }
   }
@@ -752,7 +771,7 @@
     .range {
       font-size: 15px;
       color:rgba(0, 0, 0, 0.5);
-      margin-bottom: 18px;
+      margin-top: 15px;
     }
   }
 }
@@ -937,7 +956,13 @@
 
     
     .col-right {
-      .filter { /*문의 사항 및 자주 묻는 질문에서 질문 유형 선택, 공지 사항에서 공개 범위 선택*/
+      .filter1 {
+        width: 100%;
+        height: 36px; line-height: 36px;
+        font-size: 15px; font-weight: 500;
+        text-align: center;
+      }
+      .filter2 { /*문의 사항 및 자주 묻는 질문에서 질문 유형 선택, 공지 사항에서 공개 범위 선택*/
         position: relative;
         cursor: pointer;
         &:hover {
@@ -1337,6 +1362,19 @@
 
 
 .bulletin-list3 { /*메인 페이지 리스트*/
+  details {
+    &[open] {
+      // background-color: yellow;
+    }
+    summary {
+      list-style: none;
+      &:hover {
+        // cursor: pointer;
+        
+      }
+    }
+  }
+
   .top {
     display: flex; justify-content: space-between; align-items: center;
     margin-bottom: 15px;
@@ -1356,8 +1394,23 @@
       }
     }
     .filter-group {
+      -ms-user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      user-select: none;
       display: flex;
-      .filter {
+      .filter1 { // select 필터
+        margin-left: 12px;
+        cursor: pointer;
+        border: 1px solid #bbbbbb;
+        width: 180px; height: 33px;
+        font-size: 15px; line-height: 33px; font-weight: 400; text-align: center;
+        &:focus {
+          outline: 0px;
+        }
+      }
+      .filter2 {
         position: relative;
         margin-left: 12px;
         cursor: pointer;
@@ -1414,8 +1467,7 @@
         display: grid;
         text-align: center;
         > div {
-          padding: 9px;
-          border-right: 1px solid rgba(0, 0 , 0, 0.1);
+          padding: 9px 18px;
           display: flex; justify-content: center; align-items: center;
           &:last-child {
             border-right: 0;
@@ -1425,13 +1477,17 @@
       > .title {
         background-color: rgba(0, 180, 255, 0.2);
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
-        font-size: 15px; font-weight: 600;
+        font-size: 14px; font-weight: 600;
+        > div {
+
+        }
       }
       .table-row {
-        border-bottom: 1px solid rgba(0, 0 , 0, 0.1);
-        font-size: 15px; font-weight: 400;
+        border-bottom: 1px solid rgba(0, 0 , 0, 0.05);
+        font-size: 14px; font-weight: 400;
         .link {
-          padding: 9px 15px;
+          text-align: left; justify-content: left;
+          padding: 12px 21px;
           color: #000000;
           cursor: pointer;
           text-decoration: none;
@@ -1449,15 +1505,24 @@
         }
       }
       .content {
-        padding: 18px 21px;
-        font-size: 16px; font-weight: 600;
+        display: none;
+        padding: 30px 30px;
+        font-size: 15px; font-weight: 600;
+        // border-top: 1px solid rgba(0, 0 , 0, 0.1);
+        border-bottom: 1px solid rgba(0, 0 , 0, 0.05);
+
       }
     }
     .row-group.selected {
-      box-shadow: 0 0 0 3px rgba(0, 180, 255, 0.9) inset;
+      background-color: rgba(0, 0 , 0, 0.045);
+
+      // box-shadow: 0 0 0 3px rgba(0, 180, 255, 0.9) inset;
       .link {
-        font-weight: 600;
-        color: rgba(0, 180, 255, 1);
+        // font-weight: 600;
+        // color: rgba(0, 180, 255, 1);
+      }
+      .content {
+        display: block;
       }
     }
   }
@@ -1527,7 +1592,7 @@
     }
   }
   .title, .table-row {
-    grid-template-columns: 78px minmax(0, 1fr) 150px;
+    grid-template-columns: 96px minmax(0, 1fr) 156px;
     .partner {
       word-break: break-all;
     }
@@ -1543,7 +1608,7 @@
     }
   }
   .title, .table-row {
-    grid-template-columns: 195px minmax(0, 1fr);
+    grid-template-columns: 205px minmax(0, 1fr);
   }
   .title {
     .scr-group::-webkit-scrollbar { 

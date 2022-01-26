@@ -94,7 +94,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 300;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.1s ease-out;
+  // transition: max-height 0.1s ease-out;
 }
 .main-nav nav .selected + .sub {
   max-height: 100%;
@@ -134,7 +134,7 @@ body::-webkit-scrollbar-thumb {
 
   .artboard {
     // width: 1670px;
-    min-height: 450px;
+    min-height: 600px;
     width: 100%;
     margin-bottom: 30px;
     padding: 45px;

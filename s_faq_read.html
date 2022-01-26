@@ -90,8 +90,8 @@
           <div class="top">
             <div class="row2">
               <div class="filter-group">
-                <div class="filter">
-                  <div class="title">문의 유형 선택</div>
+                <div class="filter2">
+                  <div class="title" onclick="filter(this)">문의 유형 선택</div>
                   <div class="options hide">
                     <label>
                       <input type="checkbox">모두 선택
@@ -116,15 +116,12 @@
                     </label>
                   </div>
                 </div>
-                <div class="filter">
-                  <div class="title">10개씩 선택</div>
-                  <div class="options hide">
-                    <label class="radio-select"><input class="label" type="radio" value="10" name="eee">10개씩 선택</label>
-                    <label class="radio-select"><input class="label" type="radio" value="20" name="eee">20개씩 선택</label>
-                    <label class="radio-select"><input class="label" type="radio" value="30" name="eee">30개씩 선택</label>
-                    <label class="radio-select"><input class="label" type="radio" value="50" name="eee">50개씩 선택</label>
-                  </div>
-                </div>
+                <select class="filter1">
+                  <option value="">10개씩 보기</option>
+                  <option value="">20개씩 보기</option>
+                  <option value="">30개씩 보기</option>
+                  <option value="">50개씩 보기</option>
+                </select>
               </div>
               <div class="search-group">
                 <input class="search" type="text" placeholder="제목 / 내용" maxlength="15">
@@ -143,7 +140,7 @@
             <li class="row-group selected">
               <div class="table-row">
                 <div>계정 문제</div>
-                <div class="link">
+                <div class="link" onclick="detail(this)">
                   <div class="shorten">숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?  숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?  숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?</div>
                 </div>
               </div>
@@ -188,8 +185,44 @@
             <li class="row-group">
               <div class="table-row">
                 <div>계정 문제</div>
-                <div class="link">
+                <div class="link" onclick="detail(this)">
                   <div class="shorten">2022년 새해 맞이 이벤트</div>
+                </div>
+              </div>
+              <div class="content-group">
+                <div class="content1">
+                  <div class="question">
+                    질문) 숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?  숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?
+                  </div>
+                  <div class="answer">
+                    답변) 네, 가능합니다.
+                  </div>
+                  <ul class="uploaded">
+                    <li>
+                      <button class="btn8-1">파트너_르페도라_202104정산서.xlsx</button>
+                    </li>
+                    <li>
+                      <button class="btn8-1">파트너_르페도라_202104정산서.jpg</button>
+                    </li>
+                    <li>
+                      <button class="btn8-1">파트너_르페도라_202104정산서.xlsx</button>
+                    </li>
+                    <li>
+                      <button class="btn8-1">파트너_르페도라_20sdfsdfsdfsdfsdfsdffdssdf2104정산서.jpg</button>
+                    </li>
+                    <li>
+                      <button class="btn8-1">파트너_르페도라_202104정산서.xlsx</button>
+                    </li>
+                  </ul>
+
+                  <div class="btn-group">
+                    <a class="btn6-1" href="s_notice_write.html">수정</a>
+                    <button class="btn6-2">삭제</button>
+                  </div>
+                  <div class="record">
+                    <div><span>작성</span>2020-11-20 12:53 제주애견동반 솔펜션</div>
+                    <div><span>수정</span>2020-11-21 00:15 제주애견동반 솔펜션</div>
+                  </div>
                 </div>
               </div>
             </li>
@@ -197,8 +230,44 @@
             <li class="row-group">
               <div class="table-row">
                 <div>계정 문제</div>
-                <div class="link">
+                <div class="link" onclick="detail(this)">
                   <div class="shorten">2021년 연말 이벤트</div>
+                </div>
+              </div>
+              <div class="content-group">
+                <div class="content1">
+                  <div class="question">
+                    질문) 숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?  숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?
+                  </div>
+                  <div class="answer">
+                    답변) 네, 가능합니다.
+                  </div>
+                  <ul class="uploaded">
+                    <li>
+                      <button class="btn8-1">파트너_르페도라_202104정산서.xlsx</button>
+                    </li>
+                    <li>
+                      <button class="btn8-1">파트너_르페도라_202104정산서.jpg</button>
+                    </li>
+                    <li>
+                      <button class="btn8-1">파트너_르페도라_202104정산서.xlsx</button>
+                    </li>
+                    <li>
+                      <button class="btn8-1">파트너_르페도라_20sdfsdfsdfsdfsdfsdffdssdf2104정산서.jpg</button>
+                    </li>
+                    <li>
+                      <button class="btn8-1">파트너_르페도라_202104정산서.xlsx</button>
+                    </li>
+                  </ul>
+
+                  <div class="btn-group">
+                    <a class="btn6-1" href="s_notice_write.html">수정</a>
+                    <button class="btn6-2">삭제</button>
+                  </div>
+                  <div class="record">
+                    <div><span>작성</span>2020-11-20 12:53 제주애견동반 솔펜션</div>
+                    <div><span>수정</span>2020-11-21 00:15 제주애견동반 솔펜션</div>
+                  </div>
                 </div>
               </div>
             </li>

@@ -86,7 +86,7 @@
         <div class="grid-artboard summary">
           <div class="info-group">
             <div class="info date">
-              <div class="title">TODAY</div>
+              <div class="title ttt">TODAY</div>
               <div class="value">2021.07.05 (월)</div>
             </div>
             <div class="info">
@@ -134,16 +134,15 @@
             <div class="top">
               <div class="title">쉼플 처리 내역</div>
               <div class="filter-group">
-                <div class="filter">
-                  <div class="title">직원명 선택</div>
+                <div class="filter2">
+                  <div class="title" onclick="filter(this)">직원명 선택</div>
                   <div class="options hide">
                     <label>
-                      <input type="checkbox">모두 선택
+                      <input type="checkbox" oncLick="selectAll(this)">모두 선택
                     </label>
                     <label>
                       <input type="checkbox">신재호
                     </label>
-                    
                     <label>
                       <input type="checkbox">우소영
                     </label>
@@ -152,15 +151,12 @@
                     </label>
                   </div>
                 </div>
-                <div class="filter">
-                  <div class="title">10개씩 보기</div>
-                  <div class="options hide">
-                    <label class="radio-select"><input class="label" type="radio" value="10" name="eee">10개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="20" name="eee">20개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="30" name="eee">30개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="50" name="eee">50개씩 보기</label>
-                  </div>
-                </div>
+                <select class="filter1">
+                  <option value="">10개씩 보기</option>
+                  <option value="">20개씩 보기</option>
+                  <option value="">30개씩 보기</option>
+                  <option value="">50개씩 보기</option>
+                </select>
               </div>
             </div>  
             <ul class="table">
@@ -171,10 +167,23 @@
                 </div>
               </li>
               <div class="scr-group">
-                <li class="row-group selected">
+                <li class="row-group">
                   <div class="table-row">
                     <div>신재호호 2021-09-20 18:31</div>
-                    <div class="link">
+                    <div class="link" onclick="detail(this)">
+                      <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="text">
+                      [예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)
+                    </div>
+                  </div>
+                </li>
+                <li class="row-group">
+                  <div class="table-row">
+                    <div>신재호호 2021-09-20 18:31</div>
+                    <div class="link" onclick="detail(this)">
                       <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
                     </div>
                   </div>
@@ -187,11 +196,11 @@
                 <li class="row-group">
                   <div class="table-row">
                     <div>신재호호 2021-09-20 18:31</div>
-                    <div class="link">
+                    <div class="link" onclick="detail(this)">
                       <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
                     </div>
                   </div>
-                  <div class="content hide">
+                  <div class="content">
                     <div class="text">
                       [예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)
                     </div>
@@ -200,11 +209,11 @@
                 <li class="row-group">
                   <div class="table-row">
                     <div>신재호호 2021-09-20 18:31</div>
-                    <div class="link">
+                    <div class="link" onclick="detail(this)">
                       <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
                     </div>
                   </div>
-                  <div class="content hide">
+                  <div class="content">
                     <div class="text">
                       [예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)
                     </div>
@@ -213,24 +222,11 @@
                 <li class="row-group">
                   <div class="table-row">
                     <div>신재호호 2021-09-20 18:31</div>
-                    <div class="link">
+                    <div class="link" onclick="detail(this)">
                       <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
                     </div>
                   </div>
-                  <div class="content hide">
-                    <div class="text">
-                      [예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)
-                    </div>
-                  </div>
-                </li>
-                <li class="row-group">
-                  <div class="table-row">
-                    <div>신재호호 2021-09-20 18:31</div>
-                    <div class="link">
-                      <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
-                    </div>
-                  </div>
-                  <div class="content hide">
+                  <div class="content">
                     <div class="text">
                       [예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)
                     </div>
@@ -261,27 +257,18 @@
           </div>
         </div>
         <div class="grid-artboard div2">
-          
           <div class="bulletin-list3" id="s-main-question">
             <div class="top">
               <div class="title"><a href="s_question_read.html">문의 사항</a></div>
               <div class="filter-group">
-                <div class="filter">
-                  <div class="title">답변 상태 선택</div>
-                  <div class="options hide">
-                    <label>
-                      <input type="checkbox">모두 선택
-                    </label>
-                    <label>
-                      <input type="checkbox">미답변
-                    </label>
-                    <label>
-                      <input type="checkbox">답변 완료
-                    </label>
-                  </div>
-                </div>
-                <div class="filter">
-                  <div class="title">파트너 선택</div>
+                <select class="filter1">
+                  <option selected disabled>답변 상태 선택</option>
+                  <option value="">모두 선택</option>
+                  <option value="">미답변</option>
+                  <option value="">답변 완료</option>
+                </select>
+                <div class="filter2">
+                  <div class="title" onclick="filter(this)">파트너 선택</div>
                   <div class="options hide">
                     <label>
                       <input type="checkbox">모두 선택
@@ -303,19 +290,16 @@
                     </label>
                   </div>
                 </div>
-                <div class="filter">
-                  <div class="title">10개씩 보기</div>
-                  <div class="options hide">
-                    <label class="radio-select"><input class="label" type="radio" value="10" name="eee">10개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="20" name="eee">20개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="30" name="eee">30개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="50" name="eee">50개씩 보기</label>
-                  </div>
-                </div>
+                <select class="filter1">
+                  <option value="">10개씩 보기</option>
+                  <option value="">20개씩 보기</option>
+                  <option value="">30개씩 보기</option>
+                  <option value="">50개씩 보기</option>
+                </select>
               </div>
             </div>
-            <ul class="table">
 
+            <ul class="table">
               <li class="row-group">
                 <div class="title">
                   <div>답변</div>
@@ -374,28 +358,19 @@
             </div> 
           </div>
         </div>
-        
         <div class="grid-artboard div3">
           <div class="bulletin-list3" id="s-main-partner">
             <div class="top">
               <div class="title">파트너 처리 내역</div>
               <div class="filter-group">
-                <div class="filter">
-                  <div class="title">체크 여부 선택</div>
-                  <div class="options hide">
-                    <label>
-                      <input type="checkbox">모두 선택
-                    </label>
-                    <label>
-                      <input type="checkbox">체크 완료
-                    </label>
-                    <label>
-                      <input type="checkbox">미체크
-                    </label>
-                  </div>
-                </div>
-                <div class="filter">
-                  <div class="title">파트너 선택</div>
+                <select class="filter1">
+                  <option selected disabled>체크 여부 선택</option>
+                  <option value="">모두 선택</option>
+                  <option value="">체크 완료</option>
+                  <option value="">미체크</option>
+                </select>
+                <div class="filter2">
+                  <div class="title" onclick="filter(this)">파트너 선택</div>
                   <div class="options hide">
                     <label>
                       <input type="checkbox">모두 선택
@@ -417,16 +392,12 @@
                     </label>
                   </div>
                 </div>
-                
-                <div class="filter">
-                  <div class="title">10개씩 보기</div>
-                  <div class="options hide">
-                    <label class="radio-select"><input class="label" type="radio" value="10" name="eee">10개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="20" name="eee">20개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="30" name="eee">30개씩 보기</label>
-                    <label class="radio-select"><input class="label" type="radio" value="50" name="eee">50개씩 보기</label>
-                  </div>
-                </div>
+                <select class="filter1">
+                  <option value="">10개씩 보기</option>
+                  <option value="">20개씩 보기</option>
+                  <option value="">30개씩 보기</option>
+                  <option value="">50개씩 보기</option>
+                </select>
               </div>
             </div>
             <ul class="table">
@@ -447,25 +418,25 @@
                       </div>
                       <div>2021-09-20 18:31</div>
                     </div>
-                    <div class="link">
-                      <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
+                    <div class="link" onclick="detail(this)">
+                      <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
                     </div>
                     <div class="partner">제주애견동반 솔펜션<br>2021-09-20 18:31</div>
                   </div>
-                  <div class="content hide">
+                  <div class="content">
                     <div class="text">
                       [예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)
                     </div>
                   </div>
                 </li>
-                <li class="row-group selected">
+                <li class="row-group">
                   <div class="table-row">
                     <div class="check-group">
                       <div class="check">
                         <input type="checkbox">
                       </div>
                     </div>
-                    <div class="link">
+                    <div class="link" onclick="detail(this)">
                       <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
                     </div>
                     <div class="partner">제주애견동반 솔펜션<br>2021-09-20 18:31</div>
@@ -485,12 +456,12 @@
                       </div>
                       <div>2021-09-20 18:31</div>
                     </div>
-                    <div class="link">
+                    <div class="link" onclick="detail(this)">
                       <div class="shorten">[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)</div>
                     </div>
                     <div class="partner">제주애견동반 솔펜션<br>2021-09-20 18:31</div>
                   </div>
-                  <div class="content hide">
+                  <div class="content">
                     <div class="text">
                       [예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)[예약 취소] 13평 온돌 / 오손도손 / 2021-11-29 (3박)
                     </div>
