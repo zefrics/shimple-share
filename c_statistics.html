@@ -73,7 +73,6 @@
       <!--통계 시작-->
       <div id="c-statistic">
         <div class="grid-artboard div1" id="summary">
-
           <div class="col" id="calendar">
             <div class="info-group">
               <div class="value">2021년 07월</div>
@@ -93,7 +92,7 @@
               <div class="value">
                 12,000,000 원
                 <div class="sub">
-                  <span>(쉼플 10,000,000원 + 직판 2,000,000원)</span>
+                  <span>(쉼플 10,000,000 원 + 직판 2,000,000 원)</span>
                 </div>
               </div>
             </div>
@@ -109,14 +108,77 @@
         </div>
 
         <div class="grid-artboard div2">
-          <div class="title">
-            타입별 판매 상세 (표)
+          <div class="top">
+            <div class="title">
+              타입별 판매 상세 (표)
+            </div>
+          </div>
+          <div class="bulletin-list3" id="types">
+            <ul class="table">
+              <li class="row-group">
+                <div class="title">
+                  <div>객실 타입</div>
+                  <div>평균 객단가</div>
+                  <div>판매 수량</div>
+                  <div>판매 불가 수량</div>
+                  <div>판매 금액</div>
+                </div>
+              </li>
+              <li class="row-group">
+                <div class="table-row">
+                  <div>Park (1F)</div>
+                  <div>100,000 원</div>
+                  <div>100 박</div>
+                  <div>10 박</div>
+                  <div>10,000,000 원</div>
+                </div>
+              </li>
+              <li class="row-group">
+                <div class="table-row">
+                  <div>Ocean (2F)</div>
+                  <div>100,000 원</div>
+                  <div>100 박</div>
+                  <div>10 박</div>
+                  <div>10,000,000 원</div>
+                </div>
+              </li>
+              <li class="row-group">
+                <div class="table-row">
+                  <div>Sky Ocean (3F)</div>
+                  <div>100,000 원</div>
+                  <div>100 박</div>
+                  <div>10 박</div>
+                  <div>10,000,000 원</div>
+                </div>
+              </li>
+              <li class="row-group">
+                <div class="table-row">
+                  <div>Sky Ocean (3F)</div>
+                  <div>100,000 원</div>
+                  <div>100 박</div>
+                  <div>10 박</div>
+                  <div>10,000,000 원</div>
+                </div>
+              </li>
+              <li class="row-group">
+                <div class="table-row">
+                  <div>Sky Ocean (3F)</div>
+                  <div>100,000 원</div>
+                  <div>100 박</div>
+                  <div>10 박</div>
+                  <div>10,000,000 원</div>
+                </div>
+              </li>
+              
+            </ul>
           </div>
         </div>
         
         <div class="grid-artboard div3">
-          <div class="title">
-            타입별 판매 상세 그래프
+          <div class="top">
+            <div class="title">
+              타입별 판매 상세 그래프
+            </div>
           </div>
           <div class="chart">
             <canvas id="myChart1"></canvas>
@@ -194,7 +256,11 @@
         </div>
 
         <div class="grid-artboard div4" id="sales">
-          <div class="title">매출 지표</div>
+          <div class="top">
+            <div class="title">
+              매출 지표
+            </div>
+          </div>
             <div class="chart">
               <canvas id="myChart2"></canvas>
               <script>
@@ -232,7 +298,7 @@
                               value = value.toString();
                               value = value.split(/(?=(?:...)*$)/);
                               value = value.join(',');
-                              value = '₩ ' + value;
+                              value = value + ' 원';
                               return value;
                             }
                           },
@@ -252,7 +318,7 @@
                             value = value.toString();
                             value = value.split(/(?=(?:...)*$)/);
                             value = value.join(',');
-                            value = '₩' + value;
+                            value = value + ' 원';
                             return label + ' : ' + value;
                           }
                         }
@@ -283,7 +349,7 @@
             <a href="s_main.html"><li>쉼플 관리자 페이지</li></a>
             <li>근동이네독채민박</li>
             <li>마레보리조트</li>
-            <a href="index.html"><li>제주 르페도라펜션</li></a>
+            <a href="c_calendar.html"><li>제주 르페도라펜션</li></a>
             <li>제주애견동반 솔펜션</li>
             <li>플라이진하우스</li>
             <li>근동이네독채민박</li>

@@ -72,31 +72,39 @@
     <div class="content-container">
       <!--메인 시작-->
       <div id="c-main">
-        <div class="grid-artboard summary">
-          <div class="info-group">
-            <div class="info date">
+        <div class="grid-artboard div1" id="summary">
+          <div class="col" id="calendar">
+            <div class="info-group">
               <div class="title">TODAY</div>
               <div class="value">2021.07.05 (월)</div>
             </div>
-            <div class="info">
+          </div>
+          <div class="col">
+            <div class="info-group">
               <div class="title">예약 완료</div>
               <div class="value">34 박</div>
             </div>
-            <div class="info">
+          </div>
+          <div class="col">
+            <div class="info-group">
               <div class="title">입금 대기</div>
               <div class="value">5 박</div>
             </div>
-            <div class="info cancel">
+          </div>
+          <div class="col">
+            <div class="info-group">
               <div class="title">예약 취소</div>
               <div class="value">4 박</div>
             </div>
-            <div class="info">
+          </div>
+          <div class="col">
+            <div class="info-group">
               <div class="title">총계</div>
               <div class="value">30 박</div>
             </div>
           </div>
         </div>
-        <div class="grid-artboard div1">
+        <div class="grid-artboard div2">
           <div class="bulletin-list3" id="c-main-notice">
             <div class="top">
               <div class="title">공지 사항</div>
@@ -188,7 +196,7 @@
             </div> 
           </div>
         </div>
-        <div class="grid-artboard div2">
+        <div class="grid-artboard div3">
           <div class="bulletin-list3" id="monthly-share">
             <div class="top">
               <div class="title">월별 객실 점유율 :&nbsp;&nbsp;95%</div>
@@ -198,81 +206,79 @@
                 <button class="btn2-3">&#62;</button>
               </div>
             </div>
-            <div class="container">
-              <div class="chart">
-                <canvas id="myChart"></canvas>
-                <script>
-                  var ctx = document.getElementById('myChart').getContext('2d');
-                  var myChart = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                      labels: ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31'],
-                      datasets: [
-                        {
-                          label: "01",
-                          backgroundColor: "rgba(0, 180, 255, 0.9)",
-                          data: [100,3,50,65,70,90,100]
-                        }
-                      ]
-                      // datasets: [{
-                      //     label: '# of Votes',
-                      //     data: [12, 19, 3, 5, 2, 3],
-                      //     backgroundColor: [
-                      //         'rgba(255, 99, 132, 0.2)',
-                      //         'rgba(54, 162, 235, 0.2)',
-                      //         'rgba(255, 206, 86, 0.2)',
-                      //         'rgba(75, 192, 192, 0.2)',
-                      //         'rgba(153, 102, 255, 0.2)',
-                      //         'rgba(255, 159, 64, 0.2)'
-                      //     ],
-                      //     borderColor: [
-                      //         'rgba(255, 99, 132, 1)',
-                      //         'rgba(54, 162, 235, 1)',
-                      //         'rgba(255, 206, 86, 1)',
-                      //         'rgba(75, 192, 192, 1)',
-                      //         'rgba(153, 102, 255, 1)',
-                      //         'rgba(255, 159, 64, 1)'
-                      //     ],
-                      //     borderWidth: 1
-                      // }]
-                    },
-
-                    options: {
-                      animation: false,
-                      responsive: true,
-                      maintainAspectRatio: false,
-                      legend: {
-                        display: false
-                      },
-                      tooltips: {
-                        displayColors: false,
-                      // enabled: false
-                        callbacks: {
-                          title: (item) => ``,
-                          label: (item) => `${item.yLabel}%`
-                        }
-                      },
-                      scales: {
-                        yAxes: [{
-                          ticks: {
-                            beginAtZero: true,
-                            stepSize: 25,
-                            callback: function(value) {
-                              value = value + '%';
-                              return value;
-                            }
-                          }  
-                        }]
+            <div class="chart">
+              <canvas id="myChart"></canvas>
+              <script>
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                  type: 'bar',
+                  data: {
+                    labels: ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31'],
+                    datasets: [
+                      {
+                        label: "01",
+                        backgroundColor: "rgba(0, 180, 255, 0.9)",
+                        data: [100,3,50,65,70,90,100]
                       }
+                    ]
+                    // datasets: [{
+                    //     label: '# of Votes',
+                    //     data: [12, 19, 3, 5, 2, 3],
+                    //     backgroundColor: [
+                    //         'rgba(255, 99, 132, 0.2)',
+                    //         'rgba(54, 162, 235, 0.2)',
+                    //         'rgba(255, 206, 86, 0.2)',
+                    //         'rgba(75, 192, 192, 0.2)',
+                    //         'rgba(153, 102, 255, 0.2)',
+                    //         'rgba(255, 159, 64, 0.2)'
+                    //     ],
+                    //     borderColor: [
+                    //         'rgba(255, 99, 132, 1)',
+                    //         'rgba(54, 162, 235, 1)',
+                    //         'rgba(255, 206, 86, 1)',
+                    //         'rgba(75, 192, 192, 1)',
+                    //         'rgba(153, 102, 255, 1)',
+                    //         'rgba(255, 159, 64, 1)'
+                    //     ],
+                    //     borderWidth: 1
+                    // }]
+                  },
+
+                  options: {
+                    animation: false,
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    legend: {
+                      display: false
+                    },
+                    tooltips: {
+                      displayColors: false,
+                    // enabled: false
+                      callbacks: {
+                        title: (item) => ``,
+                        label: (item) => `${item.yLabel}%`
+                      }
+                    },
+                    scales: {
+                      yAxes: [{
+                        ticks: {
+                          beginAtZero: true,
+                          stepSize: 25,
+                          callback: function(value) {
+                            value = value + '%';
+                            return value;
+                          }
+                        }  
+                      }]
                     }
-                  });
-                </script>
-              </div>
+                  }
+                });
+              </script>
             </div>
 
           </div>
         </div>
-        <div class="grid-artboard div3">
+        <div class="grid-artboard div4">
           <div class="bulletin-list3" id="c-main-enter">
             <div class="top">
               <div class="title">오늘 입실<span>체크 2건 / 전체 12건</span></div>
@@ -325,7 +331,7 @@
             </ul>
           </div>
         </div>
-        <div class="grid-artboard div4">
+        <div class="grid-artboard div5">
           <div class="bulletin-list3" id="c-main-enter">
             <div class="top">
               <div class="title">오늘 퇴실<span>체크 2건 / 전체 12건</span></div>
@@ -398,7 +404,7 @@
             <a href="s_main.html"><li>쉼플 관리자 페이지</li></a>
             <li>근동이네독채민박</li>
             <li>마레보리조트</li>
-            <a href="index.html"><li>제주 르페도라펜션</li></a>
+            <a href="c_calendar.html"><li>제주 르페도라펜션</li></a>
             <li>제주애견동반 솔펜션</li>
             <li>플라이진하우스</li>
             <li>근동이네독채민박</li>

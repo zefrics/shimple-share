@@ -1,4 +1,11 @@
 /* Popup 시작 */
+#popup-list {
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
 .popup-container {
   height: 100%;
   left: 0;

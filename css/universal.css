@@ -39,6 +39,15 @@ body::-webkit-scrollbar-thumb {
   z-index: 500;
   width: 180px;
   height: 100%;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  overflow-y: auto;
+}
+
+.main-nav::-webkit-scrollbar {
+  display: none;
 }
 
 .main-nav a {

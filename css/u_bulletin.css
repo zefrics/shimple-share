@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .bulletin-write1 {
-  /*숙소세부정보, 객실세부정보*/
+  /*숙소세부정보, 객실세부정보, 파트너계정생성및수정, 관리자계정및수정*/
 }
 
 .bulletin-write1 .form3 {
@@ -107,6 +107,25 @@
           justify-content: space-between;
 }
 
+.bulletin-write1 .form3 .content-group .btn-group {
+  /*숙소 및 객실 세부 정보에서 항목 설정에서 설정한 내용 적용하는 버튼*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.bulletin-write1 .form3 .content-group .btn-group .ordering {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 6px;
+  width: 225px;
+}
+
 .bulletin-write1 .form3 .content-group .options {
   /* 계정 설정에서 소속 선택시 */
   border: 1px solid #cccccc;
@@ -138,24 +157,6 @@
 
 .bulletin-write1 .form3 .content-group .options label:last-child {
   margin-bottom: 0;
-}
-
-.bulletin-write1 .form3 .content-group .btn-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.bulletin-write1 .form3 .content-group .btn-group .ordering {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 6px;
-  width: 225px;
 }
 
 .bulletin-write1 .form3 .content {
@@ -288,7 +289,7 @@
   margin-right: 3px;
   font-size: 15px;
   line-height: 33px;
-  border: 1px solid #cfcfcf;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   height: 33px;
 }
 
@@ -522,7 +523,7 @@
 
 .bulletin-list1 .table .row-group > .title > div, .bulletin-list1 .table .row-group .table-row > div {
   padding: 12px;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -547,7 +548,7 @@
 }
 
 .bulletin-list1 .table .row-group > .table-row {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   font-size: 15px;
   font-weight: 400;
 }
@@ -584,6 +585,7 @@
 
 .bulletin-list1 .table .row-group .content-group .content1, .bulletin-list1 .table .row-group .content-group .content2 {
   padding: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .bulletin-list1 .table .row-group .content-group .content1 .text, .bulletin-list1 .table .row-group .content-group .content2 .text {
@@ -639,7 +641,6 @@
 }
 
 .bulletin-list1 .table .row-group.selected .link {
-  font-weight: 600;
   color: #00b4ff;
 }
 
@@ -802,7 +803,7 @@
 }
 
 #c-question-list .content1 {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 #c-question-list .content2 .frame {
@@ -820,7 +821,7 @@
 }
 
 #s-question-list .content1 {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 #s-question-list .content2 .frame {
@@ -866,23 +867,58 @@
       grid-template-columns: 165px 120px 120px minmax(0, 1fr) 90px 165px;
 }
 
-#account-c-list .title, #account-c-list .table-row, #account-s-list .title, #account-s-list .table-row {
-  -ms-grid-columns: 240px minmax(0, 1fr) 240px 240px 420px;
-      grid-template-columns: 240px minmax(0, 1fr) 240px 240px 420px;
+#account-c-list {
+  width: 70%;
 }
 
-#account-c-list .btn-group, #account-s-list .btn-group {
+#account-c-list .title, #account-c-list .table-row {
+  -ms-grid-columns: 210px minmax(0, 1fr) 105px 180px 330px;
+      grid-template-columns: 210px minmax(0, 1fr) 105px 180px 330px;
+}
+
+#account-c-list .btn-group {
   width: 90%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  gap: 12px;
+  gap: 9px;
 }
 
-#account-c-list-modify .title, #account-c-list-modify .table-row, #account-s-list-modify .title, #account-s-list-modify .table-row {
-  -ms-grid-columns: 60px 60px 240px minmax(0, 1fr) 240px 240px;
-      grid-template-columns: 60px 60px 240px minmax(0, 1fr) 240px 240px;
+#account-s-list {
+  width: 70%;
+}
+
+#account-s-list .title, #account-s-list .table-row {
+  -ms-grid-columns: 135px minmax(0, 1fr) 105px 165px 120px 330px;
+      grid-template-columns: 135px minmax(0, 1fr) 105px 165px 120px 330px;
+}
+
+#account-s-list .btn-group {
+  width: 90%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 9px;
+}
+
+#account-c-list-modify {
+  width: 70%;
+}
+
+#account-c-list-modify .title, #account-c-list-modify .table-row {
+  -ms-grid-columns: 60px 60px 210px minmax(0, 1fr) 105px 180px;
+      grid-template-columns: 60px 60px 210px minmax(0, 1fr) 105px 180px;
+}
+
+#account-s-list-modify {
+  width: 70%;
+}
+
+#account-s-list-modify .title, #account-s-list-modify .table-row {
+  -ms-grid-columns: 60px 60px 135px minmax(0, 1fr) 105px 165px 120px;
+      grid-template-columns: 60px 60px 135px minmax(0, 1fr) 105px 165px 120px;
 }
 
 #c-reservation-list .table-row {
@@ -1180,7 +1216,7 @@
   color: #00b4ff;
 }
 
-.bulletin-read1 .form3 .content-group input.content {
+.bulletin-read1 .form3 .content-group input.content, .bulletin-read1 .form3 .content-group select.content {
   height: 36px;
   padding: 0 12px;
   font-size: 15px;
@@ -1358,7 +1394,7 @@
 }
 
 .bulletin-write2 .form3 .col-right .filter2 .title {
-  border: 1px solid #cfcfcf;
+  border: 1px solid #cccccc;
   height: 36px;
   line-height: 36px;
   font-size: 15px;
@@ -1480,6 +1516,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1632,7 +1671,7 @@
 
 .bulletin-list2 .table li > div {
   padding: 12px 0;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1888,10 +1927,6 @@
   /*메인 페이지 리스트*/
 }
 
-.bulletin-list3 details summary {
-  list-style: none;
-}
-
 .bulletin-list3 .top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2031,7 +2066,8 @@
 }
 
 .bulletin-list3 .table .row-group > .title > div, .bulletin-list3 .table .row-group .table-row > div {
-  padding: 9px 18px;
+  padding: 9px 12px;
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2096,7 +2132,12 @@
 }
 
 .bulletin-list3 .table .row-group.selected {
-  background-color: rgba(0, 0, 0, 0.045);
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 180, 255, 0.9) inset;
+          box-shadow: 0 0 0 3px rgba(0, 180, 255, 0.9) inset;
+}
+
+.bulletin-list3 .table .row-group.selected .link {
+  color: #00b4ff;
 }
 
 .bulletin-list3 .table .row-group.selected .content {
@@ -2276,6 +2317,10 @@
       grid-template-columns: 570px 1fr;
 }
 
+#c-main-notice .title .link, #c-main-notice .table-row .link {
+  padding: 9px 24px;
+}
+
 #c-main-enter .scr-group, #c-main-exit .scr-group {
   min-height: 240px;
   max-height: 240px;
@@ -2285,6 +2330,15 @@
 #c-main-enter .title, #c-main-enter .table-row, #c-main-exit .title, #c-main-exit .table-row {
   -ms-grid-columns: 60px 135px minmax(0, 1fr);
       grid-template-columns: 60px 135px minmax(0, 1fr);
+}
+
+#types {
+  margin-top: 24px;
+}
+
+#types .title, #types .table-row {
+  -ms-grid-columns: minmax(0, 1fr) 135px 135px 135px 135px;
+      grid-template-columns: minmax(0, 1fr) 135px 135px 135px 135px;
 }
 
 .col2 {

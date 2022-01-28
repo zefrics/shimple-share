@@ -15,41 +15,9 @@ function filter(e) { //필터 접고 펴는 기능
   var child1 = e.parentNode.querySelector(".options"); //클릭한 요소의 자손 중 options를 캐치
   child1.classList.toggle("hide");
 }
-// 1. 아무것도 안 열려 있을 때, 닫혀있는 것을 클릭시 열린다.
-// 2. 하나라도 열려 있을 때, 열려있는 options를 제외한 부분을 클릭하면 닫힌다.
-
-
-
-// function selectAll(e)  { //체크박스 모두 선택 기능 (추후)
-//   var grand1 = e.parentNode.parentNode;
-//   var child1 = grand1.querySelectorAll('input[type="checkbox"]');
-  
-//   child1.forEach((checkbox) => {
-//     checkbox.checked = child1.checked;
-//   })
-// }
 
 window.onload = function(){
 
-  // // 메뉴 Accordion
-  // var acc = document.getElementsByClassName("accordion");
-  // var zzz = document.getElementsByClassName("menu-item");
-  // for (var i = 0; i < acc.length; i++) {
-  //   acc[i].addEventListener("click", function() {
-
-  //     for (var j = 0; j < zzz.length; j++) {
-  //       zzz[j].classList.remove("selected");
-  //     };
-
-  //     this.classList.toggle("selected");
-  //     var sub = this.nextElementSibling;
-  //     if (sub.style.PxHeight) {
-  //       sub.style.maxHeight = null;
-  //     } else {
-  //       sub.style.maxHeight = sub.scrollHeight + "px";
-  //     } 
-  //   });
-  // }
 
   // 메뉴 Accordion  (작동되는 것 확인됨)
   var acc = document.querySelectorAll(".accordion"); //아코디언 메뉴 선택
@@ -75,23 +43,6 @@ window.onload = function(){
     }
   }
 
-  // 완성 코드 (게시판 접고 펴는 기능 Universal.)
-  // var click1 = document.querySelectorAll(".row-group .link"); //해당 클래스 선택
-  // var target1 = document.querySelectorAll(".row-group"); //해당 클래스 선택 
-  
-  // for (var k = 0; k < click1.length; k++) {
-  //   click1[k].addEventListener("click", function() { //row-group의 link를 클릭했을 때,
-  //     var grand1 = this.parentNode.parentNode;  //선택한 요소의 row-group를 캐치
-  //     if (grand1.classList.contains("selected")) { //클릭한 row-group이 닫혀있는거면
-  //       grand1.classList.remove("selected"); } else {
-  //         for (var j = 0; j < target1.length; j++) { //모든 row-group을 일단 닫는다.
-  //           target1[j].classList.remove("selected");
-  //         };
-  //         grand1.classList.add("selected");
-  //       }
-  //     }
-  //   );
-  // }
 }
 
 

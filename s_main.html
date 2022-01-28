@@ -83,53 +83,61 @@
     <div class="content-container">
       <!--메인 시작-->
       <div id="s-main">
-        <div class="grid-artboard summary">
-          <div class="info-group">
-            <div class="info date">
-              <div class="title ttt">TODAY</div>
+        <div class="grid-artboard div1" id="summary">
+          <div class="col" id="calendar">
+            <div class="info-group">
+              <div class="title">TODAY</div>
               <div class="value">2021.07.05 (월)</div>
             </div>
-            <div class="info">
+          </div>
+          <div class="col">
+            <div class="info-group">
               <div class="title">예약 완료 (34박)</div>
               <div class="value">+ 100,000,000 원</div>
             </div>
-            <div class="info cancel">
+          </div>
+          <div class="col">
+            <div class="info-group">
               <div class="title">예약 취소 (4박)</div>
               <div class="value">- 40,000 원</div>
             </div>
-            <div class="info">
+          </div>
+          <div class="col">
+            <div class="info-group">
               <div class="title">총계 (30박)</div>
               <div class="value">= 960,000 원</div>
             </div>
-            <div class="info share-group" onclick="selectBox()">
+          </div>
+          <div class="col" id="share" onclick="selectBox()">
+            <div class="info-group">
               <div class="title">11월 객실 점유율</div>
               <div class="value">76 %</div>
-              <div class="selectbox hide">
-                <a class="partner-group" href="index.html">
-                  <div class="partner">근동이네독채민박</div>
-                  <div class="share">80%</div>
-                </a>
-                <a class="partner-group" href="index.html">
-                  <div class="partner">제주 르페도라펜션</div>
-                  <div class="share">80%</div>
-                </a>
-                <a class="partner-group" href="index.html">
-                  <div class="partner">제주애견동반 솔펜션</div>
-                  <div class="share">80%</div>
-                </a>
-                <a class="partner-group" href="index.html">
-                  <div class="partner">힐튼 호텔</div>
-                  <div class="share">80%</div>
-                </a>
-                <a class="partner-group" href="index.html">
-                  <div class="partner">웨스틴 조선 호텔</div>
-                  <div class="share">1%</div>
-                </a>
-              </div>
+            </div>
+            <div class="selectbox hide">
+              <a class="partner-group" href="index.html">
+                <div class="partner">근동이네독채민박</div>
+                <div class="share">80%</div>
+              </a>
+              <a class="partner-group" href="index.html">
+                <div class="partner">제주 르페도라펜션</div>
+                <div class="share">80%</div>
+              </a>
+              <a class="partner-group" href="index.html">
+                <div class="partner">제주애견동반 솔펜션</div>
+                <div class="share">80%</div>
+              </a>
+              <a class="partner-group" href="index.html">
+                <div class="partner">힐튼 호텔</div>
+                <div class="share">80%</div>
+              </a>
+              <a class="partner-group" href="index.html">
+                <div class="partner">웨스틴 조선 호텔</div>
+                <div class="share">1%</div>
+              </a>
             </div>
           </div>
         </div>
-        <div class="grid-artboard div1">
+        <div class="grid-artboard div2">
           <div class="bulletin-list3" id="s-main-shimple">
             <div class="top">
               <div class="title">쉼플 처리 내역</div>
@@ -256,7 +264,7 @@
             </div> 
           </div>
         </div>
-        <div class="grid-artboard div2">
+        <div class="grid-artboard div3">
           <div class="bulletin-list3" id="s-main-question">
             <div class="top">
               <div class="title"><a href="s_question_read.html">문의 사항</a></div>
@@ -358,7 +366,7 @@
             </div> 
           </div>
         </div>
-        <div class="grid-artboard div3">
+        <div class="grid-artboard div4">
           <div class="bulletin-list3" id="s-main-partner">
             <div class="top">
               <div class="title">파트너 처리 내역</div>
@@ -513,7 +521,7 @@
             <a href="s_main.html"><li>쉼플 관리자 페이지</li></a>
             <li>근동이네독채민박</li>
             <li>마레보리조트</li>
-            <a href="index.html"><li>제주 르페도라펜션</li></a>
+            <a href="c_calendar.html"><li>제주 르페도라펜션</li></a>
             <li>제주애견동반 솔펜션</li>
             <li>플라이진하우스</li>
             <li>근동이네독채민박</li>

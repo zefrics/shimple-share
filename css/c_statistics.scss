@@ -13,11 +13,13 @@
     overflow: auto;
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 7px 0px;
-    > .title {
-      font-size: 18px; font-weight: 600;
+    .top{
+      .title {
+        font-size: 18px; font-weight: 600;
+      }
     }
     .chart {
-      width: 100%; height: 270px;
+      height: 270px; width: 100%;
     }
   }
 
@@ -39,6 +41,11 @@
     text-align: center;
     display: flex; justify-content: space-between;
     .col {
+      -ms-user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      user-select: none;
       display: flex; align-items: center; justify-content: center;
       height: 105px; width: 360px;
       border: 3px solid rgba(0, 180, 255, 0.5);
@@ -61,13 +68,7 @@
     }
   }
   
-  #sales {
-    .title {
-      margin-bottom: 0;
-    }
-  }
 }
-
 
 .calendar-control {
   display: flex;
