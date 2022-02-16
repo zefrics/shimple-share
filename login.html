@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/universal.css" />
     <link rel="stylesheet" href="css/popup.css" />
     <link rel="stylesheet" href="css/u_button.css" />
+    <link rel="stylesheet" href="css/u_login.css" />
     <script type="text/javascript" src="js/hide.js"></script>
     <script type="text/javascript" src="js/toggle.js"></script>
     <title>쉼플</title>
@@ -15,24 +16,29 @@
   <body>
 
     <!--Content 시작 -->
-    <div class="content-container" id="login">
+    <div class="login-bg">
+      <div class="login-container">
 
-      <div class="bbb">
-        <div class="ccc">
+        <div class="logo">
           <img src="img/logo.svg" alt="쉼플" />
         </div>
-        <div class="ddd">
-          <div class="row">
-            <div class="label">이메일</div>
-            <input type="email">
+        
+        <div class="login-group">
+          <div class="row-group">
+            <div class="row">
+              <div class="label">이메일</div>
+              <input type="text">
+            </div>
+            <div class="row">
+              <div class="label">비밀번호</div>
+              <input type="password">
+            </div>
           </div>
-          <div class="row">
-            <div class="label">비밀번호</div>
-            <input type="password">
+          <div class="message">
+            이메일 또는 비밀번호를 잘못 입력했습니다.<br>
+            입력하신 내용을 다시 확인해주세요.
           </div>
-          <div class="row">
-            <button class="btn9-1">로그인</button>
-          </div>
+          <button class="btn9-1">로그인</button>
         </div>
         <!--Footer 시작-->
         <footer>&copy;&nbsp;Shimple</footer>

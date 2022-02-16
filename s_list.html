@@ -246,7 +246,7 @@
                     <div class="btn12-3">미발송</div>
                   </div>
                 </div>
-                <div class="schedule">
+                <div class="schedule" onclick="modalRReadOpen()">
                   <div class="set">
                     <div>Park(1F) 101호 / 2021-08-25(2박) / 2인</div>
                     <div class="blue">┖ Ocean(2F) 202호 / 2021-08-26(1박)</div>
@@ -291,7 +291,7 @@
                     <button class="btn12-1">발송 완료</button>
                   </div>
                 </div>
-                <div class="schedule">
+                <div class="schedule" onclick="modalRReadOpen()">
                   <div class="set">
                     <div>Ocean(2F) 201호 / 2021-08-26(3박)</div>
                     <div class="reason">┖ SkyOcean(3F) 301호 / 2021-08-27(1박)</div>
@@ -341,7 +341,7 @@
                     <div class="btn12-3">미발송</div>
                   </div>
                 </div>
-                <div class="schedule">
+                <div class="schedule" onclick="modalRReadOpen()">
                   <div class="set">
                     <div>Ocean(2F) 201호 / 2021-08-26(3박)</div>
                     <div class="blue">┖ SkyOcean(3F) 301호 / 2021-08-27(1박)</div>
@@ -390,7 +390,7 @@
                     <button class="btn12-1">발송 완료</button>
                   </div>
                 </div>
-                <div class="schedule">
+                <div class="schedule" onclick="modalRReadOpen()">
                   <div class="set">
                     <div>Pardlgjfdlkgjdfasldfjslfkjsdklfjsdklflgjdfklgjk(1F) 102호 / 2021-08-25(2박) / 2인</div>
                   </div>
@@ -477,6 +477,326 @@
       </div>
     </div>
     <!--숙소 목록 Popup 끝-->
+    <!-- 예약 조회 Modal 시작 -->
+    <div id="modal-r-read" class="modal-container side hide">
+      <div class="modal-bg" onclick="modalRReadClose()"></div>
+      <div class="modal">
+        <div class="modal-header">
+          <h5 class="modal-title">예약 조회</h5>
+          <button class="close"><img src="img/exit.svg" alt="close" onclick="modalRReadClose()" /></button>
+        </div>
+        <div class="modal-contents">
+
+          <div class="sub-title1">
+            <div class="text">공통 사항</div>
+          </div>
+
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">판매 채널</div>
+            </div>
+            <div class="col-type1">
+              <div class="kkk">네이버</div>
+            </div>
+          </div>
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">예약 상태</div>
+            </div>
+            <div class="col-type2">
+              <div class="kkk">예약 완료</div>
+              <div class="btn-group1">
+                <button class="btn3-2" onclick="modalCCreateOpen()">예약 취소</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-type1"> 
+            <div class="label1">
+              <div class="label-text">예약 일시</div>
+            </div>
+            <div class="col-type1">
+              <div class="kkk">2020년 02월 10일</div>
+            </div>
+          </div>
+
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">예약자</div>
+            </div>
+            <div class="col-type1">
+              <div class="kkk">홍길동</div>
+            </div> 
+          </div>
+
+          <div class="form-type1"> 
+            <div class="label1">
+              <div class="label-text">연락처</div>
+            </div>
+            <div class="col-type2">
+              <div class="kkk">010-0000-0000</div>
+              <div class="btn-group2-2">
+                <button class="btn3-1">카카오톡</button>
+                <div class="btn3-4">미발송</div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="group-line1">
+          <div class="room-group">
+            <div class="sub-title1">
+              <div class="text">객실 #1</div>
+            </div>
+
+            <div class="date-group">
+              <div class="sub-title2">
+                <div class="text">일정 #1</div>
+              </div>
+
+              <div class="form-type1"> 
+                <div class="label1">
+                  <div class="label-text">입실일</div>
+                </div>
+                <div class="col-type1">
+                  <div class="kkk">2020년 02월 10일</div>
+                </div>
+              </div>
+      
+              <div class="form-type1">
+                <div class="label2">
+                  <div class="label-text">퇴실일</div>
+                  <div class="sub-label">(1박 2일)</div>
+                </div>
+                <div class="col-type1">
+                  <div class="kkk">2020년 02월 11일</div>
+                </div>
+              </div>
+
+              <div class="form-type1">
+                <div class="label1">
+                  <div class="label-text">객실 타입</div>
+                </div>
+                <div class="col-type1">
+                  <div class="kkk">Ocean S(2F)</div>
+                </div>
+              </div>
+    
+              <div class="form-type1">
+                <div class="label1">
+                  <div class="label-text">객실 번호</div>
+                </div>
+                <div class="col-type1">
+                  <div class="kkk">201</div>
+                </div>
+              </div>
+              <hr class="group-line3">
+            </div>
+
+            <div class="date-group">
+              <div class="sub-title2">
+                <div class="text">일정 #2</div>
+              </div>
+              <div class="form-type1"> 
+                <div class="label1">
+                  <div class="label-text">입실일</div>
+                </div>
+                <div class="col-type1">
+                  <div class="kkk">2020년 02월 11일</div>
+                </div>
+              </div>
+      
+              <div class="form-type1">
+                <div class="label2">
+                  <div class="label-text">퇴실일</div>
+                  <div class="sub-label">(1박 2일)</div>
+                </div>
+                <div class="col-type1">
+                  <div class="kkk">2020년 02월 12일</div>
+                </div>
+              </div>
+
+              <div class="form-type1">
+                <div class="label1">
+                  <div class="label-text">객실 타입</div>
+                </div>
+                <div class="col-type1">
+                  <div class="kkk">SkyOcean(3F)</div>
+                </div>
+              </div>
+    
+              <div class="form-type1">
+                <div class="label1">
+                  <div class="label-text">객실 번호</div>
+                </div>
+                <div class="col-type1">
+                  <div class="kkk">301</div>
+                </div>
+              </div>
+              <hr class="group-line3">
+            </div>
+
+            <div class="form-type1">
+              <div class="label2">
+                <div class="label-text">인원</div>
+                <div class="sub-label">(기준 인원 : 2명)</div>
+              </div>
+              <div class="col-type1">
+                <div class="kkk">성인 2명<br>소아 10명<br>유아 10명</div>
+              </div>
+            </div>
+            <div class="form-type1"> 
+              <div class="label1">
+                <div class="label-text">반려 동물</div>
+              </div>
+              <div class="col-type1">
+                <div class="kkk">소형 2마리</div>
+              </div>
+            </div>
+            <hr class="group-line1">
+
+          </div>
+          <div class="room-group">
+            <div class="sub-title1">
+              <div class="text">객실 #2</div>
+            </div>
+
+            <div class="date-group">
+              <div class="sub-title2">
+                <div class="text">일정 #1</div>
+              </div>
+
+              <div class="form-type1"> 
+                <div class="label1">
+                  <div class="label-text">입실일</div>
+                </div>
+                <div class="col-type1">
+                  <div class="kkk">2020년 02월 10일</div>
+                </div>
+              </div>
+      
+              <div class="form-type1">
+                <div class="label2">
+                  <div class="label-text">퇴실일</div>
+                  <div class="sub-label">(1박 2일)</div>
+                </div>
+                <div class="col-type1">
+                  <div class="kkk">2020년 02월 11일</div>
+                </div>
+              </div>
+
+              <div class="form-type1">
+                <div class="label1">
+                  <div class="label-text">객실 타입</div>
+                </div>
+                <div class="col-type1">
+                  <div class="kkk">Ocean S(2F)</div>
+                </div>
+              </div>
+    
+              <div class="form-type1">
+                <div class="label1">
+                  <div class="label-text">객실 번호</div>
+                </div>
+                <div class="col-type1">
+                  <div class="kkk">202</div>
+                </div>
+              </div>
+              <hr class="group-line3">
+            </div>
+
+            <div class="form-type1">
+              <div class="label2">
+                <div class="label-text">인원</div>
+                <div class="sub-label">(기준 인원 : 2명)</div>
+              </div>
+              <div class="col-type1">
+                <div class="kkk">성인 2명</div>
+              </div>
+            </div>
+            <div class="form-type1"> 
+              <div class="label1">
+                <div class="label-text">반려 동물</div>
+              </div>
+              <div class="col-type1">
+                <div class="kkk">소형 2마리</div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="group-line1">
+          <div class="sub-title1">가격</div>
+          <div class="form-type1">
+            <div class="label2">
+              <div class="label-text">판매가</div>
+              <div class="sub-label">(정상가 : 100,000 원)</div>
+            </div>
+            <div class="col-type1">
+              <div class="kkk text-red">150,000 원</div>
+            </div>
+          </div>
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">연박 할인 총액</div>
+            </div>
+            <div class="col-type1">
+              <div class="kkk">- 20,000 원</div>
+            </div>
+          </div>
+          <div class="form-type1">
+            <div class="label2">
+              <div class="label-text">인원 및 반려동물</div>
+              <div class="sub-label">(사전 결제 완료)</div>
+            </div>
+            <!--사전 결제 체크시에는 "사전 결제 완료" / 미체크시에는 "추후 결제 예정"-->
+            <div class="col-type1">
+              <div class="kkk">+ 20,000 원</div>
+            </div>
+          </div>
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">최종 판매가</div>
+            </div>
+            <div class="col-type1">
+              <div class="kkk"><span>= 160,000 원</span></div>
+            </div>
+          </div>
+
+          <hr class="group-line1">
+          <div class="sub-title1">메모</div>
+          <div class="form-type2">
+            <div class="label1">
+              <div class="label-text">쉼플 메모</div>
+            </div>
+            <textarea disabled cols="" rows="4">안녕하세요.</textarea>
+          </div>
+          <div class="form-type2">
+            <div class="label1">
+              <div class="label-text">파트너 메모</div>
+            </div>
+            <textarea disabled cols="" rows="4">반갑습니다.</textarea>
+          </div>
+          <div class="form-type2">
+            <div class="label1">
+              <div class="label-text">관리자 메모</div>
+            </div>
+            <textarea disabled cols="" rows="4">안녕하세요.</textarea>
+          </div>
+          <div class="form-type2">
+            <div class="record">
+              <span>작성</span>2020-11-20-12:53│쉼플│신재호<br>
+              <span>수정</span>2020-11-21-00:15│르페도라│홍길동
+            </div>
+          </div>
+        </div>
+        <div class="modal-bottom">
+          <div class="btn-group">
+            <button class="btn1-1" onclick="modalRModifyOpen()">예약 수정</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- 예약 조회 Modal 끝 -->
 
     <!-- 예약 취소 수정 시작 -->
     <div id="modal-c-modify" class="modal-container side hide">

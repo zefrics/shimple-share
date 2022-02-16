@@ -289,7 +289,7 @@
   margin-right: 3px;
   font-size: 15px;
   line-height: 33px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid #cfcfcf;
   height: 33px;
 }
 
@@ -857,14 +857,9 @@
       grid-template-columns: 60px 60px minmax(0, 1fr);
 }
 
-#history-list .table-row {
-  font-size: 14px;
-  font-weight: 400;
-}
-
 #history-list .title, #history-list .table-row {
-  -ms-grid-columns: 165px 120px 120px minmax(0, 1fr) 90px 165px;
-      grid-template-columns: 165px 120px 120px minmax(0, 1fr) 90px 165px;
+  -ms-grid-columns: 165px 150px 120px minmax(0, 1fr) 90px 165px;
+      grid-template-columns: 165px 150px 120px minmax(0, 1fr) 90px 165px;
 }
 
 #account-c-list {
