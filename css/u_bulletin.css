@@ -593,6 +593,51 @@
   font-weight: 600;
 }
 
+.bulletin-list1 .table .row-group .content-group .content1 .text .log-group, .bulletin-list1 .table .row-group .content-group .content2 .text .log-group {
+  margin-bottom: 30px;
+}
+
+.bulletin-list1 .table .row-group .content-group .content1 .text .log-group:last-child, .bulletin-list1 .table .row-group .content-group .content2 .text .log-group:last-child {
+  margin-bottom: 0;
+}
+
+.bulletin-list1 .table .row-group .content-group .content1 .text .log-group .title, .bulletin-list1 .table .row-group .content-group .content2 .text .log-group .title {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 6px;
+}
+
+.bulletin-list1 .table .row-group .content-group .content1 .text .log-group .log, .bulletin-list1 .table .row-group .content-group .content2 .text .log-group .log {
+  margin-bottom: 9px;
+}
+
+.bulletin-list1 .table .row-group .content-group .content1 .text .log-group .log:last-child, .bulletin-list1 .table .row-group .content-group .content2 .text .log-group .log:last-child {
+  margin-bottom: 0;
+}
+
+.bulletin-list1 .table .row-group .content-group .content1 .text .log-group .log .past, .bulletin-list1 .table .row-group .content-group .content2 .text .log-group .log .past {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: line-through;
+}
+
+.bulletin-list1 .table .row-group .content-group .content1 .text .log-group .log .edit, .bulletin-list1 .table .row-group .content-group .content2 .text .log-group .log .edit {
+  color: red;
+}
+
+.bulletin-list1 .table .row-group .content-group .content1 .text .log-group .log .note, .bulletin-list1 .table .row-group .content-group .content2 .text .log-group .log .note {
+  color: rgba(0, 0, 0, 0.15);
+  font-weight: 400;
+}
+
+.bulletin-list1 .table .row-group .content-group .content1 .image, .bulletin-list1 .table .row-group .content-group .content2 .image {
+  margin-top: 18px;
+}
+
+.bulletin-list1 .table .row-group .content-group .content1 .image img, .bulletin-list1 .table .row-group .content-group .content2 .image img {
+  width: 100%;
+}
+
 .bulletin-list1 .table .row-group .content-group .content1 .uploaded, .bulletin-list1 .table .row-group .content-group .content2 .uploaded {
   margin-top: 18px;
 }
@@ -858,8 +903,8 @@
 }
 
 #history-list .title, #history-list .table-row {
-  -ms-grid-columns: 165px 150px 120px minmax(0, 1fr) 90px 165px;
-      grid-template-columns: 165px 150px 120px minmax(0, 1fr) 90px 165px;
+  -ms-grid-columns: 180px 150px 120px minmax(0, 1fr) 90px 165px;
+      grid-template-columns: 180px 150px 120px minmax(0, 1fr) 90px 165px;
 }
 
 #account-c-list {
@@ -1380,8 +1425,14 @@
 
 .bulletin-write2 .form3 .col-right .filter2 {
   /*문의 사항 및 자주 묻는 질문에서 질문 유형 선택, 공지 사항에서 공개 범위 선택*/
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: relative;
   cursor: pointer;
+  display: -ms-grid;
+  display: grid;
 }
 
 .bulletin-write2 .form3 .col-right .filter2:hover {
@@ -1390,10 +1441,14 @@
 
 .bulletin-write2 .form3 .col-right .filter2 .title {
   border: 1px solid #cccccc;
+  padding: 0 12px;
   height: 36px;
   line-height: 36px;
   font-size: 15px;
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .bulletin-write2 .form3 .col-right .filter2 .options {
