@@ -172,8 +172,8 @@ button {
   opacity: 0;
 }
 .btn4-1 input:checked ~ label {
-  border-color: rgba(0, 180, 255, 0.8);
-  background-color: rgba(0, 180, 255, 0.8);
+  border-color: rgba(0, 0, 255, 0.7);
+  background-color: rgba(0, 0, 255, 0.7);
   color: #ffffff;
 }
 

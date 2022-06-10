@@ -1,5 +1,5 @@
 /* Popup 시작 */
-#popup-list {
+#popup-list, #other-list { /* 블럭 지정 방지*/
   -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -61,6 +61,17 @@
   font-weight: 600;
   margin-bottom: 21px;
 }
+
+.popup .popup-contents .select-group {
+  display: grid;
+  gap: 15px;
+}
+.popup .popup-contents .select-group select {
+  font-size: 16px;
+  height: 36px;
+  padding: 0 15px;
+}
+
 .popup .popup-contents .info .section {
   margin-bottom: 18px;
 }
@@ -110,10 +121,16 @@
   justify-content: space-between;
   padding: 24px 30px 24px 24px;
 }
-.modal-header .modal-title {
+.modal-header .title-group .modal-title {
   font-size: 24px;
   font-weight: 600;
 }
+.modal-header .title-group .sub-title {
+  font-size: 14px;
+  font-weight: 400;
+  color:rgba(0, 0, 0, 0.75)
+}
+
 .modal-header button {
   background-color: transparent;
   border: 0px;
@@ -170,11 +187,11 @@
 }
 
 .modal-contents .label2 .label-text {
-  margin-bottom: 6px;
+  margin-bottom: 3px;
 }
 .modal-contents .label2 .sub-label {
   color: #888888;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
 }
 
@@ -268,13 +285,13 @@
 .modal-contents .sub-title2 {
   display: flex; align-items: center; justify-content: space-between;
   color:rgba(0, 180, 255, 1);
-  font-size: 16px; font-weight: 500;
+  font-size: 15px; font-weight: 400;
   margin-bottom: 12px;
 }
 
 /* 팝업 내용 - 구분 줄*/
 .modal-contents .group-line1 {
-  border: 1px solid rgba(0, 180, 255, 0.2);
+  border: 1px solid rgba(0, 180, 255, 0.5);
   margin: 48px 0;
 }
 .modal-contents .group-line2 {
@@ -364,6 +381,10 @@
   display: flex; flex-direction: column; align-items: right;
   width: 50%;
 }
+.side .modal-contents .col-type1 .sub-check {
+  user-select: none;
+}
+
 /* Side 끝 */
 
 /* Center 시작 */
@@ -403,8 +424,13 @@
   border: 1px solid #cfcfcf;
   padding: 12px;
   overflow: scroll;
-  height: 240px; max-height: 240px;
+  height: 150px; max-height: 240px;
 }
+
+#modal-c-create .reservation-info::-webkit-scrollbar {
+  display: none;
+}
+
 /* 예약 취소 생성 끝 */
 
 

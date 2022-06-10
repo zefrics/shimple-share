@@ -982,6 +982,10 @@
 }
 
 #c-reservation-list .title .schedule, #c-reservation-list .table-row .schedule {
+  padding-left: 18px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   text-align: left;
 }
 
@@ -1040,8 +1044,8 @@
 }
 
 #s-reservation-list .title, #s-reservation-list .table-row {
-  -ms-grid-columns: 150px 90px 80px 120px 150px 350px 105px minmax(0, 1fr) minmax(0, 1fr);
-      grid-template-columns: 150px 90px 80px 120px 150px 350px 105px minmax(0, 1fr) minmax(0, 1fr);
+  -ms-grid-columns: 150px 90px 80px 120px 165px 350px 105px minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-columns: 150px 90px 80px 120px 165px 350px 105px minmax(0, 1fr) minmax(0, 1fr);
 }
 
 #s-reservation-list .title .contact, #s-reservation-list .title .schedule, #s-reservation-list .title .statue, #s-reservation-list .title .date, #s-reservation-list .title .price, #s-reservation-list .table-row .contact, #s-reservation-list .table-row .schedule, #s-reservation-list .table-row .statue, #s-reservation-list .table-row .date, #s-reservation-list .table-row .price {
@@ -1055,6 +1059,10 @@
 }
 
 #s-reservation-list .title .schedule, #s-reservation-list .table-row .schedule {
+  padding-left: 18px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   text-align: left;
 }
 

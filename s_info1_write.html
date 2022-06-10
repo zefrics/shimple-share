@@ -83,7 +83,7 @@
       <div class="artboard">
         <div class="header">
           <div class="title">숙소 추가 / 숙소 세부 정보 수정</div>
-          <button class="btn13-1">다른 숙소 정보 불러오기</button>
+          <button class="btn13-1" onclick="other1Open()">다른 숙소 정보 불러오기</button>
         </div>
         <div class="bulletin-write1 grid2-1">
           <div class="grid-section">
@@ -92,12 +92,12 @@
               <div class="col-right">
                 <div class="row col1-1-1">
                   <div class="content-group">
-                    <div class="sub-title">숙소명</div>
-                    <input class="content" type="text" value="제주애견동반 솔펜션" maxlength="10">
+                    <div class="sub-title">숙소명 (필수)</div>
+                    <input class="content" type="text" value="제주애견동반 솔펜션" maxlength="10" required>
                   </div>
                   <div class="content-group">
-                    <div class="sub-title">분류</div>
-                    <select class="content">
+                    <div class="sub-title">분류 (필수)</div>
+                    <select class="content" required>
                       <option value="">펜션</option>
                       <option value="">민박</option>
                       <option value="">리조트</option>
@@ -105,8 +105,8 @@
                     </select>
                   </div>
                   <div class="content-group">
-                    <div class="sub-title">제휴 상태</div>
-                    <select class="content">
+                    <div class="sub-title">제휴 상태 (필수)</div>
+                    <select class="content" required>
                       <option>제휴</option>
                       <option class="red">미제휴</option>
                     </select>
@@ -120,12 +120,12 @@
               <div class="col-right">
                 <div class="row col1-1-1">
                   <div class="content-group">
-                    <div class="sub-title">담당자 #1</div>
-                    <input class="content" type="text" maxlength="5">
+                    <div class="sub-title">담당자 #1 (필수)</div>
+                    <input class="content" type="text" maxlength="5" required>
                   </div>
                   <div class="content-group">
-                    <div class="sub-title">연락처 #1</div>
-                    <input class="content" type="tel" maxlength="20">
+                    <div class="sub-title">연락처 #1 (필수)</div>
+                    <input class="content" type="tel" maxlength="20" required>
                   </div>
                   <div class="content-group">
                     <div class="sub-title">이메일 #1</div>
@@ -150,7 +150,7 @@
             </div>
 
             <div class="form3">
-              <div class="label3">카카오톡 알림</div>
+              <div class="label3">SMS 알림</div>
               <div class="col-right">
                 <div class="row col1-1-1">
                   <div class="content-group">
@@ -427,7 +427,7 @@
 
           <div class="grid-section">
             <div class="form3">
-              <div class="label3">판매 채널</div>
+              <div class="label3">판매 채널<br>(필수)</div> <!--필수항목이므로 오른쪽에 값이 비어있으면 '적용'클릭 시 진행이 안되도록 한다.-->
               <div class="row col1">
 
                 <div class="content-group">
@@ -463,7 +463,7 @@
               </div>
             </div>
             <div class="form3">
-              <div class="label3">환불 수수료</div>
+              <div class="label3">환불 수수료<br>(필수)</div> <!--최대 30일.  환불 비율 입력값은 0~100 사이의 숫자. 밑으로 갈수록 같거나 커져야 한다. 필수 항목이므로 값이 하나도 안 들어가 있으면 '적용'클릭 시 진행이 안되도록 해야한다.-->
               <div class="row">
                 <div class="bulletin-list2" id="refund-write">
                   <ul class="table">
@@ -473,27 +473,27 @@
                     </li>
                     <li class="table-row">
                       <div>입실일 <span class="day">당일</span> 취소 시</div>
-                      <div>총 금액의 <input type="text" class="percentage" maxlength="3">% 환불</div>
+                      <div>총 금액의 <input type="text" class="percentage" maxlength="3" min="0" max="100">% 환불</div>
                     </li>
                     <li class="table-row">
                       <div>입실일 <span class="day">1일 전</span> 취소 시</div>
-                      <div>총 금액의 <input type="text" class="percentage" maxlength="3">% 환불</div>
+                      <div>총 금액의 <input type="text" class="percentage" maxlength="3" min="0" max="100">% 환불</div>
                     </li>
                     <li class="table-row">
                       <div>입실일 <span class="day">2일 전</span> 취소 시</div>
-                      <div>총 금액의 <input type="text" class="percentage" maxlength="3">% 환불</div>
+                      <div>총 금액의 <input type="text" class="percentage" maxlength="3" min="0" max="100">% 환불</div>
                     </li>
                     <li class="table-row">
                       <div>입실일 <span class="day">3일 전</span> 취소 시</div>
-                      <div>총 금액의 <input type="text" class="percentage" maxlength="3">% 환불</div>
+                      <div>총 금액의 <input type="text" class="percentage" maxlength="3" min="0" max="100">% 환불</div>
                     </li>
                     <li class="table-row">
                       <div>입실일 <span class="day">4일 전</span> 취소 시</div>
-                      <div>총 금액의 <input type="text" class="percentage" maxlength="3">% 환불</div>
+                      <div>총 금액의 <input type="text" class="percentage" maxlength="3" min="0" max="100">% 환불</div>
                     </li>
                     <li class="table-row">
                       <div>입실일 <span class="day">5일 전</span> 취소 시</div>
-                      <div>총 금액의 <input type="text" class="percentage" maxlength="3">% 환불</div>
+                      <div>총 금액의 <input type="text" class="percentage" maxlength="3" min="0" max="100">% 환불</div>
                     </li>
                   </ul>
                   <p class="notice">* 명기되어 있지 않는 날짜는 100 % 환불</p>
@@ -510,7 +510,7 @@
               </div>
             </div>
             <div class="form3">
-              <div class="label3">공휴일 지정</div>
+              <div class="label3">공휴일 지정</div> <!--매년 최대 366개까지 생성 가능.  드롭 박스 연도는 자동으로 생성됨.  날짜 입력시 중복된 날짜 생성이 안되도록 하는 장치가 필요.  1월에서 12월 순서로 정렬.-->
               <div class="row">
                 <div class="bulletin-list2" id="holiday-write">
                   <div class="top">
@@ -518,7 +518,7 @@
                       <option value="">2021년 공휴일</option>
                       <option value="">2020년 공휴일</option>
                     </select>
-                    <button class="btn13-1">다른 숙소 공휴일 정보 불러오기</button>
+                    <button class="btn13-1" onclick="other2Open()">다른 숙소 공휴일 정보 불러오기</button> <!--정보를 불러오면 해당 연도의 기존 정보가 없어지고 덮어쓰기 됨-->
 
                   </div>
                   <ul class="table">
@@ -626,7 +626,7 @@
               </div>
             </div>
             <div class="form3">
-              <div class="label3">고객 발송<br>카톡 메시지</div>
+              <div class="label3">고객 발송<br>SMS 문구</div>
               <div class="col-right">
                 <div class="row">
                   <div class="content-group">
@@ -690,6 +690,80 @@
       </div>
     </div>
     <!--숙소 목록 Popup 끝-->
+
+    <!--다른 숙소 정보 불러오기 Popup 시작-->
+    <div id="other1" class="popup-container center hide">
+      <div class="popup-bg" onclick="other1Close()"></div>
+      <div class="popup">
+        
+        <div class="popup-contents">
+          <div class="title1">다른 숙소 정보 불러오기</div>
+          <div class="select-group">
+            <select>
+              <option selected disabled>숙소 선택</option>
+              <option value="">근동이네독채민박</option>
+              <option value="">마레보리조트</option>
+              <option value="">제주 르페도라펜션</option>
+              <option value="">제주애견동반 솔펜션</option>
+              <option value="">플라이진하우스</option>
+              <option value="">근동이네독채민박</option>
+              <option value="">마레보리조트</option>
+              <option value="">제주 르페도라펜션</option>
+              <option value="">제주애견동반 솔펜션</option>
+              <option value="">플라이진하우스</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="popup-bottom">
+          <div class="btn-group2-1">
+            <button class="btn5-1" onclick="other1Alert()">불러오기</button>
+            <button class="btn5-3" onclick="other1Close()">나가기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--다른 숙소 정보 불러오기 Popup 끝-->
+
+    <!--공휴일 정보 불러오기 Popup 시작-->
+    <div id="other2" class="popup-container center hide">
+      <div class="popup-bg" onclick="other2Close()"></div>
+      <div class="popup">
+        
+        <div class="popup-contents">
+          <div class="title1">공휴일 정보 불러오기</div>
+          <div class="select-group">
+            <select>
+              <option selected disabled>숙소 선택</option>
+              <option value="">근동이네독채민박</option>
+              <option value="">마레보리조트</option>
+              <option value="">제주 르페도라펜션</option>
+              <option value="">제주애견동반 솔펜션</option>
+              <option value="">플라이진하우스</option>
+              <option value="">근동이네독채민박</option>
+              <option value="">마레보리조트</option>
+              <option value="">제주 르페도라펜션</option>
+              <option value="">제주애견동반 솔펜션</option>
+              <option value="">플라이진하우스</option>
+            </select>
+            <select>
+              <option selected disabled>연도 선택</option>
+              <option value="">2020년</option>
+              <option value="">2021년</option>
+              <option value="">2022년</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="popup-bottom">
+          <div class="btn-group2-1">
+            <button class="btn5-1" onclick="other2Alert()">불러오기</button>
+            <button class="btn5-3" onclick="other2Close()">나가기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--공휴일 정보 불러오기 Popup 끝-->
 
     <!--하단 Popup 시작-->
     <div id="confirm" class="bottom-popup">

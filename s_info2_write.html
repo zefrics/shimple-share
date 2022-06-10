@@ -87,7 +87,7 @@
       <div class="artboard">
         <div class="header">
           <div class="title">객실 추가 / 객실 수정</div>
-          <button class="btn13-1">다른 객실 정보 불러오기</button>
+          <button class="btn13-1" onclick="other3Open()">다른 객실 정보 불러오기</button>
         </div>
         <div class="bulletin-write1 grid2-1">
           <div class="grid-section">
@@ -100,8 +100,8 @@
                     <input class="content" type="text" value="제주 르페도라펜션" disabled>
                   </div>
                   <div class="content-group">
-                    <div class="sub-title">객실 타입명</div>
-                    <input class="content" type="text" maxlength="15">
+                    <div class="sub-title">객실 타입명 (필수)</div>
+                    <input class="content" type="text" maxlength="15" required>
                   </div>
                 </div>
                 <div class="row">
@@ -165,16 +165,16 @@
               <div class="col-right">
                 <div class="row col2">
                   <div class="content-group">
-                    <div class="sub-title">기준 인원</div>
+                    <div class="sub-title">기준 인원 (필수)</div>
                     <div class="input-group">
-                      <input class="content" type="text" maxlength="2">
+                      <input class="content" type="text" maxlength="2" required>
                       <div class="unit">명</div>
                     </div>
                   </div>
                   <div class="content-group">
-                    <div class="sub-title">최대 인원</div>
+                    <div class="sub-title">최대 인원 (필수)</div>
                     <div class="input-group">
-                      <input class="content" type="text" maxlength="2">
+                      <input class="content" type="text" maxlength="2" required>
                       <div class="unit">명</div>
                     </div>
                   </div>
@@ -542,6 +542,45 @@
     </div>
     <!--숙소 목록 Popup 끝-->
 
+    <!--다른 숙소 정보 불러오기 Popup 시작-->
+    <div id="other3" class="popup-container center hide">
+      <div class="popup-bg" onclick="other3Close()"></div>
+      <div class="popup">
+        
+        <div class="popup-contents">
+          <div class="title1">다른 숙소 정보 불러오기</div>
+          <div class="select-group">
+            <select>
+              <option selected disabled>숙소 선택</option>
+              <option value="">근동이네독채민박</option>
+              <option value="">마레보리조트</option>
+              <option value="">제주 르페도라펜션</option>
+              <option value="">제주애견동반 솔펜션</option>
+              <option value="">플라이진하우스</option>
+              <option value="">근동이네독채민박</option>
+              <option value="">마레보리조트</option>
+              <option value="">제주 르페도라펜션</option>
+              <option value="">제주애견동반 솔펜션</option>
+              <option value="">플라이진하우스</option>
+            </select>
+            <select>
+              <option selected disabled>객실 타입 선택</option>
+              <option value="">Ocean(1F)</option>
+              <option value="">BlueOcean(2F)</option>
+              <option value="">SkyOcean(3F)</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="popup-bottom">
+          <div class="btn-group2-1">
+            <button class="btn5-1" onclick="other3Alert()">불러오기</button>
+            <button class="btn5-3" onclick="other3Close()">나가기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--다른 숙소 정보 불러오기 Popup 끝-->
     <!--하단 Popup 시작-->
     <div id="confirm" class="bottom-popup">
       <div class="btn-group2-3">

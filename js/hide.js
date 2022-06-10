@@ -108,29 +108,65 @@ function modalRCreateClose() {
   x.classList.add("hide");
 }
 
-function modalRModifyOpen() {
-  var x = document.querySelector("#modal-r-modify");
+function modalRModifyOpen1() {
+  var x = document.querySelector("#modal-r-modify1");
   x.classList.remove("hide");
-  var y = document.querySelector("#modal-r-read");
+  var y = document.querySelector("#modal-r-read1");
   y.classList.add("hide");
 }
-function modalRModifyClose() {
+function modalRModifyClose1() {
   document.body.classList.remove("not_scroll");
-  var x = document.querySelector("#modal-r-modify");
+  var x = document.querySelector("#modal-r-modify1");
   x.classList.add("hide");
 }
-function modalRReadOpen() {
+function modalRModifyOpen2() {
+  var x = document.querySelector("#modal-r-modify2");
+  x.classList.remove("hide");
+  var y = document.querySelector("#modal-r-read2");
+  y.classList.add("hide");
+}
+function modalRModifyClose2() {
+  document.body.classList.remove("not_scroll");
+  var x = document.querySelector("#modal-r-modify2");
+  x.classList.add("hide");
+}
+
+function modalRReadOpen1() {
   document.body.classList.add("not_scroll");
-  var x = document.querySelector("#modal-r-read");
+  var x = document.querySelector("#modal-r-read1");
   x.classList.remove("hide");
   var y = document.querySelector(".type-hover");
   y.classList.add("hide");
 }
-function modalRReadClose() {
+function modalRReadClose1() {
   document.body.classList.remove("not_scroll");
-  var x = document.querySelector("#modal-r-read");
+  var x = document.querySelector("#modal-r-read1");
   x.classList.add("hide");
 }
+function modalCReadOpen1() {
+  document.body.classList.add("not_scroll");
+  var x = document.querySelector("#modal-c-read1");
+  x.classList.remove("hide");
+}
+function modalCReadClose1() {
+  document.body.classList.remove("not_scroll");
+  var x = document.querySelector("#modal-c-read1");
+  x.classList.add("hide");
+}
+
+function modalRReadOpen2() {
+  document.body.classList.add("not_scroll");
+  var x = document.querySelector("#modal-r-read2");
+  x.classList.remove("hide");
+  var y = document.querySelector(".type-hover");
+  y.classList.add("hide");
+}
+function modalRReadClose2() {
+  document.body.classList.remove("not_scroll");
+  var x = document.querySelector("#modal-r-read2");
+  x.classList.add("hide");
+}
+
 function modalCReadOpen() {
   document.body.classList.add("not_scroll");
   var x = document.querySelector("#modal-c-read");
@@ -163,6 +199,7 @@ function modalCModifyClose() {
   x.classList.add("hide");
 }
 
+
 function modalRoomblockOpen() {
   document.body.classList.add("not_scroll");
   var y = document.querySelector("#modal-roomblock");
@@ -187,6 +224,49 @@ function popupListClose() {
   var y = document.querySelector("#popup-list");
   y.classList.add("hide");
 }
+
+function other1Open() {
+  document.body.classList.add("not_scroll");
+  var y = document.querySelector("#other1");
+  y.classList.remove("hide");
+}
+function other1Close() {
+  document.body.classList.remove("not_scroll");
+  var y = document.querySelector("#other1");
+  y.classList.add("hide");
+}
+function other1Alert() {
+  confirm ("해당 숙소 정보로 덮어쓰기 하시겠습니까?")
+}
+
+function other2Open() {
+  document.body.classList.add("not_scroll");
+  var y = document.querySelector("#other2");
+  y.classList.remove("hide");
+}
+function other2Close() {
+  document.body.classList.remove("not_scroll");
+  var y = document.querySelector("#other2");
+  y.classList.add("hide");
+}
+function other2Alert() {
+  confirm ("해당 공휴일 정보로 덮어쓰기 하시겠습니까?")
+}
+
+function other3Open() {
+  document.body.classList.add("not_scroll");
+  var y = document.querySelector("#other3");
+  y.classList.remove("hide");
+}
+function other3Close() {
+  document.body.classList.remove("not_scroll");
+  var y = document.querySelector("#other3");
+  y.classList.add("hide");
+}
+function other3Alert() {
+  confirm ("해당 객실 타입 정보로 덮어쓰기 하시겠습니까?")
+}
+
 function popupRoomopenOpen() {
   var y = document.querySelector("#popup-roomopen");
   y.classList.remove("hide");

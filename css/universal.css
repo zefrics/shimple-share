@@ -410,6 +410,15 @@ body::-webkit-scrollbar-thumb {
           box-shadow: 0 0 0 2px #000000 inset;
 }
 
+.available-week.past-week {
+  cursor: initial !important;
+}
+
+.available-week.past-week:hover {
+  -webkit-box-shadow: 0 0 0 0 #000000 inset;
+          box-shadow: 0 0 0 0 #000000 inset;
+}
+
 .hide {
   display: none !important;
 }
@@ -784,5 +793,33 @@ textarea:disabled:hover {
 
 .bg-color35 {
   background-color: rgba(0, 0, 255, 0.65) !important;
+}
+
+.bg-color36 {
+  background-color: rgba(0, 0, 128, 0.45) !important;
+}
+
+.bg-color37 {
+  background-color: rgba(128, 0, 128, 0.65) !important;
+}
+
+.bg-color38 {
+  background-color: rgba(255, 99, 71, 0.65) !important;
+}
+
+.bg-color39 {
+  background-color: rgba(173, 255, 47, 0.65) !important;
+}
+
+.bg-color40 {
+  background-color: rgba(0, 255, 255, 0.65) !important;
+}
+
+.bg-color41 {
+  background-color: rgba(255, 0, 255, 0.65) !important;
+}
+
+.bg-color42 {
+  background-color: rgba(139, 69, 19, 0.65) !important;
 }
 /*# sourceMappingURL=universal.css.map */
