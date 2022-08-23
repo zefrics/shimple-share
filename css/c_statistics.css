@@ -1,140 +1,98 @@
 #c-statistic {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: 'div1 div1' 'div2 div3' 'div4 div4';
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "div1 div1" "div2 div3" "div4 div4";
   gap: 30px;
   margin-bottom: 30px;
 }
-
 #c-statistic .grid-artboard {
   width: 100%;
   padding: 30px;
   overflow: auto;
   background-color: #ffffff;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 7px 0px;
-          box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 7px 0px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 7px 0px;
 }
-
 #c-statistic .grid-artboard .top .title {
   font-size: 18px;
   font-weight: 600;
 }
-
 #c-statistic .grid-artboard .chart {
   height: 270px;
   width: 100%;
 }
-
 #c-statistic .div1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: div1;
 }
-
 #c-statistic .div2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: div2;
 }
-
 #c-statistic .div3 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: div3;
 }
-
 #c-statistic .div4 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: div4;
 }
-
 #c-statistic #summary {
   padding: 21px 45px;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 #c-statistic #summary .col {
-  -ms-user-select: none;
-  -moz-user-select: none;
   -webkit-user-select: none;
-  user-select: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 105px;
   width: 360px;
   border: 3px solid rgba(0, 180, 255, 0.5);
   border-radius: 15px;
 }
-
 #c-statistic #summary .col .info-group .title {
   color: rgba(0, 0, 0, 0.5);
   font-size: 15px;
   font-weight: 500;
 }
-
 #c-statistic #summary .col .info-group .value {
   font-size: 30px;
   font-weight: 800;
 }
-
 #c-statistic #summary .col .info-group .value .sub {
   font-size: 15px;
   font-weight: 500;
 }
-
 #c-statistic #summary #calendar {
   border: 0;
 }
+#c-statistic #summary #calendar .info-group {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+#c-statistic #summary #calendar .info-group .btn-group {
+  display: flex;
+  gap: 12px;
+}
 
 .calendar-control {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-bottom: 45px;
 }
-
 .calendar-control .col {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .calendar-control .col .year-month {
   font-size: 30px;
   font-weight: 600;
 }
-
 .calendar-control .col .btn-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .calendar-control .col .btn-group button {
   margin-left: 15px;
-}
-/*# sourceMappingURL=c_statistics.css.map */
+}/*# sourceMappingURL=c_statistics.css.map */

@@ -1,7 +1,6 @@
 @charset "UTF-8";
 *, *::before, *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -45,7 +44,6 @@ body::-webkit-scrollbar-thumb {
   user-select: none;
   overflow-y: auto;
 }
-
 .main-nav::-webkit-scrollbar {
   display: none;
 }
@@ -57,7 +55,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #c-nav {
-  background-color: #00b4ff;
+  background-color: rgb(0, 180, 255);
 }
 
 #c-nav a:hover,
@@ -66,11 +64,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 #c-nav a.active {
-  background-color: #3c79c8 !important;
+  background-color: rgb(60, 121, 200) !important;
 }
 
 #s-nav {
-  background-color: #364150;
+  background-color: rgb(54, 65, 80);
 }
 
 #s-nav a:hover,
@@ -79,31 +77,23 @@ body::-webkit-scrollbar-thumb {
 }
 
 #s-nav a.active {
-  background-color: #36c6d3 !important;
+  background-color: rgb(54, 198, 211) !important;
 }
 
-.main-nav .brand a {
-  /* 숙소 이름*/
+.main-nav .brand a { /* 숙소 이름*/
   display: block;
   padding: 30px;
-  overflow-wrap: break-word;
-  /*넘치는 텍스트 줄바꿈 처리*/
-  word-break: keep-all;
-  /*넘치는 경우 띄어쓰기를 줄바꿈처리*/
+  overflow-wrap: break-word; /*넘치는 텍스트 줄바꿈 처리*/
+  word-break: keep-all; /*넘치는 경우 띄어쓰기를 줄바꿈처리*/
   font-size: 21px;
   font-weight: 500;
   line-height: 27px;
   text-align: center;
 }
 
-.main-nav nav .menu-item {
-  /*일반 메뉴 항목*/
-  display: -webkit-box;
-  display: -ms-flexbox;
+.main-nav nav .menu-item { /*일반 메뉴 항목*/
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 15px 0 15px 24px;
   font-size: 15px;
   font-weight: 300;
@@ -113,8 +103,7 @@ body::-webkit-scrollbar-thumb {
   padding-top: 2px;
 }
 
-.main-nav nav .menu-item img {
-  /*메뉴 아이콘*/
+.main-nav nav .menu-item img { /*메뉴 아이콘*/
   width: 18px;
   height: 18px;
   margin-right: 12px;
@@ -156,20 +145,14 @@ body::-webkit-scrollbar-thumb {
 /* Main Menu 끝 */
 /* Content 시작 */
 .content-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 30px 30px 0px 210px;
   height: 100%;
   min-height: 100%;
   min-width: 1910px;
   max-width: 1910px;
 }
-
 .content-container .artboard {
   min-height: 600px;
   width: 100%;
@@ -177,44 +160,31 @@ body::-webkit-scrollbar-thumb {
   padding: 45px;
   overflow: auto;
   background-color: #ffffff;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 7px 0px;
-          box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 7px 0px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 7px 0px;
 }
-
 .content-container .artboard .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   border-bottom: 1px #cccccc solid;
   margin-bottom: 30px;
   padding-bottom: 15px;
 }
-
 .content-container .artboard .header .title {
   font-size: 27px;
   font-weight: 700;
 }
-
 .content-container .artboard .header .title span {
   color: rgba(0, 0, 0, 0.4);
   margin-left: 18px;
   font-size: 18px;
   font-weight: 500;
 }
-
 .content-container .artboard .header .btn-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .content-container .artboard .header .btn-group button {
   margin-left: 15px;
 }
-
 .content-container footer {
   padding: 15px 0 90px 0;
   border-top: 1px solid #cccccc;
@@ -224,39 +194,38 @@ body::-webkit-scrollbar-thumb {
 
 /* Content 끝 */
 /* Floating Icon 시작 */
-.floating {
+.floating-group {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  cursor: pointer;
-  border-radius: 30px;
-  background-color: #00b4ff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-
-.floating:hover {
+.floating-group .floating {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #a0a0a0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.floating-group .floating:hover {
   outline: 2px solid #000000;
 }
-
-.floating img {
-  display: block;
-  min-height: 60px;
-  min-width: 60px;
-  height: 60px;
-  width: 60px;
+.floating-group .floating img {
+  height: 33px;
+  width: 100%;
 }
 
 /* Floating Icon 끝 */
 /* 뱃지 공통 */
 .badge-xs {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 6px;
   height: 18px;
   width: 18px;
@@ -269,15 +238,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .badge-small {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 22px;
   width: 22px;
   min-height: 22px;
@@ -295,15 +258,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .badge-large {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 24px;
   width: 24px;
   min-height: 24px;
@@ -322,19 +279,19 @@ body::-webkit-scrollbar-thumb {
 
 /* 색상 */
 .available {
-  background-color: #00b4ff;
+  background-color: rgb(0, 180, 255);
 }
 
 .waiting {
-  background-color: orange;
+  background-color: rgb(255, 165, 0);
 }
 
 .complete {
-  background-color: #f4516c;
+  background-color: rgb(244, 81, 108);
 }
 
 .blocked {
-  background-color: #ababab;
+  background-color: rgb(171, 171, 171);
 }
 
 .available-week {
@@ -359,11 +316,11 @@ body::-webkit-scrollbar-thumb {
 
 /* 텍스트 공통 */
 .text-red {
-  color: #f4516c !important;
+  color: rgb(244, 81, 108) !important;
 }
 
 .text-blue {
-  color: #00b4ff !important;
+  color: rgb(0, 180, 255) !important;
 }
 
 /* 기타 속성 */
@@ -402,21 +359,10 @@ body::-webkit-scrollbar-thumb {
 .waiting-week {
   cursor: pointer !important;
 }
-
 .available-week:hover,
 .complete-week:hover,
 .waiting-week:hover {
-  -webkit-box-shadow: 0 0 0 2px #000000 inset;
-          box-shadow: 0 0 0 2px #000000 inset;
-}
-
-.available-week.past-week {
-  cursor: initial !important;
-}
-
-.available-week.past-week:hover {
-  -webkit-box-shadow: 0 0 0 0 #000000 inset;
-          box-shadow: 0 0 0 0 #000000 inset;
+  box-shadow: 0 0 0 2px #000000 inset;
 }
 
 .hide {
@@ -424,8 +370,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .today {
-  -webkit-box-shadow: 0 0 0 3px #000000 inset;
-          box-shadow: 0 0 0 3px #000000 inset;
+  box-shadow: 0 0 0 3px #000000 inset;
 }
 
 /* Input, Select, Textarea, Label 공통 */
@@ -446,40 +391,39 @@ input:focus {
   outline: 2px solid #000000;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
+input[type=date]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   margin: 0;
   padding: 0;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator:focus {
-  background-color: #00b4ff;
+input[type=date]::-webkit-calendar-picker-indicator:focus {
+  background-color: rgb(0, 180, 255);
   outline: none;
 }
 
-input[type="time"]::-webkit-calendar-picker-indicator {
+input[type=time]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   margin: 0;
   padding: 0;
 }
 
-input[type="checkbox"] {
+input[type=checkbox] {
   cursor: pointer;
 }
 
-input[type="checkbox"]:hover,
-input[type="checkbox"]:focus {
+input[type=checkbox]:hover,
+input[type=checkbox]:focus {
   outline: none;
 }
 
-input[type="radio"] {
+input[type=radio] {
   cursor: pointer;
   height: 21px;
   width: 21px;
 }
 
-input[type=number]::-webkit-inner-spin-button {
-  /*화살표*/
+input[type=number]::-webkit-inner-spin-button { /*화살표*/
   height: 30px;
   width: 30px;
 }
@@ -545,31 +489,26 @@ textarea:disabled:hover {
 }
 
 .sub-check {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: flex;
   margin-top: 10px;
   margin-left: auto;
   padding-right: 6px;
 }
-
 .sub-check label {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 15px;
   font-weight: 400;
 }
-
 .sub-check label input {
   margin: 0 9px 0 0;
   width: 24px;
   height: 24px;
 }
-
 .sub-check label:hover {
   outline: 1px solid #444444;
 }
@@ -583,7 +522,7 @@ textarea:disabled:hover {
 }
 
 .blue {
-  color: #00b4ff !important;
+  color: rgb(0, 180, 255) !important;
 }
 
 .gray {
@@ -591,7 +530,7 @@ textarea:disabled:hover {
 }
 
 .through {
-  color: #ababab;
+  color: rgb(171, 171, 171);
   text-decoration: line-through;
 }
 
@@ -821,5 +760,4 @@ textarea:disabled:hover {
 
 .bg-color42 {
   background-color: rgba(139, 69, 19, 0.65) !important;
-}
-/*# sourceMappingURL=universal.css.map */
+}/*# sourceMappingURL=universal.css.map */

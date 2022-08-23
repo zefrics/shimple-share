@@ -93,12 +93,20 @@
           <div class="top">
             <div class="row2">
               <div class="filter-group">
-                <select class="filter1">
-                  <option selected disabled>답변 상태 선택</option>
-                  <option value="">모두 선택</option>
-                  <option value="">미답변</option>
-                  <option value="">답변 완료</option>
-                </select>
+                <div class="filter2">
+                  <div class="title" onclick="filter(this)">답변 상태 선택</div>
+                  <div class="options hide">
+                    <label>
+                      <input type="checkbox">모두 선택
+                    </label>
+                    <label>
+                      <input type="checkbox">미답변
+                    </label>
+                    <label>
+                      <input type="checkbox">답변 완료
+                    </label>
+                  </div>
+                </div>
                 <div class="filter2">
                   <div class="title" onclick="filter(this)">문의 유형 선택</div>
                   <div class="options hide">

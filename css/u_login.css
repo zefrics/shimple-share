@@ -1,83 +1,54 @@
 .login-bg {
   padding: 30px;
   height: 96vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .login-bg .login-container {
   text-align: center;
 }
-
 .login-bg .login-container .logo {
   margin-bottom: 24px;
 }
-
 .login-bg .login-container .logo img {
   height: 60px;
 }
-
 .login-bg .login-container .login-group {
   background-color: #ffffff;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 7px 0px;
-          box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 7px 0px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 7px 0px;
   width: 540px;
   padding: 54px 66px;
   border-radius: 15px;
 }
-
 .login-bg .login-container .login-group .row-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 21px;
   margin-bottom: 36px;
 }
-
 .login-bg .login-container .login-group .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
-
 .login-bg .login-container .login-group .row .label {
   font-size: 18px;
   font-weight: 500;
 }
-
 .login-bg .login-container .login-group .row input {
   padding: 9px 12px;
   width: 300px;
   font-size: 18px;
 }
-
 .login-bg .login-container .login-group .message {
   font-size: 18px;
   margin-bottom: 36px;
   color: red;
 }
-
 .login-bg footer {
   border: 0;
   padding: 0;
   margin-top: 24px;
   font-size: 18px;
-}
-/*# sourceMappingURL=u_login.css.map */
+}/*# sourceMappingURL=u_login.css.map */

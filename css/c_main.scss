@@ -1,0 +1,85 @@
+#c-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'div1 div1'
+                       'div2 div3'
+                       'div4 div5';
+  gap: 30px;
+  margin-bottom: 30px;
+
+  .grid-artboard {
+    width: 100%;
+    padding: 30px;
+    overflow: auto;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 7px 0px;
+  }
+  .div1 {
+    grid-area: div1;
+  }
+  .div2 {
+    grid-area: div2;
+  }
+  .div3 {
+    grid-area: div3;
+  }
+  .div4 {
+    grid-area: div4;
+  }
+  .div5 {
+    grid-area: div5;
+  }
+  #summary {
+    padding: 21px 30px;
+    text-align: center;
+    display: flex; justify-content: space-between;
+    .col {
+      -ms-user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      user-select: none;
+      display: flex; align-items: center; justify-content: center;
+      height: 81px; width: 300px;
+      border: 3px solid rgba(0, 180, 255, 0.5);
+      border-radius: 15px;
+      .info-group {
+        >.title {
+          color:rgba(0, 0, 0, 0.5);
+          font-size: 15px; font-weight: 500;
+        }
+        >.value {
+          font-size: 30px; font-weight: 800;
+        }
+      }
+    }
+    #calendar {
+      border: 0;
+    }
+  }
+  
+  #monthly-share {
+    .top {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 15px;
+      .title {
+        font-size: 18px; font-weight: 600;
+      }
+      .month-group {
+        display: flex; align-items: center;
+        .month {
+          font-size: 18px; font-weight: 600;
+        }
+        button {
+          margin-left: 12px;
+        }
+      }
+    }
+    .chart {
+      height: 270px; width: 100%;
+    }
+  }
+
+
+
+}

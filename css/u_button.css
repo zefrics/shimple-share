@@ -152,6 +152,7 @@ button {
 /*INPUT BUTTON 모음 - 기간 지정 방막기에 쓰임*/
 .btn4-1 {
   position: relative;
+  display: flex;
 }
 .btn4-1 label {
   display: flex; align-items: center; justify-content: center;
@@ -160,8 +161,7 @@ button {
   border: 1px solid rgba(171, 171, 171, 0.8); border-radius: 5px;
   background-color: #ffffff; color: rgba(171, 171, 171, 0.8);
   cursor: pointer;
-  font-size: 14px; font-weight: 400;
-  
+  font-size: 14px; font-weight: 400; 
 }
 .btn4-1:hover label {
   box-shadow: 0 0 0 2px #444444;
