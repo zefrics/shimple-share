@@ -1,3 +1,7 @@
+#calendar {
+  padding-bottom: 105px;
+}
+
 /* 연도, 날짜 부분 */
 .calendar-control {
   display: flex;

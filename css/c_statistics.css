@@ -12,12 +12,39 @@
   background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 7px 0px;
 }
+#c-statistic .grid-artboard .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 #c-statistic .grid-artboard .top .title {
   font-size: 18px;
   font-weight: 600;
 }
+#c-statistic .grid-artboard .top .filter-group {
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  display: flex;
+}
+#c-statistic .grid-artboard .top .filter-group .filter1 {
+  margin-left: 12px;
+  cursor: pointer;
+  border: 1px solid #bbbbbb;
+  width: 180px;
+  height: 33px;
+  font-size: 15px;
+  line-height: 33px;
+  font-weight: 400;
+  text-align: center;
+}
+#c-statistic .grid-artboard .top .filter-group .filter1:focus {
+  outline: 0px;
+}
 #c-statistic .grid-artboard .chart {
-  height: 270px;
+  min-height: 270px;
+  height: 85%;
   width: 100%;
 }
 #c-statistic .div1 {

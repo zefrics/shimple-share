@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="css/c_statistics.css" />
     <script type="text/javascript" src="js/hide.js"></script>
     <script type="text/javascript" src="js/toggle.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.1.0/dist/chartjs-plugin-datalabels.min.js"></script>
     <title>쉼플</title>
   </head>
 
@@ -125,6 +126,7 @@
                   <div>평균 객단가</div>
                   <div>판매 수량</div>
                   <div>판매 불가 수량</div>
+                  <div>점유율</div>
                   <div>판매 금액</div>
                 </div>
               </li>
@@ -134,6 +136,7 @@
                   <div>100,000 원</div>
                   <div>100 박</div>
                   <div>10 박</div>
+                  <div>50 %</div>
                   <div>10,000,000 원</div>
                 </div>
               </li>
@@ -143,37 +146,50 @@
                   <div>100,000 원</div>
                   <div>100 박</div>
                   <div>10 박</div>
+                  <div>50 %</div>
                   <div>10,000,000 원</div>
                 </div>
               </li>
               <li class="row-group">
                 <div class="table-row">
-                  <div>Sky Ocean (3F)</div>
+                  <div>Ocean (2F)</div>
                   <div>100,000 원</div>
                   <div>100 박</div>
                   <div>10 박</div>
+                  <div>50 %</div>
                   <div>10,000,000 원</div>
                 </div>
               </li>
               <li class="row-group">
                 <div class="table-row">
-                  <div>Sky Ocean (3F)</div>
+                  <div>Ocean (2F)</div>
                   <div>100,000 원</div>
                   <div>100 박</div>
                   <div>10 박</div>
+                  <div>50 %</div>
                   <div>10,000,000 원</div>
                 </div>
               </li>
               <li class="row-group">
                 <div class="table-row">
-                  <div>Sky Ocean (3F)</div>
+                  <div>Ocean (2F)</div>
                   <div>100,000 원</div>
                   <div>100 박</div>
                   <div>10 박</div>
+                  <div>50 %</div>
                   <div>10,000,000 원</div>
                 </div>
               </li>
-              
+              <li class="row-group">
+                <div class="table-row">
+                  <div>Ocean (2F)</div>
+                  <div>100,000 원</div>
+                  <div>100 박</div>
+                  <div>10 박</div>
+                  <div>50 %</div>
+                  <div>10,000,000 원</div>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -181,7 +197,15 @@
         <div class="grid-artboard div3">
           <div class="top">
             <div class="title">
-              타입별 판매 상세 그래프
+              타입별 판매 상세 (그래프)
+            </div>
+            <div class="filter-group">
+              <select class="filter1">
+                <option value="" selected disabled>객실 타입 선택</option>
+                <option value="">Park (1F)</option>
+                <option value="">Ocean (2F)</option>
+                <option value="">Sky Ocean (3F)</option>
+              </select>
             </div>
           </div>
           <div class="chart">
@@ -189,73 +213,64 @@
             <script>
               var ctx = document.getElementById('myChart1').getContext('2d');
               var myChart = new Chart(ctx, {
-                  type: 'horizontalBar',
-                  data: {
-                      labels: ['Park (1F)','Ocean (2F)', 'SkyOcean (3F)', 'SkyOcean (4F)', 'SkyOcean (5F)'],
-                      datasets: [
-                        {
-                          label: "네이버",
-                          backgroundColor: "rgba(0, 128, 0, 0.65)",
-                          data: [300,700,400,300,1000]
-                        },
-                        {
-                          label: "에어비앤비",
-                          backgroundColor: "rgba(0, 180, 255, 0.75)",
-                          data: [400,300,500,500,300]
-                        },
-                        {
-                          label: "여기어때",
-                          backgroundColor: "rgba(244, 81, 108, 0.75)",
-                          data: [700,900,500,100,900]
-                        }
-                    ]
-                  },
-                  options: {
-                    animation: false,
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    legend: {
-                      // position: "right",
-                      align: "end"
-                    },
-                    scales: {
-                      xAxes: [{
-                        ticks: {
-                          beginAtZero: true,
-                          userCallback: function(value, index, values) {
-                            // Convert the number to a string and splite the string every 3 charaters from the end
-                            value = value.toString();
-                            value = value.split(/(?=(?:...)*$)/);
-                            value = value.join(',');
-                            value = value + ' 박';
-                            return value;
-                          }
-                        },
-                        scaleLabel: {
-                          display: false,
-                        },
-                      }]
-                    },
-                    tooltips: {
-                    // enabled: false
-                      displayColors: false,
-                      callbacks: {
-                        // title: (item) => ``,
-                        // label: (item) => `${item.xLabel} 박`,
-                        label: function(tooltipItem, data) {
-                          var label = data.datasets[tooltipItem.datasetIndex].label;
-                          var value = tooltipItem.xLabel;
-                          value = value.toString();
-                          value = value.split(/(?=(?:...)*$)/);
-                          value = value.join(',');
-                          value = value + '박';
-                          return label + ' : ' + value;
+                type: 'bar',
+                data: {
+                    labels: ['네이버', '에어비앤비', '여기어때', '야놀자', '쿠팡', '11번가', '아고다', '호텔스컴바인'],
+                    datasets: [
+                      {
+                        backgroundColor: ["rgba(0, 128, 0, 0.65)", "rgba(0, 128, 128, 0.65)", "rgba(128, 128, 128, 0.65)", "red", "yellow","blue","green"],
+                        data: [30, 52, 600, 30, 40, 22, 43, 1]
+                      }
+                  ]
+                },
+                plugins: [ChartDataLabels],
+                options: {
+                  indexAxis: 'y',
+                  animation: false,
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  scales: {
+                    x: {
+                      beginAtZero: true,
+                      ticks: {
+                        callback: function(value, index, values) {
+                          value = value + ' 박';
+                          return value;
                         }
                       }
                     }
-                  }
+                  },
+                  
+                  plugins: {
+                    legend: {
+                      display: false,
+                    },
+                    tooltip: {
+                      enabled: false,
+                      // displayColors: false,
+                      // callbacks: {
+                      //   title: (item) => ``,
+                      //   label: (item) => `${item.parsed.x} 박`
+                      // }
+                    },
+                    datalabels: {
+                      color: 'black',
+                      anchor: 'end',
+                      align: 'end',
+                      offset: '-4'
+
+                    },
+                  },
+                  layout: {
+                    padding: {
+                      top: 18
+                    }
+                  },
+                },
+                
+
               });
-              </script>
+            </script>
           </div>
         </div>
 
@@ -270,69 +285,64 @@
               <script>
                 var ctx = document.getElementById('myChart2').getContext('2d');
                 var myChart = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: ['2021년 07월', '2021년 08월', '2021년 09월', '2021년 10월', '2021년 11월', '2021년 12월', '2022년 01월', '2022년 02월', '2022년 03월', '2022년 04월', '2022년 05월', '2022년 06월'],
-                        datasets: [
-                          {
-                              label: "작년",
-                              backgroundColor: "#dddddd",
-                              data: [300000,700000,400000]
-                          },
-                          {
-                              label: "올해",
-                              backgroundColor: "rgba(0, 180, 255, 1)",
-                              data: [400000,300000,500000]
+                  type: 'bar',
+                  data: {
+                      labels: ['2021년 07월', '2021년 08월', '2021년 09월', '2021년 10월', '2021년 11월', '2021년 12월', '2022년 01월', '2022년 02월', '2022년 03월', '2022년 04월', '2022년 05월', '2022년 06월'],
+                      datasets: [
+                        {
+                            label: "작년",
+                            backgroundColor: "#dddddd",
+                            data: [300000,700000,400000]
+                        },
+                        {
+                            label: "올해",
+                            backgroundColor: "rgba(0, 180, 255, 1)",
+                            data: [400000,300000,500000]
+                        }
+                    ]
+                  },
+                  options: {
+                    animation: false,
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                      y: {
+                        beginAtZero: true,
+                        ticks: {
+                          callback: function(value, index, values) {
+                            // Convert the number to a string and splite the string every 3 charaters from the end
+                            value = new Intl.NumberFormat().format(value);
+                            return value + ' 원';
                           }
-                      ]
+                        },
+                      }
                     },
-                    options: {
-                      animation: false,
-                      responsive: true,
-                      maintainAspectRatio: false,
+                    plugins: {
                       legend: {
                         align: "end"
                       },
-                      scales: {
-                        yAxes: [{
-                          ticks: {
-                            beginAtZero: true,
-                            userCallback: function(value, index, values) {
-                              // Convert the number to a string and splite the string every 3 charaters from the end
-                              value = value.toString();
-                              value = value.split(/(?=(?:...)*$)/);
-                              value = value.join(',');
-                              value = value + ' 원';
-                              return value;
-                            }
-                          },
-                          scaleLabel: {
-                            display: false,
-                          },
-                        }]
-                      },
-                      tooltips: {
-                      // enabled: false
-                      displayColors: false,
+                      tooltip: {
+                        displayColors: false,
                         callbacks: {
                           title: (item) => ``,
-                          label: function(tooltipItem, data) {
-                            var value = tooltipItem.yLabel;
-                            var label = data.datasets[tooltipItem.datasetIndex].label;
-                            value = value.toString();
-                            value = value.split(/(?=(?:...)*$)/);
-                            value = value.join(',');
-                            value = value + ' 원';
-                            return label + ' : ' + value;
+                          label: function(context) {
+                            let label = context.dataset.label || '';
+                            if (label) {
+                              label += ': ';
+                            }
+                            if (context.parsed.y !== null) {
+                              label += new Intl.NumberFormat().format(context.parsed.y);
+                            }
+                            return label + ' 원';
                           }
                         }
                       }
-                    }
+                    },
+                  }
                 });
                 </script>
             </div>
         </div>
-        
       </div>
       <!--통계 끝-->
 

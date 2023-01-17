@@ -74,6 +74,10 @@
           <img src="img/myinfo.svg" alt="myinfo" />
           <span>내 정보</span>
         </a>
+        <a class="menu-item active" href="u_popup.html">
+          <img src="img/myinfo.svg" alt="popup" />
+          <span>팝업 (임시)</span>
+        </a>
       </nav>
     </div>
     <!--Main Menu 끝-->
@@ -527,7 +531,7 @@
             ○ 예약 일정<br>
               · 2022-06-10(2박) / Ocean(2F) 201 / 12인<br>
               · 2022-06-10(2박) / Ocean(2F) / 2인<br>
-            ○ 취소 정보 : 1일 전 취소 / 취소 수수료 90%
+            ○ 취소 정보 : 1일 전 취소 / 취소 수수료 90% / 30,000원
           </div>
         </div>
         <div class="popup-bottom">
@@ -559,7 +563,7 @@
             ○ 예약 정보<br>
             · 2022-06-10(2박) / Ocean(2F) 201 / 12인<br>
             · 2022-06-10(2박) / Ocean(2F) 202 / 2인<br>
-            ○ 취소 정보 : 1일 전 취소 / 취소 수수료 90%<br>
+            ○ 취소 정보 : 1일 전 취소 / 취소 수수료 90% / 30,000원<br>
             <br>
             * 수정 후<br>
             ○ 판매 채널 : 네이버<br>
@@ -567,7 +571,7 @@
             ○ 예약 정보<br>
             · 2022-06-10(2박) / Ocean(2F) 201 / 12인<br>
             · 2022-06-10(2박) / Ocean(2F) 202 / 2인<br>
-            ○ 취소 정보 : 1일 전 취소 / 취소 수수료 0%
+            ○ 취소 정보 : 1일 전 취소 / 취소 수수료 0% / 0원
           </div>
         </div>
         <div class="popup-bottom">
@@ -814,7 +818,6 @@
             </div>
             <div class="col-type1">
               <select name="">
-                <option selected disabled>선택해주세요</option>
                 <option value="">네이버</option>
                 <option value="">에어비앤비</option>
                 <option value="">여기어때</option>
@@ -830,7 +833,6 @@
             </div>
             <div class="col-type1">
               <select name="">
-                <option selected disabled>선택해주세요</option>
                 <option value="">예약 완료</option>
                 <option value="">입금 대기</option>
               </select>
@@ -842,7 +844,7 @@
               <div class="label-text">예약 일시</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-05-10" min="" max=""> <!--클릭한 날짜-->
+              <input type="date" value="2022-05-10" min="2000-01-01" max="9999-12-31"> <!--클릭한 날짜-->
             </div>
           </div>
 
@@ -868,7 +870,7 @@
               <div class="label-text">입실일</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-06-10" min="" max=""> <!--클릭한 날짜-->
+              <input type="date" value="2022-06-10" min="2000-01-01" max="9999-12-31"> <!--클릭한 날짜-->
             </div>
           </div>
 
@@ -878,7 +880,7 @@
               <div class="sub-label">(1박)</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-06-12" min="" max=""> <!--클릭한 날짜 다음날-->
+              <input type="date" value="2022-06-12" min="2000-01-01" max="9999-12-31"> <!--클릭한 날짜 다음날-->
             </div>
           </div>
           <div class="form-type1"> 
@@ -972,6 +974,16 @@
             <div class="col-type1">
               <div class="input-group1 text-red">
                 <input type="text" class="text-red" value="150,000"><div class="unit2">원</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">쿠폰 할인</div>
+            </div>
+            <div class="col-type1">
+              <div class="input-group2">
+                <div class="unit1">-</div><input type="text" value="0"><div class="unit2">원</div>
               </div>
             </div>
           </div>
@@ -1078,7 +1090,6 @@
             </div>
             <div class="col-type1">
               <select name="">
-                <option selected disabled>선택해주세요</option>
                 <option value="">네이버</option>
                 <option value="">에어비앤비</option>
                 <option value="">여기어때</option>
@@ -1094,7 +1105,6 @@
             </div>
             <div class="col-type1">
               <select name="">
-                <option selected disabled>선택해주세요</option>
                 <option value="">예약 완료</option>
                 <option value="">입금 대기</option>
               </select>
@@ -1106,7 +1116,7 @@
               <div class="label-text">예약 일시</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-05-10" min="" max=""> <!--클릭한 날짜-->
+              <input type="date" value="2022-05-10" min="2000-01-01" max="9999-12-31"> <!--클릭한 날짜-->
             </div>
           </div>
 
@@ -1132,7 +1142,7 @@
               <div class="label-text">입실일</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-06-10" min="" max=""> <!--클릭한 날짜-->
+              <input type="date" value="2022-06-10" min="2000-01-01" max="9999-12-31"> <!--클릭한 날짜-->
             </div>
           </div>
 
@@ -1142,7 +1152,7 @@
               <div class="sub-label">(1박)</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-06-12" min="" max=""> <!--클릭한 날짜 다음날-->
+              <input type="date" value="2022-06-12" min="2000-01-01" max="9999-12-31"> <!--클릭한 날짜 다음날-->
             </div>
           </div>
           <div class="form-type1"> 
@@ -1302,6 +1312,16 @@
             </div>
           </div>
           <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">쿠폰 할인</div>
+            </div>
+            <div class="col-type1">
+              <div class="input-group2">
+                <div class="unit1">-</div><input type="text" value="0"><div class="unit2">원</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-type1">
             <div class="label2">
               <div class="label-text">연박 할인 총액</div>
               <div class="sub-label">(정상가 : 20,000 원)</div>
@@ -1397,7 +1417,20 @@
           <div class="sub-title1">
             <div class="text">공통 사항</div>
           </div>
-          
+          <div class="form-type1"> 
+            <div class="label1">
+              <div class="label-text">파트너</div>
+            </div>
+            <div class="col-type1">
+              <select name="">
+                <option selected disabled>선택해주세요</option>
+                <option value="">제주 르페도라펜션</option>
+                <option value="">제주애견동반 솔펜션</option>
+                <option value="">근동이네독채민박</option>
+                <option value="">리베라 호텔</option>
+              </select>
+            </div>
+          </div>
           <div class="form-type1">
             <div class="label1">
               <div class="label-text">판매 채널</div>
@@ -1420,7 +1453,6 @@
             </div>
             <div class="col-type1">
               <select name="">
-                <option selected disabled>선택해주세요</option>
                 <option value="">예약 완료</option>
                 <option value="">입금 대기</option>
               </select>
@@ -1432,7 +1464,7 @@
               <div class="label-text">예약 일시</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-05-10" min="" max=""> <!--클릭한 날짜-->
+              <input type="date" value="2022-05-10" min="2000-01-01" max="9999-12-31"> <!--클릭한 날짜-->
             </div>
           </div>
 
@@ -1458,7 +1490,7 @@
               <div class="label-text">입실일</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="" min="" max="">
+              <input type="date" value="" min="2000-01-01" max="9999-12-31">
             </div>
           </div>
 
@@ -1468,23 +1500,10 @@
               <div class="sub-label">(박)</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="" min="" max="">
+              <input type="date" value="" min="2000-01-01" max="9999-12-31">
             </div>
           </div>
-          <div class="form-type1"> 
-            <div class="label1">
-              <div class="label-text">파트너</div>
-            </div>
-            <div class="col-type1">
-              <select name="">
-                <option selected disabled>선택해주세요</option>
-                <option value="">제주 르페도라펜션</option>
-                <option value="">제주애견동반 솔펜션</option>
-                <option value="">근동이네독채민박</option>
-                <option value="">리베라 호텔</option>
-              </select>
-            </div>
-          </div>
+          
           <div class="form-type1"> 
             <div class="label1">
               <div class="label-text">객실 타입</div>
@@ -1578,6 +1597,16 @@
             <div class="col-type1">
               <div class="input-group1 text-red">
                 <input type="text" class="text-red" value="150,000"><div class="unit2">원</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">쿠폰 할인</div>
+            </div>
+            <div class="col-type1">
+              <div class="input-group2">
+                <div class="unit1">-</div><input type="text" value="0"><div class="unit2">원</div>
               </div>
             </div>
           </div>
@@ -1712,7 +1741,7 @@
               <div class="label-text">예약 일시</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-05-10" min="" max="">
+              <input type="date" value="2022-05-10" min="2000-01-01" max="9999-12-31">
             </div>
           </div>
 
@@ -1738,7 +1767,7 @@
               <div class="label-text">입실일</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-06-10" min="" max="">
+              <input type="date" value="2022-06-10" min="2000-01-01" max="9999-12-31">
             </div>
           </div>
           <div class="form-type1">
@@ -1747,7 +1776,7 @@
               <div class="sub-label">(2박)</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-06-12" min="" max="">
+              <input type="date" value="2022-06-12" min="2000-01-01" max="9999-12-31">
             </div>
           </div>
           <div class="form-type1"> 
@@ -1842,6 +1871,16 @@
             <div class="col-type1">
               <div class="input-group1 text-red">
                 <input type="text" class="text-red" value="150,000"><div class="unit2">원</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">쿠폰 할인</div>
+            </div>
+            <div class="col-type1">
+              <div class="input-group2">
+                <div class="unit1">-</div><input type="text" value="0"><div class="unit2">원</div>
               </div>
             </div>
           </div>
@@ -1982,7 +2021,7 @@
               <div class="label-text">예약 일시</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-05-10" min="" max="">
+              <input type="date" value="2022-05-10" min="2000-01-01" max="9999-12-31">
             </div>
           </div>
 
@@ -2008,7 +2047,7 @@
               <div class="label-text">입실일</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-06-10" min="" max="">
+              <input type="date" value="2022-06-10" min="2000-01-01" max="9999-12-31">
             </div>
           </div>
           <div class="form-type1">
@@ -2017,7 +2056,7 @@
               <div class="sub-label">(2박)</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-06-12" min="" max="">
+              <input type="date" value="2022-06-12" min="2000-01-01" max="9999-12-31">
             </div>
           </div>
           <div class="form-type1"> 
@@ -2262,7 +2301,7 @@
                   <div class="label-text">입실일</div>
                 </div>
                 <div class="col-type1">
-                  <input type="date" value="2022-06-11" min="" max=""> <!--클릭한 날짜-->
+                  <input type="date" value="2022-06-11" min="2000-01-01" max="9999-12-31"> <!--클릭한 날짜-->
                 </div>
               </div>
 
@@ -2410,7 +2449,7 @@
                   <div class="label-text">입실일</div>
                 </div>
                 <div class="col-type1">
-                  <input type="date" value="2022-06-11" min="" max=""> <!--클릭한 날짜-->
+                  <input type="date" value="2022-06-11" min="2000-01-01" max="9999-12-31"> <!--클릭한 날짜-->
                 </div>
               </div>
 
@@ -2505,6 +2544,16 @@
             <div class="col-type1">
               <div class="input-group1 text-red">
                 <input type="text" class="text-red" value="150,000"><div class="unit2">원</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">쿠폰 할인</div>
+            </div>
+            <div class="col-type1">
+              <div class="input-group2">
+                <div class="unit1">-</div><input type="text" value="0"><div class="unit2">원</div>
               </div>
             </div>
           </div>
@@ -2869,7 +2918,7 @@
                   <div class="label-text">입실일</div>
                 </div>
                 <div class="col-type1">
-                  <input type="date" value="2022-06-11" min="" max=""> <!--클릭한 날짜-->
+                  <input type="date" value="2022-06-11" min="2000-01-01" max="9999-12-31"> <!--클릭한 날짜-->
                 </div>
               </div>
 
@@ -2995,7 +3044,7 @@
                   <div class="label-text">입실일</div>
                 </div>
                 <div class="col-type1">
-                  <input type="date" value="2022-06-11" min="" max=""> <!--클릭한 날짜-->
+                  <input type="date" value="2022-06-11" min="2000-01-01" max="9999-12-31"> <!--클릭한 날짜-->
                 </div>
               </div>
 
@@ -3065,6 +3114,14 @@
             </div>
             <div class="col-type1">
               <div class="kkk text-red">150,000 원</div>
+            </div>
+          </div>
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">쿠폰 할인</div>
+            </div>
+            <div class="col-type1">
+              <div class="kkk">-20,000 원</div>
             </div>
           </div>
           <div class="form-type1">
@@ -3251,6 +3308,14 @@
             </div>
           </div>
           <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">쿠폰 할인</div>
+            </div>
+            <div class="col-type1">
+              <div class="kkk">-20,000 원</div>
+            </div>
+          </div>
+          <div class="form-type1">
             <div class="label2">
               <div class="label-text">연박 할인 총액</div>
               <div class="sub-label">(정상가 : 20,000원)</div>
@@ -3283,7 +3348,7 @@
               <div class="sub-label">(정상가 : 140,000원)</div>
             </div>
             <div class="col-type1">
-              <div class="kkk text-red"><span>= 170,000 원</span></div>
+              <div class="kkk text-red"><span>= 150,000 원</span></div>
             </div>
           </div>
 
@@ -3558,6 +3623,14 @@
             </div>
           </div>
           <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">쿠폰 할인</div>
+            </div>
+            <div class="col-type1">
+              <div class="kkk">-20,000 원</div>
+            </div>
+          </div>
+          <div class="form-type1">
             <div class="label2">
               <div class="label-text">연박 할인 총액</div>
               <div class="sub-label">(정상가 : 20,000원)</div>
@@ -3590,7 +3663,7 @@
               <div class="sub-label">(정상가 : 140,000원)</div>
             </div>
             <div class="col-type1">
-              <div class="kkk text-red"><span>= 170,000 원</span></div>
+              <div class="kkk text-red"><span>= 150,000 원</span></div>
             </div>
           </div>
 
@@ -3858,6 +3931,14 @@
             </div>
           </div>
           <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">쿠폰 할인</div>
+            </div>
+            <div class="col-type1">
+              <div class="kkk">-20,000 원</div>
+            </div>
+          </div>
+          <div class="form-type1">
             <div class="label2">
               <div class="label-text">연박 할인 총액</div>
               <div class="sub-label">(정상가 : 20,000원)</div>
@@ -3960,44 +4041,29 @@
               <div class="label-text">취소 일시</div>
             </div>
             <div class="col-type2">
-              <input type="date" value="2022-06-09" min="" max=""> <!--예약 취소 생성일을 기본값으로 하되 변경 가능-->
+              <input type="date" value="2022-06-09" min="2000-01-01" max="9999-12-31"> <!--예약 취소 생성일을 기본값으로 하되 변경 가능-->
             </div>
           </div>
-
           <div class="form-type1">
             <div class="label2">
-              <div class="label-text">취소 수수료</div> <!--숙소 세부 정보에서의 설정을 기본값으로 하되 변경 가능-->
+              <div class="label-text">취소 수수료</div>
               <div class="sub-label">(1일 전 취소 / 90 %)</div>
             </div>
             <div class="col-type1">
-              <div class="input-group1 text-red">
-                <select class="text-red">
-                  <option>100</option>
-                  <option>90</option>
-                  <option>80</option>
-                  <option>70</option>
-                  <option>60</option>
-                  <option>50</option>
-                  <option>40</option>
-                  <option>30</option>
-                  <option>20</option>
-                  <option>10</option>
-                  <option selected>0</option>
-                </select>
-                <div class="unit2">&#37;</div>
-              </div>
+              <div class="kkk text-red">80 %</div>
             </div>
           </div>
           <div class="form-type1">
             <div class="label2">
               <div class="label-text">금액</div>
-              <div class="sub-label">(정상가 : 68,000 원)</div>
+              <div class="sub-label">(정상가 : 100,000 원)</div>
             </div>
             <div class="col-type1">
-              <div class="kkk text-red">0 원</div>
+              <div class="input-group1 text-red">
+                <input type="text" class="text-red" value="150,000"><div class="unit2">원</div>
+              </div>
             </div>
           </div>
-
           <hr class="group-line2">
           
           <div class="form-type2">
@@ -4066,7 +4132,7 @@
               <div class="label-text">예약 일시</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-05-10" min="" max="">
+              <input type="date" value="2022-05-10" min="2000-01-01" max="9999-12-31">
             </div>
           </div>
           <div class="form-type1"> 
@@ -4074,7 +4140,7 @@
               <div class="label-text">취소 일시</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-06-05" min="" max="">
+              <input type="date" value="2022-06-05" min="2000-01-01" max="9999-12-31">
             </div>
           </div>
           <div class="form-type1">
@@ -4098,7 +4164,7 @@
               <div class="label-text">입실일</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-06-10" min="" max="">
+              <input type="date" value="2022-06-10" min="2000-01-01" max="9999-12-31">
             </div>
           </div>
           <div class="form-type1">
@@ -4107,7 +4173,7 @@
               <div class="sub-label">(2박)</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-12-25" min="" max="">
+              <input type="date" value="2022-12-25" min="2000-01-01" max="9999-12-31">
             </div>
           </div>
           <div class="form-type1"> 
@@ -4252,7 +4318,7 @@
                   <div class="label-text">입실일</div>
                 </div>
                 <div class="col-type1">
-                  <input type="date" value="2022-06-11" min="" max=""> <!--클릭한 날짜-->
+                  <input type="date" value="2022-06-11" min="2000-01-01" max="9999-12-31"> <!--클릭한 날짜-->
                 </div>
               </div>
 
@@ -4350,6 +4416,16 @@
             </div>
           </div>
           <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">쿠폰 할인</div>
+            </div>
+            <div class="col-type1">
+              <div class="input-group2">
+                <div class="unit1">-</div><input type="text" value="0"><div class="unit2">원</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-type1">
             <div class="label2">
               <div class="label-text">연박 할인 총액</div>
               <div class="sub-label">(정상가 : 20,000 원)</div>
@@ -4400,35 +4476,22 @@
 
           <div class="form-type1">
             <div class="label2">
-              <div class="label-text">취소 수수료</div> <!--사전 취소 일수를 기본으로 나온 수수료율을 기본값으로 하되 변경 가능-->
+              <div class="label-text">취소 수수료</div>
               <div class="sub-label">(1일 전 취소 / 90 %)</div>
             </div>
             <div class="col-type1">
-              <div class="input-group1 text-red">
-                <select class="text-red">
-                  <option>100</option>
-                  <option>90</option>
-                  <option>80</option>
-                  <option>70</option>
-                  <option>60</option>
-                  <option>50</option>
-                  <option>40</option>
-                  <option>30</option>
-                  <option>20</option>
-                  <option>10</option>
-                  <option selected>0</option>
-                </select>
-                <div class="unit2">&#37;</div>
-              </div>
+              <div class="kkk text-red">80 %</div>
             </div>
           </div>
           <div class="form-type1">
             <div class="label2">
               <div class="label-text">금액</div>
-              <div class="sub-label">(정상가 : 68,000 원)</div>
+              <div class="sub-label">(정상가 : 100,000 원)</div>
             </div>
             <div class="col-type1">
-              <div class="kkk"><span class="text-red">40,000 원</span></div>
+              <div class="input-group1 text-red">
+                <input type="text" class="text-red" value="150,000"><div class="unit2">원</div>
+              </div>
             </div>
           </div>
 
@@ -4703,6 +4766,14 @@
             </div>
             <div class="col-type1">
               <div class="kkk text-red">150,000 원</div>
+            </div>
+          </div>
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">쿠폰 할인</div>
+            </div>
+            <div class="col-type1">
+              <div class="kkk">-20,000 원</div>
             </div>
           </div>
           <div class="form-type1">
@@ -5029,6 +5100,14 @@
             </div>
           </div>
           <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">쿠폰 할인</div>
+            </div>
+            <div class="col-type1">
+              <div class="kkk">-20,000 원</div>
+            </div>
+          </div>
+          <div class="form-type1">
             <div class="label2">
               <div class="label-text">연박 할인 총액</div>
               <div class="sub-label">(정상가 : 20,000원)</div>
@@ -5120,7 +5199,7 @@
             </div>
             <div class="col-type2" id="duration">
               <div class="input-row">
-                <input type="date" value="" min="" max=""><span>~</span><input type="date" value="" min="" max="">
+                <input type="date" value="" min="2000-01-01" max="9999-12-31"><span>~</span><input type="date" value="" min="2000-01-01" max="9999-12-31">
               </div>
             </div>
           </div>

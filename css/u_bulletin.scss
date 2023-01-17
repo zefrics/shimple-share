@@ -854,7 +854,7 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.15);
         width: 100%;
         padding: 0 0 5px 0;
-        // height: 36px;
+        height: 36px;
         font-size: 16px; font-weight: 500; line-height: 30px;
         overflow: auto;
         &::-webkit-scrollbar { 
@@ -879,9 +879,6 @@
         height: 120px;
         font-size: 15px; font-weight: 400;
         overflow: auto;
-        &::-webkit-scrollbar { 
-          display: none; 
-        }
       }
       .element-group {
         display: flex; flex-wrap: wrap;
@@ -1732,7 +1729,7 @@
 #types {
   margin-top: 24px;
   .title, .table-row {
-    grid-template-columns: minmax(0, 1fr) 135px 135px 135px 135px;
+    grid-template-columns: minmax(0, 1fr) 115px 115px 115px 75px 115px;
   }
 }
 

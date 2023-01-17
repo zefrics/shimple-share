@@ -47,7 +47,6 @@ body::-webkit-scrollbar-thumb {
 .main-nav::-webkit-scrollbar {
   display: none;
 }
-
 .main-nav a {
   color: #ffffff;
   cursor: pointer;
@@ -147,7 +146,7 @@ body::-webkit-scrollbar-thumb {
 .content-container {
   display: flex;
   flex-direction: column;
-  padding: 30px 30px 0px 210px;
+  padding: 30px 30px 30px 210px;
   height: 100%;
   min-height: 100%;
   min-width: 1910px;
@@ -158,7 +157,6 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   margin-bottom: 30px;
   padding: 45px;
-  overflow: auto;
   background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 7px 0px;
 }
@@ -186,7 +184,7 @@ body::-webkit-scrollbar-thumb {
   margin-left: 15px;
 }
 .content-container footer {
-  padding: 15px 0 90px 0;
+  padding-top: 15px;
   border-top: 1px solid #cccccc;
   font-size: 15px;
   font-weight: 400;
@@ -203,14 +201,15 @@ body::-webkit-scrollbar-thumb {
   gap: 15px;
 }
 .floating-group .floating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   width: 60px;
   height: 60px;
   border-radius: 30px;
   background-color: #a0a0a0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 9px 3px;
 }
 .floating-group .floating:hover {
   outline: 2px solid #000000;
@@ -325,21 +324,24 @@ body::-webkit-scrollbar-thumb {
 
 /* 기타 속성 */
 .other-month {
-  background-color: #dddddd;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.other-month .type-hover {
+  background-color: yellow !important;
 }
 
-.past-month {
-  opacity: 0.3;
+.past-month .day-header, .past-month .badge-large, .past-month .name, .past-month .stock {
+  opacity: 0.5;
 }
 
 .past-week {
-  /* opacity: 0.5; */
   position: relative;
 }
-
 .past-week::after {
   content: "";
   position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   opacity: 0.3;
@@ -534,66 +536,68 @@ textarea:disabled:hover {
   text-decoration: line-through;
 }
 
+/* 채널 별 색상 */
 .color01 {
-  color: red !important;
+  color: rgba(255, 0, 0, 0.65) !important;
 }
 
 .color02 {
-  color: orange !important;
+  color: rgba(255, 165, 0, 0.65) !important;
 }
 
 .color03 {
-  color: yellow !important;
+  color: rgba(255, 255, 0, 0.65) !important;
 }
 
 .color04 {
-  color: green !important;
+  color: rgba(0, 128, 0, 0.65) !important;
 }
 
 .color05 {
-  color: blue !important;
+  color: rgba(0, 0, 255, 0.65) !important;
 }
 
 .color06 {
-  color: navy !important;
+  color: rgba(0, 0, 128, 0.65) !important;
 }
 
 .color07 {
-  color: purple !important;
+  color: rgba(128, 0, 128, 0.65) !important;
 }
 
 .color08 {
-  color: tomato !important;
+  color: rgba(255, 99, 71, 0.65) !important;
 }
 
 .color09 {
-  color: greenyellow !important;
+  color: rgba(173, 255, 47, 0.65) !important;
 }
 
 .color10 {
-  color: cyan !important;
+  color: rgba(0, 255, 255, 0.45) !important;
 }
 
 .color11 {
-  color: magenta !important;
+  color: rgba(255, 0, 255, 0.45) !important;
 }
 
 .color12 {
-  color: saddlebrown !important;
+  color: rgba(139, 69, 19, 0.45) !important;
 }
 
 .color13 {
-  color: seagreen !important;
+  color: rgba(46, 139, 87, 0.45) !important;
 }
 
 .color14 {
-  color: steelblue !important;
+  color: rgba(70, 130, 180, 0.45) !important;
 }
 
 .color15 {
-  color: teal !important;
+  color: rgba(0, 128, 128, 0.45) !important;
 }
 
+/* 요금 정보 색상 */
 .bg-color01 {
   background-color: rgba(255, 0, 0, 0.25) !important;
 }
@@ -735,7 +739,7 @@ textarea:disabled:hover {
 }
 
 .bg-color36 {
-  background-color: rgba(0, 0, 128, 0.45) !important;
+  background-color: rgba(0, 0, 128, 0.65) !important;
 }
 
 .bg-color37 {

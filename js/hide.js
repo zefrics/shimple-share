@@ -520,13 +520,13 @@ function popupRoommoveClose() {
 
 
 // 월간 달력 hover
-function hoverIn() {
-  var x = document.querySelector(".type-hover");
+function hoverIn(e) {
+  var x = e.querySelector(".type-hover");
   x.classList.remove("hide");
 }
 
-function hoverOut() {
-  var x = document.querySelector(".type-hover");
+function hoverOut(e) {
+  var x = e.querySelector(".type-hover");
   x.classList.add("hide");
 }
 

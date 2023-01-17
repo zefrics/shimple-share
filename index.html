@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/c_main.css" />
     <script type="text/javascript" src="js/hide.js"></script>
     <script type="text/javascript" src="js/toggle.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
     <title>쉼플</title>
   </head>
 
@@ -62,6 +62,10 @@
         <a class="menu-item" href="c_myinfo_read.html">
           <img src="img/myinfo.svg" alt="myinfo" />
           <span>내 정보</span>
+        </a>
+        <a class="menu-item" href="u_popup.html">
+          <img src="img/myinfo.svg" alt="popup" />
+          <span>팝업 (임시)</span>
         </a>
       </nav>
     </div>
@@ -221,56 +225,37 @@
                         data: [100,3,50,65,70,90,100]
                       }
                     ]
-                    // datasets: [{
-                    //     label: '# of Votes',
-                    //     data: [12, 19, 3, 5, 2, 3],
-                    //     backgroundColor: [
-                    //         'rgba(255, 99, 132, 0.2)',
-                    //         'rgba(54, 162, 235, 0.2)',
-                    //         'rgba(255, 206, 86, 0.2)',
-                    //         'rgba(75, 192, 192, 0.2)',
-                    //         'rgba(153, 102, 255, 0.2)',
-                    //         'rgba(255, 159, 64, 0.2)'
-                    //     ],
-                    //     borderColor: [
-                    //         'rgba(255, 99, 132, 1)',
-                    //         'rgba(54, 162, 235, 1)',
-                    //         'rgba(255, 206, 86, 1)',
-                    //         'rgba(75, 192, 192, 1)',
-                    //         'rgba(153, 102, 255, 1)',
-                    //         'rgba(255, 159, 64, 1)'
-                    //     ],
-                    //     borderWidth: 1
-                    // }]
                   },
 
                   options: {
                     animation: false,
                     responsive: true,
                     maintainAspectRatio: false,
-                    legend: {
-                      display: false
-                    },
-                    tooltips: {
-                      displayColors: false,
-                    // enabled: false
-                      callbacks: {
-                        title: (item) => ``,
-                        label: (item) => `${item.yLabel}%`
-                      }
-                    },
                     scales: {
-                      yAxes: [{
+                      y: {
+                        beginAtZero: true,
                         ticks: {
-                          beginAtZero: true,
                           stepSize: 25,
                           callback: function(value) {
                             value = value + '%';
                             return value;
                           }
                         }  
-                      }]
-                    }
+                      }
+                    },
+                    plugins: {
+                      legend: {
+                        display: false,
+                      },
+                      tooltip: {
+                        // enabled: false
+                        displayColors: false,
+                        callbacks: {
+                          title: (item) => ``,
+                          label: (item) => `${item.parsed.y}%`
+                        }
+                      },
+                    },
                   }
                 });
               </script>
@@ -917,7 +902,20 @@
           <div class="sub-title1">
             <div class="text">공통 사항</div>
           </div>
-          
+          <div class="form-type1"> 
+            <div class="label1">
+              <div class="label-text">파트너</div>
+            </div>
+            <div class="col-type1">
+              <select name="">
+                <option selected disabled>선택해주세요</option>
+                <option value="">제주 르페도라펜션</option>
+                <option value="">제주애견동반 솔펜션</option>
+                <option value="">근동이네독채민박</option>
+                <option value="">리베라 호텔</option>
+              </select>
+            </div>
+          </div>
           <div class="form-type1">
             <div class="label1">
               <div class="label-text">판매 채널</div>
@@ -940,7 +938,6 @@
             </div>
             <div class="col-type1">
               <select name="">
-                <option selected disabled>선택해주세요</option>
                 <option value="">예약 완료</option>
                 <option value="">입금 대기</option>
               </select>
@@ -952,7 +949,7 @@
               <div class="label-text">예약 일시</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="2022-05-10" min="" max=""> <!--클릭한 날짜-->
+              <input type="date" value="2022-05-10" min="2000-01-01" max="9999-12-31"> <!--클릭한 날짜-->
             </div>
           </div>
 
@@ -978,7 +975,7 @@
               <div class="label-text">입실일</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="" min="" max="">
+              <input type="date" value="" min="2000-01-01" max="9999-12-31">
             </div>
           </div>
 
@@ -988,23 +985,10 @@
               <div class="sub-label">(박)</div>
             </div>
             <div class="col-type1">
-              <input type="date" value="" min="" max="">
+              <input type="date" value="" min="2000-01-01" max="9999-12-31">
             </div>
           </div>
-          <div class="form-type1"> 
-            <div class="label1">
-              <div class="label-text">파트너</div>
-            </div>
-            <div class="col-type1">
-              <select name="">
-                <option selected disabled>선택해주세요</option>
-                <option value="">제주 르페도라펜션</option>
-                <option value="">제주애견동반 솔펜션</option>
-                <option value="">근동이네독채민박</option>
-                <option value="">리베라 호텔</option>
-              </select>
-            </div>
-          </div>
+          
           <div class="form-type1"> 
             <div class="label1">
               <div class="label-text">객실 타입</div>
@@ -1102,6 +1086,16 @@
             </div>
           </div>
           <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">쿠폰 할인</div>
+            </div>
+            <div class="col-type1">
+              <div class="input-group2">
+                <div class="unit1">-</div><input type="text" value="0"><div class="unit2">원</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-type1">
             <div class="label2">
               <div class="label-text">연박 할인 총액</div>
               <div class="sub-label">(정상가 : 20,000 원)</div>
@@ -1181,6 +1175,5 @@
       </div>
     </div>
     <!-- 예약 생성 #3 Modal 끝 -->
-
   </body>
 </html>
