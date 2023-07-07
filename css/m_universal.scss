@@ -1,27 +1,39 @@
-$color0: rgba(255, 255, 255, 1); // 배경 색상
-$color1: rgba(0, 180, 255, 1); // 주요 색상 #1
-$color2: rgba(244, 81, 108, 1); // 주요 색상 #2
-$color3: rgba(171, 171, 171, 1); // 주요 색상 #3
-$color9-1: rgba(0, 0, 0, 1); // 주요 색상 #9-1
+$color-wa: rgba(255, 255, 255, 1);
+$color-w5: rgba(255, 255, 255, 0.5); // Menu text (normal)
+
+$color-ka: rgba(0, 0, 0, 1);
+$color-k7: rgba(0, 0, 0, 0.7); // Result, Hover
+$color-k4: rgba(0, 0, 0, 0.4); // Box-shadow
+$color-k3: rgba(0, 0, 0, 0.3); // Placeholder
+$color-k2: rgba(0, 0, 0, 0.2); // Input, Select, Textarea
+
+$color-xd: #dddddd;
+
+$color-ca: rgba(0, 180, 255, 1);
+
+$color-ma: rgba(244, 81, 108, 1);
 
 $fs-brand: 16rem; // 브랜드 폰트 사이즈
 $fw-brand: 600; // 브랜드 폰트 웨이트
 
 $fs-menu: 27rem; // 메뉴 폰트 사이즈
-$fw-menu1: 300; // 메뉴 폰트 웨이트1 (일반)
-$fw-menu2: 400; // 메뉴 폰트 웨이트2 (Hover 및 Active)
-
-$fs-menu-title: 16rem; // 메뉴 타이틀 폰트 사이즈
-$fw-menu-title: 600; // 메뉴 폰트 웨이트
+$fw-menu1: 400; // 메뉴 폰트 웨이트1 (일반)
+$fw-menu2: 500; // 메뉴 폰트 웨이트2 (Hover 및 Active)
 
 $fs-con-title: 16rem; // 내용 타이틀 폰트 사이즈
 $fw-con-title: 600; // 내용 타이틀 폰트 웨이트
 
-$fs-result-title: 12rem; // 검색 결과 폰트 사이즈
-$fw-result-title: 400; // 검색 결과 폰트 웨이트
+$fs-result: 12rem; // 검색 결과 폰트 사이즈
+$fw-result: 400; // 검색 결과 폰트 웨이트
 
 $fs-copy: 15rem; // 카피라이트 폰트 사이즈
 $fw-copy: 400; // 카피라이트 폰트 웨이트
+
+$fs-input: 14rem; // Input, Select 폰트 사이즈
+$fw-input: 500; // Input, Select 폰트 사이즈
+
+$fs-textarea: 13rem; // Textarea 폰트 사이즈
+$fw-textarea: 400; // Textarea 폰트 사이즈
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -43,17 +55,17 @@ html {
 
 body {
   font-family: Apple SD Gothic Neo;
-  background-color: $color1;
+  background-color: $color-ca;
   letter-spacing: -0.5rem;
 }
 
 nav {
-  position: sticky; top: 0;
   z-index: 500;
+  position: sticky; top: 0;
   user-select: none;
   display: flex; justify-content: center;
-  color: $color0;
-  background-color: $color1;
+  color: $color-wa;
+  background-color: $color-ca;
   .navigation {
     height: 45px; width: 100%;
     padding: 0 18rem;
@@ -77,12 +89,12 @@ nav {
         position: relative;
         cursor: pointer;
         width: 19px; height: 16px;
-        color: rgba(255, 255, 255, 1);
+        color: $color-wa;
         span {
           display: block;
           position: absolute;
           width: 100%; height: 2px;
-          background: rgba(255, 255, 255, 1);
+          background-color: $color-wa;
           border-radius: 2px;
           left: 0;
           transform: rotate(0deg); transition: .25s ease-in-out;
@@ -118,13 +130,13 @@ nav {
       height: 100vh; width: 100%;
       li {
         font-size: $fs-menu; font-weight: $fw-menu1;
-        color: rgba(255, 255, 255, 0.45);
+        color: $color-w5;
         a {
           &:link, &:visited {
-            color: rgba(255, 255, 255, 0.45); text-decoration: none;
+            color: $color-w5; text-decoration: none;
           }
           &:hover, &.active {
-            color: rgba(255, 255, 255, 1); font-weight: $fw-menu2;
+            color: $color-wa; font-weight: $fw-menu2;
           }
         }
       }
@@ -143,35 +155,34 @@ nav {
 }
 
 .content-container {
-  .header {
-    z-index: 500;
+  >.header {
+    z-index: 300;
     position: sticky; top: 45px;
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 18rem;
     height: 45px;
-    background-color: $color0;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    background-color: $color-wa;
+    box-shadow: 0 2px 2px 0 $color-k4;
     .title {
       display: flex; align-items: center;
       font-size: $fs-con-title; font-weight: $fw-con-title;
       span {
         margin-left: 9rem;
-        font-size: $fs-result-title; font-weight: $fw-result-title;
-        color: $color3;
+        font-size: $fs-result; font-weight: $fw-result;
+        color: $color-k7;
       }
     }
   }
-  .content {
-    background-color: rgba(225, 225, 225, 1);
+  >.content {
+    background-color: $color-xd;
     display: flex; flex-direction: column;
     padding: 6rem; gap: 6rem;
     .artboard {
-      background-color: $color0;
+      background-color: $color-wa;
       padding: 12rem;
       font-size: 15rem;
     }
   }
-
 }
 
 footer {
@@ -179,7 +190,7 @@ footer {
   height: 45px;
   padding: 0 15rem;
   font-size: $fs-copy; font-weight: $fw-copy;
-  color: $color0;
+  color: $color-wa;
 }
 
 .hide {
@@ -189,59 +200,59 @@ footer {
 
 /* Input, Select, Textarea, Label 공통 */
 
-label {
-  cursor: pointer;
-}
-
+/* 입력 공통 */
 input {
-  border: 1px solid #cfcfcf;
-  font-family: Apple SD Gothic Neo;
+  height: 33rem; width: 100%;
+  padding: 0 9rem;
+  border: 1px solid $color-k2;
+  background-color: $color-wa;
+  font-family: Apple SD Gothic Neo; font-size: $fs-input; font-weight: $fw-input;
   &:hover {
-    outline: 1px solid #444444;
+    outline: 1px solid $color-k7;
     outline-offset: -1px;
   }
   &:focus {
-    outline: 2px solid #000000;
+    outline: 2px solid $color-ka;
     outline-offset: -2px;
   }
-  &[type="date"]::-webkit-calendar-picker-indicator {
+  &::placeholder {
+    color: $color-k3 !important;
+  }
+
+  &[type=date]::-webkit-calendar-picker-indicator,
+  [type=time]::-webkit-calendar-picker-indicator {
     cursor: pointer;
     height: 21px; width: 21px;
     margin: 0; padding: 0;
   }
-  &[type="time"]::-webkit-calendar-picker-indicator {
-    cursor: pointer;
-    height: 21px; width: 21px;
-    margin: 0; padding: 0;
-  }
-  &[type="checkbox"] {
+  &[type=checkbox] {
     cursor: pointer;
     &:hover, &:focus {
       outline: none;
     }
   }
-  &[type="radio"] {
+  &[type=radio] {
     cursor: pointer;
     height: 21px; width: 21px;
   }
-  &[type="number"]::-webkit-inner-spin-button { /*화살표*/
+  &[type=number]::-webkit-inner-spin-button { // 화살표
     height: 30px; width: 30px;
   }
   &[type=file] {
-    border-color:rgba(0, 180, 255, 1);
+    border-color: $color-ca;
     border-radius: 6px;
     text-align: center;
     cursor: pointer;
     padding-left: 9px;
     height: 33px; line-height: 33px;
     font-size: 12rem; font-weight: 500;
-    color:rgba(0, 180, 255, 1);
+    color: $color-ca;
     &:hover {
-      outline: 1px solid #444444;
+      outline: 1px solid $color-k7;
       outline-offset: -1px;
     }
     &:focus {
-      outline: 2px solid #000000;
+      outline: 2px solid $color-ka;
       outline-offset: -2px;
     }
     &::file-selector-button {
@@ -252,97 +263,76 @@ input {
 }
 
 select {
-  border: 1px solid #cfcfcf;
-  font-family: Apple SD Gothic Neo;
-  cursor: pointer;
-  -webkit-appearance: none; appearance: none;
+  cursor: pointer; appearance: none;
+  height: 33rem; width: 100%;
+  padding: 0 9rem;
+  border: 1px solid $color-k2;
+  background-color: $color-wa;
+  font-family: Apple SD Gothic Neo; font-size: $fs-input; font-weight: $fw-input;
   &:hover {
-    outline: 1px solid #444444;
+    outline: 1px solid $color-k7;
     outline-offset: -1px;
   }
   &:focus {
-    outline: 2px solid #000000;
+    outline: 2px solid $color-ka;
     outline-offset: -2px;
-  }
-}
-
-option {
-  &:disabled {
-    cursor: unset !important;
-    color: #cccccc !important;
-    &:hover {
-      cursor: unset !important;
-      color: #cccccc !important;
-      background-color: transparent !important;
-    }
   }
 }
 
 textarea {
-  font-family: Apple SD Gothic Neo;
   resize: none;
-  border: 1px solid #cfcfcf;
+  width: 100%;
+  padding: 9rem;
+  background-color: $color-wa;
+  font-family: Apple SD Gothic Neo; font-size: $fs-textarea; font-weight: $fw-textarea;
+  border: 1px solid $color-k2;
   &:hover {
-    outline: 1px solid #444444;
+    outline: 1px solid $color-k7;
     outline-offset: -1px;
   }
   &:focus {
-    outline: 2px solid #000000;
+    outline: 2px solid $color-ka;
     outline-offset: -2px;
   }
 }
 
-input:disabled,
-input:disabled~label,
-select:disabled,
-textarea:disabled {
-  cursor: unset;
-  border-color: #dddddd;
-  background-color: #f5f5f5;
-  color: #222222;
-  opacity: 1;
+label {
+  cursor: pointer;
 }
 
-input:disabled:hover,
-input:disabled~label:hover,
-select:disabled:hover,
-textarea:disabled:hover {
-  outline: 0px !important;
+/* 뒤에만 단위가 있는 input */
+.input-group1 {
+  display: flex; align-items: center;
+  position: relative;
+  input, select {
+    padding-right: 33px;
+  }
+  .unit2 {
+    position: absolute;
+    right: 9rem;
+  }
 }
 
-.sub-check {
-  user-select: none;
-  display: flex;
-  margin-top: 10px;
-  margin-left: auto;
-  padding-right: 6px;
-  label {
-    display: flex; align-items: center;
-    font-size: 15px; font-weight: 400;
-    input {
-      margin: 0 9px 0 0;
-      width: 24px; height: 24px;
-    }
-    &:hover {
-      outline: 1px solid #444444;
-    }
+/* 앞뒤에 단위가 있는 input */
+.input-group2 {
+  display: flex; align-items: center;
+  position: relative;
+  input, select {
+    padding: 0 33px 0 24px;
+  }
+  .unit1 {
+    position: absolute;
+    left: 9rem;
+  }
+  .unit2 {
+    position: absolute;
+    right: 9rem;
   }
 }
 
 
-.bold {
-  font-weight: 600;
-}
-.red {
-  color: red !important;
-}
-.blue {
-  color: rgba(0, 180, 255, 1) !important;
-}
-.gray {
-  color: rgba(171, 171, 171, 0.75) !important;
-}
-.through {
-  color: rgba(171, 171, 171, 1);
-  text-decoration: line-through;
+
+
+.text-red {
+  color: $color-ma !important;
 }

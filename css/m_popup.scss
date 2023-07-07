@@ -1,161 +1,92 @@
-$color0: rgba(255, 255, 255, 1); // 배경 색상
-$color1: rgba(0, 180, 255, 1); // 주요 색상 #1
-$color2: rgba(244, 81, 108, 1); // 주요 색상 #2
-$color3: rgba(171, 171, 171, 1); // 주요 색상 #3
-$color9-1: rgba(0, 0, 0, 1); // 주요 색상 #9-1
+$color-wa: rgba(255, 255, 255, 1);
+$color-w9: rgba(255, 255, 255, 0.9); // Bottom popup
+
+$color-ka: rgba(0, 0, 0, 1);
+$color-k7: rgba(0, 0, 0, 0.7); // BG, sub-title, log, Hover
+$color-k4: rgba(0, 0, 0, 0.4); // Box-shadow, sub-lable
+$color-k1: rgba(0, 0, 0, 0.1); // 조회 border
+
+$color-ca: rgba(0, 180, 255, 1);
+$color-c5: rgba(0, 180, 255, 0.5); // <hr>
+
+$color-ma: rgba(244, 81, 108, 1);
 
 $fs-popup-title: 18rem; // 팝업 타이틀 폰트 사이즈
 $fw-popup-title: 600; // 팝업 타이틀 폰트 웨이트
 
-$fs-modal-title: 18rem; // 팝업 타이틀 폰트 사이즈
-$fw-modal-title: 600; // 팝업 타이틀 폰트 웨이트
+$fs-popup-msg1: 18rem; // 팝업 메시지 폰트 사이즈
+$fw-popup-msg1: 600; // 팝업 메시지 폰트 웨이트
 
-/* 입력 공통 */
-input[type="text"], input[type="date"], input[type="number"] {
-  width: 100%;
-  padding: 0 12px;
-  height: 33px;
-  font-size: 15px; font-weight: 500;
-}
-select {
-  height: 33px;
-  width: 100%;
-  padding: 0 12px;
-  font-size: 15px; font-weight: 500;
-}
-textarea {
-  width: 100%;
-  margin-top: 6px;
-  padding: 12px;
-  font-size: 14px; font-weight: 400;
-}
+$fs-popup-msg2: 18rem; // 팝업 카카오톡 폰트 사이즈
+$fw-popup-msg2: 600; // 팝업 카카오톡 폰트 웨이트
 
-/* 뒤에만 단위가 있는 input */
-.input-group1 {
-  display: flex; align-items: center;
-  position: relative;
+$fs-modal-title: 18rem; // 모달 타이틀 폰트 사이즈
+$fw-modal-title: 600; // 모달 타이틀 폰트 웨이트
+
+$fs-modal-title: 18rem; // 모달 대제목 폰트 사이즈
+$fw-modal-title: 600; // 모달 대제목 폰트 웨이트
+
+$fs-modal-title: 18rem; // 모달 중제목 폰트 사이즈
+$fw-modal-title: 600; // 모달 중제목 폰트 웨이트
+
+$fs-modal-title: 18rem; // 모달 소제목 폰트 사이즈
+$fw-modal-title: 600; // 모달 소제목 폰트 웨이트
+
+$fs-modal-label: 14rem; // 모달 라벨 폰트 사이즈
+$fw-modal-label: 600; // 모달 라벨 폰트 웨이트
+
+$fs-modal-sub: 12rem; // 모달 서브 라벨 폰트 사이즈
+$fw-modal-sub: 400; // 모달 서브 라벨 폰트 웨이트
+
+/* 라벨과 내용의 배치 */
+.form-type1 { // 일반 타입
+  display: grid; grid-template-columns: 2fr 3fr; gap: 18px;
+  // margin-bottom: 18px;
 }
-.input-group1 input,
-.input-group1 select {
-  padding-right: 33px;
-}
-.input-group1 .unit2 {
-  position: absolute;
-  right: 12px;
+.form-type2 { // 메모 타입
+  // margin-bottom: 24px;
 }
 
-/* 앞뒤에 단위가 있는 input */
-.input-group2 {
-  align-items: center;
-  display: flex;
-  position: relative;
-}
-.input-group2 input,
-.input-group2 select {
-  padding: 0 33px 0 24px;
-}
-.input-group2 .unit1 {
-  position: absolute;
-  left: 12px;
-}
-.input-group2 .unit2 {
-  position: absolute;
-  right: 12px;
-}
-
-.form-type1 {
-  display: grid; grid-template-columns: 2fr 3fr;
-  margin-bottom: 21px;
-  .label1 {
+/* 라벨 */
+.label1 {
+  .label-text {
     margin-top: 9px;
-    font-size: 12rem; line-height: 15px; font-weight: 500;
-  }
-  select {
-    margin-bottom: 6px;
-    &:last-child {
-      margin-bottom: 0;
-    }
+    font-size: $fs-modal-label; line-height: $fs-modal-label; font-weight: $fw-modal-label;
   }
 }
-.form-type2 {
-  margin-top: 27px;
-  .label1 {
-    margin-bottom: 9px;
-    font-size: 12rem; line-height: 15px; font-weight: 500;
+.label2 {
+  .label-text {
+    font-size: $fs-modal-label; line-height: $fs-modal-label; font-weight: $fw-modal-label;
+  }
+  .sub-label {
+    color: $color-k7;
+    font-size: $fs-modal-sub; line-height: $fs-modal-sub; font-weight: $fw-modal-sub;
   }
 }
-
-
-/* Popup 시작 */
-.popup-container {
-  min-width: 360px;
-  z-index: 800;
-  display: flex; align-items: center; justify-content: center;
-  position: fixed; top: 0; left: 0;
-  height: 100%; width: 100%;
-  .bg {
-    z-index: 1;
-    position: fixed; top: 0; left: 0;
-    height: 100%; width: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
-  }
-  .popup {
-    z-index: 2;
-    display: flex; flex-direction: column; gap: 21rem;
-    max-height: calc(100% - 120rem); width: calc(100% - 36rem);
-    padding: 18rem;
-    background-color: $color0;
-    .header {
-      .title {
-        font-size: $fs-popup-title; font-weight: $fw-popup-title;
-      }
-    }
-    .content {
-      overflow-y: auto; height: 100%;
-      // 팝업 메시지 내용
-      .msg1 {
-        text-align: center;
-        font-size: 18px; font-weight: 500;
-      }
-      // 카카오톡 알림톡 내용
-      .msg2 {
-        border: 1px solid #cfcfcf;
-        padding: 12px;
-        overflow-y: auto;
-        max-height: 360px;
-        font-size: 14px; font-weight: 400;
-      }
-    }
-    .bottom {
-      user-select: none;
-    }
-  }
-}
-/* Popup 끝 */
 
 /* Modal 시작 */
 .modal-container {
-  min-width: 360px;
   z-index: 700;
   display: flex; align-items: center; justify-content: center;
   position: fixed; top: 0; left: 0;
   height: 100%; width: 100%;
+  padding: 30rem;
   .bg {
     z-index: 1;
     position: fixed; top: 0; left: 0;
     height: 100%; width: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: $color-k7;
   }
   .modal {
     z-index: 2;
     display: flex; flex-direction: column;
-    max-height: calc(100% - 36rem); width: calc(100% - 36rem);
-    background-color: $color0;
+    max-height: 100%; width: 100%;
+    background-color: $color-wa;
     .header {
       z-index: 1;
-      box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 2px 0px $color-k4;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 18rem;
+      padding: 15rem;
       .title-group {
         .title {
           font-size: 18rem; font-weight: 600;
@@ -163,14 +94,14 @@ textarea {
         .sub-title {
           font-size: 14px;
           font-weight: 400;
-          color:rgba(0, 0, 0, 0.75)
+          color: $color-k7;
         }
       }
       .close {
         background-color: transparent;
         height: 18rem; width: 18rem;
         &:hover {
-          outline: 2px solid $color2;
+          outline: 2px solid $color-ma;
         }
         img {
           height: 18rem; width: 18rem;
@@ -180,36 +111,8 @@ textarea {
     .content {
       overflow-y: auto;
       height: 100%;
-      padding: 18rem;
-      font-size: 15rem;
-    
-      /* 라벨과 내용의 배치 */
-      .form-type1 { /* 일반 타입 */
-        display: grid; grid-template-columns: 2fr 3fr; gap: 18px;
-        margin-bottom: 18px;
-      }
-      .form-type2 { /* 메모 타입 */
-        margin-bottom: 24px;
-      }
-    
-      /* 라벨 */
-      .label1 {
-        margin-top: 9px;
-        font-weight: 600;
-        line-height: 15px;
-      }
-      .label2 {
-        font-weight: 600;
-        line-height: 15px;
-        .label-text {
-          margin-bottom: 3px;
-        }
-        .sub-label {
-          color: #888888;
-          font-size: 13px;
-          font-weight: 400;
-        }
-      }
+      padding: 15rem;
+      font-size: 14rem;
     
       /* SUB BUTTON (ex. 예약 취소, SMS, 미발송, 발송 완료*/
       .btn-group1,
@@ -220,20 +123,20 @@ textarea {
       /* SUB TITLE */
       .sub-title1 {
         display: flex; align-items: center; justify-content: space-between;
-        color:rgba(0, 180, 255, 1);
+        color:$color-ca;
         font-size: 21rem; font-weight: 600;
         margin-bottom: 24px;
       }
       .sub-title2 {
         display: flex; align-items: center; justify-content: space-between;
-        color:rgba(0, 180, 255, 1);
+        color:$color-ca;
         font-size: 15rem; font-weight: 400;
         margin-bottom: 12px;
       }
     
       /* 구분 줄*/
       .group-line1 {
-        border: 1px solid rgba(0, 180, 255, 0.5);
+        border: 1px solid $color-c5;
         margin: 48px 0;
       }
       .group-line2 {
@@ -241,20 +144,15 @@ textarea {
         margin: 30px 0;
       }
       .group-line3 {
-        border: 1px solid rgba(0, 180, 255, 0.1);
+        border: 1px solid #ff0000;
         margin: 24px 0;
       }
     
       /* 인원, 반려동물 */
-      .person, .pet {
+      .person {
         display: flex;
-        margin-bottom: 5px;
-        &:last-child {
-          margin-bottom: 0;
-        }
         .type {
-          height: 33px;
-          width: 70%;
+          height: 33px; width: 70%;
           border: 1px solid #bbbbbb;
           box-sizing: border-box;
           background-color: #eeeeee;
@@ -275,7 +173,7 @@ textarea {
         padding: 4px 6px;
         text-align: right;
         font-size: 16px; font-weight: 500;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        border-bottom: 1px solid $color-k1;
         span {
           font-weight: 600;
         }
@@ -283,22 +181,24 @@ textarea {
     
       /* 작성 로그 */
       .record {
-        color: #444444;
+        color: $color-k7;
         font-size: 14px;
         font-weight: 400;
         line-height: 21px;
         span {
-          color: #000000;
+          color: $color-ka;
           font-weight: 600;
           padding-right: 12px;
         }
+      
       }
-      .partner-list { // 숙소 목록
+      .partner-list { // 좌상단 클릭시 나타나는 숙소 목록
+        user-select: none;
         display: flex; flex-direction: column; gap: 18rem;
         li {
           font-size: 15rem;
           a {
-            color: $color9-1;
+            color: $color-ka;
             text-decoration: none;
             &:visited, &:hover, &:focus {
               text-decoration: none;
@@ -306,53 +206,88 @@ textarea {
           }
         }
       }
-      .upload-group {
-        .uploading {
-          margin-bottom: 9px;
-          li {
-            display: flex; align-items: center; justify-content: space-between;
-            margin-bottom: 12px;
-            padding: 5px 12px;
-            border: 1px solid #bbbbbb;
-            border-radius: 6px;
-            font-size: 15px;
-            .name-cover {
-              max-width: 540px;
-              .filename {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap; 
-              }
-            }
-            button {
-              font-size: 18px; 
-            }
-          }
-        }
-        .upload {
-          display: grid; grid-template-columns: 1fr 90px;
-          gap: 12px;
-        }
-      }
     }
-    .bottom {
+
+    >.bottom {
       z-index: 1;
-      padding: 18rem;
-      background-color: rgba(0, 180, 255, 0.05);
-      box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
+      padding: 15rem;
+      box-shadow: 0 -2px 2px 0 $color-k4;
     }
   }
 }
 /* Modal 끝 */
 
+/* Popup 시작 */
+.popup-container {
+  z-index: 800;
+  display: flex; align-items: center; justify-content: center;
+  position: fixed; top: 0; left: 0;
+  max-height: 100%; width: 100%;
+  padding: 30rem;
+  .bg {
+    z-index: 1;
+    position: fixed; top: 0; left: 0;
+    height: 100%; width: 100%;
+    background-color: $color-k7;
+  }
+  .popup {
+    z-index: 2;
+    display: flex; flex-direction: column; gap: 21rem;
+    height: 100%; width: 100%;
+    padding: 18rem;
+    background-color: $color-wa;
+    .header {
+      .title {
+        font-size: $fs-popup-title; font-weight: $fw-popup-title;
+      }
+    }
+    .content {
+      overflow-y: auto; height: 100%;
+      .msg1 { // 팝업 메시지 내용
+        text-align: center;
+        font-size: 18px; font-weight: 500;
+      }
+      .msg2 { // 카카오톡 알림톡 내용
+        border: 1px solid #cfcfcf;
+        padding: 12px;
+        overflow-y: auto;
+        max-height: 360px;
+        font-size: 14px; font-weight: 400;
+      }
+    }
+    >.bottom {
+      user-select: none;
+    }
+  }
+}
+/* Popup 끝 */
+
 /* Bottom Popup 시작 */
 .bottom-popup {
-  z-index: 600;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.3);
-  display: flex; justify-content: center;
-  position: fixed; bottom: 0; left: 0; 
+  z-index: 400;
+  position: sticky; bottom: 0; left: 0; 
   width: 100%;
-  padding: 30px 0;
+  padding: 18rem;
+  background-color: $color-w9;
+  box-shadow: 0 -2px 4px 0 $color-k4;
 }
 /* Bottom Popup 끝 */
+
+.sub-check {
+  user-select: none;
+  display: flex;
+  padding-right: 6px;
+  label {
+    display: flex; align-items: center;
+    font-size: 13rem; font-weight: 400;
+    input {
+      margin: 0 6rem 0 0;
+      height: 15rem; width: 15rem;
+      min-height: 15rem; min-width: 15rem;
+    }
+    &:hover {
+      outline: 1px solid $color-k7;
+      outline-offset: -1px;
+    }
+  }
+}

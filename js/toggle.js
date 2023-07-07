@@ -12,8 +12,13 @@ function detail(e) { //게시판 접고 펴는 기능
 }
 
 function filter(e) { //필터 접고 펴는 기능
-  var child1 = e.parentNode.querySelector(".options"); //클릭한 요소의 자손 중 options를 캐치
+  var child1 = e.parentNode.querySelector(".options"); //클릭한 요소의 세대 중 options를 캐치
   child1.classList.toggle("hide");
+}
+
+function filter2(e) { //필터 접고 펴는 기능
+  var child2 = e.querySelector(".options"); //클릭한 요소의 자손 중 options를 캐치
+  child2.classList.toggle("hide");
 }
 
 window.onload = function() {

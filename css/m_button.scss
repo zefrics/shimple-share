@@ -1,8 +1,15 @@
-$color0-1: rgba(255, 255, 255, 1); // 배경 색상
-$color1: rgba(0, 180, 255, 1); // 주요 색상 #1
-$color2: rgba(244, 81, 108, 1); // 주요 색상 #2
-$color3: rgba(171, 171, 171, 1); // 주요 색상 #3
-$color9-1: rgba(0, 0, 0, 1); // 주요 색상 #9-1
+$color-wa: rgba(255, 255, 255, 1);
+
+$color-ka: rgba(0, 0, 0, 1);
+$color-k7: rgba(0, 0, 0, 0.7); // Hover
+$color-k5: rgba(0, 0, 0, 0.5); // X버튼 (조정 필요)
+
+$color-ca: rgba(0, 180, 255, 1);
+
+$color-ma: rgba(244, 81, 108, 1);
+
+$color-ga: rgba(171, 171, 171, 1);
+$color-g1: rgba(171, 171, 171, 0.1); // 파일 리스트
 
 button {
   padding: 0px;
@@ -12,149 +19,159 @@ button {
   background-color: transparent;
   font-family: Apple SD Gothic Neo;
 }
+
 // 컨펌 버튼
 .btn5-1 {
+  display: flex; align-items: center; justify-content: center;
   width: 100%;
-  border: 2px solid $color1;
+  border: 2px solid $color-ca;
   border-radius: 30rem;
   height: 42rem;
-  font-size: 18rem; font-weight: 600;
-  background-color: $color1;
-  color: $color0-1;
+  font-size: 18rem; font-weight: 600; text-decoration: none;
+  background-color: $color-ca;
+  color: $color-wa;
 }
 
 .btn5-2 {
+  display: flex; align-items: center; justify-content: center;
   width: 100%;
-  border: 2px solid $color2;
+  border: 2px solid $color-ma;
   border-radius: 30rem;
   height: 42rem;
-  font-size: 18rem; font-weight: 600;
-  background-color: $color2;
-  color: $color0-1;
+  font-size: 18rem; font-weight: 600; text-decoration: none;
+  background-color: $color-ma;
+  color: $color-wa;
 }
 
 .btn5-3 {
+  display: flex; align-items: center; justify-content: center;
   width: 100%;
-  border: 2px solid $color3;
+  border: 2px solid $color-ga;
   border-radius: 30rem;
   height: 42rem;
-  font-size: 18rem; font-weight: 600;
-  background-color: $color3;
-  color: $color0-1;
+  font-size: 18rem; font-weight: 600; text-decoration: none;
+  background-color: $color-ga;
+  color: $color-wa;
 }
 
 .btn5-1:hover,
 .btn5-2:hover,
 .btn5-3:hover {
-  outline: 2px solid #444444;
+  outline: 2px solid $color-k7;
   outline-offset: -2px;
 }
 .btn5-1:focus,
 .btn5-2:focus,
 .btn5-3:focus {
-  outline: 2px solid #000000;
+  outline: 2px solid $color-ka;
   outline-offset: -2px;
 }
 
-// 수정 삭제 버튼
+// 게시판 내(답글) 수정 삭제 버튼
 .btn6-1 {
-  width: 100%;
-  padding: 3px 9px;
-  border: 2px solid rgba(0, 180, 255, 1);
-  border-radius: 6px;
-  font-size: 15px; font-weight: 500;
-  background-color: rgba(0, 180, 255, 1);
-  color: $color0-1;
-  text-decoration: none;
   display: flex; align-items: center; justify-content: center;
+  height: 30rem; width: 100%;
+  border: 2px solid $color-ca;
+  border-radius: 6rem;
+  font-size: 15rem; font-weight: 500;
+  background-color: $color-ca;
+  color: $color-wa;
+  text-decoration: none;
 }
+
 .btn6-2 {
-  width: 100%;
-  padding: 3px 9px;
-  border: 2px solid rgba(244, 81, 108, 1);
-  border-radius: 6px;
-  font-size: 15px; font-weight: 500;
-  background-color: rgba(244, 81, 108, 1);
-  color: $color0-1;
-  text-decoration: none;
   display: flex; align-items: center; justify-content: center;
+  height: 30rem; width: 100%;
+  border: 2px solid $color-ma;
+  border-radius: 6rem;
+  font-size: 15rem; font-weight: 500;
+  background-color: $color-ma;
+  color: $color-wa;
+  text-decoration: none;
 }
+
 .btn6-3 {
-  width: 100%;
-  padding: 3px 9px;
-  border: 2px solid rgba(171, 171, 171, 1);;
-  border-radius: 6px;
-  font-size: 15px; font-weight: 500;
-  background-color: rgba(171, 171, 171, 1);;
-  color: $color0-1;
-  text-decoration: none;
   display: flex; align-items: center; justify-content: center;
+  height: 30rem; width: 100%;
+  border: 2px solid $color-ga;;
+  border-radius: 6rem;
+  font-size: 15rem; font-weight: 500;
+  background-color: $color-ga;;
+  color: $color-wa;
+  text-decoration: none;
 }
 
 .btn6-1:hover,
 .btn6-2:hover {
-  box-shadow: 0 0 0 2px #444444;
+  outline: 2px solid $color-k7;
+  outline-offset: -2px;
 }
+
 .btn6-1:focus,
 .btn6-2:focus {
-  box-shadow: 0 0 0 2px #000000;
+  outline: 2px solid $color-ka;
+  outline-offset: -2px;
 }
 
 
 .btn7-2 { // X 버튼
   font-size: 27px;
   font-weight: 100;
-  color: rgba(0, 0, 0, 0.4);
+  color: $color-k5;
   &:hover {
     cursor: pointer;
-    color: $color2;
+    color: $color-ma;
   }
 }
 
 /* FILE LIST BUTTON */
 .btn8-3 {
-  height: 33px; width: 100%;
-  text-align: left;
-  border: 1px solid rgba(171, 171, 171, 1);
-  border-radius: 5px;
-  background-color: rgba(171, 171, 171, 0.15);
-  font-size: 13rem; font-weight: 500;
+  height: 30rem; width: 100%;
+  padding: 0 9rem;
+  border: 1px solid $color-ga;
+  border-radius: 6rem;
+  background-color: $color-g1;
+  font-size: 13rem; font-weight: 500; text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-
 .btn8-3:hover {
-  box-shadow: 0 0 0 1px #444444;
+  outline: 1px solid $color-k7;
+  outline-offset: -1px;
 }
 .btn8-3:focus {
-  box-shadow: 0 0 0 2px #000000;
+  outline: 2px solid $color-ka;
+  outline-offset: -2px;
 }
 
-.btntest { // 더보기
+.btn-more { // 더보기
   width: 100%;
   padding: 6rem;
-  border: 1px solid $color3;
+  border: 1px solid $color-ga;
   font-size: 14rem; font-weight: 500;
   span {
-    color: $color3;
+    color: $color-ga;
     font-size: 12rem; font-weight: 400;
     &.highlight {
-      color: $color1;
+      color: $color-ca;
     }
   }
   &:focus {
-    outline: 2px solid #000000;
+    outline: 2px solid $color-ka;
     outline-offset: -2px;
   }
   &:hover {
-    outline: 1px solid #444444;
+    outline: 1px solid $color-k7;
     outline-offset: -1px;
   }
 }
 
-.view-all {
+.btn-all {
   font-size: 14rem; font-weight: 400;
-  color: $color0-1;
-  background-color: $color1;
-  border: 1px solid $color1;
+  color: $color-wa;
+  background-color: $color-ca;
+  border: 1px solid $color-ca;
   border-radius: 6rem;
   padding: 3rem 6rem;
 }

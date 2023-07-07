@@ -1,10 +1,128 @@
-$color0: rgba(255, 255, 255, 1); // 배경 색상
-$color1: rgba(0, 180, 255, 1); // 주요 색상 #1
-$color2: rgba(244, 81, 108, 1); // 주요 색상 #2
-$color3: rgba(171, 171, 171, 1); // 주요 색상 #3
-$color9-1: rgba(0, 0, 0, 1); // 주요 색상 #9-1
+$color-wa: rgba(255, 255, 255, 1);
 
-#s-question-list {
+$color-ka: rgba(0, 0, 0, 1);
+$color-k7: rgba(0, 0, 0, 0.7);
+$color-k3: rgba(0, 0, 0, 0.3);
+$color-k2: rgba(0, 0, 0, 0.2);
+
+$color-ca: rgba(0, 180, 255, 1);
+
+/* 드롭다운 필터 */
+.filter-group { // 필터
+  user-select: none;
+  .filter1 { // Select 필터
+    display: flex; align-items: center; justify-content: center;
+    &:focus {
+      outline: 0;
+    }
+  }
+  .filter2 { // 자체 제작 필터
+    cursor: pointer;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid $color-k2;
+    height: 33px; width: 100%;
+    padding: 0 9rem;
+    &:hover {
+      outline: 1px solid $color-k7;
+      outline-offset: -1px;
+    }
+    .title {
+      font-size: 14rem; font-weight: 400;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .options {
+      box-shadow: $color-k2 1px 1px 3px;
+      border: 1px solid $color-k2;
+      background-color: $color-wa;
+      position: absolute; top: 33px; left: 0;
+      width: 100%;
+      padding: 3rem;
+      max-height: 450px;
+      overflow-y: auto;
+      z-index: 1; // 간혹 게시판 목록들과 겹치는 경우가 있다.
+      label {
+        display: flex; align-items: center;
+        padding: 6rem 3rem;
+        font-size: 13rem;
+        &:hover {
+          background-color: #eeeeee;
+        }
+        input[type=checkbox] {
+          margin-right: 6rem;
+          height: 15rem; width: 15rem;
+          min-height: 15rem; min-width: 15rem;
+        }
+        input[type=radio] {
+          display: none;
+        }
+      }
+      .radio-select {
+        padding-left: 9px;
+      }
+    }
+  }
+  .disabled { // 선택 불가
+    .title {
+      border: 1px solid #dddddd;
+      color: #cccccc;
+    }
+  }
+}
+
+/* 업로드 */
+.upload-group {
+  .uploaded {
+    li {
+    }
+  }
+  .uploading {
+    li {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 5px 12px;
+      border: 1px solid $color-k2;
+      border-radius: 6px;
+      font-size: 13rem; font-weight: 400;
+      .name-cover {
+        width: 90%;
+        .filename {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; 
+        }
+      }
+      button {
+        font-size: 18px; 
+      }
+    }
+  }
+  .upload {
+    display: grid; grid-template-columns: 1fr 90px; gap: 12px;
+    input[type=file] {
+      cursor: pointer;
+      padding-left: 9rem;
+      border-color: $color-ca;
+      border-radius: 6rem;
+      font-size: 13rem; font-weight: 500;
+      color:$color-ca;
+      &:hover {
+        outline: 1px solid $color-k7;
+        outline-offset: -1px;
+      }
+      &:focus {
+        outline: 2px solid $color-k7;
+        outline-offset: -2px;
+      }
+      &::file-selector-button {
+        // display: none;
+      }
+    }
+  }
+}
+
+#s-question-list { // 문의 사항
   .top {
     .row2 {
       .filter-group {
@@ -18,13 +136,10 @@ $color9-1: rgba(0, 0, 0, 1); // 주요 색상 #9-1
   }
 }
 
-.bulletin-list1 { /*게시판, 예약 목록*/
+.bulletin-list1 { // 게시판 목록, 예약 목록
   .top {
     .row1 {
       display: flex;
-      border: 1px solid #bbbbbb;
-      margin-bottom: 15px;
-      padding: 21px;
       .item-group {
         display: flex; align-items: center;
         margin-right: 18px;
@@ -42,127 +157,20 @@ $color9-1: rgba(0, 0, 0, 1); // 주요 색상 #9-1
         span {
           margin: 0 6px;
         }
-
-        .btn-group {
-          display: flex;
-          button {
-            padding: 0 12px;
-            margin-right: 3px;
-            font-size: 15px;
-            line-height: 33px;
-            border: 1px solid #cfcfcf;
-            height: 33px;
-            &:hover {
-              outline: 1px solid #444444;
-            }
-          }
-        }
-        
-        .search-group {
-          display: flex;
-          .search {
-            height: 33px; width: 300px;
-            margin-right: 3px;
-            padding: 0 12px;
-            font-size: 15px;
-            &::placeholder {
-              color: #cccccc;
-            }
-          }
-          button {
-            padding: 0 12px;
-            height: 33px;
-            font-size: 15px;
-            background-color: $color1;
-            color: #ffffff;
-            &:hover {
-              outline: 1px solid #444444;
-            }
-            &:focus {
-              outline: 2px solid #000000;
-            }
-          }
-        }
-
       }
     }
     .row2 {
       display: flex;flex-direction: column; gap: 9rem;
-      .filter-group {
-        user-select: none;
-        .filter1 { // select 필터
-          cursor: pointer;
-          display: flex; align-items: center; justify-content: center;
-          border: 1px solid #bbbbbb;
-          height: 33px;
-          font-size: 14rem; font-weight: 400;
-          &:focus {
-            outline: 0px;
-          }
-        }
-        .filter2 { // 자체 제작 필터
-          position: relative;
-          cursor: pointer;
-          &:hover {
-            outline: 1px solid #444444;
-          }
-          .title {
-            display: flex; align-items: center; justify-content: center;
-            border: 1px solid #bbbbbb;
-            height: 33px;
-            font-size: 14rem; font-weight: 400;
-          }
-          .options {
-            box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 2px 2px;
-            border: 1px solid #888888;
-            background-color: #ffffff;
-            position: absolute; top: 33px; left: 0;
-            width: 100%;
-            padding: 3rem;
-            max-height: 450px;
-            overflow-y: auto;
-            z-index: 1; // 간혹 게시판 목록들과 겹치는 경우가 있다.
-            label {
-              display: flex; align-items: center;
-              padding: 6rem 3rem;
-              font-size: 13rem;
-              &:hover {
-                background-color: #eeeeee;
-              }
-              input[type="checkbox"] {
-                margin-right: 6rem;
-                height: 15rem; width: 15rem;
-                min-height: 15rem; min-width: 15rem;
-              }
-            }
-          }
-        }
-        .disabled {
-          .title {
-            border: 1px solid #dddddd;
-            color: #cccccc;
-          }
-        }
-  
-      }
-      .search-group {
-        .search {
-          font-size: 14rem; font-weight: 400;
-          &::placeholder {
-            color: #cccccc;
-          }
-        }
-      }
     }
   }
 
   .table {
     margin-top: 18rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    border-top: 1px solid $color-k2;
     .row-group {
       .table-row {
         padding: 15rem;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        border-bottom: 1px solid $color-k2;
         .link {
           cursor: pointer;
           user-select: none;
@@ -170,9 +178,9 @@ $color9-1: rgba(0, 0, 0, 1); // 주요 색상 #9-1
           text-overflow: ellipsis;
           white-space: nowrap;
           font-size: 15rem; font-weight: 500;
-          color: $color9-1;
+          color: $color-ka;
           &:hover {
-            color: $color1;
+            color: $color-ca;
           }
         }
         .info {
@@ -202,16 +210,6 @@ $color9-1: rgba(0, 0, 0, 1); // 주요 색상 #9-1
               width: 100%;
             }
           }
-          .uploaded {
-            li {
-              button {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                padding: 5px 9px;
-              }
-            }
-          }
           .record {
             font-size: 12rem;
             span {
@@ -224,10 +222,10 @@ $color9-1: rgba(0, 0, 0, 1); // 주요 색상 #9-1
       }
     }
     .row-group.selected {
-      outline: 3px solid $color1;
+      outline: 3px solid $color-ca;
       outline-offset: -3px;
       .link {
-        color: $color1
+        color: $color-ca
       }
       .content-group {
         display: block;
@@ -235,169 +233,7 @@ $color9-1: rgba(0, 0, 0, 1); // 주요 색상 #9-1
     }
   }
 
-  .bottom {
+  >.bottom {
     margin-top: 15rem;
-  }
-}
-
-.bulletin-write2 { /*게시판*/
-  .form3 {
-    margin-bottom: 30px;
-    display: grid;
-    grid-template-columns: 105px 1fr;
-    column-gap: 6px;
-  
-    .label3 {
-      margin-top: 6px;
-      font-size: 16px; font-weight: 600; color: #000000;
-    }
-
-    
-    .col-right {
-      .filter1 {
-        width: 100%;
-        height: 36px; line-height: 36px;
-        font-size: 15px; font-weight: 500;
-        text-align: center;
-      }
-      .filter2 { /*문의 사항 및 자주 묻는 질문에서 질문 유형 선택, 공지 사항에서 공개 범위 선택*/
-        user-select: none;
-        position: relative;
-        cursor: pointer;
-        display: grid;
-        &:hover {
-          outline: 1px solid #444444;
-        }
-        .title {
-          border: 1px solid #cccccc;
-          padding: 0 12px;
-          height: 36px; line-height: 36px;
-          font-size: 15px;
-          text-align: center;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
-        .options {
-          box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 2px 2px;
-          border: 1px solid #888888;
-          background-color: #ffffff;
-          position: absolute; top: 36px; left: 0;
-          width: 100%;
-          padding: 6px;
-
-          label {
-            padding: 6px 3px;
-            font-size: 15px;
-            display: flex; align-items: center;
-            margin-bottom: 9px;
-            &:hover {
-              background-color: #eeeeee;
-            }
-            input[type=radio] {
-              display: none;
-            }
-            input[type=checkbox] {
-              margin-right: 6px;
-              width: 18px; height: 18px;
-            }
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-          .radio-select {
-            padding-left: 9px;
-          }
-        }
-      }
-      .disabled {
-        .title {
-          border: 1px solid #dddddd;
-          width: 180px;
-          height: 33px; line-height: 33px;
-          font-size: 15px;
-          color: #cccccc;
-          text-align: center;
-        }
-      }
-      .input-group { /*정산서 입력시 단위가 있는 경우*/
-        position: relative;
-        display: flex; align-items: center; justify-content: space-between;
-        .unit {
-          font-size: 14px;
-          position: absolute; right: 15px;
-        }
-      }
-      .text { /*Input이 아닌 텍스트 고정*/
-        display: flex; align-items: center;
-        height: 30px;
-        font-size: 16px; font-weight: 500;
-      }
-      .content { /*제목*/
-        width: 100%;
-        height: 36px;
-        padding: 0 12px;
-        font-size: 15px; font-weight: 500;
-      }
-      textarea { /*내용*/
-        height: 240px; 
-        width: 100%;
-        padding: 12px;
-        font-size: 16px;
-        font-weight: 500;
-      }
-      .upload-group {
-        .uploading {
-          margin-bottom: 9px;
-          li {
-            display: flex; align-items: center; justify-content: space-between;
-            margin-bottom: 12px;
-            padding: 5px 12px;
-            border: 1px solid #bbbbbb;
-            border-radius: 6px;
-            font-size: 15px;
-            .name-cover {
-              max-width: 540px;
-              .filename {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap; 
-              }
-            }
-            button {
-              font-size: 18px; 
-            }
-          }
-        }
-        .upload {
-          display: grid; grid-template-columns: 1fr 90px;
-          gap: 12px;
-      
-          input[type=file] {
-            border-color:rgba(0, 180, 255, 1);
-            border-radius: 6px;
-            text-align: center;
-            cursor: pointer;
-            padding-left: 9px;
-            height: 33px; line-height: 33px;
-            font-size: 15px; font-weight: 500;
-            color:rgba(0, 180, 255, 1);
-            &:hover {
-              box-shadow: 0 0 0 1px #444444;
-              outline: 0;
-            }
-            &:focus {
-              box-shadow: 0 0 0 2px #444444;
-              outline: 0;
-            }
-            &::file-selector-button {
-              display: none;
-              height: 30px;
-            }
-          }
-        }
-      }
-    }
-
   }
 }

@@ -1,4 +1,124 @@
 @charset "UTF-8";
+/* 드롭다운 필터 */
+.filter-group {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.filter-group .filter1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filter-group .filter1:focus {
+  outline: 0;
+}
+.filter-group .filter2 {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 33px;
+  width: 100%;
+  padding: 0 9rem;
+}
+.filter-group .filter2:hover {
+  outline: 1px solid rgba(0, 0, 0, 0.7);
+  outline-offset: -1px;
+}
+.filter-group .filter2 .title {
+  font-size: 14rem;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.filter-group .filter2 .options {
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 3px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 33px;
+  left: 0;
+  width: 100%;
+  padding: 3rem;
+  max-height: 450px;
+  overflow-y: auto;
+  z-index: 1;
+}
+.filter-group .filter2 .options label {
+  display: flex;
+  align-items: center;
+  padding: 6rem 3rem;
+  font-size: 13rem;
+}
+.filter-group .filter2 .options label:hover {
+  background-color: #eeeeee;
+}
+.filter-group .filter2 .options label input[type=checkbox] {
+  margin-right: 6rem;
+  height: 15rem;
+  width: 15rem;
+  min-height: 15rem;
+  min-width: 15rem;
+}
+.filter-group .filter2 .options label input[type=radio] {
+  display: none;
+}
+.filter-group .filter2 .options .radio-select {
+  padding-left: 9px;
+}
+.filter-group .disabled .title {
+  border: 1px solid #dddddd;
+  color: #cccccc;
+}
+
+/* 업로드 */
+.upload-group .uploading li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  font-size: 13rem;
+  font-weight: 400;
+}
+.upload-group .uploading li .name-cover {
+  width: 90%;
+}
+.upload-group .uploading li .name-cover .filename {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.upload-group .uploading li button {
+  font-size: 18px;
+}
+.upload-group .upload {
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  gap: 12px;
+}
+.upload-group .upload input[type=file] {
+  cursor: pointer;
+  padding-left: 9rem;
+  border-color: rgb(0, 180, 255);
+  border-radius: 6rem;
+  font-size: 13rem;
+  font-weight: 500;
+  color: rgb(0, 180, 255);
+}
+.upload-group .upload input[type=file]:hover {
+  outline: 1px solid rgba(0, 0, 0, 0.7);
+  outline-offset: -1px;
+}
+.upload-group .upload input[type=file]:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.7);
+  outline-offset: -2px;
+}
 #s-question-list .top .row2 .filter-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -9,12 +129,8 @@
   grid-row: 2/3;
 }
 
-.bulletin-list1 { /*게시판, 예약 목록*/ }
 .bulletin-list1 .top .row1 {
   display: flex;
-  border: 1px solid #bbbbbb;
-  margin-bottom: 15px;
-  padding: 21px;
 }
 .bulletin-list1 .top .row1 .item-group {
   display: flex;
@@ -35,138 +151,18 @@
 .bulletin-list1 .top .row1 .item-group span {
   margin: 0 6px;
 }
-.bulletin-list1 .top .row1 .item-group .btn-group {
-  display: flex;
-}
-.bulletin-list1 .top .row1 .item-group .btn-group button {
-  padding: 0 12px;
-  margin-right: 3px;
-  font-size: 15px;
-  line-height: 33px;
-  border: 1px solid #cfcfcf;
-  height: 33px;
-}
-.bulletin-list1 .top .row1 .item-group .btn-group button:hover {
-  outline: 1px solid #444444;
-}
-.bulletin-list1 .top .row1 .item-group .search-group {
-  display: flex;
-}
-.bulletin-list1 .top .row1 .item-group .search-group .search {
-  height: 33px;
-  width: 300px;
-  margin-right: 3px;
-  padding: 0 12px;
-  font-size: 15px;
-}
-.bulletin-list1 .top .row1 .item-group .search-group .search::-moz-placeholder {
-  color: #cccccc;
-}
-.bulletin-list1 .top .row1 .item-group .search-group .search::placeholder {
-  color: #cccccc;
-}
-.bulletin-list1 .top .row1 .item-group .search-group button {
-  padding: 0 12px;
-  height: 33px;
-  font-size: 15px;
-  background-color: rgb(0, 180, 255);
-  color: #ffffff;
-}
-.bulletin-list1 .top .row1 .item-group .search-group button:hover {
-  outline: 1px solid #444444;
-}
-.bulletin-list1 .top .row1 .item-group .search-group button:focus {
-  outline: 2px solid #000000;
-}
 .bulletin-list1 .top .row2 {
   display: flex;
   flex-direction: column;
   gap: 9rem;
 }
-.bulletin-list1 .top .row2 .filter-group {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-.bulletin-list1 .top .row2 .filter-group .filter1 {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #bbbbbb;
-  height: 33px;
-  font-size: 14rem;
-  font-weight: 400;
-}
-.bulletin-list1 .top .row2 .filter-group .filter1:focus {
-  outline: 0px;
-}
-.bulletin-list1 .top .row2 .filter-group .filter2 {
-  position: relative;
-  cursor: pointer;
-}
-.bulletin-list1 .top .row2 .filter-group .filter2:hover {
-  outline: 1px solid #444444;
-}
-.bulletin-list1 .top .row2 .filter-group .filter2 .title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #bbbbbb;
-  height: 33px;
-  font-size: 14rem;
-  font-weight: 400;
-}
-.bulletin-list1 .top .row2 .filter-group .filter2 .options {
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 2px 2px;
-  border: 1px solid #888888;
-  background-color: #ffffff;
-  position: absolute;
-  top: 33px;
-  left: 0;
-  width: 100%;
-  padding: 3rem;
-  max-height: 450px;
-  overflow-y: auto;
-  z-index: 1;
-}
-.bulletin-list1 .top .row2 .filter-group .filter2 .options label {
-  display: flex;
-  align-items: center;
-  padding: 6rem 3rem;
-  font-size: 13rem;
-}
-.bulletin-list1 .top .row2 .filter-group .filter2 .options label:hover {
-  background-color: #eeeeee;
-}
-.bulletin-list1 .top .row2 .filter-group .filter2 .options label input[type=checkbox] {
-  margin-right: 6rem;
-  height: 15rem;
-  width: 15rem;
-  min-height: 15rem;
-  min-width: 15rem;
-}
-.bulletin-list1 .top .row2 .filter-group .disabled .title {
-  border: 1px solid #dddddd;
-  color: #cccccc;
-}
-.bulletin-list1 .top .row2 .search-group .search {
-  font-size: 14rem;
-  font-weight: 400;
-}
-.bulletin-list1 .top .row2 .search-group .search::-moz-placeholder {
-  color: #cccccc;
-}
-.bulletin-list1 .top .row2 .search-group .search::placeholder {
-  color: #cccccc;
-}
 .bulletin-list1 .table {
   margin-top: 18rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 .bulletin-list1 .table .row-group .table-row {
   padding: 15rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .bulletin-list1 .table .row-group .table-row .link {
   cursor: pointer;
@@ -212,12 +208,6 @@
 .bulletin-list1 .table .row-group .content-group .content1 .image img, .bulletin-list1 .table .row-group .content-group .content2 .image img {
   width: 100%;
 }
-.bulletin-list1 .table .row-group .content-group .content1 .uploaded li button, .bulletin-list1 .table .row-group .content-group .content2 .uploaded li button {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  padding: 5px 9px;
-}
 .bulletin-list1 .table .row-group .content-group .content1 .record, .bulletin-list1 .table .row-group .content-group .content2 .record {
   font-size: 12rem;
 }
@@ -235,179 +225,6 @@
 .bulletin-list1 .table .row-group.selected .content-group {
   display: block;
 }
-.bulletin-list1 .bottom {
+.bulletin-list1 > .bottom {
   margin-top: 15rem;
-}
-
-.bulletin-write2 { /*게시판*/ }
-.bulletin-write2 .form3 {
-  margin-bottom: 30px;
-  display: grid;
-  grid-template-columns: 105px 1fr;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
-}
-.bulletin-write2 .form3 .label3 {
-  margin-top: 6px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #000000;
-}
-.bulletin-write2 .form3 .col-right .filter1 {
-  width: 100%;
-  height: 36px;
-  line-height: 36px;
-  font-size: 15px;
-  font-weight: 500;
-  text-align: center;
-}
-.bulletin-write2 .form3 .col-right .filter2 { /*문의 사항 및 자주 묻는 질문에서 질문 유형 선택, 공지 사항에서 공개 범위 선택*/
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  position: relative;
-  cursor: pointer;
-  display: grid;
-}
-.bulletin-write2 .form3 .col-right .filter2:hover {
-  outline: 1px solid #444444;
-}
-.bulletin-write2 .form3 .col-right .filter2 .title {
-  border: 1px solid #cccccc;
-  padding: 0 12px;
-  height: 36px;
-  line-height: 36px;
-  font-size: 15px;
-  text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.bulletin-write2 .form3 .col-right .filter2 .options {
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 2px 2px;
-  border: 1px solid #888888;
-  background-color: #ffffff;
-  position: absolute;
-  top: 36px;
-  left: 0;
-  width: 100%;
-  padding: 6px;
-}
-.bulletin-write2 .form3 .col-right .filter2 .options label {
-  padding: 6px 3px;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 9px;
-}
-.bulletin-write2 .form3 .col-right .filter2 .options label:hover {
-  background-color: #eeeeee;
-}
-.bulletin-write2 .form3 .col-right .filter2 .options label input[type=radio] {
-  display: none;
-}
-.bulletin-write2 .form3 .col-right .filter2 .options label input[type=checkbox] {
-  margin-right: 6px;
-  width: 18px;
-  height: 18px;
-}
-.bulletin-write2 .form3 .col-right .filter2 .options label:last-child {
-  margin-bottom: 0;
-}
-.bulletin-write2 .form3 .col-right .filter2 .options .radio-select {
-  padding-left: 9px;
-}
-.bulletin-write2 .form3 .col-right .disabled .title {
-  border: 1px solid #dddddd;
-  width: 180px;
-  height: 33px;
-  line-height: 33px;
-  font-size: 15px;
-  color: #cccccc;
-  text-align: center;
-}
-.bulletin-write2 .form3 .col-right .input-group { /*정산서 입력시 단위가 있는 경우*/
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.bulletin-write2 .form3 .col-right .input-group .unit {
-  font-size: 14px;
-  position: absolute;
-  right: 15px;
-}
-.bulletin-write2 .form3 .col-right .text { /*Input이 아닌 텍스트 고정*/
-  display: flex;
-  align-items: center;
-  height: 30px;
-  font-size: 16px;
-  font-weight: 500;
-}
-.bulletin-write2 .form3 .col-right .content { /*제목*/
-  width: 100%;
-  height: 36px;
-  padding: 0 12px;
-  font-size: 15px;
-  font-weight: 500;
-}
-.bulletin-write2 .form3 .col-right textarea { /*내용*/
-  height: 240px;
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  font-weight: 500;
-}
-.bulletin-write2 .form3 .col-right .upload-group .uploading {
-  margin-bottom: 9px;
-}
-.bulletin-write2 .form3 .col-right .upload-group .uploading li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  padding: 5px 12px;
-  border: 1px solid #bbbbbb;
-  border-radius: 6px;
-  font-size: 15px;
-}
-.bulletin-write2 .form3 .col-right .upload-group .uploading li .name-cover {
-  max-width: 540px;
-}
-.bulletin-write2 .form3 .col-right .upload-group .uploading li .name-cover .filename {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.bulletin-write2 .form3 .col-right .upload-group .uploading li button {
-  font-size: 18px;
-}
-.bulletin-write2 .form3 .col-right .upload-group .upload {
-  display: grid;
-  grid-template-columns: 1fr 90px;
-  gap: 12px;
-}
-.bulletin-write2 .form3 .col-right .upload-group .upload input[type=file] {
-  border-color: rgb(0, 180, 255);
-  border-radius: 6px;
-  text-align: center;
-  cursor: pointer;
-  padding-left: 9px;
-  height: 33px;
-  line-height: 33px;
-  font-size: 15px;
-  font-weight: 500;
-  color: rgb(0, 180, 255);
-}
-.bulletin-write2 .form3 .col-right .upload-group .upload input[type=file]:hover {
-  box-shadow: 0 0 0 1px #444444;
-  outline: 0;
-}
-.bulletin-write2 .form3 .col-right .upload-group .upload input[type=file]:focus {
-  box-shadow: 0 0 0 2px #444444;
-  outline: 0;
-}
-.bulletin-write2 .form3 .col-right .upload-group .upload input[type=file]::file-selector-button {
-  display: none;
-  height: 30px;
 }/*# sourceMappingURL=m_bulletin.css.map */
