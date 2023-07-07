@@ -102,6 +102,7 @@
                 <div class="btn" onclick="popupErrorOpen()">0-3. 실패 (ex. 예약 생성 중 오류가 발생했습니다. / 공지 사항 생성 중 오류가 발생했습니다.)</div>
                 <div class="btn" onclick="popupEscapeOpen()">0-4. 탈출 (ex. 작성 중인 내용이 있습니다.  저장하지 않고 나가시겠습니까?)</div>
                 <div class="btn" onclick="popupNoticeOpen()">0-5. 기타 알림 (ex. ○○을 입력해 주세요.)</div>
+                <div class="btn" onclick="popupDeleteImpossibleOpen()">0-6. 삭제 불가 알림</div>
               </div>
             </div>
           </div>
@@ -261,7 +262,7 @@
           <hr>
 
           <div class="example">
-            <h2 class="title">7. 기간 지정 방막기 / 열기</h2>
+            <h2 class="title">7. 기간 지정 방막기</h2>
             <div class="sec">
               <p class="title">* Modal</p>
               <div class="des-group">
@@ -269,7 +270,7 @@
                   · 관리자만 사용할 수 있는 기능<br>
                   · 주간 및 월간 달력 페이지에서 기간 지정 방막기 버튼은 파트너에게는 보이지 않는다.
                 </p>
-                <div class="btn" onclick="modalRoomblockOpen()">7-1. 기간 지정 방막기 Modal 예시</div>
+                <div class="btn" onclick="modalRoomblockOpen()">7-1. 객실 설정 Modal 예시</div>
               </div>
             </div>
             <div class="sec">
@@ -289,7 +290,34 @@
           <hr>
 
           <div class="example">
-            <h2 class="title">8. 객실 이동</h2>
+            <h2 class="title">8. 객실 비활성화</h2>
+            <div class="sec">
+              <p class="title">* Modal</p>
+              <div class="des-group">
+                <p class="des">
+                  · 관리자만 사용할 수 있는 기능<br>
+                  · 주간 및 월간 달력 페이지에서 객실 폐쇄 버튼은 파트너에게는 보이지 않는다.<br>
+                </p>
+                <div class="btn" onclick="modalRoomdeactOpen()">8-1. 객실 비활성화 Modal 예시</div>
+              </div>
+            </div>
+            <div class="sec">
+              <p class="title">* Popup</p>
+              <div class="des-group">
+                <p class="des">
+                  · 객실 비활성화 Modal에서 '활성화'또는 '비활성화' 버튼 클릭 시<br>
+                  · 알림톡을 보낼 필요 없지만 히스토리에는 기록되어야 한다.
+                </p>
+                <div class="btn" onclick="popupRoomdeactOpen()">8-2. 객실 비활성화 Popup 예시</div>
+                <div class="btn" onclick="popupRoomactOpen()">8-3. 객실 활성화 열기 Popup 예시</div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="example">
+            <h2 class="title">9. 객실 이동</h2>
             <div class="sec">
               <p class="title">* Popup</p>
               <div class="des-group">
@@ -299,7 +327,7 @@
                   · 객실 이동은 같은 타입, 같은 입실일이면서, 다른 예약 건들과 겹치지 않는 경우에만 가능하다.<br>
                   · 주간 달력에서 가능하고, 한 번에 하나의 타입만 객실 이동(호수 변경)을 할 수 있다. (객실 타입명 아래 '객실 이동' 버튼 클릭을 통해 가능)
                 </p>
-                <div class="btn" onclick="popupRoommoveOpen()">8-1. 객실 이동 메시지 Popup 예시</div>
+                <div class="btn" onclick="popupRoommoveOpen()">9-1. 객실 이동 메시지 Popup 예시</div>
               </div>
             </div>
           </div>
@@ -307,15 +335,15 @@
           <hr>
 
           <div class="example">
-            <h2 class="title">9. SMS 발송</h2>
+            <h2 class="title">10. SMS 발송</h2>
             <div class="sec">
               <p class="title">* Popup</p>
               <div class="des-group">
                 <p class="des">
                   · 고객(예약자)에게 보내는 메시지
                 </p>
-                <div class="btn" onclick="popupSMS1Open()">9-1. 반자동 Popup (예약 조회, 예약 취소 조회, 관리자 페이지의 예약 목록에서 'SMS' 버튼을 클릭하면 팝업이 뜨고 여기에서 발송)</div>
-                <div class="btn" onclick="popupSMS2Open()">9-2. 수동 Popup (예약 건과 상관없이 SMS를 보내는 기능.  따라서 예약 건들과 연동되어 있지 않고 '미발송' 버튼과도 상관 없이 작동)</div>
+                <div class="btn" onclick="popupSMS1Open()">10-1. 반자동 Popup (예약 조회, 예약 취소 조회, 관리자 페이지의 예약 목록에서 'SMS' 버튼을 클릭하면 팝업이 뜨고 여기에서 발송)</div>
+                <div class="btn" onclick="popupSMS2Open()">10-2. 수동 Popup (예약 건과 상관없이 SMS를 보내는 기능.  따라서 예약 건들과 연동되어 있지 않고 '미발송' 버튼과도 상관 없이 작동)</div>
               </div>
             </div>
           </div>
@@ -446,6 +474,22 @@
       </div>
     </div>
     <!-- 기타 알림 Popup 끝 -->
+
+    <!-- 삭제 불가 알림 Popup 시작 -->
+    <div id="popup-delete" class="popup-container center hide">
+      <div class="popup-bg"></div>
+      <div class="popup">
+        <div class="popup-contents">
+          <div class="msg1">해당 항목을 사용한 예약 건이 존재하여<br>삭제를 진행할 수 없습니다.</div>
+        </div>
+        <div class="popup-bottom">
+          <div class="btn-group1">
+            <button class="btn5-3" onclick="popupDeleteImpossibleClose()">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 삭제 불가 알림 Popup 끝 -->
 
     <!-- 예약 생성 Popup 시작 -->
     <div id="popup-r-create" class="popup-container center hide">
@@ -647,6 +691,54 @@
       </div>
     </div>
     <!-- 방열기 Popup 끝 -->
+
+    <!-- 객실 비활성화 Popup 시작 -->
+    <div id="popup-roomdeact" class="popup-container center hide">
+      <div class="popup-bg"></div>
+      <div class="popup">
+        <div class="popup-contents">
+          <div class="title1">객실 비활성화를 진행하시겠습니까?</div>
+          <div class="msg2">
+            &#60; 객실 상태 변경 : 비활성화 &#62; <br>
+            <br>
+            · Park 101 / 2021-09-17(2박), 2021-09-30(1박)<br>
+            · Ocean 201 / 2021-09-20(1박)<br>
+            · Ocean 202 / 2021-09-28(1박)<br>
+          </div>
+        </div>
+        <div class="popup-bottom">
+          <div class="btn-group2-1">
+            <button class="btn5-1" onclick="">확인</button>
+            <button class="btn5-3" onclick="popupRoomdeactClose()">돌아가기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 객실 비활성화 Popup 끝 -->
+
+    <!-- 객실 활성화 Popup 시작 -->
+    <div id="popup-roomact" class="popup-container center hide">
+      <div class="popup-bg"></div>
+      <div class="popup">
+        <div class="popup-contents">
+          <div class="title1">객실 활성화를 진행하시겠습니까?</div>
+          <div class="msg2">
+            &#60; 객실 상태 변경 : 활성화 &#62; <br>
+            <br>
+            · Park 101 / 2021-09-17(2박), 2021-09-30(1박)<br>
+            · Ocean 201 / 2021-09-20(1박)<br>
+            · Ocean 202 / 2021-09-28(1박)<br>
+          </div>
+        </div>
+        <div class="popup-bottom">
+          <div class="btn-group2-1">
+            <button class="btn5-1" onclick="">확인</button>
+            <button class="btn5-3" onclick="popupRoomactClose()">돌아가기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 객실 활성화 Popup 끝 -->
 
     <!-- 객실 이동 Popup 시작 -->
     <div id="popup-roommove" class="popup-container center hide">
@@ -3250,8 +3342,8 @@
             <div class="col-type2">
               <div class="kkk">010-0000-0000</div>
               <div class="btn-group2-2">
-                <button class="btn3-1">SMS</button>
-                <div class="btn3-4">미발송</div>
+                <button class="btn12-1">SMS</button>
+                <div class="btn12-3">미발송</div>
               </div>
             </div>
           </div>
@@ -3454,8 +3546,8 @@
             <div class="col-type2">
               <div class="kkk">010-0000-0000</div>
               <div class="btn-group2-2">
-                <button class="btn3-1">SMS</button>
-                <div class="btn3-4">미발송</div>
+                <button class="btn12-1">SMS</button>
+                <div class="btn12-3">미발송</div>
               </div>
             </div>
           </div>
@@ -4601,8 +4693,8 @@
               <div class="kkk">010-0000-0000</div>
 
               <div class="btn-group2-2">
-                <button class="btn3-1">SMS</button>
-                <div class="btn3-4">미발송</div>
+                <button class="btn12-1">SMS</button>
+                <div class="btn12-3">미발송</div>
               </div>
             </div>
           </div>
@@ -5300,5 +5392,124 @@
       </div>
     </div>
     <!-- 기간 지정 방막기 Modal 끝 -->
+
+    <!-- 객실 비활성화 Modal 시작 -->
+    <div id="modal-roomdeact" class="modal-container center hide">
+      <div class="modal-bg" onclick="modalRoomdeactClose()"></div>
+      <div class="modal">
+        <div class="modal-header">
+          <h5 class="modal-title">객실 비활성화</h5>
+          <button class="close"><img src="img/exit.svg" alt="close" onclick="modalRoomdeactClose()" /></button>
+        </div>
+        <div class="modal-contents">
+          <div class="form-type1"> 
+            <div class="label1">
+              <div class="label-text">기간 지정</div>
+            </div>
+            <div class="col-type2" id="duration">
+              <div class="input-row">
+                <input type="date" value="" min="2000-01-01" max="9999-12-31"><span>~</span><input type="date" value="" min="2000-01-01" max="9999-12-31">
+              </div>
+            </div>
+          </div>
+          <div class="form-type1"> 
+            <div class="label2">
+              <div class="label-text">객실 선택</div>
+              <div class="btn4-1"><input checked type="checkbox"><label>모두 선택</label></div>
+            </div>
+            <div class="col-type2">
+              <div>
+                <div class="room-type">
+                  <div class="btn4-1"><input checked type="checkbox"><label>Ocean(2F)</label></div>
+                </div>
+                <div class="room-group">
+                  <div class="btn4-1"><input checked type="checkbox"><label>101호</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>102호</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>103호</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>104호</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>105호</label></div>
+                </div>
+              </div>
+              <hr class="group-line2">
+              <div>
+                <div class="room-type">
+                  <div class="btn4-1"><input checked type="checkbox"><label>Park(1F)</label></div>
+                </div>
+                <div class="room-group">
+                  <div class="btn4-1"><input checked type="checkbox"><label>201호</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>202호</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>203호</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>204호</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>205호</label></div>
+                </div>
+              </div>
+              <hr class="group-line2">
+              <div>
+                <div class="room-type">
+                  <div class="btn4-1"><input checked type="checkbox"><label>SkyOcean(3F)</label></div>
+                </div>
+                <div class="room-group">
+                  <div class="btn4-1"><input checked type="checkbox"><label>스위트룸 - 더블 1</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>Suit Room - Double Bed 1</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>스위트룸 - 트윈 1</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>Suit Room - Twin Bed 1</label></div>
+                </div>
+              </div>
+
+              <hr class="group-line2">
+
+              <div>
+                <div class="room-type">
+                  <div class="btn4-1"><input checked type="checkbox"><label>SkyOcean(3F)</label></div>
+                </div>
+                <div class="room-group">
+                  <div class="btn4-1"><input checked type="checkbox"><label>스위트룸 - 더블 1</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>Suit Room - Double Bed 1</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>스위트룸 - 트윈 1</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>Suit Room - Twin Bed 1</label></div>
+                </div>
+              </div>
+
+              <hr class="group-line2">
+
+              <div>
+                <div class="room-type">
+                  <div class="btn4-1"><input checked type="checkbox"><label>SkyOcean(3F)</label></div>
+                </div>
+                <div class="room-group">
+                  <div class="btn4-1"><input checked type="checkbox"><label>스위트룸 - 더블 1</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>Suit Room - Double Bed 1</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>스위트룸 - 트윈 1</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>Suit Room - Twin Bed 1</label></div>
+                </div>
+              </div>
+
+              <hr class="group-line2">
+
+              <div>
+                <div class="room-type">
+                  <div class="btn4-1"><input checked type="checkbox"><label>SkyOcean(3F)</label></div>
+                </div>
+                <div class="room-group">
+                  <div class="btn4-1"><input checked type="checkbox"><label>스위트룸 - 더블 1</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>Suit Room - Double Bed 1</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>스위트룸 - 트윈 1</label></div>
+                  <div class="btn4-1"><input checked type="checkbox"><label>Suit Room - Twin Bed 1</label></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-bottom">
+          <div class="btn-group2-1">
+            <button class="btn1-1">활성화</button>
+            <button class="btn1-3">비활성화</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 객실 비활성화 Modal 끝 -->
+
+
   </body>
 </html>

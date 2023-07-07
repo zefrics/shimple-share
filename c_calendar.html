@@ -110,6 +110,7 @@
               <div class="btn-group">
                 <button class="btn2-3 checkview-week" onclick="checkWeek()">선택 방막기</button>
                 <button class="btn2-3">기간 지정 방막기</button>
+                <button class="btn2-3">객실 비활성화</button>
               </div>
             </div>
           </div>
@@ -321,7 +322,7 @@
                     <div class="room-customer">최예규 (2인)<br>010-2744-0000</div>
                     
                   </div>
-                  <div class="room-contents available-week past-week">
+                  <div class="room-contents deact-week past-week">
                     
                   </div>
                   <div class="room-contents blocked-week on-week">
@@ -340,7 +341,7 @@
                     <div class="room-customer">최예규 (2인)<br>010-2744-0000</div>
                     
                   </div>
-                  <div class="room-contents available-week on-week">
+                  <div class="room-contents deact-week on-week">
                     
                     <label class="room-checkbox hide">
                       <input type="checkbox" onclick="btRoomblockOpen()" />
@@ -598,6 +599,7 @@
                 <button class="btn2-3 pastview" onclick="date()">지난 날짜 보기</button>
                 <button class="btn2-3 rateview-month" onclick="rateMonth()">요금 보기</button>
                 <button class="btn2-3">기간 지정 방막기</button>
+                <button class="btn2-3">객실 비활성화</button>
               </div>
             </div>
           </div>
@@ -2255,6 +2257,20 @@
     </div>
     <!--하단 Popup (객실 이동) 끝-->
 
+    <!--Floating 시작--> <!--모든 페이지에 아이콘이 뜨면 됩니다.-->
+    <div class="floating-group">
+      <div class="floating"> <!--파트너에게만 보이는 아이콘 : 클릭시 문의사항 쓰기 팝업이 뜬다.-->
+        <img src="img/question.svg" alt="question" />
+      </div>
+      <div class="floating"> <!--관리자에게만 보이는 아이콘 : 클릭시 수동 SMS 발송 팝업이 뜬다. (u_popup.html의 9-2)-->
+        <img src="img/sms.svg" alt="SMS" />
+      </div>
+      <div class="floating"> <!--관리자에게만 보이는 아이콘 : 어디에서든지 예약 생성을 할 수 있는 팝업. (u_popup.html의 1-3)-->
+        <img src="img/reservation.svg" alt="reservation" />
+      </div>
+    </div>
+    <!--Floating 끝-->
+    
     <!--팝업 끝-->
 
   </body>

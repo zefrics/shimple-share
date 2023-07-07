@@ -22,7 +22,6 @@
   font-weight: 600;
 }
 #c-statistic .grid-artboard .top .filter-group {
-  -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
@@ -68,7 +67,6 @@
 #c-statistic #summary .col {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   display: flex;
   align-items: center;

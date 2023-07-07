@@ -9,16 +9,13 @@ body {
   overflow-y: scroll;
   background-color: #f2f2f2;
 }
-
 body::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
-
 body::-webkit-scrollbar-track {
   background-color: rgba(255, 255, 255, 0.5);
 }
-
 body::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.15);
 }
@@ -38,7 +35,6 @@ body::-webkit-scrollbar-thumb {
   z-index: 500;
   width: 180px;
   height: 100%;
-  -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
@@ -193,6 +189,7 @@ body::-webkit-scrollbar-thumb {
 /* Content 끝 */
 /* Floating Icon 시작 */
 .floating-group {
+  z-index: 601;
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -293,20 +290,24 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(171, 171, 171);
 }
 
+.deact-week {
+  background-color: rgb(255, 255, 255);
+}
+
 .available-week {
-  background-color: rgba(0, 180, 255, 0.8);
+  background-color: rgba(0, 180, 255, 0.7);
 }
 
 .waiting-week {
-  background-color: rgba(255, 165, 0, 0.8);
+  background-color: rgba(255, 165, 0, 0.7);
 }
 
 .complete-week {
-  background-color: rgba(244, 81, 108, 0.8);
+  background-color: rgba(244, 81, 108, 0.7);
 }
 
 .blocked-week {
-  background-color: rgba(171, 171, 171, 0.8);
+  background-color: rgba(171, 171, 171, 0.7);
 }
 
 .new {
@@ -384,47 +385,37 @@ input {
   border: 1px solid #cfcfcf;
   font-family: Apple SD Gothic Neo;
 }
-
 input:hover {
   outline: 1px solid #444444;
 }
-
 input:focus {
   outline: 2px solid #000000;
 }
-
 input[type=date]::-webkit-calendar-picker-indicator {
   cursor: pointer;
+  height: 21px;
+  width: 21px;
   margin: 0;
   padding: 0;
 }
-
-input[type=date]::-webkit-calendar-picker-indicator:focus {
-  background-color: rgb(0, 180, 255);
-  outline: none;
-}
-
 input[type=time]::-webkit-calendar-picker-indicator {
   cursor: pointer;
+  height: 21px;
+  width: 21px;
   margin: 0;
   padding: 0;
 }
-
 input[type=checkbox] {
   cursor: pointer;
 }
-
-input[type=checkbox]:hover,
-input[type=checkbox]:focus {
+input[type=checkbox]:hover, input[type=checkbox]:focus {
   outline: none;
 }
-
 input[type=radio] {
   cursor: pointer;
   height: 21px;
   width: 21px;
 }
-
 input[type=number]::-webkit-inner-spin-button { /*화살표*/
   height: 30px;
   width: 30px;
@@ -438,11 +429,9 @@ select {
   -moz-appearance: none;
        appearance: none;
 }
-
 select:hover {
   outline: 1px solid #444444;
 }
-
 select:focus {
   outline: 2px solid #000000;
 }
@@ -451,7 +440,6 @@ option:disabled {
   cursor: unset !important;
   color: #cccccc !important;
 }
-
 option:disabled:hover {
   cursor: unset !important;
   color: #cccccc !important;
@@ -463,11 +451,9 @@ textarea {
   resize: none;
   border: 1px solid #cfcfcf;
 }
-
 textarea:hover {
   outline: 1px solid #444444;
 }
-
 textarea:focus {
   outline: 2px solid #000000;
 }
@@ -493,7 +479,6 @@ textarea:disabled:hover {
 .sub-check {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   display: flex;
   margin-top: 10px;

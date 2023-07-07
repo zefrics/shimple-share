@@ -151,9 +151,6 @@
 }
 
 .bulletin-list1 { /*숙소세부정보, 객실세부정보, 게시판, 히스토리, 예약 목록*/
-  .view-all {
-    // margin-bottom: 15px;
-  }
   .top {
     margin-top: 15px;
     .row1 {
@@ -191,15 +188,9 @@
             &:hover {
               outline: 1px solid #444444;
             }
-            .active {
-              cursor: unset;
-              outline: 0;
-              border-color: rgba(0, 180, 255, 1);
-              background-color: rgba(0, 180, 255, 1);
-              color: #ffffff;
-            }
           }
         }
+        
         .search-group {
           display: flex;
           .search {
@@ -770,7 +761,7 @@
 #partner-list {
   width: 70%;
   .title, .table-row {
-    grid-template-columns: 120px 120px 1fr 300px 90px;
+    grid-template-columns: 60px 120px 120px 1fr 300px 90px;
   }
   .btn-group {
     display: grid; grid-template-columns: 1fr 1fr;
@@ -790,7 +781,7 @@
 #roomtype-list {
   width: 70%;
   .title, .table-row {
-    grid-template-columns: 1fr 300px 120px 120px;
+    grid-template-columns: 60px 1fr 300px 120px 120px 90px;
   }
   .btn-group {
     display: grid; grid-template-columns: 1fr 1fr;
@@ -800,7 +791,7 @@
 #roomtype-list-modify {
   width: 70%;
   .title, .table-row {
-    grid-template-columns: 60px 60px 1fr 120px 120px;
+    grid-template-columns: 60px 60px 1fr 120px 120px 90px;
   }
   .btn-group {
     display: grid; grid-template-columns: 1fr 1fr;
@@ -927,9 +918,9 @@
     
   }
   .notice {
+    margin-top: 3px;
     color: red;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 14px; font-weight: 600;
   }
 }
 #holiday-read {
@@ -956,14 +947,14 @@
 #room-name-read {
   .table {
     li {
-      grid-template-columns: 60px 1fr;
+      grid-template-columns: 60px 1fr 90px;
     }
   }
 }
 #add-person-read, #add-pet-read {
   .table {
     li {
-      grid-template-columns: 60px 1fr 1fr;
+      grid-template-columns: 60px 1fr 1fr 90px;
     }
     .unit-group {
       width: 80%;
@@ -1303,14 +1294,14 @@
 #room-name-write {
   .table {
     li {
-      grid-template-columns: 60px 60px 1fr;
+      grid-template-columns: 60px 60px 1fr 90px;
     }
   }
 }
 #add-person-write, #add-pet-write {
   .table {
     li {
-      grid-template-columns: 60px 60px 1fr 1fr;
+      grid-template-columns: 60px 60px 1fr 1fr 90px;
     }
     .unit-group {
       width: 80%;

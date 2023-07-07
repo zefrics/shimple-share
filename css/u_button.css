@@ -119,6 +119,7 @@ button {
   height: 33px;
   font-size: 14px; font-weight: 500;
 }
+
 .btn3-3, .btn3-4 { /*3-4는 hover와 focus가 필요 없는 버튼*/
   width: 100%;
   display: flex; align-items: center; justify-content: center;
@@ -350,22 +351,31 @@ button {
 }
 
 /* 예약 목록에 있는 발송 완료 및 미발송 버튼 */
-.btn12-1 {
+.btn12-1 { /* SMS */
   display: flex; align-items: center; justify-content: center;
   border: 1px solid rgba(0, 180, 255, 1);
   border-radius: 5px;
   background-color: rgba(0, 180, 255, 0.2);
-  width: 72px; height: 33px;
+  height: 33px; width: 100%;
   font-size: 14px; font-weight: 500;
 }
-.btn12-3 {
+.btn12-2 { /* 발송 완료 */
   display: flex; align-items: center; justify-content: center;
-  border: 1px solid rgba(171, 171, 171, 1);
+  border: 1px solid rgba(0, 180, 255, 1);
   border-radius: 5px;
-  background-color: rgba(171, 171, 171, 0.2);
-  width: 72px; height: 33px;
+  color : rgba(0, 180, 255, 1);
+  height: 33px; width: 100%;
   font-size: 14px; font-weight: 500;
 }
+.btn12-3 { /* 미발송 */
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(244, 81, 108, 1); 
+  border-radius: 5px;
+  color : rgba(244, 81, 108, 1); 
+  height: 33px; width: 100%;
+  font-size: 14px; font-weight: 500;
+}
+
 .btn12-1:hover {
   box-shadow: 0 0 0 1px #444444;
   outline: 0;
@@ -415,8 +425,10 @@ button {
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 5%;
 }
-.btn-group2-4 { /*카카오톡 아이콘 및 발송여부*/
-  display: flex; justify-content: space-between;
+.btn-group2-4 { /*SMS 및 발송 여부*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 6%;
   margin-top: 6px;
+  width: 100%;
 }

@@ -1,0 +1,166 @@
+$color0-1: rgba(255, 255, 255, 1); // 배경 색상
+$color1: rgba(0, 180, 255, 1); // 주요 색상 #1
+$color2: rgba(244, 81, 108, 1); // 주요 색상 #2
+$color3: rgba(171, 171, 171, 1); // 주요 색상 #3
+$color9-1: rgba(0, 0, 0, 1); // 주요 색상 #9-1
+
+button {
+  padding: 0px;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  font-family: Apple SD Gothic Neo;
+}
+// 컨펌 버튼
+.btn5-1 {
+  width: 100%;
+  border: 2px solid $color1;
+  border-radius: 30rem;
+  height: 42rem;
+  font-size: 18rem; font-weight: 600;
+  background-color: $color1;
+  color: $color0-1;
+}
+
+.btn5-2 {
+  width: 100%;
+  border: 2px solid $color2;
+  border-radius: 30rem;
+  height: 42rem;
+  font-size: 18rem; font-weight: 600;
+  background-color: $color2;
+  color: $color0-1;
+}
+
+.btn5-3 {
+  width: 100%;
+  border: 2px solid $color3;
+  border-radius: 30rem;
+  height: 42rem;
+  font-size: 18rem; font-weight: 600;
+  background-color: $color3;
+  color: $color0-1;
+}
+
+.btn5-1:hover,
+.btn5-2:hover,
+.btn5-3:hover {
+  outline: 2px solid #444444;
+  outline-offset: -2px;
+}
+.btn5-1:focus,
+.btn5-2:focus,
+.btn5-3:focus {
+  outline: 2px solid #000000;
+  outline-offset: -2px;
+}
+
+// 수정 삭제 버튼
+.btn6-1 {
+  width: 100%;
+  padding: 3px 9px;
+  border: 2px solid rgba(0, 180, 255, 1);
+  border-radius: 6px;
+  font-size: 15px; font-weight: 500;
+  background-color: rgba(0, 180, 255, 1);
+  color: $color0-1;
+  text-decoration: none;
+  display: flex; align-items: center; justify-content: center;
+}
+.btn6-2 {
+  width: 100%;
+  padding: 3px 9px;
+  border: 2px solid rgba(244, 81, 108, 1);
+  border-radius: 6px;
+  font-size: 15px; font-weight: 500;
+  background-color: rgba(244, 81, 108, 1);
+  color: $color0-1;
+  text-decoration: none;
+  display: flex; align-items: center; justify-content: center;
+}
+.btn6-3 {
+  width: 100%;
+  padding: 3px 9px;
+  border: 2px solid rgba(171, 171, 171, 1);;
+  border-radius: 6px;
+  font-size: 15px; font-weight: 500;
+  background-color: rgba(171, 171, 171, 1);;
+  color: $color0-1;
+  text-decoration: none;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.btn6-1:hover,
+.btn6-2:hover {
+  box-shadow: 0 0 0 2px #444444;
+}
+.btn6-1:focus,
+.btn6-2:focus {
+  box-shadow: 0 0 0 2px #000000;
+}
+
+
+.btn7-2 { // X 버튼
+  font-size: 27px;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.4);
+  &:hover {
+    cursor: pointer;
+    color: $color2;
+  }
+}
+
+/* FILE LIST BUTTON */
+.btn8-3 {
+  height: 33px; width: 100%;
+  text-align: left;
+  border: 1px solid rgba(171, 171, 171, 1);
+  border-radius: 5px;
+  background-color: rgba(171, 171, 171, 0.15);
+  font-size: 13rem; font-weight: 500;
+}
+
+.btn8-3:hover {
+  box-shadow: 0 0 0 1px #444444;
+}
+.btn8-3:focus {
+  box-shadow: 0 0 0 2px #000000;
+}
+
+.btntest { // 더보기
+  width: 100%;
+  padding: 6rem;
+  border: 1px solid $color3;
+  font-size: 14rem; font-weight: 500;
+  span {
+    color: $color3;
+    font-size: 12rem; font-weight: 400;
+    &.highlight {
+      color: $color1;
+    }
+  }
+  &:focus {
+    outline: 2px solid #000000;
+    outline-offset: -2px;
+  }
+  &:hover {
+    outline: 1px solid #444444;
+    outline-offset: -1px;
+  }
+}
+
+.view-all {
+  font-size: 14rem; font-weight: 400;
+  color: $color0-1;
+  background-color: $color1;
+  border: 1px solid $color1;
+  border-radius: 6rem;
+  padding: 3rem 6rem;
+}
+
+/* 버튼 배치 시작 */
+.btn-group2 {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 15rem;
+}
+/* 버튼 배치 끝 */

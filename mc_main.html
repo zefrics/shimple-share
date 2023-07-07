@@ -4,83 +4,762 @@
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/m_button.css" />
+    <link rel="stylesheet" href="css/m_popup.css" />
+    <link rel="stylesheet" href="css/m_bulletin.css" />
     <link rel="stylesheet" href="css/m_universal.css" />
-    <link rel="stylesheet" href="css/popup.css" />
-    <link rel="stylesheet" href="css/ms_main.css" />
-    <link rel="stylesheet" href="css/u_button.css" />
     <script type="text/javascript" src="js/hide.js"></script>
     <script type="text/javascript" src="js/toggle.js"></script>
     <title>쉼플</title>
   </head>
 
-  <body>
-    <div class="top">
-      <nav>
-        <div class="a">
-          <div class="brand">
-            제주 르페도라<span class="title"> │ 메인</span>
-          </div>
-        </div>
-        <div class="b"></div>
-      </nav>  
-    </div>
-    <div class="content">
-      sdfsd
-      <footer>&copy;&nbsp;Shimple</footer>
-
-    </div>
-    <div class="bottom">
-      <nav>
-        <div class="menu active">
-          <div class="item">
-            <div class="icon">
-            </div>
-            <div class="text">
-              메인
-            </div>  
-          </div>
-        </div>
-        <div class="menu">
-          <div class="item">
-            <div class="icon">
-            </div>
-            <div class="text">
-              예약 목록
-            </div>
-          </div>
-        </div>
-        <div class="menu">
-          <div class="item">
-            <div class="icon">
-            </div>
-            <div class="text">
-              객실 달력
-            </div>
-          </div>
-        </div>
-        <div class="menu">
-          <div class="item">
-            <div class="icon">
-            </div>
-            <div class="text">
-              공지 사항
-            </div>
-          </div>
-        </div>
-        <div class="menu">
-          <div class="item">
-            <div class="icon">
-            </div>
-            <div class="text">
-              문의 사항
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
+  <body class="hide_scroll">
     <!--Menu 시작-->
-
+    <nav>
+      <div class="navigation">
+        <h1 class="brand" onclick="popupListOpen()">
+          제주애견동반솔펜션솔펜션솔펜션
+        </h1>
+        <div class="icon-group">
+          <div class="icon" onclick="popupQuestionOpen()">
+            <img src="img/question.svg" alt="question" />
+          </div>
+          <div class="icon" onclick="popupSMS2Open()">
+            <img src="img/sms.svg" alt="SMS" />
+          </div>
+          <div class="icon" onclick="modalRCreateOpen3()">
+            <img src="img/reservation.svg" alt="reservation" />
+          </div>
+          <div class="menu-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul>
+          <li><a class="active" href="" onclick="closeMenu()">메인</a></li>
+          <li><a href="" onclick="closeMenu()">예약 목록</a></li>
+          <li><a href="" onclick="closeMenu()">객실 달력</a></li>
+          <li><a href="" onclick="closeMenu()">공지 사항</a></li>
+          <li><a href="" onclick="closeMenu()">자주 묻는 질문</a></li>
+          <li><a href="" onclick="closeMenu()">문의 사항</a></li>
+          <li><a href="" onclick="closeMenu()">내 정보</a></li>
+        </ul>
+      </div>
+    </nav>
     <!--Menu 끝-->
+
+    <!--Content 시작-->
+    <div class="content-container">
+      <div class="header">
+        <h2 class="title">안녕하세요<span>검색결과 : 00 개</span></h2>
+        <button class="view-all">전체 보기</button>
+      </div>
+      <div class="content">
+        <section class="artboard">
+          <div class="bulletin-list1" id="s-question-list">
+            <div class="top">
+              <div class="row2">
+                <div class="filter-group">
+                  <div class="filter2">
+                    <div class="title" onclick="filter(this)">답변 상태 선택</div>
+                    <div class="options hide">
+                      <label>
+                        <input type="checkbox">모두 선택
+                      </label>
+                      <label>
+                        <input type="checkbox">미답변
+                      </label>
+                      <label>
+                        <input type="checkbox">답변 완료
+                      </label>
+                    </div>
+                  </div>
+                  <div class="filter2">
+                    <div class="title" onclick="filter(this)">문의 유형 선택</div>
+                    <div class="options hide">
+                      <label>
+                        <input type="checkbox">모두 선택
+                      </label>
+                      <label>
+                        <input type="checkbox">고민
+                      </label>
+                      <label>
+                        <input type="checkbox">숙소 정보 변경
+                      </label>
+                      <label>
+                        <input type="checkbox">요금 변경
+                      </label>
+                      <label>
+                        <input type="checkbox">정산 문의
+                      </label>
+                      <label>
+                        <input type="checkbox">후기 답글 요청
+                      </label>
+                      <label>
+                        <input type="checkbox">기타 문의
+                      </label>
+                    </div>
+                  </div>
+                  <div class="filter2">
+                    <div class="title" onclick="filter(this)">파트너 선택</div>
+                    <div class="options hide">
+                      <label>
+                        <input type="checkbox">모두 선택
+                      </label>
+                      <label>
+                        <input type="checkbox">제주 르페도라펜션
+                      </label>
+                      <label>
+                        <input type="checkbox">제주애견동반솔펜션솔펜션솔펜션
+                      </label>
+                      <label>
+                        <input type="checkbox">근동이네
+                      </label>
+                      <label>
+                        <input type="checkbox">메리어트 호텔
+                      </label>
+                      <label>
+                        <input type="checkbox">하얏트 호텔
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="search-group">
+                  <input class="search" type="text" placeholder="제목 / 내용 검색">
+                </div>
+              </div>
+            </div>
+            
+            <ul class="table">
+              <li class="row-group">
+                <div class="table-row">
+                  <h4 class="link" onclick="detail(this)">
+                    숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?  숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?
+                  </h4>
+                  <p class="info">
+                    우소영 / 숙소 정보 변경 / 제주애견동반솔펜션솔펜션솔펜션<br>2021-09-20 18:31:45
+                  </p>
+                </div>
+                <div class="content-group">
+                  <div class="content1">
+                    <div class="text">
+                      숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?
+                      숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?
+                      숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?
+                      숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?
+                    </div>
+                    
+                    <ul class="uploaded">
+                      <li>
+                        <button class="btn8-3">파트너_르페도라_202104정산서.xlsx</button>
+                      </li>
+                      <li>
+                        <button class="btn8-3">파트너_르페도라_202104정산서.jpg</button>
+                      </li>
+                      <li>
+                        <button class="btn8-3">파트너_르페도라_202104정산서.xlsx</button>
+                      </li>
+                      <li>
+                        <button class="btn8-3">파트너_르페도라_20sdfsdfsdfsdfsdfsdffdssdf2104정산서.jpg</button>
+                      </li>
+                      <li>
+                        <button class="btn8-3">파트너_르페도라_202104정산서.xlsx</button>
+                      </li>
+                    </ul>
+                    <div class="btn-group2">
+                      <a class="btn6-1" href="s_question_write.html">수정</a>
+                      <button class="btn6-2">삭제</button>
+                    </div>
+                    <div class="record">
+                      <div><span>작성</span>2020-11-20 12:53 제주애견동반 솔펜션</div>
+                      <div><span>수정</span>2020-11-21 00:15 제주애견동반 솔펜션</div>
+                    </div>
+                  </div>
+                  <div class="content2">
+                    <div class="frame">
+                      <div class="text">
+                        네, 반영 완료했습니다.  첨부파일 확인 부탁드려요.
+                      </div>
+                      
+                      <ul class="uploaded">
+                        <li>
+                          <button class="btn8-3">파트너_르페도라_202104정산서.xlsx</button>
+                        </li>
+                        <li>
+                          <button class="btn8-3">파트너_르페도라_202104정산서.jpg</button>
+                        </li>
+                        <li>
+                          <button class="btn8-3">파트너_르페도라_202104정산서.xlsx</button>
+                        </li>
+                        <li>
+                          <button class="btn8-3">파트너_르페도라_20sdfsdfsdfsdfsdfsdffdssdf2104정산서.jpg</button>
+                        </li>
+                        <li>
+                          <button class="btn8-3">파트너_르페도라_202104정산서.xlsx</button>
+                        </li>
+                      </ul>
+                      
+                      <div class="btn-group2">
+                        <button class="btn6-1">수정</button>
+                        <button class="btn6-2">삭제</button>
+                      </div>
+  
+                      <div class="record">
+                        <div><span>작성</span>2020-11-20 12:53 신재호</div>
+                        <div><span>수정</span>2020-11-21 00:15 우소영</div>
+                      </div>
+                      
+  
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="row-group">
+                <div class="table-row">
+                  <h4 class="link" onclick="detail(this)">
+                    숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?  숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?
+                  </h4>
+                  <p class="info">
+                    미답변 / 숙소 정보 변경 / 제주애견동반솔펜션솔펜션솔펜션<br>2021-09-19 18:31:45
+                  </p>
+                </div>
+                <div class="content-group">
+                  <div class="content1">
+                    <div class="text">
+                      안녕하세요 혹시 정산서 내용에 이해가 잘 가지 않는 부분들이 있는데 확인 부탁드립니다.  해당 파일을 첨부했습니다.
+                    </div>
+                    
+                    <ul class="uploaded">
+                      <li>
+                        <button class="btn8-3">파트너_르페도라_202104정산서.xlsx</button>
+                      </li>
+                      <li>
+                        <button class="btn8-3">파트너_르페도라_202104정산서.jpg</button>
+                      </li>
+                    </ul>
+  
+                    <div class="btn-group2">
+                      <a class="btn6-1" href="s_question_write.html">수정</a>
+                      <button class="btn6-2">삭제</button>
+                    </div>
+                    <div class="record">
+                      <div><span>작성</span>2020-11-20 12:53 제주 르페도라</div>
+                      <div><span>수정</span>2020-11-21 00:15 제주 르페도라</div>
+                    </div>
+                  </div>
+                  <div class="content2">
+                    <div class="bulletin-write2" id="s-question-reply">
+                      <div class="grid-section">
+                        <div class="form3">
+                          <div class="label3">답변 내용</div>
+                          <div class="col-right">
+                            <textarea maxlength="500"></textarea>
+                          </div>
+                        </div>
+                        <div class="form3">
+                          <div class="label3">파일 첨부</div>
+                          <div class="col-right">
+                            <div class="upload-group">
+                              <ul class="uploading">
+                                <li>
+                                  <div class="name-cover">
+                                    <div class="filename">참고파일.jpg</div>
+                                  </div>
+                                  <button class="btn7-2">×</button>
+                                </li>
+                                <li>
+                                  <div class="name-cover">
+                                    <div class="filename">파트너_르페도라_202104정산서.jpg</div>
+                                  </div>
+                                  <button class="btn7-2">×</button>
+                                </li>
+                              </ul>
+                              <form class="upload" action="">
+                                <input type="file">
+                                <input class="btn3-1" type="submit" value="파일 업로드">
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="confirm">
+                          <button class="btn1-1">답변 작성</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                </div>
+              </li>
+            </ul>
+
+            <div class="bottom">
+              <button class="btntest">더보기 ∇<br><span class="highlight">30</span><span> / 1,100</span></button>
+            </div>
+
+          </div>
+        </section>
+      </div>
+      
+
+    </div>
+    
+    <!--Content 끝-->
+
+    <!--Footer 시작-->
+    <footer>&copy;&nbsp;Shimple</footer>
+    <!--Footer 끝-->
+
+    <!--숙소 목록 Popup 시작-->
+    <div id="popup-list" class="modal-container hide">
+      <div class="bg" onclick="popupListClose()"></div>
+      <div class="modal">
+        <div class="header">
+          <div class="title-group">
+            <h3 class="title">숙소 목록</h3>
+          </div>
+          <button class="close" tabindex="-1"><img src="img/exit.svg" alt="close" onclick="popupListClose()" /></button>
+        </div>
+        <div class="content">
+          <ul class="partner-list">
+            <li><a href="s_main.html">쉼플 관리자 페이지</a></li>
+            <li>근동이네독채민박</li>
+            <li>마레보리조트</li>
+            <li><a href="c_calendar.html">제주 르페도라펜션</a></li>
+            <li>제주애견동반 솔펜션</li>
+            <li>플라이진하우스</li>
+            <li>근동이네독채민박</li>
+            <li>마레보리조트</li>
+            <li>제주 르페도라펜션</li>
+            <li>제주애견동반 솔펜션</li>
+            <li>플라이진하우스</li>
+            <li>근동이네독채민박</li>
+            <li>마레보리조트</li>
+            <li>제주 르페도라펜션</li>
+            <li>제주애견동반 솔펜션</li>
+            <li>플라이진하우스</li>
+          </ul>
+        </div>
+        <div class="bottom">
+          <div class="btn-group1">
+            <button class="btn5-3" onclick="popupListClose()">나가기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 수동 SMS Popup 시작 -->
+    <div id="popup-sms2" class="modal-container center hide">
+      <div class="bg"></div>
+      <div class="modal">
+        <div class="header">
+          <div class="title-group">
+            <h3 class="title">SMS 발송</h3>
+          </div>
+          <button class="close" tabindex="-1"><img src="img/exit.svg" alt="close" onclick="popupSMS2Close()" /></button>
+        </div>
+        <div class="content">
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">수신 번호</div>
+            </div>
+            <div class="col-type1">
+              <input type="text">
+            </div>
+          </div>
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">양식 불러오기</div>
+            </div>
+            <div class="col-type1">
+              <select>
+                <option value="" selected disabled>파트너 선택</option>
+                <option value="">제주 르페도라</option>
+                <option value="">제주애견동반 솔펜션</option>
+                <option value="">근동이네</option>
+                <option value="">하얏트 호텔</option>
+              </select>
+              <select>
+                <option value="" selected disabled>양식 선택</option>
+                <option value="">체크인 알림</option>
+                <option value="">예약 취소 알림</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-type2">
+            <div class="label1">
+              <div class="label-text">내용</div>
+            </div>
+            <textarea class="sms" rows="15"></textarea>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="btn-group2">
+            <button class="btn5-1" onclick="popupSMS2Close()">전송</button>
+            <button class="btn5-3" onclick="popupSMS2Close()">돌아가기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 수동 SMS Popup 끝 -->
+
+    <!-- 문의 사항 작성 Popup 시작 -->
+    <div id="popup-question" class="modal-container center hide">
+      <div class="bg"></div>
+      <div class="modal">
+        <div class="header">
+          <div class="title-group">
+            <h3 class="title">문의 사항 작성</h3>
+          </div>
+          <button class="close" tabindex="-1"><img src="img/exit.svg" alt="close" onclick="popupQuestionClose()" /></button>
+        </div>
+        <div class="content">
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">문의 유형</div>
+            </div>
+            <div class="col-type1">
+              <select>
+                <option selected disabled>문의 유형 선택</option>
+                <option value="">고민</option>
+                <option value="">숙소 정보 변경</option>
+                <option value="">요금 변경</option>
+                <option value="">정산 문의</option>
+                <option value="">후기 답글 요청</option>
+                <option value="">기타 문의</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-type2">
+            <div class="label1">
+              <div class="label-text">내용</div>
+            </div>
+            <textarea class="question" rows="10" max-length="500"></textarea>
+          </div>
+          <div class="form-type2">
+            <div class="label1">
+              <div class="label-text">파일 첨부</div>
+            </div>
+            <div class="upload-group">
+              <ul class="uploading">
+                <li>
+                  <div class="name-cover">
+                    <div class="filename">파트너_르페도라_202104정산서.xlsx</div>
+                  </div>
+                  <button class="btn7-2">×</button>
+                </li>
+                <li>
+                  <div class="name-cover">
+                    <div class="filename">파트너_르페도라_202104정산서.jpg</div>
+                  </div>
+                  <button class="btn7-2">×</button>
+                </li>
+              </ul>
+              <form class="upload" action="">
+                <input type="file">
+                <input class="btn3-1" type="submit" value="파일 업로드">
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="btn-group2">
+            <button class="btn5-1" onclick="popupQuestionClose()">저장</button>
+            <button class="btn5-3" onclick="popupQuestionClose()">취소</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 문의 사항 작성 Popup 끝 -->
+    
+    <!-- 예약 생성 #3 Modal 시작 -->
+    <div id="modal-r-create3" class="modal-container side hide">
+      <div class="bg" onclick="modalRCreateClose3()"></div>
+      <div class="modal">
+        <div class="header">
+          <div class="title-group">
+            <h3 class="title">예약 생성 #3</h3>
+          </div>
+          <button class="close"><img src="img/exit.svg" alt="close" onclick="modalRCreateClose3()" /></button>
+        </div>
+        <div class="content">
+          <div class="sub-title1">
+            <div class="text">공통 사항</div>
+          </div>
+          <div class="form-type1"> 
+            <div class="label1">
+              <div class="label-text">파트너</div>
+            </div>
+            <div class="col-type1">
+              <select name="">
+                <option selected disabled>선택해주세요</option>
+                <option value="">제주 르페도라펜션</option>
+                <option value="">제주애견동반 솔펜션</option>
+                <option value="">근동이네독채민박</option>
+                <option value="">리베라 호텔</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">판매 채널</div>
+            </div>
+            <div class="col-type1">
+              <select name="">
+                <option selected disabled>선택해주세요</option>
+                <option value="">네이버</option>
+                <option value="">에어비앤비</option>
+                <option value="">여기어때</option>
+                <option value="">쉼플</option>
+                <option value="">직판</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">예약 상태</div>
+            </div>
+            <div class="col-type1">
+              <select name="">
+                <option value="">예약 완료</option>
+                <option value="">입금 대기</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-type1"> 
+            <div class="label1">
+              <div class="label-text">예약 일시</div>
+            </div>
+            <div class="col-type1">
+              <input type="date" value="2022-05-10" min="2000-01-01" max="9999-12-31"> <!--클릭한 날짜-->
+            </div>
+          </div>
+
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">예약자</div>
+            </div>
+            <div class="col-type1">
+              <input type="text">
+            </div> 
+          </div>
+
+          <div class="form-type1"> 
+            <div class="label1">
+              <div class="label-text">연락처</div>
+            </div>
+            <div class="col-type2">
+              <input type="text">
+            </div>
+          </div>
+          <div class="form-type1"> 
+            <div class="label1">
+              <div class="label-text">입실일</div>
+            </div>
+            <div class="col-type1">
+              <input type="date" value="" min="2000-01-01" max="9999-12-31">
+            </div>
+          </div>
+
+          <div class="form-type1">
+            <div class="label2">
+              <div class="label-text">퇴실일</div>
+              <div class="sub-label">(박)</div>
+            </div>
+            <div class="col-type1">
+              <input type="date" value="" min="2000-01-01" max="9999-12-31">
+            </div>
+          </div>
+          
+          <div class="form-type1"> 
+            <div class="label1">
+              <div class="label-text">객실 타입</div>
+            </div>
+            <div class="col-type1">
+              <select name="">
+                <option selected disabled>선택해주세요</option>
+                <option value="">Park(1F)</option>
+                <option value="">Ocean S(2F)</option>
+                <option value="">SkyOcean(3F)</option>
+              </select>
+            </div>
+          </div>
+
+          <hr class="group-line1">
+
+          <div class="room-group"> <!--처음에는 안나타나고 객실 추가 버튼 클릭 시 생성됨-->
+            <div class="sub-title1">
+              <div class="text">객실 #1</div>
+              <button class="btn7-2" tabindex="-1">×</button> <!--버튼을 누르면 해당 객실 그룹이 삭제되고 객실 그룹이 하나만 있으면 버튼이 없음-->
+            </div>
+            
+            <div class="date-group">
+
+              <div class="form-type1">
+                <div class="label1">
+                  <div class="label-text">객실 번호</div>
+                </div>
+                <div class="col-type1">
+                  <select name="">
+                    <option selected disabled>선택해주세요</option>
+                    <option value="">201</option>
+                    <option value="">202</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-type1"> 
+              <div class="label1">
+                <div class="label-text">인원</div>
+              </div>
+              <div class="col-type2">
+                <div class="person">
+                  <div class="type">성인</div>
+                  <input type="number" min="0" value="0">
+                </div>
+                <div class="person">
+                  <div class="type">어린이</div>
+                  <input type="number" min="0" value="0">
+                </div>
+                <div class="person">
+                  <div class="type">유아</div>
+                  <input type="number" min="0" value="0">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-type1"> 
+              <div class="label1">
+                <div class="label-text">반려 동물</div>
+              </div>
+              <div class="col-type2">
+                <div class="person">
+                  <div class="type">대형</div>
+                  <input type="number" min="0" value="0">
+                </div>
+                <div class="person">
+                  <div class="type">중형</div>
+                  <input type="number" min="0" value="0">
+                </div>
+                <div class="person">
+                  <div class="type">소형</div>
+                  <input type="number" min="0" value="0">
+                </div>
+              </div>
+            </div>
+            <button class="btn3-1">객실 추가</button>
+          </div>
+
+          <hr class="group-line1">
+
+          <div class="sub-title1">
+            <div class="text">가격</div>
+          </div>
+          <div class="form-type1">
+            <div class="label2">
+              <div class="label-text">판매가</div>
+              <div class="sub-label">(정상가 : 100,000 원)</div>
+            </div>
+            <div class="col-type1">
+              <div class="input-group1 text-red">
+                <input type="text" class="text-red" value="150,000"><div class="unit2">원</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-type1">
+            <div class="label1">
+              <div class="label-text">쿠폰 할인</div>
+            </div>
+            <div class="col-type1">
+              <div class="input-group2">
+                <div class="unit1">-</div><input type="text" value="0"><div class="unit2">원</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-type1">
+            <div class="label2">
+              <div class="label-text">연박 할인 총액</div>
+              <div class="sub-label">(정상가 : 20,000 원)</div>
+            </div>
+            <div class="col-type1">
+              <div class="input-group2">
+                <div class="unit1">-</div><input type="text" value="20,000"><div class="unit2">원</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-type1">
+            <div class="label2">
+              <div class="label-text">인원 추가 금액</div>
+              <div class="sub-label">(정상가 : 30,000 원)</div>
+            </div>
+            <div class="col-type1">
+              <div class="input-group2 text-red">
+                <div class="unit1">+</div><input type="text" class="text-red" value="20,000"><div class="unit2">원</div>
+              </div>
+              <div class="sub-check">
+                <label><input type="checkbox" tabindex="-1">사전 결제 완료</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-type1">
+            <div class="label2">
+              <div class="label-text">반려 동물 추가 금액</div>
+              <div class="sub-label">(정상가 : 30,000 원)</div>
+            </div>
+            <div class="col-type1">
+              <div class="input-group2 text-red">
+                <div class="unit1">+</div><input type="text" class="text-red" value="20,000"><div class="unit2">원</div>
+              </div>
+              <div class="sub-check">
+                <label><input type="checkbox" tabindex="-1">사전 결제 완료</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-type1">
+            <div class="label2">
+              <div class="label-text">최종 판매가</div>
+              <div class="sub-label">(정상가 : 140,000 원)</div>
+            </div>
+            <div class="col-type1">
+              <div class="read text-red"><span>= 170,000 원</span></div>
+            </div>
+          </div>
+
+          <hr class="group-line1">
+          <div class="sub-title1">
+            <div class="text">메모</div>
+          </div>
+          <div class="form-type2">
+            <div class="label1">
+              <div class="label-text">쉼플 메모</div>
+            </div>
+            <textarea name="" id="" cols="" rows="4"></textarea>
+          </div>
+          <div class="form-type2">
+            <div class="label1">
+              <div class="label-text">파트너 메모</div>
+            </div>
+            <textarea name="" id="" cols="" rows="4"></textarea>
+          </div>
+          <div class="form-type2">
+            <div class="label1">
+              <div class="label-text">관리자 메모</div>
+            </div>
+            <textarea name="" id="" cols="" rows="4"></textarea>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="btn-group1">
+            <button class="btn5-1">저장</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 예약 생성 #3 Modal 끝 -->
 
   </body>
 

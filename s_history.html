@@ -103,7 +103,7 @@
               <div class="item-group">
                 <div class="btn-group">
                   <button tabindex="-1">어제</button>
-                  <button class="active" tabindex="-1">오늘</button>
+                  <button tabindex="-1">오늘</button>
                   <button tabindex="-1">최근 1주</button>
                   <button tabindex="-1">최근 1개월</button>
                 </div>
@@ -114,6 +114,7 @@
                   <input class="search" type="text" placeholder="텍스트 검색">
                 </div>
               </div>
+              
             </div>
             <div class="row2">
               <div class="filter-group">
@@ -124,7 +125,7 @@
                       <input type="checkbox">모두 선택
                     </label>
                     <label>
-                      <input type="checkbox">쉼플
+                      <input type="checkbox">쉼플 <!--쉼플 체크 시, 공지 사항이나 자주 묻는 질문과 같이 파트너 부분이 '-'로 표기 되어 있는 항목들 필터링-->
                     </label>
                     <label>
                       <input type="checkbox">제주 르페도라펜션
@@ -229,6 +230,15 @@
                     <label>
                       <input type="checkbox">방열기
                     </label>
+                    <label>
+                      <input type="checkbox">객실 비활성화
+                    </label>
+                    <label>
+                      <input type="checkbox">객실 활성화
+                    </label>
+                    <label>
+                      <input type="checkbox">(항목 - 세부항목)
+                    </label>
                   </div>
                 </div>
                 <select class="filter1">
@@ -237,6 +247,9 @@
                   <option value="">30개씩 보기</option>
                   <option value="">50개씩 보기</option>
                 </select>
+                <div class="disabled">
+                  <div class="title">세부 항목 선택</div> <!--선택 불가 UI-->
+                </div>
               </div>
             </div>
             
@@ -452,6 +465,52 @@
                 <div>제주애견동반 솔펜션</div>
                 <div>예약</div>
                 <div>방열기</div>
+                <div class="link" onclick="detail(this)">
+                  <div class="shorten">
+                    내용 보기
+                  </div>
+                </div>
+                <div>신재호</div>
+                <div>2021-09-08 16:08:55</div>
+              </div>
+              <div class="content-group">
+                <div class="content1">
+                  <div class="text">
+                    · Park(1F) 101 / 2021-09-17 ~ 2021-09-19, 2021-09-30 ~ 2021-10-01<br>
+                    · Ocean(2F) 201 / 2021-09-20 ~ 2021-09-21<br>
+                    · Ocean(2F) 202 / 2021-09-28 ~ 2021-09-29
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="row-group">
+              <div class="table-row">
+                <div>제주애견동반 솔펜션</div>
+                <div>예약</div>
+                <div>객실 비활성화</div>
+                <div class="link" onclick="detail(this)">
+                  <div class="shorten">
+                    내용 보기
+                  </div>
+                </div>
+                <div>신재호</div>
+                <div>2021-09-08 16:08:55</div>
+              </div>
+              <div class="content-group">
+                <div class="content1">
+                  <div class="text">
+                    · Park(1F) 101 / 2021-09-17 ~ 2021-09-19, 2021-09-30 ~ 2021-10-01<br>
+                    · Ocean(2F) 201 / 2021-09-20 ~ 2021-09-21<br>
+                    · Ocean(2F) 202 / 2021-09-28 ~ 2021-09-29
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="row-group">
+              <div class="table-row">
+                <div>제주애견동반 솔펜션</div>
+                <div>예약</div>
+                <div>객실 활성화</div>
                 <div class="link" onclick="detail(this)">
                   <div class="shorten">
                     내용 보기
@@ -1387,7 +1446,7 @@
               <div class="table-row">
                 <div>-</div>
                 <div>항목 설정</div>
-                <div>수정</div>
+                <div>-</div>
                 <div class="shorten">
                   항목 설정 내용이 수정되었습니다.
                 </div>
@@ -1496,7 +1555,7 @@
               <div class="table-row">
                 <div>-</div>
                 <div>내 정보</div>
-                <div>수정</div>
+                <div>-</div>
                 <div class="shorten">
                   홍길동 010-0000-0000 계정이 수정되었습니다. <!--{이름} {연락처}-->
                 </div>

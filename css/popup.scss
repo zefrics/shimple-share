@@ -257,7 +257,7 @@
           outline: 2px solid #444444;
   
         }
-        button img {
+        img {
           height: 30px;
           width: 30px;
         }
@@ -501,8 +501,8 @@
 /* 예약 취소 생성 끝 */
 
 
-/* 기간 지정 방막기 Modal 시작*/
-#modal-roomblock {
+/* 기간 지정 방막기, 객실 폐쇄 Modal 시작*/
+#modal-roomblock, #modal-roomdeact {
   .modal {
     width: 600px;
     .modal-contents {
@@ -532,6 +532,9 @@
           }
         }
       }
+    }
+    .modal-bottom {
+      gap: 30px;
     }
   }
 }

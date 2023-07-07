@@ -1,0 +1,358 @@
+$color0: rgba(255, 255, 255, 1); // 배경 색상
+$color1: rgba(0, 180, 255, 1); // 주요 색상 #1
+$color2: rgba(244, 81, 108, 1); // 주요 색상 #2
+$color3: rgba(171, 171, 171, 1); // 주요 색상 #3
+$color9-1: rgba(0, 0, 0, 1); // 주요 색상 #9-1
+
+$fs-popup-title: 18rem; // 팝업 타이틀 폰트 사이즈
+$fw-popup-title: 600; // 팝업 타이틀 폰트 웨이트
+
+$fs-modal-title: 18rem; // 팝업 타이틀 폰트 사이즈
+$fw-modal-title: 600; // 팝업 타이틀 폰트 웨이트
+
+/* 입력 공통 */
+input[type="text"], input[type="date"], input[type="number"] {
+  width: 100%;
+  padding: 0 12px;
+  height: 33px;
+  font-size: 15px; font-weight: 500;
+}
+select {
+  height: 33px;
+  width: 100%;
+  padding: 0 12px;
+  font-size: 15px; font-weight: 500;
+}
+textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px;
+  font-size: 14px; font-weight: 400;
+}
+
+/* 뒤에만 단위가 있는 input */
+.input-group1 {
+  display: flex; align-items: center;
+  position: relative;
+}
+.input-group1 input,
+.input-group1 select {
+  padding-right: 33px;
+}
+.input-group1 .unit2 {
+  position: absolute;
+  right: 12px;
+}
+
+/* 앞뒤에 단위가 있는 input */
+.input-group2 {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+.input-group2 input,
+.input-group2 select {
+  padding: 0 33px 0 24px;
+}
+.input-group2 .unit1 {
+  position: absolute;
+  left: 12px;
+}
+.input-group2 .unit2 {
+  position: absolute;
+  right: 12px;
+}
+
+.form-type1 {
+  display: grid; grid-template-columns: 2fr 3fr;
+  margin-bottom: 21px;
+  .label1 {
+    margin-top: 9px;
+    font-size: 12rem; line-height: 15px; font-weight: 500;
+  }
+  select {
+    margin-bottom: 6px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.form-type2 {
+  margin-top: 27px;
+  .label1 {
+    margin-bottom: 9px;
+    font-size: 12rem; line-height: 15px; font-weight: 500;
+  }
+}
+
+
+/* Popup 시작 */
+.popup-container {
+  min-width: 360px;
+  z-index: 800;
+  display: flex; align-items: center; justify-content: center;
+  position: fixed; top: 0; left: 0;
+  height: 100%; width: 100%;
+  .bg {
+    z-index: 1;
+    position: fixed; top: 0; left: 0;
+    height: 100%; width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  .popup {
+    z-index: 2;
+    display: flex; flex-direction: column; gap: 21rem;
+    max-height: calc(100% - 120rem); width: calc(100% - 36rem);
+    padding: 18rem;
+    background-color: $color0;
+    .header {
+      .title {
+        font-size: $fs-popup-title; font-weight: $fw-popup-title;
+      }
+    }
+    .content {
+      overflow-y: auto; height: 100%;
+      // 팝업 메시지 내용
+      .msg1 {
+        text-align: center;
+        font-size: 18px; font-weight: 500;
+      }
+      // 카카오톡 알림톡 내용
+      .msg2 {
+        border: 1px solid #cfcfcf;
+        padding: 12px;
+        overflow-y: auto;
+        max-height: 360px;
+        font-size: 14px; font-weight: 400;
+      }
+    }
+    .bottom {
+      user-select: none;
+    }
+  }
+}
+/* Popup 끝 */
+
+/* Modal 시작 */
+.modal-container {
+  min-width: 360px;
+  z-index: 700;
+  display: flex; align-items: center; justify-content: center;
+  position: fixed; top: 0; left: 0;
+  height: 100%; width: 100%;
+  .bg {
+    z-index: 1;
+    position: fixed; top: 0; left: 0;
+    height: 100%; width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  .modal {
+    z-index: 2;
+    display: flex; flex-direction: column;
+    max-height: calc(100% - 36rem); width: calc(100% - 36rem);
+    background-color: $color0;
+    .header {
+      z-index: 1;
+      box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.2);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18rem;
+      .title-group {
+        .title {
+          font-size: 18rem; font-weight: 600;
+        }
+        .sub-title {
+          font-size: 14px;
+          font-weight: 400;
+          color:rgba(0, 0, 0, 0.75)
+        }
+      }
+      .close {
+        background-color: transparent;
+        height: 18rem; width: 18rem;
+        &:hover {
+          outline: 2px solid $color2;
+        }
+        img {
+          height: 18rem; width: 18rem;
+        }
+      }
+    }
+    .content {
+      overflow-y: auto;
+      height: 100%;
+      padding: 18rem;
+      font-size: 15rem;
+    
+      /* 라벨과 내용의 배치 */
+      .form-type1 { /* 일반 타입 */
+        display: grid; grid-template-columns: 2fr 3fr; gap: 18px;
+        margin-bottom: 18px;
+      }
+      .form-type2 { /* 메모 타입 */
+        margin-bottom: 24px;
+      }
+    
+      /* 라벨 */
+      .label1 {
+        margin-top: 9px;
+        font-weight: 600;
+        line-height: 15px;
+      }
+      .label2 {
+        font-weight: 600;
+        line-height: 15px;
+        .label-text {
+          margin-bottom: 3px;
+        }
+        .sub-label {
+          color: #888888;
+          font-size: 13px;
+          font-weight: 400;
+        }
+      }
+    
+      /* SUB BUTTON (ex. 예약 취소, SMS, 미발송, 발송 완료*/
+      .btn-group1,
+      .btn-group2-2 {
+        margin-top: 6px;
+      }
+
+      /* SUB TITLE */
+      .sub-title1 {
+        display: flex; align-items: center; justify-content: space-between;
+        color:rgba(0, 180, 255, 1);
+        font-size: 21rem; font-weight: 600;
+        margin-bottom: 24px;
+      }
+      .sub-title2 {
+        display: flex; align-items: center; justify-content: space-between;
+        color:rgba(0, 180, 255, 1);
+        font-size: 15rem; font-weight: 400;
+        margin-bottom: 12px;
+      }
+    
+      /* 구분 줄*/
+      .group-line1 {
+        border: 1px solid rgba(0, 180, 255, 0.5);
+        margin: 48px 0;
+      }
+      .group-line2 {
+        border: 1px solid #eeeeee;
+        margin: 30px 0;
+      }
+      .group-line3 {
+        border: 1px solid rgba(0, 180, 255, 0.1);
+        margin: 24px 0;
+      }
+    
+      /* 인원, 반려동물 */
+      .person, .pet {
+        display: flex;
+        margin-bottom: 5px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .type {
+          height: 33px;
+          width: 70%;
+          border: 1px solid #bbbbbb;
+          box-sizing: border-box;
+          background-color: #eeeeee;
+          font-size: 14px;
+          line-height: 33px;
+          text-align: center;
+        }
+        input {
+          border-left: 0;
+          padding: 0 0 0 10px;
+          text-align: center;
+          width: 30%;
+        }
+      }
+    
+      /* 조회 */
+      .read {
+        padding: 4px 6px;
+        text-align: right;
+        font-size: 16px; font-weight: 500;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        span {
+          font-weight: 600;
+        }
+      }
+    
+      /* 작성 로그 */
+      .record {
+        color: #444444;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        span {
+          color: #000000;
+          font-weight: 600;
+          padding-right: 12px;
+        }
+      }
+      .partner-list { // 숙소 목록
+        display: flex; flex-direction: column; gap: 18rem;
+        li {
+          font-size: 15rem;
+          a {
+            color: $color9-1;
+            text-decoration: none;
+            &:visited, &:hover, &:focus {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .upload-group {
+        .uploading {
+          margin-bottom: 9px;
+          li {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 12px;
+            padding: 5px 12px;
+            border: 1px solid #bbbbbb;
+            border-radius: 6px;
+            font-size: 15px;
+            .name-cover {
+              max-width: 540px;
+              .filename {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap; 
+              }
+            }
+            button {
+              font-size: 18px; 
+            }
+          }
+        }
+        .upload {
+          display: grid; grid-template-columns: 1fr 90px;
+          gap: 12px;
+        }
+      }
+    }
+    .bottom {
+      z-index: 1;
+      padding: 18rem;
+      background-color: rgba(0, 180, 255, 0.05);
+      box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+/* Modal 끝 */
+
+/* Bottom Popup 시작 */
+.bottom-popup {
+  z-index: 600;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.3);
+  display: flex; justify-content: center;
+  position: fixed; bottom: 0; left: 0; 
+  width: 100%;
+  padding: 30px 0;
+}
+/* Bottom Popup 끝 */

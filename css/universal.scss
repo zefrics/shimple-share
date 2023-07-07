@@ -7,16 +7,17 @@ body {
   // user-select: none; 스크롤을 막는 기능
   overflow-x: scroll; overflow-y: scroll;
   background-color: #f2f2f2;
+  &::-webkit-scrollbar {
+    width: 10px; height: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0,0, 0.15);
+  }
 }
-body::-webkit-scrollbar {
-  width: 10px; height: 10px;
-}
-body::-webkit-scrollbar-track {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-body::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0,0, 0.15);
-}
+
 /* 팝업 발생시 전체화면 스크롤 막는 기능 */
 .not_scroll {
   padding-right: 10px;
@@ -126,9 +127,6 @@ body::-webkit-scrollbar-thumb {
 #s-nav nav .sub .sub-item:hover {
   background-color: rgba(54, 198, 211, 0.6);
 }
-
-
-
 /* Main Menu 끝 */
 
 
@@ -181,12 +179,11 @@ body::-webkit-scrollbar-thumb {
     font-weight: 400;
   }
 }
-
-
 /* Content 끝 */
 
 /* Floating Icon 시작 */
 .floating-group {
+  z-index: 601;
   position:fixed; bottom: 30px; right: 30px;
   display: flex; flex-direction: column; gap: 15px;
   .floating {
@@ -204,7 +201,6 @@ body::-webkit-scrollbar-thumb {
     }
   }
 }
-
 /* Floating Icon 끝 */
 
 
@@ -259,17 +255,20 @@ body::-webkit-scrollbar-thumb {
 .blocked {
   background-color: rgba(171, 171, 171, 1);
 }
+.deact-week {
+  background-color: rgba(255, 255, 255, 1);
+}
 .available-week {
-  background-color: rgba(0, 180, 255, 0.8);
+  background-color: rgba(0, 180, 255, 0.7);
 }
 .waiting-week {
-  background-color: rgba(255, 165, 0, 0.8);
+  background-color: rgba(255, 165, 0, 0.7);
 }
 .complete-week {
-  background-color: rgba(244, 81, 108, 0.8);
+  background-color: rgba(244, 81, 108, 0.7);
 }
 .blocked-week {
-  background-color: rgba(171, 171, 171, 0.8);
+  background-color: rgba(171, 171, 171, 0.7);
 }
 .new {
   background-color: rgba(0, 180, 255, 0.8);
@@ -343,7 +342,6 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 0 0 0 3px #000000 inset;
 }
 
-
 /* Input, Select, Textarea, Label 공통 */
 
 label {
@@ -353,40 +351,35 @@ label {
 input {
   border: 1px solid #cfcfcf;
   font-family: Apple SD Gothic Neo;
-}
-input:hover {
-  outline: 1px solid #444444;
-}
-input:focus {
-  outline: 2px solid #000000;
-}
-input[type="date"]::-webkit-calendar-picker-indicator {
-  cursor: pointer;
-  margin: 0; padding: 0;
-}
-input[type="date"]::-webkit-calendar-picker-indicator:focus {
-  background-color: rgba(0, 180, 255, 1);
-  outline: none;
-}
-
-input[type="time"]::-webkit-calendar-picker-indicator {
-  cursor: pointer;
-  margin: 0; padding: 0;
-}
-
-input[type="checkbox"] {
-  cursor: pointer;
-}
-input[type="checkbox"]:hover,
-input[type="checkbox"]:focus {
-  outline:none;
-}
-input[type="radio"] {
-  cursor: pointer;
-  height: 21px; width: 21px;
-}
-input[type=number]::-webkit-inner-spin-button { /*화살표*/
-  height: 30px; width: 30px;
+  &:hover {
+    outline: 1px solid #444444;
+  }
+  &:focus {
+    outline: 2px solid #000000;
+  }
+  &[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    height: 21px; width: 21px;
+    margin: 0; padding: 0;
+  }
+  &[type="time"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    height: 21px; width: 21px;
+    margin: 0; padding: 0;
+  }
+  &[type="checkbox"] {
+    cursor: pointer;
+    &:hover, &:focus {
+      outline: none;
+    }
+  }
+  &[type="radio"] {
+    cursor: pointer;
+    height: 21px; width: 21px;
+  }
+  &[type="number"]::-webkit-inner-spin-button { /*화살표*/
+    height: 30px; width: 30px;
+  }
 }
 
 select {
@@ -394,35 +387,36 @@ select {
   font-family: Apple SD Gothic Neo;
   cursor: pointer;
   -webkit-appearance: none; appearance: none;
-}
-select:hover {
-  outline: 1px solid #444444;
-}
-select:focus {
-  outline: 2px solid #000000;
-}
-
-option:disabled {
-  cursor: unset !important;
-  color: #cccccc !important;
-}
-option:disabled:hover {
-  cursor: unset !important;
-  color: #cccccc !important;
-  background-color: transparent !important;
+  &:hover {
+    outline: 1px solid #444444;
+  }
+  &:focus {
+    outline: 2px solid #000000;
+  }
 }
 
+option {
+  &:disabled {
+    cursor: unset !important;
+    color: #cccccc !important;
+    &:hover {
+      cursor: unset !important;
+      color: #cccccc !important;
+      background-color: transparent !important;
+    }
+  }
+}
 
 textarea {
   font-family: Apple SD Gothic Neo;
   resize: none;
   border: 1px solid #cfcfcf;
-}
-textarea:hover {
-  outline: 1px solid #444444;
-}
-textarea:focus {
-  outline: 2px solid #000000;
+  &:hover {
+    outline: 1px solid #444444;
+  }
+  &:focus {
+    outline: 2px solid #000000;
+  }
 }
 
 input:disabled,
@@ -443,7 +437,6 @@ textarea:disabled:hover {
   outline: 0px !important;
 }
 
-
 .sub-check {
   user-select: none;
   display: flex;
@@ -462,7 +455,6 @@ textarea:disabled:hover {
     }
   }
 }
-
 
 
 .bold {

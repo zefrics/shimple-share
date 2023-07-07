@@ -258,7 +258,7 @@ function modalCModifyClose() {
   x.classList.add("hide");
 }
 
-
+// 방막기 Modal
 function modalRoomblockOpen() {
   document.body.classList.add("not_scroll");
   var y = document.querySelector("#modal-roomblock");
@@ -270,8 +270,17 @@ function modalRoomblockClose() {
   y.classList.add("hide");
 }
 
-
-
+// 객실 비활성화 Modal
+function modalRoomdeactOpen() {
+  document.body.classList.add("not_scroll");
+  var y = document.querySelector("#modal-roomdeact");
+  y.classList.remove("hide");
+}
+function modalRoomdeactClose() {
+  document.body.classList.remove("not_scroll");
+  var y = document.querySelector("#modal-roomdeact");
+  y.classList.add("hide");
+}
 
 // Popup
 
@@ -375,6 +384,17 @@ function popupNoticeClose() {
   y.classList.add("hide");
 }
 
+// 삭제 불가
+function popupDeleteImpossibleOpen() {
+  document.body.classList.add("not_scroll");
+  var y = document.querySelector("#popup-delete");
+  y.classList.remove("hide");
+}
+function popupDeleteImpossibleClose() {
+  document.body.classList.remove("not_scroll");
+  var y = document.querySelector("#popup-delete");
+  y.classList.add("hide");
+}
 
 // 숙소 리스트
 function popupListOpen() {
@@ -503,6 +523,30 @@ function popupRoomopenOpen() {
 function popupRoomopenClose() {
   document.body.classList.remove("not_scroll");
   var y = document.querySelector("#popup-roomopen");
+  y.classList.add("hide");
+}
+
+// 객실 비활성화 Popup
+function popupRoomdeactOpen() {
+  document.body.classList.add("not_scroll");
+  var y = document.querySelector("#popup-roomdeact");
+  y.classList.remove("hide");
+}
+function popupRoomdeactClose() {
+  document.body.classList.remove("not_scroll");
+  var y = document.querySelector("#popup-roomdeact");
+  y.classList.add("hide");
+}
+
+// 객실 활성화 Popup
+function popupRoomactOpen() {
+  document.body.classList.add("not_scroll");
+  var y = document.querySelector("#popup-roomact");
+  y.classList.remove("hide");
+}
+function popupRoomactClose() {
+  document.body.classList.remove("not_scroll");
+  var y = document.querySelector("#popup-roomact");
   y.classList.add("hide");
 }
 

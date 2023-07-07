@@ -9,7 +9,6 @@
 .example-group .example {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .example-group .example h2.title {
@@ -46,7 +45,6 @@
 #popup-list, #other-list { /* 블럭 지정 방지 */
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -154,10 +152,6 @@
   box-shadow: 0 0 0 2px #444444;
   outline: 0;
 }
-.popup-container .popup .popup-contents .upload-group .upload input[type=file]::-webkit-file-upload-button {
-  display: none;
-  height: 30px;
-}
 .popup-container .popup .popup-contents .upload-group .upload input[type=file]::file-selector-button {
   display: none;
   height: 30px;
@@ -227,7 +221,6 @@
 .popup-container .popup .popup-bottom {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   padding: 30px;
 }
@@ -286,7 +279,7 @@
 .modal-container .modal .modal-header button:focus {
   outline: 2px solid #444444;
 }
-.modal-container .modal .modal-header button button img {
+.modal-container .modal .modal-header button img {
   height: 30px;
   width: 30px;
 }
@@ -526,37 +519,40 @@
 }
 
 /* 예약 취소 생성 끝 */
-/* 기간 지정 방막기 Modal 시작*/
-#modal-roomblock .modal {
+/* 기간 지정 방막기, 객실 폐쇄 Modal 시작*/
+#modal-roomblock .modal, #modal-roomdeact .modal {
   width: 600px;
 }
-#modal-roomblock .modal .modal-contents .form-type1 {
+#modal-roomblock .modal .modal-contents .form-type1, #modal-roomdeact .modal .modal-contents .form-type1 {
   display: grid;
   grid-template-columns: 3fr 7fr;
   gap: 15px;
 }
-#modal-roomblock .modal .modal-contents .form-type1 .label2 .label-text {
+#modal-roomblock .modal .modal-contents .form-type1 .label2 .label-text, #modal-roomdeact .modal .modal-contents .form-type1 .label2 .label-text {
   margin-bottom: 6px;
 }
-#modal-roomblock .modal .modal-contents .form-type1 .input-row {
+#modal-roomblock .modal .modal-contents .form-type1 .input-row, #modal-roomdeact .modal .modal-contents .form-type1 .input-row {
   display: flex;
   align-items: center;
 }
-#modal-roomblock .modal .modal-contents .form-type1 .input-row input {
+#modal-roomblock .modal .modal-contents .form-type1 .input-row input, #modal-roomdeact .modal .modal-contents .form-type1 .input-row input {
   width: 150px;
 }
-#modal-roomblock .modal .modal-contents .form-type1 .input-row span {
+#modal-roomblock .modal .modal-contents .form-type1 .input-row span, #modal-roomdeact .modal .modal-contents .form-type1 .input-row span {
   margin: 0 9px;
 }
-#modal-roomblock .modal .modal-contents .form-type1 .room-type {
+#modal-roomblock .modal .modal-contents .form-type1 .room-type, #modal-roomdeact .modal .modal-contents .form-type1 .room-type {
   margin-bottom: 15px;
 }
-#modal-roomblock .modal .modal-contents .form-type1 .room-group {
+#modal-roomblock .modal .modal-contents .form-type1 .room-group, #modal-roomdeact .modal .modal-contents .form-type1 .room-group {
   display: flex;
   flex-wrap: wrap;
 }
-#modal-roomblock .modal .modal-contents .form-type1 .room-group div {
+#modal-roomblock .modal .modal-contents .form-type1 .room-group div, #modal-roomdeact .modal .modal-contents .form-type1 .room-group div {
   margin: 0 5px 5px 0;
+}
+#modal-roomblock .modal .modal-bottom, #modal-roomdeact .modal .modal-bottom {
+  gap: 30px;
 }
 
 /* 기간 지정 방막기 Modal 끝 */

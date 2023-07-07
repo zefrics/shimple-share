@@ -155,10 +155,6 @@
   box-shadow: 0 0 0 2px #444444;
   outline: 0;
 }
-.bulletin-write1 .form3 .upload input[type=file]::-webkit-file-upload-button {
-  display: none;
-  height: 30px;
-}
 .bulletin-write1 .form3 .upload input[type=file]::file-selector-button {
   display: none;
   height: 30px;
@@ -207,13 +203,6 @@
 .bulletin-list1 .top .row1 .item-group .btn-group button:hover {
   outline: 1px solid #444444;
 }
-.bulletin-list1 .top .row1 .item-group .btn-group button .active {
-  cursor: unset;
-  outline: 0;
-  border-color: rgb(0, 180, 255);
-  background-color: rgb(0, 180, 255);
-  color: #ffffff;
-}
 .bulletin-list1 .top .row1 .item-group .search-group {
   display: flex;
 }
@@ -225,9 +214,6 @@
   font-size: 15px;
 }
 .bulletin-list1 .top .row1 .item-group .search-group .search::-moz-placeholder {
-  color: #cccccc;
-}
-.bulletin-list1 .top .row1 .item-group .search-group .search:-ms-input-placeholder {
   color: #cccccc;
 }
 .bulletin-list1 .top .row1 .item-group .search-group .search::placeholder {
@@ -251,7 +237,6 @@
   justify-content: space-between;
 }
 .bulletin-list1 .top .row2 .filter-group {
-  -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
@@ -346,9 +331,6 @@
 .bulletin-list1 .top .row2 .search-group .search::-moz-placeholder {
   color: #cccccc;
 }
-.bulletin-list1 .top .row2 .search-group .search:-ms-input-placeholder {
-  color: #cccccc;
-}
 .bulletin-list1 .top .row2 .search-group .search::placeholder {
   color: #cccccc;
 }
@@ -409,7 +391,6 @@
 .bulletin-list1 .table .row-group > .table-row .link .shorten {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -804,7 +785,7 @@
   width: 70%;
 }
 #partner-list .title, #partner-list .table-row {
-  grid-template-columns: 120px 120px 1fr 300px 90px;
+  grid-template-columns: 60px 120px 120px 1fr 300px 90px;
 }
 #partner-list .btn-group {
   display: grid;
@@ -828,7 +809,7 @@
   width: 70%;
 }
 #roomtype-list .title, #roomtype-list .table-row {
-  grid-template-columns: 1fr 300px 120px 120px;
+  grid-template-columns: 60px 1fr 300px 120px 120px 90px;
 }
 #roomtype-list .btn-group {
   display: grid;
@@ -840,7 +821,7 @@
   width: 70%;
 }
 #roomtype-list-modify .title, #roomtype-list-modify .table-row {
-  grid-template-columns: 60px 60px 1fr 120px 120px;
+  grid-template-columns: 60px 60px 1fr 120px 120px 90px;
 }
 #roomtype-list-modify .btn-group {
   display: grid;
@@ -965,6 +946,7 @@
   font-weight: 600;
 }
 #refund-read .notice {
+  margin-top: 3px;
   color: red;
   font-size: 14px;
   font-weight: 600;
@@ -984,11 +966,11 @@
 }
 
 #room-name-read .table li {
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: 60px 1fr 90px;
 }
 
 #add-person-read .table li, #add-pet-read .table li {
-  grid-template-columns: 60px 1fr 1fr;
+  grid-template-columns: 60px 1fr 1fr 90px;
 }
 #add-person-read .table .unit-group, #add-pet-read .table .unit-group {
   width: 80%;
@@ -1035,7 +1017,6 @@
 .bulletin-write2 .form3 .col-right .filter2 { /*문의 사항 및 자주 묻는 질문에서 질문 유형 선택, 공지 사항에서 공개 범위 선택*/
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   position: relative;
   cursor: pointer;
@@ -1178,10 +1159,6 @@
 .bulletin-write2 .form3 .col-right .upload-group .upload input[type=file]:focus {
   box-shadow: 0 0 0 2px #444444;
   outline: 0;
-}
-.bulletin-write2 .form3 .col-right .upload-group .upload input[type=file]::-webkit-file-upload-button {
-  display: none;
-  height: 30px;
 }
 .bulletin-write2 .form3 .col-right .upload-group .upload input[type=file]::file-selector-button {
   display: none;
@@ -1332,11 +1309,11 @@
 }
 
 #room-name-write .table li {
-  grid-template-columns: 60px 60px 1fr;
+  grid-template-columns: 60px 60px 1fr 90px;
 }
 
 #add-person-write .table li, #add-pet-write .table li {
-  grid-template-columns: 60px 60px 1fr 1fr;
+  grid-template-columns: 60px 60px 1fr 1fr 90px;
 }
 #add-person-write .table .unit-group, #add-pet-write .table .unit-group {
   width: 80%;
@@ -1461,7 +1438,6 @@
   color: rgb(0, 180, 255);
 }
 .bulletin-list3 .top .filter-group {
-  -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
@@ -1576,7 +1552,6 @@
 .bulletin-list3 .table .row-group .table-row .link .shorten {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   overflow: hidden;
   text-overflow: ellipsis;

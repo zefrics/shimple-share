@@ -16,9 +16,7 @@ function filter(e) { //필터 접고 펴는 기능
   child1.classList.toggle("hide");
 }
 
-window.onload = function(){
-
-
+window.onload = function() {
   // 메뉴 Accordion  (작동되는 것 확인됨)
   var acc = document.querySelectorAll(".accordion"); //아코디언 메뉴 선택
   for (var i = 0; i < acc.length; i++) {
@@ -42,7 +40,20 @@ window.onload = function(){
       }
     }
   }
-
 }
 
+function closeMenu() {
+  const x = document.querySelector('nav');
+  x.classList.remove('responsive'); // 메뉴 접기
+  
+  const y = document.querySelector('nav .menu-icon');
+  y.classList.remove('open'); // x모양에서 햄버거 모양으로 복귀
+}
 
+function toggleMenu() {
+  const x = document.querySelector('nav');
+  x.classList.toggle('responsive'); // 메뉴 토글
+  
+  const y = document.querySelector('nav .menu-icon');
+  y.classList.toggle('open'); // 햄버거 아이콘 토글
+}
