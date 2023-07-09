@@ -3,7 +3,8 @@ $color-w9: rgba(255, 255, 255, 0.9); // Bottom popup
 
 $color-ka: rgba(0, 0, 0, 1);
 $color-k7: rgba(0, 0, 0, 0.7); // BG, sub-title, log, Hover
-$color-k4: rgba(0, 0, 0, 0.4); // Box-shadow, sub-lable
+$color-k5: rgba(0, 0, 0, 0.5); // Sub-lable
+$color-k3: rgba(0, 0, 0, 0.3); // Box-shadow
 $color-k1: rgba(0, 0, 0, 0.1); // 조회 border
 
 $color-ca: rgba(0, 180, 255, 1);
@@ -50,7 +51,6 @@ $fw-modal-sub: 400; // 모달 서브 라벨 폰트 웨이트
 /* 라벨 */
 .label1 {
   .label-text {
-    margin-top: 9px;
     font-size: $fs-modal-label; line-height: $fs-modal-label; font-weight: $fw-modal-label;
   }
 }
@@ -59,7 +59,7 @@ $fw-modal-sub: 400; // 모달 서브 라벨 폰트 웨이트
     font-size: $fs-modal-label; line-height: $fs-modal-label; font-weight: $fw-modal-label;
   }
   .sub-label {
-    color: $color-k7;
+    color: $color-k5;
     font-size: $fs-modal-sub; line-height: $fs-modal-sub; font-weight: $fw-modal-sub;
   }
 }
@@ -84,7 +84,7 @@ $fw-modal-sub: 400; // 모달 서브 라벨 폰트 웨이트
     background-color: $color-wa;
     .header {
       z-index: 1;
-      box-shadow: 0 2px 2px 0px $color-k4;
+      box-shadow: 0 2px 2px 0px $color-k3;
       display: flex; align-items: center; justify-content: space-between;
       padding: 15rem;
       .title-group {
@@ -211,7 +211,7 @@ $fw-modal-sub: 400; // 모달 서브 라벨 폰트 웨이트
     >.bottom {
       z-index: 1;
       padding: 15rem;
-      box-shadow: 0 -2px 2px 0 $color-k4;
+      box-shadow: 0 -2px 2px 0 $color-k3;
     }
   }
 }
@@ -261,17 +261,6 @@ $fw-modal-sub: 400; // 모달 서브 라벨 폰트 웨이트
   }
 }
 /* Popup 끝 */
-
-/* Bottom Popup 시작 */
-.bottom-popup {
-  z-index: 400;
-  position: sticky; bottom: 0; left: 0; 
-  width: 100%;
-  padding: 18rem;
-  background-color: $color-w9;
-  box-shadow: 0 -2px 4px 0 $color-k4;
-}
-/* Bottom Popup 끝 */
 
 .sub-check {
   user-select: none;

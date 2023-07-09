@@ -168,12 +168,13 @@ button {
 }
 
 .btn-all {
-  font-size: 14rem; font-weight: 400;
-  color: $color-wa;
-  background-color: $color-ca;
+  height: 30rem;
+  padding: 0 6rem;
   border: 1px solid $color-ca;
   border-radius: 6rem;
-  padding: 3rem 6rem;
+  background-color: $color-ca;
+  font-size: 14rem; font-weight: 400;
+  color: $color-wa;
 }
 
 /* 버튼 배치 시작 */

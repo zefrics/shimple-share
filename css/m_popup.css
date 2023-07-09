@@ -8,7 +8,6 @@
 
 /* 라벨 */
 .label1 .label-text {
-  margin-top: 9px;
   font-size: 14rem;
   line-height: 14rem;
   font-weight: 600;
@@ -20,7 +19,7 @@
   font-weight: 600;
 }
 .label2 .sub-label {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.5);
   font-size: 12rem;
   line-height: 12rem;
   font-weight: 400;
@@ -58,7 +57,7 @@
 }
 .modal-container .modal .header {
   z-index: 1;
-  box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -192,7 +191,7 @@
 .modal-container .modal > .bottom {
   z-index: 1;
   padding: 15rem;
-  box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* Modal 끝 */
@@ -256,19 +255,6 @@
 }
 
 /* Popup 끝 */
-/* Bottom Popup 시작 */
-.bottom-popup {
-  z-index: 400;
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 18rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.4);
-}
-
-/* Bottom Popup 끝 */
 .sub-check {
   -webkit-user-select: none;
      -moz-user-select: none;

@@ -3,8 +3,7 @@ $color-w5: rgba(255, 255, 255, 0.5); // Menu text (normal)
 
 $color-ka: rgba(0, 0, 0, 1);
 $color-k7: rgba(0, 0, 0, 0.7); // Result, Hover
-$color-k4: rgba(0, 0, 0, 0.4); // Box-shadow
-$color-k3: rgba(0, 0, 0, 0.3); // Placeholder
+$color-k3: rgba(0, 0, 0, 0.3); // Placeholder, Box-shadow
 $color-k2: rgba(0, 0, 0, 0.2); // Input, Select, Textarea
 
 $color-xd: #dddddd;
@@ -14,16 +13,16 @@ $color-ca: rgba(0, 180, 255, 1);
 $color-ma: rgba(244, 81, 108, 1);
 
 $fs-brand: 16rem; // 브랜드 폰트 사이즈
-$fw-brand: 600; // 브랜드 폰트 웨이트
+$fw-brand: 700; // 브랜드 폰트 웨이트
 
 $fs-menu: 27rem; // 메뉴 폰트 사이즈
 $fw-menu1: 400; // 메뉴 폰트 웨이트1 (일반)
 $fw-menu2: 500; // 메뉴 폰트 웨이트2 (Hover 및 Active)
 
 $fs-con-title: 16rem; // 내용 타이틀 폰트 사이즈
-$fw-con-title: 600; // 내용 타이틀 폰트 웨이트
+$fw-con-title: 700; // 내용 타이틀 폰트 웨이트
 
-$fs-result: 12rem; // 검색 결과 폰트 사이즈
+$fs-result: 13rem; // 검색 결과 폰트 사이즈
 $fw-result: 400; // 검색 결과 폰트 웨이트
 
 $fs-copy: 15rem; // 카피라이트 폰트 사이즈
@@ -57,6 +56,7 @@ body {
   font-family: Apple SD Gothic Neo;
   background-color: $color-ca;
   letter-spacing: -0.5rem;
+  user-select: none;
 }
 
 nav {
@@ -68,7 +68,7 @@ nav {
   background-color: $color-ca;
   .navigation {
     height: 45px; width: 100%;
-    padding: 0 18rem;
+    padding: 0 15rem;
     display: flex; justify-content: space-between; align-items: center;
     .brand {
       z-index: 997;
@@ -159,10 +159,10 @@ nav {
     z-index: 300;
     position: sticky; top: 45px;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 0 18rem;
+    padding: 0 15rem;
     height: 45px;
     background-color: $color-wa;
-    box-shadow: 0 2px 2px 0 $color-k4;
+    box-shadow: 0 2px 2px 0 $color-k3;
     .title {
       display: flex; align-items: center;
       font-size: $fs-con-title; font-weight: $fw-con-title;
@@ -174,13 +174,15 @@ nav {
     }
   }
   >.content {
-    background-color: $color-xd;
     display: flex; flex-direction: column;
-    padding: 6rem; gap: 6rem;
+    // padding: 6rem; gap: 6rem;
+    // background-color: $color-xd;
     .artboard {
+      padding: 15rem;
       background-color: $color-wa;
-      padding: 12rem;
-      font-size: 15rem;
+      >.confirm {
+        margin-top: 45rem;
+      }
     }
   }
 }
@@ -202,8 +204,8 @@ footer {
 
 /* 입력 공통 */
 input {
-  height: 33rem; width: 100%;
-  padding: 0 9rem;
+  height: 36rem; width: 100%;
+  padding: 0 12rem;
   border: 1px solid $color-k2;
   background-color: $color-wa;
   font-family: Apple SD Gothic Neo; font-size: $fs-input; font-weight: $fw-input;
@@ -264,8 +266,8 @@ input {
 
 select {
   cursor: pointer; appearance: none;
-  height: 33rem; width: 100%;
-  padding: 0 9rem;
+  height: 36rem; width: 100%;
+  padding: 0 12rem;
   border: 1px solid $color-k2;
   background-color: $color-wa;
   font-family: Apple SD Gothic Neo; font-size: $fs-input; font-weight: $fw-input;
@@ -282,7 +284,7 @@ select {
 textarea {
   resize: none;
   width: 100%;
-  padding: 9rem;
+  padding: 12rem;
   background-color: $color-wa;
   font-family: Apple SD Gothic Neo; font-size: $fs-textarea; font-weight: $fw-textarea;
   border: 1px solid $color-k2;
@@ -309,7 +311,7 @@ label {
   }
   .unit2 {
     position: absolute;
-    right: 9rem;
+    right: 12rem;
   }
 }
 
@@ -318,15 +320,15 @@ label {
   display: flex; align-items: center;
   position: relative;
   input, select {
-    padding: 0 33px 0 24px;
+    padding: 0 33rem 0 24rem;
   }
   .unit1 {
     position: absolute;
-    left: 9rem;
+    left: 12rem;
   }
   .unit2 {
     position: absolute;
-    right: 9rem;
+    right: 12rem;
   }
 }
 

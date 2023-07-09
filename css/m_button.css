@@ -185,13 +185,14 @@ button {
 }
 
 .btn-all {
+  height: 30rem;
+  padding: 0 6rem;
+  border: 1px solid rgb(0, 180, 255);
+  border-radius: 6rem;
+  background-color: rgb(0, 180, 255);
   font-size: 14rem;
   font-weight: 400;
   color: rgb(255, 255, 255);
-  background-color: rgb(0, 180, 255);
-  border: 1px solid rgb(0, 180, 255);
-  border-radius: 6rem;
-  padding: 3rem 6rem;
 }
 
 /* 버튼 배치 시작 */
