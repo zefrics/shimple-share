@@ -55,15 +55,15 @@ html {
 body {
   font-family: Apple SD Gothic Neo;
   background-color: $color-ca;
-  letter-spacing: -0.5rem;
   user-select: none;
 }
 
 nav {
   z-index: 500;
-  position: sticky; top: 0;
+  position: fixed; top: 0; left:0;
   user-select: none;
   display: flex; justify-content: center;
+  width: 100%;
   color: $color-wa;
   background-color: $color-ca;
   .navigation {
@@ -73,7 +73,7 @@ nav {
     .brand {
       z-index: 997;
       cursor: pointer;
-      font-size: $fs-brand; font-weight: $fw-brand;
+      font-size: $fs-brand; font-weight: $fw-brand; letter-spacing: -0.25rem;
     }
     
     .icon-group {
@@ -157,10 +157,10 @@ nav {
 .content-container {
   >.header {
     z-index: 300;
-    position: sticky; top: 45px;
+    position: fixed; top: 45px;
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 15rem;
-    height: 45px;
+    height: 45px; width: 100%;
     background-color: $color-wa;
     box-shadow: 0 2px 2px 0 $color-k3;
     .title {
@@ -175,6 +175,7 @@ nav {
   }
   >.content {
     display: flex; flex-direction: column;
+    margin-top: 90px;
     // padding: 6rem; gap: 6rem;
     // background-color: $color-xd;
     .artboard {
