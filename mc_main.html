@@ -49,13 +49,12 @@
       </div>
     </nav>
     <!--Menu 끝-->
-
+    <header>
+      <h2 class="title">자주 묻는 질문<span>검색결과 : 000개</span></h2>
+      <button class="btn-all">전체 보기</button>
+    </header>
     <!--Content 시작-->
     <div class="content-container">
-      <div class="header">
-        <h2 class="title">자주 묻는 질문<span>검색결과 : 000개</span></h2>
-        <button class="btn-all">전체 보기</button>
-      </div>
       <div class="content">
         <section class="artboard">
           <div class="bulletin-list1" id="s-question-list">
@@ -139,11 +138,11 @@
             </div>
             <div class="table">
               <div class="row-group">
-                <div class="table-row" onclick="detail2(this)">
+                <div class="row" onclick="detail2(this)">
                   <h4 class="title">
                     숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?  숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?
                   </h4>
-                  <div class="row2">
+                  <div class="sub">
                     <p class="info">
                       제주애견동반솔펜션솔펜션솔펜션<br>우소영&#9474;숙소 정보 변경&#9474;2021-09-20 18:31
                     </p>
@@ -233,11 +232,11 @@
                 </div>
               </div>
               <div class="row-group">
-                <div class="table-row" onclick="detail2(this)">
+                <div class="row" onclick="detail2(this)">
                   <h4 class="title">
                     숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?  숙소 세부 정보의 내용중에 잘못된 것이 있는데 변경이 가능할까요?
                   </h4>
-                  <div class="row2">
+                  <div class="sub">
                     <p class="info">
                       제주애견동반솔펜션솔펜션솔펜션<br>미답변&#9474;요금 변경&#9474;2021-09-19 18:31:45
                     </p>
@@ -326,13 +325,12 @@
                 </div>
               </div>
             </div>
-
             <div class="bottom">
-              <button class="btn-more">더보기 ∇<br><span class="highlight">30</span><span>&#9474;1,100</span></button>
+              <button class="btn-more">더보기 ∇<br><span class="highlight">30</span><span> / 1,100</span></button>
             </div>
-
           </div>
         </section>
+        
         <section class="artboard">
           <div id="s-notice-write">
             <div class="form-type2">
@@ -512,8 +510,6 @@
           
         </section>
       </div>
-      
-
     </div>
     
     <!--Content 끝-->
@@ -561,7 +557,7 @@
     </div>
 
     <!-- 수동 SMS Popup 시작 -->
-    <div id="popup-sms2" class="modal-container center hide">
+    <div id="popup-sms2" class="modal-container hide">
       <div class="bg"></div>
       <div class="modal">
         <div class="header">
@@ -616,7 +612,7 @@
     <!-- 수동 SMS Popup 끝 -->
 
     <!-- 문의 사항 작성 Popup 시작 -->
-    <div id="popup-question" class="modal-container center hide">
+    <div id="popup-question" class="modal-container hide">
       <div class="bg"></div>
       <div class="modal">
         <div class="header">
@@ -689,7 +685,7 @@
     <!-- 문의 사항 작성 Popup 끝 -->
     
     <!-- 예약 생성 #3 Modal 시작 -->
-    <div id="modal-r-create3" class="modal-container side hide">
+    <div id="modal-r-create3" class="modal-container hide">
       <div class="bg" onclick="modalRCreateClose3()"></div>
       <div class="modal">
         <div class="header">

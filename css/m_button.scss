@@ -146,9 +146,6 @@ button {
 }
 
 .btn-more { // 더보기
-  width: 100%;
-  padding: 6rem;
-  border: 1px solid $color-ga;
   font-size: 14rem; font-weight: 500;
   span {
     color: $color-ga;
@@ -156,14 +153,6 @@ button {
     &.highlight {
       color: $color-ca;
     }
-  }
-  &:focus {
-    outline: 2px solid $color-ka;
-    outline-offset: -2px;
-  }
-  &:hover {
-    outline: 1px solid $color-k7;
-    outline-offset: -1px;
   }
 }
 

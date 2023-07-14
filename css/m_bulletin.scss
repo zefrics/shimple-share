@@ -135,10 +135,20 @@ $fw-list-info: 400; // List-info 폰트 웨이트
       }
     }
   }
+  .table {
+    .row-group {
+      .content-group {
+        .content1 {
+          border-bottom: 1px solid $color-c2;
+        }
+      }
+    }
+  }
 }
 
 .bulletin-list1 { // 게시판 목록, 예약 목록
   .top {
+    padding: 15rem;
     .row1 {
       display: flex;
       .item-group {
@@ -162,16 +172,14 @@ $fw-list-info: 400; // List-info 폰트 웨이트
       display: flex;flex-direction: column; gap: 9rem;
     }
   }
-
   .table {
-    margin-top: 21rem;
     border-top: 1px solid $color-k2;
     .row-group {
       display: flex; flex-direction: column;
-      .table-row {
+      padding: 18rem;
+      border-bottom: 1px solid $color-k2;
+      .row {
         cursor: pointer;
-        padding: 18rem;
-        border-bottom: 1px solid $color-k2;
         .title {
           overflow: hidden;
           text-overflow: ellipsis;
@@ -179,7 +187,7 @@ $fw-list-info: 400; // List-info 폰트 웨이트
           font-size: $fs-list-title; font-weight: $fw-list-title;
           color: $color-ka;
         }
-        .row2 {
+        .sub {
           display: flex; justify-content: space-between; align-items: center; gap: 15rem;
           margin-top: 6rem;
           .info {
@@ -227,22 +235,19 @@ $fw-list-info: 400; // List-info 폰트 웨이트
           }
         }
         .content1 {
-          margin: 0 18rem;
+          margin-top: 18rem;
           padding: 18rem 0;
           border-top: 1px solid $color-c2;
-          border-bottom: 1px solid $color-c2;
         }
         .content2 {
-          margin: 18rem;
+          margin-top: 18rem;
           padding-left: 18rem;
           border-left: 3px solid $color-ca;
         }
       }
       &.selected {
         background-color: $color-cm3;
-        outline: 1px solid $color-c2;
-        // outline-offset: -1px;
-        .table-row {
+        .row {
           border-bottom: 0;
           .title {
             color: $color-ca;
@@ -261,10 +266,9 @@ $fw-list-info: 400; // List-info 폰트 웨이트
         }
       }
     }
-    
-      
   }
-  >.bottom {
-    margin-top: 15rem;
+  > .bottom {
+    padding: 12rem 0;
+    display: flex; align-items: center; justify-content: center;
   }
 }

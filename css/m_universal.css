@@ -143,7 +143,7 @@ nav.responsive .navigation ul {
   gap: 30rem;
 }
 
-.content-container > .header {
+header {
   z-index: 300;
   position: fixed;
   top: 45px;
@@ -156,25 +156,25 @@ nav.responsive .navigation ul {
   background-color: rgb(255, 255, 255);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
 }
-.content-container > .header .title {
+header .title {
   display: flex;
   align-items: center;
   font-size: 16rem;
   font-weight: 700;
 }
-.content-container > .header .title span {
+header .title span {
   margin-left: 9rem;
   font-size: 12rem;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.5);
 }
+
 .content-container > .content {
   display: flex;
   flex-direction: column;
   margin-top: 90px;
 }
 .content-container > .content .artboard {
-  padding: 15rem;
   background-color: rgb(255, 255, 255);
 }
 .content-container > .content .artboard > .confirm {
