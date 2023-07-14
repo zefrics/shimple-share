@@ -8,15 +8,15 @@
 
 /* 라벨 */
 .label1 .label-text {
-  font-size: 14rem;
-  line-height: 14rem;
-  font-weight: 600;
+  font-size: 13rem;
+  line-height: 13rem;
+  font-weight: 500;
 }
 
 .label2 .label-text {
-  font-size: 14rem;
-  line-height: 14rem;
-  font-weight: 600;
+  font-size: 13rem;
+  line-height: 13rem;
+  font-weight: 500;
 }
 .label2 .sub-label {
   color: rgba(0, 0, 0, 0.5);
@@ -36,7 +36,6 @@
   left: 0;
   height: 100%;
   width: 100%;
-  padding: 30rem;
 }
 .modal-container .bg {
   z-index: 1;
@@ -74,15 +73,12 @@
 }
 .modal-container .modal .header .close {
   background-color: transparent;
-  height: 18rem;
-  width: 18rem;
-}
-.modal-container .modal .header .close:hover {
-  outline: 2px solid rgb(244, 81, 108);
+  height: 21rem;
+  width: 21rem;
 }
 .modal-container .modal .header .close img {
-  height: 18rem;
-  width: 18rem;
+  height: 21rem;
+  width: 21rem;
 }
 .modal-container .modal .content {
   overflow-y: auto;
@@ -95,6 +91,16 @@
   /* 인원, 반려동물 */
   /* 조회 */
   /* 작성 로그 */
+}
+.modal-container .modal .content::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+.modal-container .modal .content::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.modal-container .modal .content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .modal-container .modal .content .btn-group1,
 .modal-container .modal .content .btn-group2-2 {
@@ -176,9 +182,9 @@
           user-select: none;
   display: flex;
   flex-direction: column;
-  gap: 18rem;
 }
 .modal-container .modal .content .partner-list li {
+  padding: 15rem 9rem;
   font-size: 15rem;
 }
 .modal-container .modal .content .partner-list li a {

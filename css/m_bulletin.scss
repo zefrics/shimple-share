@@ -3,6 +3,7 @@ $color-wa: rgba(255, 255, 255, 1);
 $color-ka: rgba(0, 0, 0, 1);
 $color-k7: rgba(0, 0, 0, 0.7);
 $color-k5: rgba(0, 0, 0, 0.5);
+$color-k4: rgba(0, 0, 0, 0.4); // List-info
 $color-k3: rgba(0, 0, 0, 0.3);
 $color-k2: rgba(0, 0, 0, 0.2);
 $color-k1: rgba(0, 0, 0, 0.1);
@@ -12,8 +13,9 @@ $color-c7: rgba(0, 180, 255, 0.7);
 $color-c5: rgba(0, 180, 255, 0.5);
 $color-c2: rgba(0, 180, 255, 0.2);
 $color-c1: rgba(0, 180, 255, 0.1);
+$color-cm3: rgba(0, 180, 255, 0.03);
 
-$fs-list-title: 15rem; // List-title 폰트 사이즈
+$fs-list-title: 14rem; // List-title 폰트 사이즈
 $fw-list-title: 500; // List-title 폰트 웨이트
 
 $fs-list-info: 12rem; // List-info 폰트 사이즈
@@ -29,21 +31,23 @@ $fw-list-info: 400; // List-info 폰트 웨이트
     }
   }
   .filter2 { // 자체 제작 필터
-    cursor: pointer;
     position: relative;
-    display: flex; align-items: center; justify-content: center;
     border: 1px solid $color-k2;
-    height: 36rem; width: 100%;
-    padding: 0 9rem;
-    &:hover {
-      outline: 1px solid $color-k7;
-      outline-offset: -1px;
-    }
     .title {
-      font-size: 14rem; font-weight: 400;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      height: 36rem; width: 100%;
+      padding: 0 12rem;
+      .text {
+        font-size: 14rem; font-weight: 400;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      &:hover {
+        outline: 1px solid $color-k7;
+        outline-offset: -1px;
+      }
     }
     .options {
       box-shadow: $color-k2 1px 1px 3px;
@@ -93,7 +97,8 @@ $fw-list-info: 400; // List-info 폰트 웨이트
   .uploading {
     li {
       display: flex; align-items: center; justify-content: space-between;
-      padding: 5px 12px;
+      height: 36rem;
+      padding: 0 12rem;
       border: 1px solid $color-k2;
       border-radius: 6px;
       font-size: 13rem; font-weight: 400;
@@ -105,32 +110,16 @@ $fw-list-info: 400; // List-info 폰트 웨이트
           white-space: nowrap; 
         }
       }
-      button {
-        font-size: 18px; 
+      .close {
+        cursor: pointer;
+        img {
+          height: 12px; width: 12px;
+        }
       }
     }
   }
   .upload {
     display: grid; grid-template-columns: 1fr 90px; gap: 12px;
-    input[type=file] {
-      cursor: pointer;
-      padding-left: 9rem;
-      border-color: $color-ca;
-      border-radius: 6rem;
-      font-size: 13rem; font-weight: 500;
-      color:$color-ca;
-      &:hover {
-        outline: 1px solid $color-k7;
-        outline-offset: -1px;
-      }
-      &:focus {
-        outline: 2px solid $color-k7;
-        outline-offset: -2px;
-      }
-      &::file-selector-button {
-        // display: none;
-      }
-    }
   }
 }
 
@@ -181,7 +170,7 @@ $fw-list-info: 400; // List-info 폰트 웨이트
       display: flex; flex-direction: column;
       .table-row {
         cursor: pointer;
-        padding: 15rem;
+        padding: 18rem;
         border-bottom: 1px solid $color-k2;
         .title {
           overflow: hidden;
@@ -190,81 +179,79 @@ $fw-list-info: 400; // List-info 폰트 웨이트
           font-size: $fs-list-title; font-weight: $fw-list-title;
           color: $color-ka;
         }
-        .info-group {
+        .row2 {
           display: flex; justify-content: space-between; align-items: center; gap: 15rem;
+          margin-top: 6rem;
           .info {
-            margin-top: 3rem; 
             overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
             font-size: $fs-list-info; font-weight: $fw-list-info;
-            color: $color-k5;
+            color: $color-k4;
           }
-          .arrow1 {
-            font-stretch: expanded;
-            font-size: 21rem;
-            color: $color-k3;
-          }
-          .arrow2 {
-            display: none;
-            font-size: 21rem;
-            color: $color-k3;
+          .arrow-group {
+            opacity: 0.2;
+            .more {
+              display: flex;
+              width: 18rem;
+            }
+            .less {
+              display: none;
+              width: 18rem;
+            }
           }
         }
       }
       .content-group {
         display: none;
         border-top: 0;
-        .content1 {
-          padding: 21rem 18rem;
-          border-top: 1px solid $color-c2;
-          border-bottom: 1px solid $color-c2;
-          .text {
-            font-size: 13rem; font-weight: 400;
-          }
-          .image {
-            margin-top: 18rem;
-            img {
-              width: 100%;
-            }
-          }
-          .uploaded {
-            margin-top: 18rem;
-          }
-          .modify {
-            margin-top: 18rem;
-          }
-          .record {
-            margin-top: 6rem;
-            font-size: 12rem;
-            span {
-              padding-right: 6px;
-              font-weight: 600;
-            }
+        .text {
+          font-size: 13rem; font-weight: 400;
+        }
+        .image {
+          margin-top: 18rem;
+          img {
+            width: 100%;
           }
         }
+        .uploaded {
+          margin-top: 18rem;
+        }
+        .modify {
+          margin-top: 18rem;
+        }
+        .record {
+          margin-top: 6rem;
+          font-size: 12rem;
+          span {
+            padding-right: 6px;
+            font-weight: 600;
+          }
+        }
+        .content1 {
+          margin: 0 18rem;
+          padding: 18rem 0;
+          border-top: 1px solid $color-c2;
+          border-bottom: 1px solid $color-c2;
+        }
         .content2 {
-          height: 100%;
-          margin-top: 21rem;
-          margin-bottom: 21rem;
-          margin-left: 18rem;
-          
+          margin: 18rem;
           padding-left: 18rem;
-          padding-right: 18rem;
           border-left: 3px solid $color-ca;
         }
       }
       &.selected {
-        outline: 2px solid $color-c5;
-        outline-offset: -2px;
+        background-color: $color-cm3;
+        outline: 1px solid $color-c2;
+        // outline-offset: -1px;
         .table-row {
           border-bottom: 0;
           .title {
             color: $color-ca;
           }
-          .info-group {
-            .arrow1 {
+          .arrow-group {
+            .more {
               display: none;
             }
-            .arrow2 {
+            .less {
               display: block;
             }
           }

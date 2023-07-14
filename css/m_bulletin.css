@@ -14,26 +14,28 @@
   outline: 0;
 }
 .filter-group .filter2 {
-  cursor: pointer;
   position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.filter-group .filter2 .title {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(0, 0, 0, 0.2);
   height: 36rem;
   width: 100%;
-  padding: 0 9rem;
+  padding: 0 12rem;
 }
-.filter-group .filter2:hover {
-  outline: 1px solid rgba(0, 0, 0, 0.7);
-  outline-offset: -1px;
-}
-.filter-group .filter2 .title {
+.filter-group .filter2 .title .text {
   font-size: 14rem;
   font-weight: 400;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.filter-group .filter2 .title:hover {
+  outline: 1px solid rgba(0, 0, 0, 0.7);
+  outline-offset: -1px;
 }
 .filter-group .filter2 .options {
   box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 3px;
@@ -80,7 +82,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 12px;
+  height: 36rem;
+  padding: 0 12rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   font-size: 13rem;
@@ -94,31 +97,19 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.upload-group .uploading li button {
-  font-size: 18px;
+.upload-group .uploading li .close {
+  cursor: pointer;
+}
+.upload-group .uploading li .close img {
+  height: 12px;
+  width: 12px;
 }
 .upload-group .upload {
   display: grid;
   grid-template-columns: 1fr 90px;
   gap: 12px;
 }
-.upload-group .upload input[type=file] {
-  cursor: pointer;
-  padding-left: 9rem;
-  border-color: rgb(0, 180, 255);
-  border-radius: 6rem;
-  font-size: 13rem;
-  font-weight: 500;
-  color: rgb(0, 180, 255);
-}
-.upload-group .upload input[type=file]:hover {
-  outline: 1px solid rgba(0, 0, 0, 0.7);
-  outline-offset: -1px;
-}
-.upload-group .upload input[type=file]:focus {
-  outline: 2px solid rgba(0, 0, 0, 0.7);
-  outline-offset: -2px;
-}
+
 #s-question-list .top .row2 .filter-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -164,87 +155,85 @@
 }
 .bulletin-list1 .table .row-group .table-row {
   cursor: pointer;
-  padding: 15rem;
+  padding: 18rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .bulletin-list1 .table .row-group .table-row .title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 15rem;
+  font-size: 14rem;
   font-weight: 500;
   color: rgb(0, 0, 0);
 }
-.bulletin-list1 .table .row-group .table-row .info-group {
+.bulletin-list1 .table .row-group .table-row .row2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 15rem;
+  margin-top: 6rem;
 }
-.bulletin-list1 .table .row-group .table-row .info-group .info {
-  margin-top: 3rem;
+.bulletin-list1 .table .row-group .table-row .row2 .info {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 12rem;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.4);
 }
-.bulletin-list1 .table .row-group .table-row .info-group .arrow1 {
-  font-stretch: expanded;
-  font-size: 21rem;
-  color: rgba(0, 0, 0, 0.3);
+.bulletin-list1 .table .row-group .table-row .row2 .arrow-group {
+  opacity: 0.2;
 }
-.bulletin-list1 .table .row-group .table-row .info-group .arrow2 {
+.bulletin-list1 .table .row-group .table-row .row2 .arrow-group .more {
+  display: flex;
+  width: 18rem;
+}
+.bulletin-list1 .table .row-group .table-row .row2 .arrow-group .less {
   display: none;
-  font-size: 21rem;
-  color: rgba(0, 0, 0, 0.3);
+  width: 18rem;
 }
 .bulletin-list1 .table .row-group .content-group {
   display: none;
   border-top: 0;
 }
-.bulletin-list1 .table .row-group .content-group .content1 {
-  padding: 21rem 18rem;
-  border-top: 1px solid rgba(0, 180, 255, 0.2);
-  border-bottom: 1px solid rgba(0, 180, 255, 0.2);
-}
-.bulletin-list1 .table .row-group .content-group .content1 .text {
+.bulletin-list1 .table .row-group .content-group .text {
   font-size: 13rem;
   font-weight: 400;
 }
-.bulletin-list1 .table .row-group .content-group .content1 .image {
+.bulletin-list1 .table .row-group .content-group .image {
   margin-top: 18rem;
 }
-.bulletin-list1 .table .row-group .content-group .content1 .image img {
+.bulletin-list1 .table .row-group .content-group .image img {
   width: 100%;
 }
-.bulletin-list1 .table .row-group .content-group .content1 .uploaded {
+.bulletin-list1 .table .row-group .content-group .uploaded {
   margin-top: 18rem;
 }
-.bulletin-list1 .table .row-group .content-group .content1 .modify {
+.bulletin-list1 .table .row-group .content-group .modify {
   margin-top: 18rem;
 }
-.bulletin-list1 .table .row-group .content-group .content1 .record {
+.bulletin-list1 .table .row-group .content-group .record {
   margin-top: 6rem;
   font-size: 12rem;
 }
-.bulletin-list1 .table .row-group .content-group .content1 .record span {
+.bulletin-list1 .table .row-group .content-group .record span {
   padding-right: 6px;
   font-weight: 600;
 }
+.bulletin-list1 .table .row-group .content-group .content1 {
+  margin: 0 18rem;
+  padding: 18rem 0;
+  border-top: 1px solid rgba(0, 180, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 180, 255, 0.2);
+}
 .bulletin-list1 .table .row-group .content-group .content2 {
-  height: 100%;
-  margin-top: 21rem;
-  margin-bottom: 21rem;
-  margin-left: 18rem;
+  margin: 18rem;
   padding-left: 18rem;
-  padding-right: 18rem;
   border-left: 3px solid rgb(0, 180, 255);
 }
 .bulletin-list1 .table .row-group.selected {
-  outline: 2px solid rgba(0, 180, 255, 0.5);
-  outline-offset: -2px;
+  background-color: rgba(0, 180, 255, 0.03);
+  outline: 1px solid rgba(0, 180, 255, 0.2);
 }
 .bulletin-list1 .table .row-group.selected .table-row {
   border-bottom: 0;
@@ -252,10 +241,10 @@
 .bulletin-list1 .table .row-group.selected .table-row .title {
   color: rgb(0, 180, 255);
 }
-.bulletin-list1 .table .row-group.selected .table-row .info-group .arrow1 {
+.bulletin-list1 .table .row-group.selected .table-row .arrow-group .more {
   display: none;
 }
-.bulletin-list1 .table .row-group.selected .table-row .info-group .arrow2 {
+.bulletin-list1 .table .row-group.selected .table-row .arrow-group .less {
   display: block;
 }
 .bulletin-list1 .table .row-group.selected .content-group {

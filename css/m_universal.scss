@@ -2,7 +2,8 @@ $color-wa: rgba(255, 255, 255, 1);
 $color-w5: rgba(255, 255, 255, 0.5); // Menu text (normal)
 
 $color-ka: rgba(0, 0, 0, 1);
-$color-k7: rgba(0, 0, 0, 0.7); // Result, Hover
+$color-k7: rgba(0, 0, 0, 0.7); // Hover
+$color-k5: rgba(0, 0, 0, 0.5); // Result
 $color-k3: rgba(0, 0, 0, 0.3); // Placeholder, Box-shadow
 $color-k2: rgba(0, 0, 0, 0.2); // Input, Select, Textarea
 
@@ -22,7 +23,7 @@ $fw-menu2: 500; // 메뉴 폰트 웨이트2 (Hover 및 Active)
 $fs-con-title: 16rem; // 내용 타이틀 폰트 사이즈
 $fw-con-title: 700; // 내용 타이틀 폰트 웨이트
 
-$fs-result: 13rem; // 검색 결과 폰트 사이즈
+$fs-result: 12rem; // 검색 결과 폰트 사이즈
 $fw-result: 400; // 검색 결과 폰트 웨이트
 
 $fs-copy: 15rem; // 카피라이트 폰트 사이즈
@@ -73,7 +74,7 @@ nav {
     .brand {
       z-index: 997;
       cursor: pointer;
-      font-size: $fs-brand; font-weight: $fw-brand; letter-spacing: -0.25rem;
+      font-size: $fs-brand; font-weight: $fw-brand; letter-spacing: -0.5rem;
     }
     
     .icon-group {
@@ -86,6 +87,7 @@ nav {
         }
       }
       .menu-icon {
+        display: none;
         position: relative;
         cursor: pointer;
         width: 19px; height: 16px;
@@ -169,7 +171,7 @@ nav {
       span {
         margin-left: 9rem;
         font-size: $fs-result; font-weight: $fw-result;
-        color: $color-k7;
+        color: $color-k5;
       }
     }
   }
@@ -242,25 +244,23 @@ input {
     height: 30px; width: 30px;
   }
   &[type=file] {
-    border-color: $color-ca;
-    border-radius: 6px;
-    text-align: center;
     cursor: pointer;
-    padding-left: 9px;
-    height: 33px; line-height: 33px;
-    font-size: 12rem; font-weight: 500;
-    color: $color-ca;
+    padding: 8rem 12rem;
+    height: 36rem;
+    border-color: $color-ca;
+    border-radius: 6rem;
+    font-size: 13rem; font-weight: 500; vertical-align: middle;
+    color:$color-ca;
     &:hover {
       outline: 1px solid $color-k7;
       outline-offset: -1px;
     }
     &:focus {
-      outline: 2px solid $color-ka;
+      outline: 2px solid $color-k7;
       outline-offset: -2px;
     }
     &::file-selector-button {
       display: none;
-      height: 30px;
     }
   }
 }
