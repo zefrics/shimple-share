@@ -5,6 +5,7 @@ $color-ka: rgba(0, 0, 0, 1);
 $color-k7: rgba(0, 0, 0, 0.7); // BG, sub-title, log, Hover
 $color-k5: rgba(0, 0, 0, 0.5); // Sub-lable
 $color-k3: rgba(0, 0, 0, 0.3); // Box-shadow
+$color-k2: rgba(0, 0, 0, 0.2); // Partner-list
 $color-k1: rgba(0, 0, 0, 0.1); // 조회 border
 
 $color-ca: rgba(0, 180, 255, 1);
@@ -12,32 +13,24 @@ $color-c5: rgba(0, 180, 255, 0.5); // <hr>
 
 $color-ma: rgba(244, 81, 108, 1);
 
-$fs-popup-title: 18rem; // 팝업 타이틀 폰트 사이즈
-$fw-popup-title: 600; // 팝업 타이틀 폰트 웨이트
-
-$fs-popup-msg1: 18rem; // 팝업 메시지 폰트 사이즈
-$fw-popup-msg1: 600; // 팝업 메시지 폰트 웨이트
-
-$fs-popup-msg2: 18rem; // 팝업 카카오톡 폰트 사이즈
-$fw-popup-msg2: 600; // 팝업 카카오톡 폰트 웨이트
-
-$fs-modal-title: 18rem; // 모달 타이틀 폰트 사이즈
-$fw-modal-title: 600; // 모달 타이틀 폰트 웨이트
-
-$fs-modal-title: 18rem; // 모달 대제목 폰트 사이즈
-$fw-modal-title: 600; // 모달 대제목 폰트 웨이트
-
-$fs-modal-title: 18rem; // 모달 중제목 폰트 사이즈
-$fw-modal-title: 600; // 모달 중제목 폰트 웨이트
-
-$fs-modal-title: 18rem; // 모달 소제목 폰트 사이즈
-$fw-modal-title: 600; // 모달 소제목 폰트 웨이트
+$fs-modal-title: 16.5rem; // 모달 타이틀 폰트 사이즈
+$fw-modal-title: 700; // 모달 타이틀 폰트 웨이트
 
 $fs-modal-label: 13rem; // 모달 라벨 폰트 사이즈
 $fw-modal-label: 500; // 모달 라벨 폰트 웨이트
 
 $fs-modal-sub: 12rem; // 모달 서브 라벨 폰트 사이즈
 $fw-modal-sub: 400; // 모달 서브 라벨 폰트 웨이트
+
+$fs-popup-title: 16.5rem; // 팝업 타이틀 폰트 사이즈
+$fw-popup-title: 600; // 팝업 타이틀 폰트 웨이트
+
+$fs-popup-msg1: 14rem; // 팝업 메시지 폰트 사이즈
+$fw-popup-msg1: 500; // 팝업 메시지 폰트 웨이트
+
+$fs-popup-msg2: 14rem; // 팝업 카카오톡 폰트 사이즈
+$fw-popup-msg2: 500; // 팝업 카카오톡 폰트 웨이트
+
 
 /* 라벨과 내용의 배치 */
 .form-type1 { // 일반 타입
@@ -70,7 +63,6 @@ $fw-modal-sub: 400; // 모달 서브 라벨 폰트 웨이트
   display: flex; align-items: center; justify-content: center;
   position: fixed; top: 0; left: 0;
   height: 100%; width: 100%;
-  // padding: 30rem;
   .bg {
     z-index: 1;
     position: fixed; top: 0; left: 0;
@@ -89,7 +81,7 @@ $fw-modal-sub: 400; // 모달 서브 라벨 폰트 웨이트
       padding: 15rem;
       .title-group {
         .title {
-          font-size: 18rem; font-weight: 600;
+          font-size: $fs-modal-title; font-weight: $fw-modal-title;
         }
         .sub-title {
           font-size: 14px;
@@ -198,21 +190,6 @@ $fw-modal-sub: 400; // 모달 서브 라벨 폰트 웨이트
         }
       
       }
-      .partner-list { // 좌상단 클릭시 나타나는 숙소 목록
-        user-select: none;
-        display: flex; flex-direction: column;
-        li {
-          padding: 15rem 9rem;
-          font-size: 15rem;
-          a {
-            color: $color-ka;
-            text-decoration: none;
-            &:visited, &:hover, &:focus {
-              text-decoration: none;
-            }
-          }
-        }
-      }
     }
 
     >.bottom {
@@ -223,6 +200,34 @@ $fw-modal-sub: 400; // 모달 서브 라벨 폰트 웨이트
   }
 }
 /* Modal 끝 */
+
+#popup-list { // 좌상단 클릭시 나타나는 숙소 목록
+  .modal {
+    .content {
+      padding: 0;
+      .partner-list {
+        user-select: none;
+        display: flex; flex-direction: column;
+        border-top: 1px solid $color-k1;
+        a {
+          display: inline-block;
+          height: 100%; width: 100%;
+          padding: 15rem 18rem;
+          border-bottom: 1px solid $color-k1;
+          font-size: 15rem;
+          color: $color-ka;
+          text-decoration: none;
+          &:visited, &:hover, &:focus {
+            text-decoration: none;
+          }
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
 
 /* Popup 시작 */
 .popup-container {

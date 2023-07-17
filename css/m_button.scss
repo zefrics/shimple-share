@@ -3,8 +3,10 @@ $color-wa: rgba(255, 255, 255, 1);
 $color-ka: rgba(0, 0, 0, 1);
 $color-k7: rgba(0, 0, 0, 0.7); // Hover
 $color-k5: rgba(0, 0, 0, 0.5); // X버튼 (조정 필요)
+$color-k2: rgba(0, 0, 0, 0.2); // Upload
 
 $color-ca: rgba(0, 180, 255, 1);
+$color-c3: rgba(0, 180, 255, 0.3);
 
 $color-ma: rgba(244, 81, 108, 1);
 
@@ -18,6 +20,24 @@ button {
   border: 0;
   background-color: transparent;
   font-family: Apple SD Gothic Neo;
+}
+
+.btn-all { // 전제 보기
+  height: 30rem; min-width: fit-content;
+  padding: 0 6rem;
+  border: 1px solid $color-ca;
+  border-radius: 6rem;
+  font-size: 14rem; font-weight: 400;
+  background-color: $color-c3;
+  color: $color-ka;
+  &:hover {
+    outline: 2px solid $color-k7;
+    outline-offset: -2px;
+  }
+  &:focus {
+    outline: 2px solid $color-ka;
+    outline-offset: -2px;
+  }
 }
 
 // 컨펌 버튼
@@ -70,7 +90,7 @@ button {
 // 게시판 내(답글) 수정 삭제 버튼
 .btn6-1 {
   display: flex; align-items: center; justify-content: center;
-  height: 30rem; width: 100%;
+  height: 36rem; width: 100%;
   border: 2px solid $color-ca;
   border-radius: 6rem;
   font-size: 15rem; font-weight: 500;
@@ -81,7 +101,7 @@ button {
 
 .btn6-2 {
   display: flex; align-items: center; justify-content: center;
-  height: 30rem; width: 100%;
+  height: 36rem; width: 100%;
   border: 2px solid $color-ma;
   border-radius: 6rem;
   font-size: 15rem; font-weight: 500;
@@ -92,7 +112,7 @@ button {
 
 .btn6-3 {
   display: flex; align-items: center; justify-content: center;
-  height: 30rem; width: 100%;
+  height: 36rem; width: 100%;
   border: 2px solid $color-ga;;
   border-radius: 6rem;
   font-size: 15rem; font-weight: 500;
@@ -113,57 +133,20 @@ button {
   outline-offset: -2px;
 }
 
-
-.btn7-2 { // X 버튼
-  font-size: 27px;
-  font-weight: 100;
-  color: $color-k5;
-  &:hover {
-    cursor: pointer;
-    color: $color-ma;
-  }
-}
-
-/* FILE LIST BUTTON */
-.btn8-3 {
-  height: 30rem; width: 100%;
-  padding: 0 9rem;
-  border: 1px solid $color-ga;
-  border-radius: 6rem;
-  background-color: $color-g1;
-  font-size: 13rem; font-weight: 500; text-align: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.btn8-3:hover {
-  outline: 1px solid $color-k7;
-  outline-offset: -1px;
-}
-.btn8-3:focus {
-  outline: 2px solid $color-ka;
-  outline-offset: -2px;
-}
-
 .btn-more { // 더보기
-  font-size: 14rem; font-weight: 500;
-  span {
-    color: $color-ga;
-    font-size: 12rem; font-weight: 400;
-    &.highlight {
+  color: $color-ka;
+  font-size: 12rem; font-weight: 400;
+  .row1 {
+    display: flex; align-items: center; justify-content: center; gap: 6rem;
+    img {
+      height: 12rem; width: 12rem;
+    }
+  }
+  .row2 {
+    .highlight {
       color: $color-ca;
     }
   }
-}
-
-.btn-all {
-  height: 30rem;
-  padding: 0 6rem;
-  border: 1px solid $color-ca;
-  border-radius: 6rem;
-  background-color: $color-ca;
-  font-size: 14rem; font-weight: 400;
-  color: $color-wa;
 }
 
 /* 버튼 배치 시작 */

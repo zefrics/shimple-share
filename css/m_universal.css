@@ -45,15 +45,19 @@ nav .navigation {
   width: 100%;
   padding: 0 15rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 15rem;
 }
 nav .navigation .brand {
   z-index: 997;
   cursor: pointer;
-  font-size: 16rem;
+  font-size: 16.5rem;
   font-weight: 700;
   letter-spacing: -0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 nav .navigation .icon-group {
   z-index: 997;
@@ -159,8 +163,9 @@ header {
 header .title {
   display: flex;
   align-items: center;
-  font-size: 16rem;
+  font-size: 16.5rem;
   font-weight: 700;
+  letter-spacing: -0.5rem;
 }
 header .title span {
   margin-left: 9rem;
@@ -176,9 +181,6 @@ header .title span {
 }
 .content-container > .content .artboard {
   background-color: rgb(255, 255, 255);
-}
-.content-container > .content .artboard > .confirm {
-  margin-top: 45rem;
 }
 
 footer {
@@ -196,7 +198,6 @@ footer {
 }
 
 /* Input, Select, Textarea, Label 공통 */
-/* 입력 공통 */
 input {
   height: 36rem;
   width: 100%;
@@ -243,28 +244,6 @@ input[type=radio] {
 input[type=number]::-webkit-inner-spin-button {
   height: 30px;
   width: 30px;
-}
-input[type=file] {
-  cursor: pointer;
-  padding: 8rem 12rem;
-  height: 36rem;
-  border-color: rgb(0, 180, 255);
-  border-radius: 6rem;
-  font-size: 13rem;
-  font-weight: 500;
-  vertical-align: middle;
-  color: rgb(0, 180, 255);
-}
-input[type=file]:hover {
-  outline: 1px solid rgba(0, 0, 0, 0.7);
-  outline-offset: -1px;
-}
-input[type=file]:focus {
-  outline: 2px solid rgba(0, 0, 0, 0.7);
-  outline-offset: -2px;
-}
-input[type=file]::file-selector-button {
-  display: none;
 }
 
 select {

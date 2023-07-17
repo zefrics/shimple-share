@@ -63,8 +63,8 @@
   padding: 15rem;
 }
 .modal-container .modal .header .title-group .title {
-  font-size: 18rem;
-  font-weight: 600;
+  font-size: 16.5rem;
+  font-weight: 700;
 }
 .modal-container .modal .header .title-group .sub-title {
   font-size: 14px;
@@ -176,24 +176,6 @@
   font-weight: 600;
   padding-right: 12px;
 }
-.modal-container .modal .content .partner-list {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  display: flex;
-  flex-direction: column;
-}
-.modal-container .modal .content .partner-list li {
-  padding: 15rem 9rem;
-  font-size: 15rem;
-}
-.modal-container .modal .content .partner-list li a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-}
-.modal-container .modal .content .partner-list li a:visited, .modal-container .modal .content .partner-list li a:hover, .modal-container .modal .content .partner-list li a:focus {
-  text-decoration: none;
-}
 .modal-container .modal > .bottom {
   z-index: 1;
   padding: 15rem;
@@ -201,6 +183,34 @@
 }
 
 /* Modal 끝 */
+#popup-list .modal .content {
+  padding: 0;
+}
+#popup-list .modal .content .partner-list {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+#popup-list .modal .content .partner-list a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 15rem 18rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 15rem;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+#popup-list .modal .content .partner-list a:visited, #popup-list .modal .content .partner-list a:hover, #popup-list .modal .content .partner-list a:focus {
+  text-decoration: none;
+}
+#popup-list .modal .content .partner-list a:last-child {
+  border-bottom: 0;
+}
+
 /* Popup 시작 */
 .popup-container {
   z-index: 800;
@@ -234,7 +244,7 @@
   background-color: rgb(255, 255, 255);
 }
 .popup-container .popup .header .title {
-  font-size: 18rem;
+  font-size: 16.5rem;
   font-weight: 600;
 }
 .popup-container .popup .content {

@@ -8,6 +8,27 @@ button {
   font-family: Apple SD Gothic Neo;
 }
 
+.btn-all {
+  height: 30rem;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  padding: 0 6rem;
+  border: 1px solid rgb(0, 180, 255);
+  border-radius: 6rem;
+  font-size: 14rem;
+  font-weight: 400;
+  background-color: rgba(0, 180, 255, 0.3);
+  color: rgb(0, 0, 0);
+}
+.btn-all:hover {
+  outline: 2px solid rgba(0, 0, 0, 0.7);
+  outline-offset: -2px;
+}
+.btn-all:focus {
+  outline: 2px solid rgb(0, 0, 0);
+  outline-offset: -2px;
+}
+
 .btn5-1 {
   display: flex;
   align-items: center;
@@ -71,7 +92,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30rem;
+  height: 36rem;
   width: 100%;
   border: 2px solid rgb(0, 180, 255);
   border-radius: 6rem;
@@ -86,7 +107,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30rem;
+  height: 36rem;
   width: 100%;
   border: 2px solid rgb(244, 81, 108);
   border-radius: 6rem;
@@ -101,7 +122,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30rem;
+  height: 36rem;
   width: 100%;
   border: 2px solid rgb(171, 171, 171);
   border-radius: 6rem;
@@ -124,64 +145,23 @@ button {
   outline-offset: -2px;
 }
 
-.btn7-2 {
-  font-size: 27px;
-  font-weight: 100;
-  color: rgba(0, 0, 0, 0.5);
-}
-.btn7-2:hover {
-  cursor: pointer;
-  color: rgb(244, 81, 108);
-}
-
-/* FILE LIST BUTTON */
-.btn8-3 {
-  height: 30rem;
-  width: 100%;
-  padding: 0 9rem;
-  border: 1px solid rgb(171, 171, 171);
-  border-radius: 6rem;
-  background-color: rgba(171, 171, 171, 0.1);
-  font-size: 13rem;
-  font-weight: 500;
-  text-align: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.btn8-3:hover {
-  outline: 1px solid rgba(0, 0, 0, 0.7);
-  outline-offset: -1px;
-}
-
-.btn8-3:focus {
-  outline: 2px solid rgb(0, 0, 0);
-  outline-offset: -2px;
-}
-
 .btn-more {
-  font-size: 14rem;
-  font-weight: 500;
-}
-.btn-more span {
-  color: rgb(171, 171, 171);
+  color: rgb(0, 0, 0);
   font-size: 12rem;
   font-weight: 400;
 }
-.btn-more span.highlight {
-  color: rgb(0, 180, 255);
+.btn-more .row1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
 }
-
-.btn-all {
-  height: 30rem;
-  padding: 0 6rem;
-  border: 1px solid rgb(0, 180, 255);
-  border-radius: 6rem;
-  background-color: rgb(0, 180, 255);
-  font-size: 14rem;
-  font-weight: 400;
-  color: rgb(255, 255, 255);
+.btn-more .row1 img {
+  height: 12rem;
+  width: 12rem;
+}
+.btn-more .row2 .highlight {
+  color: rgb(0, 180, 255);
 }
 
 /* 버튼 배치 시작 */

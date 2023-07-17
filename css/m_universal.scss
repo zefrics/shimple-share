@@ -13,15 +13,17 @@ $color-ca: rgba(0, 180, 255, 1);
 
 $color-ma: rgba(244, 81, 108, 1);
 
-$fs-brand: 16rem; // 브랜드 폰트 사이즈
+$fs-brand: 16.5rem; // 브랜드 폰트 사이즈
 $fw-brand: 700; // 브랜드 폰트 웨이트
+$fl-brand: -0.5rem; // 브랜드 폰트 간격
 
 $fs-menu: 27rem; // 메뉴 폰트 사이즈
 $fw-menu1: 400; // 메뉴 폰트 웨이트1 (일반)
 $fw-menu2: 500; // 메뉴 폰트 웨이트2 (Hover 및 Active)
 
-$fs-con-title: 16rem; // 내용 타이틀 폰트 사이즈
+$fs-con-title: 16.5rem; // 내용 타이틀 폰트 사이즈
 $fw-con-title: 700; // 내용 타이틀 폰트 웨이트
+$fl-con-title: -0.5rem; // 브랜드 폰트 간격
 
 $fs-result: 12rem; // 검색 결과 폰트 사이즈
 $fw-result: 400; // 검색 결과 폰트 웨이트
@@ -70,11 +72,14 @@ nav {
   .navigation {
     height: 45px; width: 100%;
     padding: 0 15rem;
-    display: flex; justify-content: space-between; align-items: center;
+    display: flex; align-items: center; justify-content: space-between; gap: 15rem;
     .brand {
       z-index: 997;
       cursor: pointer;
-      font-size: $fs-brand; font-weight: $fw-brand; letter-spacing: -0.5rem;
+      font-size: $fs-brand; font-weight: $fw-brand; letter-spacing: $fl-brand;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     
     .icon-group {
@@ -165,7 +170,7 @@ header {
   box-shadow: 0 2px 2px 0 $color-k3;
   .title {
     display: flex; align-items: center;
-    font-size: $fs-con-title; font-weight: $fw-con-title;
+    font-size: $fs-con-title; font-weight: $fw-con-title; letter-spacing: $fl-con-title;
     span {
       margin-left: 9rem;
       font-size: $fs-result; font-weight: $fw-result;
@@ -177,13 +182,8 @@ header {
   >.content {
     display: flex; flex-direction: column;
     margin-top: 90px;
-    // padding: 6rem; gap: 6rem;
-    // background-color: $color-xd;
     .artboard {
       background-color: $color-wa;
-      >.confirm {
-        margin-top: 45rem;
-      }
     }
   }
 }
@@ -203,7 +203,6 @@ footer {
 
 /* Input, Select, Textarea, Label 공통 */
 
-/* 입력 공통 */
 input {
   height: 36rem; width: 100%;
   padding: 0 12rem;
@@ -240,26 +239,6 @@ input {
   }
   &[type=number]::-webkit-inner-spin-button { // 화살표
     height: 30px; width: 30px;
-  }
-  &[type=file] {
-    cursor: pointer;
-    padding: 8rem 12rem;
-    height: 36rem;
-    border-color: $color-ca;
-    border-radius: 6rem;
-    font-size: 13rem; font-weight: 500; vertical-align: middle;
-    color:$color-ca;
-    &:hover {
-      outline: 1px solid $color-k7;
-      outline-offset: -1px;
-    }
-    &:focus {
-      outline: 2px solid $color-k7;
-      outline-offset: -2px;
-    }
-    &::file-selector-button {
-      display: none;
-    }
   }
 }
 
@@ -330,9 +309,6 @@ label {
     right: 12rem;
   }
 }
-
-
-
 
 .text-red {
   color: $color-ma !important;

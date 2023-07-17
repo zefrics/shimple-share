@@ -2,18 +2,22 @@ $color-wa: rgba(255, 255, 255, 1);
 
 $color-ka: rgba(0, 0, 0, 1);
 $color-k7: rgba(0, 0, 0, 0.7);
-$color-k5: rgba(0, 0, 0, 0.5);
-$color-k4: rgba(0, 0, 0, 0.4); // List-info
+$color-k5: rgba(0, 0, 0, 0.5); // List-info
+$color-k4: rgba(0, 0, 0, 0.4); 
 $color-k3: rgba(0, 0, 0, 0.3);
-$color-k2: rgba(0, 0, 0, 0.2);
+$color-k2: rgba(0, 0, 0, 0.2); // bulletin
 $color-k1: rgba(0, 0, 0, 0.1);
 
 $color-ca: rgba(0, 180, 255, 1);
 $color-c7: rgba(0, 180, 255, 0.7);
 $color-c5: rgba(0, 180, 255, 0.5);
+$color-c3: rgba(0, 180, 255, 0.3); // 파일 업로드 버튼
 $color-c2: rgba(0, 180, 255, 0.2);
 $color-c1: rgba(0, 180, 255, 0.1);
-$color-cm3: rgba(0, 180, 255, 0.03);
+$color-cm5: rgba(0, 180, 255, 0.05); // List-bg
+
+$color-ga: rgba(171, 171, 171, 1);
+$color-g1: rgba(171, 171, 171, 0.1); // 파일 리스트
 
 $fs-list-title: 14rem; // List-title 폰트 사이즈
 $fw-list-title: 500; // List-title 폰트 웨이트
@@ -21,8 +25,7 @@ $fw-list-title: 500; // List-title 폰트 웨이트
 $fs-list-info: 12rem; // List-info 폰트 사이즈
 $fw-list-info: 400; // List-info 폰트 웨이트
 
-/* 드롭다운 필터 */
-.filter-group { // 필터
+.filter-group { // 드롭 다운 필터
   user-select: none;
   .filter1 { // Select 필터
     display: flex; align-items: center; justify-content: center;
@@ -80,6 +83,7 @@ $fw-list-info: 400; // List-info 폰트 웨이트
       }
     }
   }
+
   .disabled { // 선택 불가
     .title {
       border: 1px solid #dddddd;
@@ -88,13 +92,36 @@ $fw-list-info: 400; // List-info 폰트 웨이트
   }
 }
 
-/* 업로드 */
-.upload-group {
-  .uploaded {
+.upload-group { // 파일 업로드
+  display: flex; flex-direction: column; gap: 6rem;
+
+  .uploaded { // 이미 업로드 된 파일
+    display: flex; flex-direction: column; gap: 6rem;
     li {
+      button {
+        height: 36rem; width: 100%;
+        padding: 0 12rem;
+        border: 1px solid $color-ga;
+        border-radius: 6rem;
+        background-color: $color-g1;
+        font-size: 13rem; font-weight: 500; text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &:hover {
+          outline: 1px solid $color-k7;
+          outline-offset: -1px;
+        }
+        &:focus {
+          outline: 2px solid $color-ka;
+          outline-offset: -2px;
+        }
+      }
     }
   }
-  .uploading {
+
+  .loading { // 업로드 대기 중인 파일
+    display: flex; flex-direction: column; gap: 6rem;
     li {
       display: flex; align-items: center; justify-content: space-between;
       height: 36rem;
@@ -102,6 +129,8 @@ $fw-list-info: 400; // List-info 폰트 웨이트
       border: 1px solid $color-k2;
       border-radius: 6px;
       font-size: 13rem; font-weight: 400;
+      background-color: $color-wa;
+      color: $color-k5;
       .name-cover {
         width: 90%;
         .filename {
@@ -118,29 +147,44 @@ $fw-list-info: 400; // List-info 폰트 웨이트
       }
     }
   }
-  .upload {
-    display: grid; grid-template-columns: 1fr 90px; gap: 12px;
-  }
-}
 
-#s-question-list { // 문의 사항
-  .top {
-    .row2 {
-      .filter-group {
-        display: grid; grid-template-columns: 1fr 1fr; gap: 9rem;
-        .filter2:last-child {
-          grid-column: 1 / 3;
-          grid-row: 2 / 3;
-        }
+  .upload { // 파일 선택 및 파일 업로드 버튼
+    display: flex; gap: 6rem;
+    input[type=file] { // 파일 선택
+      cursor: pointer;
+      padding: 8rem 12rem;
+      height: 36rem;
+      border-color: $color-ca;
+      border-radius: 6rem;
+      font-size: 13rem; font-weight: 500; vertical-align: middle;
+      color:$color-ca;
+      &:hover {
+        outline: 1px solid $color-k7;
+        outline-offset: -1px;
+      }
+      &:focus {
+        outline: 2px solid $color-k7;
+        outline-offset: -2px;
+      }
+      &::file-selector-button {
+        display: none;
       }
     }
-  }
-  .table {
-    .row-group {
-      .content-group {
-        .content1 {
-          border-bottom: 1px solid $color-c2;
-        }
+    .btn-upload { // 파일 업로드 버튼
+      height: 36rem; min-width: fit-content;
+      padding: 0 9rem;
+      border: 1px solid $color-ca;
+      border-radius: 6rem;
+      font-size: 14rem; font-weight: 400;
+      background-color: $color-c3;
+      color: $color-ka;
+      &:hover {
+        outline: 2px solid $color-k7;
+        outline-offset: -2px;
+      }
+      &:focus {
+        outline: 2px solid $color-ka;
+        outline-offset: -2px;
       }
     }
   }
@@ -193,7 +237,7 @@ $fw-list-info: 400; // List-info 폰트 웨이트
           .info {
             overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
             font-size: $fs-list-info; font-weight: $fw-list-info;
-            color: $color-k4;
+            color: $color-k5;
           }
           .arrow-group {
             opacity: 0.2;
@@ -215,19 +259,16 @@ $fw-list-info: 400; // List-info 폰트 웨이트
           font-size: 13rem; font-weight: 400;
         }
         .image {
-          margin-top: 18rem;
+          margin-top: 15rem;
           img {
             width: 100%;
           }
         }
-        .uploaded {
-          margin-top: 18rem;
-        }
         .modify {
-          margin-top: 18rem;
+          margin-top: 15rem;
         }
         .record {
-          margin-top: 6rem;
+          margin-top: 3rem;
           font-size: 12rem;
           span {
             padding-right: 6px;
@@ -246,7 +287,7 @@ $fw-list-info: 400; // List-info 폰트 웨이트
         }
       }
       &.selected {
-        background-color: $color-cm3;
+        background-color: $color-cm5;
         .row {
           border-bottom: 0;
           .title {
@@ -271,4 +312,35 @@ $fw-list-info: 400; // List-info 폰트 웨이트
     padding: 12rem 0;
     display: flex; align-items: center; justify-content: center;
   }
+}
+
+#s-question-list { // 관리자 - 문의 사항 목록
+  .top {
+    .row2 {
+      .filter-group {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 9rem;
+        .filter2:last-child {
+          grid-column: 1 / 3;
+          grid-row: 2 / 3;
+        }
+      }
+    }
+  }
+  .table {
+    .row-group {
+      .content-group {
+        .content1 {
+          border-bottom: 1px solid $color-c2;
+        }
+      }
+    }
+  }
+}
+
+#s-notice-write { // 관리자 - 공지 사항 작성
+  padding: 15rem;
+}
+
+.bulletin-write1 {
+  display: flex; flex-direction: column; gap: 18rem;
 }
