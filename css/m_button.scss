@@ -6,7 +6,7 @@ $color-k5: rgba(0, 0, 0, 0.5); // X버튼 (조정 필요)
 $color-k2: rgba(0, 0, 0, 0.2); // Upload
 
 $color-ca: rgba(0, 180, 255, 1);
-$color-c3: rgba(0, 180, 255, 0.3);
+$color-c2: rgba(0, 180, 255, 0.2); // 모두 보기
 
 $color-ma: rgba(244, 81, 108, 1);
 
@@ -28,7 +28,7 @@ button {
   border: 1px solid $color-ca;
   border-radius: 6rem;
   font-size: 14rem; font-weight: 400;
-  background-color: $color-c3;
+  background-color: $color-c2;
   color: $color-ka;
   &:hover {
     outline: 2px solid $color-k7;

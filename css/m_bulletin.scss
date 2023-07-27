@@ -152,11 +152,11 @@ $fw-list-info: 400; // List-info 폰트 웨이트
     display: flex; gap: 6rem;
     input[type=file] { // 파일 선택
       cursor: pointer;
-      padding: 8rem 12rem;
+      padding: 0 12rem;
       height: 36rem;
       border-color: $color-ca;
       border-radius: 6rem;
-      font-size: 13rem; font-weight: 500; vertical-align: middle;
+      font-size: 13rem; font-weight: 500; line-height: 34rem;
       color:$color-ca;
       &:hover {
         outline: 1px solid $color-k7;
@@ -257,6 +257,7 @@ $fw-list-info: 400; // List-info 폰트 웨이트
         border-top: 0;
         .text {
           font-size: 13rem; font-weight: 400;
+          line-height: 20rem;
         }
         .image {
           margin-top: 15rem;
