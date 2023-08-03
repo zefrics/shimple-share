@@ -122,20 +122,20 @@ function modalRCreateClose2() {
   x.classList.add("hide");
 }
 
-function modalRCreateOpen3() {
-  document.body.classList.add("not_scroll");
-  var x = document.querySelector("#modal-r-create3");
-  x.classList.remove("hide");
-  var y = document.querySelector(".type-hover");
-  y.classList.add("hide");
-  var z = document.querySelector("#modal-r-create3 select");
-  z.focus();
-}
-function modalRCreateClose3() {
-  document.body.classList.remove("not_scroll");
-  var x = document.querySelector("#modal-r-create3");
-  x.classList.add("hide");
-}
+// function modalRCreateOpen3() {
+//   document.body.classList.add("not_scroll");
+//   var x = document.querySelector("#modal-r-create3");
+//   x.classList.remove("hide");
+//   var y = document.querySelector(".type-hover");
+//   y.classList.add("hide");
+//   var z = document.querySelector("#modal-r-create3 select");
+//   z.focus();
+// }
+// function modalRCreateClose3() {
+//   document.body.classList.remove("not_scroll");
+//   var x = document.querySelector("#modal-r-create3");
+//   x.classList.add("hide");
+// }
 
 // 예약 수정 열고 닫기
 function modalRModifyOpen1() {

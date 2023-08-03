@@ -7,8 +7,6 @@ $color-k5: rgba(0, 0, 0, 0.5); // Result
 $color-k3: rgba(0, 0, 0, 0.3); // Placeholder, Box-shadow
 $color-k2: rgba(0, 0, 0, 0.2); // Input, Select, Textarea
 
-$color-xd: #dddddd;
-
 $color-ca: rgba(0, 180, 255, 1);
 
 $color-ma: rgba(244, 81, 108, 1);
@@ -64,15 +62,13 @@ body {
 nav {
   z-index: 500;
   position: fixed; top: 0; left:0;
-  user-select: none;
-  display: flex; justify-content: center;
   width: 100%;
-  color: $color-wa;
   background-color: $color-ca;
+  color: $color-wa;
   .navigation {
-    height: 45px; width: 100%;
-    padding: 0 15rem;
     display: flex; align-items: center; justify-content: space-between; gap: 15rem;
+    height: 45px;
+    padding: 0 15rem;
     .brand {
       z-index: 997;
       cursor: pointer;
@@ -237,8 +233,13 @@ input {
     cursor: pointer;
     height: 21px; width: 21px;
   }
-  &[type=number]::-webkit-inner-spin-button { // 화살표
-    height: 30px; width: 30px;
+  &[type=number] { // 화살표 안보이게
+    -moz-appearance: textfield;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   }
 }
 

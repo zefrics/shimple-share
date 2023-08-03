@@ -2,7 +2,7 @@
 /* 라벨과 내용의 배치 */
 .form-type1 {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 2fr minmax(0, 3fr);
   gap: 18px;
 }
 
@@ -26,6 +26,10 @@
 }
 
 /* Modal 시작 */
+#modal-r-create3 {
+  display: none;
+}
+
 .modal-container {
   z-index: 700;
   display: flex;
@@ -136,24 +140,40 @@
   border: 1px solid #ff0000;
   margin: 24px 0;
 }
-.modal-container .modal .content .person {
+.modal-container .modal .content .additional {
   display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
-.modal-container .modal .content .person .type {
-  height: 33px;
-  width: 70%;
-  border: 1px solid #bbbbbb;
-  box-sizing: border-box;
+.modal-container .modal .content .additional .type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 100%;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
   background-color: #eeeeee;
   font-size: 14px;
-  line-height: 33px;
-  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.modal-container .modal .content .person input {
-  border-left: 0;
-  padding: 0 0 0 10px;
+.modal-container .modal .content .additional .number-group {
+  display: flex;
+}
+.modal-container .modal .content .additional .number-group .btn-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 36px;
+  font-size: 18px;
+}
+.modal-container .modal .content .additional .number-group input {
+  background-color: transparent;
+  width: 24px;
+  padding: 0;
+  border: 0;
   text-align: center;
-  width: 30%;
 }
 .modal-container .modal .content .read {
   padding: 4px 6px;

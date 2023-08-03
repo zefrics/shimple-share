@@ -34,7 +34,7 @@ $fw-popup-msg2: 500; // 팝업 카카오톡 폰트 웨이트
 
 /* 라벨과 내용의 배치 */
 .form-type1 { // 일반 타입
-  display: grid; grid-template-columns: 2fr 3fr; gap: 18px;
+  display: grid; grid-template-columns: 2fr minmax(0, 3fr); gap: 18px;
   // margin-bottom: 18px;
 }
 .form-type2 { // 메모 타입
@@ -58,6 +58,9 @@ $fw-popup-msg2: 500; // 팝업 카카오톡 폰트 웨이트
 }
 
 /* Modal 시작 */
+#modal-r-create3 {
+  display: none;
+}
 .modal-container {
   z-index: 700;
   display: flex; align-items: center; justify-content: center;
@@ -147,22 +150,32 @@ $fw-popup-msg2: 500; // 팝업 카카오톡 폰트 웨이트
       }
     
       /* 인원, 반려동물 */
-      .person {
-        display: flex;
+      .additional {
+        display: flex; align-items: center;
+        border: 1px solid $color-k2;
         .type {
-          height: 33px; width: 70%;
-          border: 1px solid #bbbbbb;
-          box-sizing: border-box;
+          display: flex; align-items: center; justify-content: center;
+          height: 36px; width: 100%;
+          border-right: 1px solid $color-k2;
           background-color: #eeeeee;
           font-size: 14px;
-          line-height: 33px;
-          text-align: center;
+          overflow: hidden;
+          white-space: nowrap;
         }
-        input {
-          border-left: 0;
-          padding: 0 0 0 10px;
-          text-align: center;
-          width: 30%;
+        .number-group {
+          display: flex;
+          .btn-num {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 30px; height: 36px;
+            font-size: 18px;
+          }
+          input {
+            background-color: transparent;
+            width: 24px;
+            padding: 0;
+            border: 0 ;
+            text-align: center;
+          }
         }
       }
     
