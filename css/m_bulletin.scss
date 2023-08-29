@@ -142,6 +142,7 @@ $fw-list-info: 400; // List-info 폰트 웨이트
       .close {
         cursor: pointer;
         img {
+          display: block;
           height: 12px; width: 12px;
         }
       }
@@ -311,8 +312,7 @@ $fw-list-info: 400; // List-info 폰트 웨이트
     }
   }
   > .bottom {
-    padding: 12rem 0;
-    display: flex; align-items: center; justify-content: center;
+    padding: 12rem 18rem;
   }
 }
 

@@ -146,6 +146,7 @@ button {
 }
 
 .btn-more {
+  width: 100%;
   color: rgb(0, 0, 0);
   font-size: 12rem;
   font-weight: 400;

@@ -137,6 +137,7 @@
   cursor: pointer;
 }
 .upload-group .loading li .close img {
+  display: block;
   height: 12px;
   width: 12px;
 }
@@ -316,10 +317,7 @@
   display: block;
 }
 .bulletin-list1 > .bottom {
-  padding: 12rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 12rem 18rem;
 }
 
 #s-question-list .top .row2 .filter-group {
